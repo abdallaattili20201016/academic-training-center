@@ -1,0 +1,93 @@
+/* Login.css */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #4c669f, #3b5998, #192f6a);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-container {
+    max-width: 400px;
+    width: 100%;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+    background-color: rgb(255, 255, 255);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+label {
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px 15px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    border-color: #4c669f;
+    outline: none;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #4c669f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #3b5998;
+    transform: translateY(-2px);
+}
+
+button:active {
+    background-color: #192f6a;
+    transform: translateY(0);
+}
+
+/* Styling for the Forgot Password and Sign Up buttons */
+.extra-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.forgot-password,
+.sign-up {
+    background-color: transparent;
+    border: none;
+    color: #4c669f;
+    text-decoration: underline;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.forgot-password:hover,
+.sign-up:hover {
+    color: #d7d9dd;
+}
