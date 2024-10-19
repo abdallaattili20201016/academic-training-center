@@ -1,5 +1,7 @@
+// src/Signup.js
 import React, { useState } from 'react';
-import './signup.css'; // Import your CSS file
+import { Link } from 'react-router-dom';
+import './Signup.css';
 
 const Signup = () => {
     const [formData, setFormData] = useState({
@@ -20,16 +22,26 @@ const Signup = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        if (validateForm()) {
-            setMessage('Sign-up successful!');
+        if (!validateForm()) {
+            if (formData.password !== formData.confirmPassword) {
+                setMessage('Passwords do not match!');
+            } else {
+                setMessage('All fields are required!');
+            }
         } else {
-            setMessage('All fields are required and passwords must match!');
+            setMessage('Sign-up successful!');
         }
     };
 
     const validateForm = () => {
         const { name, username, email, password, confirmPassword } = formData;
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
         if (!name || !username || !email || !password || !confirmPassword) {
+            return false;
+        }
+        if (!emailRegex.test(email)) {
+            setMessage('Please enter a valid email address!');
             return false;
         }
         if (password !== confirmPassword) {
@@ -78,11 +90,14 @@ const Signup = () => {
                     onChange={handleChange}
                 />
                 <div className="admin-contact">
-                    Are you a Trainer? <a href="#">Contact an admin</a>
+                    Are you a Trainer? <a href="/admin-contact">Contact an admin</a>
                 </div>
-                <button type="submit">Verify</button>
+                <button type="submit" id="verify-button">Verify</button>
             </form>
             {message && <p>{message}</p>}
+            <p>
+                Already have an account? <Link to="/">Login</Link> {/* Use Link for navigation */}
+            </p>
         </div>
     );
 };
