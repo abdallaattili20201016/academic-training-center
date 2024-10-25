@@ -1,6 +1,6 @@
 // src/ForgotPassword.js
 import React, { useState } from 'react';
-import './ForgotPassword.css'; // Import the CSS for styling
+import '../styles/ForgotPassword.css'; // Import the CSS for styling
 
 const ForgotPassword = () => {
     const [email, setEmail] = useState('');
@@ -16,6 +16,7 @@ const ForgotPassword = () => {
     };
 
     return (
+        
         <div className="forgot-password-container">
             <h2>Forgot Password</h2>
             <form onSubmit={handleSubmit}>

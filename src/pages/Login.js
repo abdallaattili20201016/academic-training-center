@@ -1,25 +1,32 @@
 // src/Login.js
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import './Login.css';
+import { Link, useNavigate } from 'react-router-dom'; // Import useNavigate for navigation
+import '../styles/Login.css';  // Adjust path to point to styles folder
+
 
 const Login = () => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
+    const navigate = useNavigate(); // Initialize navigate function
 
     const handleLogin = (e) => {
         e.preventDefault();
         console.log('Logging in:', { username, password });
+
+        // Simulate login success and redirect to dashboard
+        navigate('/dashboard');
     };
 
     return (
         <>
-            <div className="header-logo">
-                <img src="/logo2.png" alt="Logo" className="logo-image" />
-                <span className="header-text">Academic Training Center</span>
-            </div>
 
+            {/* Login form */}
             <div className="login-container">
+                {/* Header with logo and text */}
+                <div class="logo-text-container ">
+                    <img src="/logoo.jpg" alt="Logo" class="logo-image" />
+                    <span class="header-text">Academic Training Center</span>
+                </div>
                 <h2>Login</h2>
                 <form onSubmit={handleLogin}>
                     <div className="form-group">
@@ -48,28 +55,14 @@ const Login = () => {
                     </div>
                     <button type="submit">Login</button>
 
-                    <div className="extra-buttons">
-                    <Link to="/forgot-password" className="forgot-password">
-                            Forgot Password?
-                        </Link>
-                        <Link to="/signup" className="sign-up">Sign Up</Link> {/* Use Link for navigation */}
-                    </div>
-                </form>
-            </div>
-        </>
-    );
-};
-
-export default Login;
-
-/*
-         
-
+                    {/* Additional links */}
                     <div className="extra-buttons">
                         <Link to="/forgot-password" className="forgot-password">
                             Forgot Password?
                         </Link>
-                        <Link to="/signup" className="sign-up">Sign Up</Link>
+                        <Link to="/signup" className="sign-up">
+                            Sign Up
+                        </Link>
                     </div>
                 </form>
             </div>
@@ -78,4 +71,6 @@ export default Login;
 };
 
 export default Login;
- */
+
+
+
