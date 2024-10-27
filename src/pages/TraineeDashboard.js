@@ -1,7 +1,7 @@
 // src/pages/TraineeDashboard.js
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import '../styles/TraineeDashboard.css'; // Updated import path
+import '../styles/Styles.css'; // Updated import path
 
 const TraineeDashboard = () => {
     const navigate = useNavigate(); // Initialize navigate function
@@ -15,69 +15,76 @@ const TraineeDashboard = () => {
     return (
         <>
             <header className="dashboard-header">
-                <h1>Academic Training Center</h1>
-                <div className="header-buttons">
-                    <button className="view-profile-btn" onClick={() => navigate('/profile')}>
-                        View Profile
-                    </button>
-                    <button className="logout-btn" onClick={handleLogout}>
-                        Logout
-                    </button>
+                <div class="headerContent">
+                    <h1>Academic Training Center</h1>
+                    <div className="header-buttons">
+                        <button className="view-profile-btn" onClick={() => navigate('/profile')}>
+                            View Profile
+                        </button>
+                        <button className="logout-btn" onClick={handleLogout}>
+                            Logout
+                        </button>
+                    </div>
                 </div>
             </header>
 
 
             {/* Welcome Section */}
-            <section className="welcome-section">
-                <h2>Welcome, {traineeName}!</h2>
-            </section>
+            <div class="ViewPage">
+                <section className="welcome-section">
+                    <h2>Welcome, {traineeName}!</h2>
+                </section>
 
-            {/* Information Section */}
-            <section className="info-section">
-                <div className="info-box">
-                    <h3>Personal Info</h3>
-                    <p>Email: abd20201016@std.psut.edu.jo</p>
-                    <p>Enrolled Courses: 5</p>
-                </div>
-                <div className="info-box">
-                    <h3>Progress</h3>
-                    <p>Completed Courses: 2</p>
-                    <p>Pending Certificates: 1</p>
-                </div>
-            </section>
+                {/* Information Section */}
 
-            {/* Cards Section */}
-            <div className="dashboard-container">
-                <div className="dashboard-card">
-                    <h2>Courses</h2>
-                    <p>Browse or enroll in available courses.</p>
-                    <Link to="/courses" className="dashboard-link">
-                        View Courses
-                    </Link>
-                </div>
+                <section className="info-section">
+                    <div className="info-box">
+                        <h3>Personal Info</h3>
+                        <p>Email: abd20201016@std.psut.edu.jo</p>
+                        <p>Enrolled Courses: 5</p>
+                    </div>
+                    <div className="info-box">
+                        <h3>Progress</h3>
+                        <p>Completed Courses: 2</p>
+                        <p>Pending Certificates: 1</p>
+                    </div>
+                </section>
 
-                <div className="dashboard-card">
-                    <h2>Certificates</h2>
-                    <p>Download certificates for completed courses.</p>
-                    <Link to="/certificates" className="dashboard-link">
-                        View Certificates
-                    </Link>
-                </div>
+                {/* Cards Section */}
 
-                <div className="dashboard-card">
-                    <h2>Feedback</h2>
-                    <p>Provide feedback on your completed courses.</p>
-                    <Link to="/feedback" className="dashboard-link">
-                        Give Feedback
-                    </Link>
-                </div>
+                <div className="dashboard-container">
 
-                <div className="dashboard-card">
-                    <h2>Profile Settings</h2>
-                    <p>Update your personal information.</p>
-                    <Link to="/personal-info" className="dashboard-link">
-                        Edit Profile
-                    </Link>
+                    <div className="dashboard-card">
+                        <h2>Courses</h2>
+                        <p>Browse or enroll in available courses.</p>
+                        <Link to="/courses" className="dashboard-link">
+                            View Courses
+                        </Link>
+                    </div>
+
+                    <div className="dashboard-card">
+                        <h2>Certificates</h2>
+                        <p>Download certificates for completed courses.</p>
+                        <Link to="/certificates" className="dashboard-link">
+                            View Certificates
+                        </Link>
+                    </div>
+
+                    <div className="dashboard-card">
+                        <h2>Feedback</h2>
+                        <p>Provide feedback on your completed courses.</p>
+                        <Link to="/feedback" className="dashboard-link">
+                            Give Feedback
+                        </Link>
+                    </div>
+
+                    <div className="dashboard-card">
+                        <h2>Profile Settings</h2>
+                        <p>Update your personal information.</p>
+                        <Link to="/personal-info" className="dashboard-link">
+                            Edit Profile
+                        </Link>
+                    </div>
                 </div>
             </div>
 

@@ -1,7 +1,8 @@
 // src/Signup.js
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import '../styles/Signup.css';
+
+import '../styles/Styles.css';  // Adjust path to point to styles folder
 
 const Signup = () => {
     const [formData, setFormData] = useState({
@@ -51,54 +52,63 @@ const Signup = () => {
     };
 
     return (
-        <div className="container">
-            <h2>Sign up</h2>
-            <form onSubmit={handleSubmit}>
-                <input
-                    type="text"
-                    name="name"
-                    placeholder="Name"
-                    value={formData.name}
-                    onChange={handleChange}
-                />
-                <input
-                    type="text"
-                    name="username"
-                    placeholder="Username"
-                    value={formData.username}
-                    onChange={handleChange}
-                />
-                <input
-                    type="email"
-                    name="email"
-                    placeholder="Email"
-                    value={formData.email}
-                    onChange={handleChange}
-                />
-                <input
-                    type="password"
-                    name="password"
-                    placeholder="Password"
-                    value={formData.password}
-                    onChange={handleChange}
-                />
-                <input
-                    type="password"
-                    name="confirmPassword"
-                    placeholder="Confirm password"
-                    value={formData.confirmPassword}
-                    onChange={handleChange}
-                />
-                <div className="admin-contact">
-                    Are you a Trainer? <a href="/admin-contact">Contact an admin</a>
-                </div>
-                <button type="submit" id="verify-button">Verify</button>
-            </form>
-            {message && <p>{message}</p>}
-            <p>
-                Already have an account? <Link to="/">Login</Link> {/* Use Link for navigation */}
-            </p>
+        <>
+        <div class="allContent">
+        <div class="fancyBG">
+            <img src="/logoo.jpg" alt="Logo" class="logo-image" />
+            <span class="header-text">Academic<br></br><br></br>Training<br></br><br></br> Center</span>
         </div>
+        <div class="contentDivsignup">
+        <div className="signup-container">
+        <h2 class="loginTitle">SignUp</h2>
+                <form onSubmit={handleSubmit}>
+                    <input
+                        type="text"
+                        name="name"
+                        class="loginInput"
+                        placeholder="Name"
+                        value={formData.name}
+                        onChange={handleChange} />
+                    <input
+                        type="text"
+                        name="username"
+                        class="loginInput"
+                        placeholder="Username"
+                        value={formData.username}
+                        onChange={handleChange} />
+                    <input
+                        type="email"
+                        name="email"
+                        class="loginInput"
+                        placeholder="Email"
+                        value={formData.email}
+                        onChange={handleChange} />
+                    <input
+                        type="password"
+                        name="password"
+                        class="loginInput"
+                        placeholder="Password"
+                        value={formData.password}
+                        onChange={handleChange} />
+                    <input
+                        type="password"
+                        name="confirmPassword"
+                        class="loginInput"
+                        placeholder="Confirm password"
+                        value={formData.confirmPassword}
+                        onChange={handleChange} />
+                    <div className="admin-contact">
+                        Are you a Trainer? <a href="/admin-contact">Contact an admin</a>
+                    </div>
+                    <button type="submit" class="loginButton">Verify</button>
+                </form>
+                {message && <p>{message}</p>}
+                <p>
+                    Already have an account? <Link to="/">Login</Link> {/* Use Link for navigation */}
+                </p>
+            </div>
+            </div>
+            </div></>
     );
 };
 

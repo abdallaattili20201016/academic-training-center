@@ -22,14 +22,13 @@ const Login = () => {
 
             {/* Login form */}
             <div class="allContent">
-                <div class="fancyBG"></div>
+                <div class="fancyBG">
+                    <img src="/logoo.jpg" alt="Logo" class="logo-image" />
+                    <span class="header-text">Academic<br></br><br></br>Training<br></br><br></br> Center</span>
+                </div>
                 <div class="contentDiv">
                     <div className="login-container">
                         {/* Header with logo and text */}
-                        <div class="logo-text-container ">
-                            <img src="/logoo.jpg" alt="Logo" class="logo-image" />
-                            <span class="header-text">Academic Training Center</span>
-                        </div>
                         <h2 class="loginTitle">Login</h2>
                         <form onSubmit={handleLogin}>
                             <div className="form-group">
