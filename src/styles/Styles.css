@@ -1,5 +1,3 @@
-body {}
-
 .fancyBG {
     position: fixed;
     top: 0;
@@ -276,6 +274,7 @@ h3 {
     padding: 10px 20px;
     cursor: pointer;
     border-radius: 5px;
+    margin-left: 5px;
 }
 
 /* Form Container Styles */
@@ -346,6 +345,9 @@ input {
 .headerContent {
     display: flex;
     justify-content: space-between;
+    align-items: center;/*delete if not needed*/
+    padding: 10px 20px;/*delete if not needed*/
+    margin-left: 10px;
 }
 
 
@@ -434,6 +436,7 @@ input {
 
 }
 
+
 /* Dashboard Cards Section */
 .ViewPage {
     position: absolute;
@@ -448,15 +451,19 @@ input {
     justify-content: space-around;
     flex-wrap: wrap;
     margin: 30px;
-
     gap: 30px;
     padding: 10px;
+
+    transition: margin-left 0.3s ease; /* Smooth transition abdalla's */
+    margin-left: 0;
 }
 
 .dashboard-card {
     width: 22%;
     min-width: 200px;
     background-color: white;
+    flex-wrap: wrap;
+    justify-content: space-between;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -504,4 +511,142 @@ input {
 
 .dashboard-footer a:hover {
     text-decoration: underline;
+}
+
+/* Drawer Styling */
+
+
+/* Show drawer when active */
+.drawer.open {
+    transform: translateX(0);
+}
+
+/* Drawer Header (e.g., User Info or Title) */
+.drawer-header {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 0px;
+    border-bottom: 1px solid #34495e;
+    padding-bottom: 0px;
+}
+
+.drawer-open .dashboard-content {
+    margin-left: 250px; /* Adjust based on the drawer width */
+}
+
+/* Drawer Links */
+.drawer {
+    position: fixed;
+    top: 18.5%; /* Adjust to match the header height */
+    left: 0;
+    width: 20%; /* Use percentage for responsiveness */
+    height: 100%;
+    background-color: #2c3e50;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    padding: 10px;
+    z-index: 2;
+}
+
+.drawer.open {
+    transform: translateX(0);
+}
+
+.drawer a {
+    color: white;
+    text-decoration:underline;
+    margin: 15px 0;
+    font-size: 18px;
+
+}
+
+.drawer-toggle-btn {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    margin-right: 0px;
+    cursor: pointer;
+    color: white;
+    transition: background-color 0.3s;
+    width: auto;
+    /* Ensure it's only as wide as needed */
+    height: auto;
+    /* Ensure it adjusts properly */
+    margin: 0 0px;
+    /* Add space between button and elements */
+}
+
+
+
+/* Adjust other elements if needed to make space for the drawer */
+.dashboard-container {
+    margin-top: 20px;
+}
+
+/* Hamburger Icon for Toggling Drawer */
+.hamburger {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    border-radius: 2px;
+    transition: 0.4s;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.hamburger::before,
+.hamburger::after {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    background-color: rgb(113, 133, 226);
+    border-radius: 2px;
+    transition: 0.4s;
+}
+
+.hamburger::before {
+    transform: translateY(-10px);
+}
+
+.hamburger::after {
+    transform: translateY(10px);
+}
+
+/* Drawer Toggle (Open/Close Animation) */
+.hamburger.open {
+    background-color: transparent;
+}
+
+.hamburger.open::before {
+    transform: rotate(45deg);
+}
+
+.hamburger.open::after {
+    transform: rotate(-45deg);
+}
+
+/*tell 651 is for viwe profile*/
+.actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+
+.dashboard-link {
+    background-color: #2980b9;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
 }

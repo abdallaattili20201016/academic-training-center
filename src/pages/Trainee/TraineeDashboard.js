@@ -1,9 +1,10 @@
 // src/pages/TraineeDashboard.js
-import React from 'react';
+import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import '../styles/Styles.css'; // Updated import path
+import '../../styles/Styles.css';
 
 const TraineeDashboard = () => {
+    const [drawerOpen, setDrawerOpen] = useState(false); // State to handle drawer
     const navigate = useNavigate(); // Initialize navigate function
     const traineeName = "Abdallah"; // Replace with actual trainee data
 
@@ -12,31 +13,50 @@ const TraineeDashboard = () => {
         navigate('/'); // Redirect to login page
     };
 
+    const toggleDrawer = () => {
+        setDrawerOpen(!drawerOpen); // Toggle drawer state
+    };
+    
     return (
         <>
+        {/* Drawer Section */}
             <header className="dashboard-header">
-                <div class="headerContent">
+                <div className="headerContent">
+                <div className={`drawer ${drawerOpen ? 'open' : ''}`}>
+                <Link to="/personal-info">Profile Settings</Link>
+                <Link to="/messages">Messages</Link>
+                <Link to="/courses">Courses</Link>
+                <Link to="/certificates">Certificates</Link>
+                <Link to="/feedback">Feedback</Link>
+                <Link to="/about-us">About Us</Link>
+                <Link to="/contact-us">Contact Us</Link>
+            </div>
+                    <button className="drawer-toggle-btn" onClick={toggleDrawer}>
+                        ☰
+                    </button>
                     <h1>Academic Training Center</h1>
-                    <div className="header-buttons">
-                        <button className="view-profile-btn" onClick={() => navigate('/profile')}>
+                    
+                        <button className="view-profile-btn" onClick={() => navigate('/ViewProfile')}>
                             View Profile
                         </button>
+
                         <button className="logout-btn" onClick={handleLogout}>
                             Logout
                         </button>
-                    </div>
+                    
                 </div>
             </header>
 
+            {/*the drawer was here*/}
+
 
             {/* Welcome Section */}
-            <div class="ViewPage">
+            <div className="ViewPage">
                 <section className="welcome-section">
                     <h2>Welcome, {traineeName}!</h2>
                 </section>
 
                 {/* Information Section */}
-
                 <section className="info-section">
                     <div className="info-box">
                         <h3>Personal Info</h3>
@@ -51,13 +71,11 @@ const TraineeDashboard = () => {
                 </section>
 
                 {/* Cards Section */}
-
                 <div className="dashboard-container">
-
                     <div className="dashboard-card">
                         <h2>Courses</h2>
                         <p>Browse or enroll in available courses.</p>
-                        <Link to="/courses" className="dashboard-link">
+                        <Link to="/Courses" className="dashboard-link">
                             View Courses
                         </Link>
                     </div>
