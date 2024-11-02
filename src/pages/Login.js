@@ -59,7 +59,7 @@ const Login = () => {
                                 />
 
                             </div>
-                            <button type="submit" class="loginButton">Login</button>
+                            <button type="submit" class=".btn-primary">Login</button>
 
                             {/* Additional links */}
                             <div className="extra-buttons">

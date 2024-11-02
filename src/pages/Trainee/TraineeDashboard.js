@@ -2,9 +2,14 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import '../../styles/Styles.css';
+import Navbar from '../../components/Navbar';
 
 const TraineeDashboard = () => {
-    const [drawerOpen, setDrawerOpen] = useState(false); // State to handle drawer
+    const [drawerOpen, setDrawerOpen] = useState(false); /*copy these three lines for the drawer in every page*/ 
+    const toggleDrawer = () => {
+        setDrawerOpen(!drawerOpen); 
+    };
+    
     const navigate = useNavigate(); // Initialize navigate function
     const traineeName = "Abdallah"; // Replace with actual trainee data
 
@@ -13,40 +18,13 @@ const TraineeDashboard = () => {
         navigate('/'); // Redirect to login page
     };
 
-    const toggleDrawer = () => {
-        setDrawerOpen(!drawerOpen); // Toggle drawer state
-    };
+
     
     return (
         <>
-        {/* Drawer Section */}
-            <header className="dashboard-header">
-                <div className="headerContent">
-                <div className={`drawer ${drawerOpen ? 'open' : ''}`}>
-                <Link to="/personal-info">Profile Settings</Link>
-                <Link to="/messages">Messages</Link>
-                <Link to="/courses">Courses</Link>
-                <Link to="/certificates">Certificates</Link>
-                <Link to="/feedback">Feedback</Link>
-                <Link to="/about-us">About Us</Link>
-                <Link to="/contact-us">Contact Us</Link>
+                    <div>
+            <Navbar />
             </div>
-                    <button className="drawer-toggle-btn" onClick={toggleDrawer}>
-                        ☰
-                    </button>
-                    <h1>Academic Training Center</h1>
-                    
-                        <button className="view-profile-btn" onClick={() => navigate('/ViewProfile')}>
-                            View Profile
-                        </button>
-
-                        <button className="logout-btn" onClick={handleLogout}>
-                            Logout
-                        </button>
-                    
-                </div>
-            </header>
-
             {/*the drawer was here*/}
 
 
@@ -106,11 +84,6 @@ const TraineeDashboard = () => {
                 </div>
             </div>
 
-            {/* Footer Section */}
-            <footer className="dashboard-footer">
-                <Link to="/about-us">About Us</Link> |
-                <Link to="/contact-us">Contact Us</Link>
-            </footer>
         </>
     );
 };

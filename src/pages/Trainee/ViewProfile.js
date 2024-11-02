@@ -2,55 +2,65 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import '../../styles/Styles.css';
+import Navbar from '../../components/Navbar';
 
 const ViewProfile = () => {
-    
-    const navigate = useNavigate(); // Initialize navigate function
+    const [editMode, setEditMode] = useState(false);
+    const [name, setName] = useState("Abdallah");
+    const [email, setEmail] = useState("abd20201016@std.psut.edu.jo");
+    const [address, setAddress] = useState("Amman, Jordan");
+    const [phone, setPhone] = useState("+962 7XXXXXXX");
+    const [enrolledCourses, setEnrolledCourses] = useState(5);
+
+    const navigate = useNavigate();
 
     const handleLogout = () => {
-        localStorage.clear(); // Clear stored data
-        navigate('/'); // Redirect to login page
+        localStorage.clear();
+        navigate('/');
     };
-    const handleBack = ()=>{
-        navigate('/dashboard'); // Navigate back to the dashboard
+
+    const handleEditToggle = () => setEditMode(!editMode);
+    const handleSave = () => {
+        setEditMode(false);
+        alert('Your information has been updated.');
     };
-    
-
-
+    const handleCancel = () => setEditMode(false);
+    const [drawerOpen, setDrawerOpen] = useState(false);
+    const toggleDrawer = () => setDrawerOpen(!drawerOpen);
 
     return (
         <>
-            <header className="dashboard-header">
-                <div className="headerContent">
-
-                    <h1>Academic Training Center</h1>
-
-                    <button className="logout-btn" onClick={handleLogout}>
-                        Logout
-                    </button>
-                </div>
-            </header>
-
-            <div className="ViewPage">
-                <h2>Profile Details</h2>
-                <div className="info-box">
-                    <h3>Personal Info</h3>
-                    <p>Name: Abdallah</p>
-                    <p>Email: abd20201016@std.psut.edu.jo</p>
-                    <p>Enrolled Courses: 5</p>
-                </div>
-                <div className="dashboard-container">
-                    <button className="dashboard-link" onClick={handleBack}>
-                        Back to Dashboard
-                    </button>
-                </div>
+            {/* Drawer Section */}
+            <div>
+            <Navbar />
             </div>
+            <div class="viewPage">
+                <div className="profile-content">
+                    {/* Personal Info Section */}
+                    <div className="user-info">
+                        <h3>Personal Info</h3>
+                        <div class="userImage"></div>
+                        <p><strong>Name:</strong> {editMode ? <input type="text" class="profileInput" value={name} onChange={(e) => setName(e.target.value)} /> : name}</p>
+                        <p><strong>Email:</strong> {editMode ? <input type="email" class="profileInput" value={email} onChange={(e) => setEmail(e.target.value)} /> : email}</p>
+                        {/* <p><strong>Enrolled Courses:</strong> {enrolledCourses}</p> */}
+                        <p><strong>Address:</strong> {editMode ? <input type="text" class="profileInput" value={address} onChange={(e) => setAddress(e.target.value)} /> : address}</p>
+                        <p><strong>Phone:</strong> {editMode ? <input type="text" class="profileInput" value={phone} onChange={(e) => setPhone(e.target.value)} /> : phone}</p>
+                        <div className="actions">
+                            {editMode ? (
+                                <>
+                                    <button onClick={handleSave} className="edit-btn">Save</button>
+                                    <button onClick={handleCancel} className="edit-btn">Cancel</button>
+                                </>
+                            ) : (
+                                <button onClick={handleEditToggle} className="edit-btn">Edit</button>
+                            )}
+                        </div>
+                    </div>
 
-            {/* Footer Section */}
-            <footer className="dashboard-footer">
-                <Link to="/about-us">About Us</Link> |
-                <Link to="/contact-us">Contact Us</Link>
-            </footer>
+                </div>
+
+            </div>
+        
         </>
     );
 };

@@ -1,5 +1,5 @@
 /* Login.css */
-
+/* 
 body {
     margin: 0;
     padding: 0;
@@ -11,14 +11,13 @@ body {
     align-items: center;
     flex-direction: column;
     background-image: url('../assets/images/loginback.jpg');
-    background-size: cover; /* Ensures the image covers the entire background */
-    background-position: center; /* Center the background image */
-    background-repeat: no-repeat; /* Prevent the image from repeating */
-    height: 100vh; /* Full height of the screen */
-    /* Ensure elements stack vertically */
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat; 
+    height: 100vh;
     position: relative;
-    /* So absolute/fixed elements don't affect the layout */
-}
+  
+} */
 
 .login-container {
     max-width: 400px;

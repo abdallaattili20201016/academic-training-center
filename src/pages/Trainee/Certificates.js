@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import '../../styles/Styles.css';
+import Navbar from '../../components/Navbar';
 
 const Certificates = () => {
     const navigate = useNavigate();
@@ -19,7 +20,11 @@ const Certificates = () => {
     };
   
     return (
-      <div className="certificates-container">
+      <>
+      <div>
+      <Navbar />
+      </div>
+      <div className="ViewPage">
         <h2 className="section-title">Certificates</h2>
         <table className="certificates-table">
           <thead>
@@ -46,12 +51,9 @@ const Certificates = () => {
             ))}
           </tbody>
         </table>
-        <div className="dashboard-container">
-                    <button className="dashboard-link" onClick={handleBack}>
-                        Back to Dashboard
-                    </button>
-                </div>
+
       </div>
+      </>
     );
   };
   

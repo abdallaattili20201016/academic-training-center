@@ -1,7 +1,7 @@
-// src/pages/Courses.js
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import '../../styles/Styles.css';
+import Navbar from '../../components/Navbar';
 
 const Courses = () => {
     const navigate = useNavigate();
@@ -22,15 +22,9 @@ const Courses = () => {
 
     return (
         <>
-            <header className="dashboard-header">
-                <div className="headerContent">
-                    <h1>Academic Training Center</h1>
-                    <button className="logout-btn" onClick={() => navigate('/')}>
-                        Logout
-                    </button>
-                </div>
-            </header>
-
+        <div>
+            <Navbar />
+            </div>
             <div className="ViewPage">
                 <h2>Courses</h2>
 
@@ -61,18 +55,7 @@ const Courses = () => {
                         </div>
                     </div>
                 </div>
-                {/*note : we need to make a class in styles that looks like welcome-section*/}
-
-                <div className="actions">
-                    <button className="dashboard-link" onClick={handleBack}>
-                        Back to Dashboard
-                    </button>
-                </div>
             </div>
-
-            <footer className="dashboard-footer">
-                <Link to="/about-us">About Us</Link> | <Link to="/contact-us">Contact Us</Link>
-            </footer>
         </>
     );
 };
