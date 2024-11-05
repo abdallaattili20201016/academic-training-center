@@ -1,0 +1,1257 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii" />
+<meta http-equiv="Content-Language" content="en" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta name="robots" content="all" scheme="http://www.robotstxt.org/" />
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 5.1" />
+<meta name="Date" content="2010-03-05T15:45:36Z" />
+<meta name="doctitle" content="Oracle&reg; Database Platform Guide 11g Release 2 (11.2) for Microsoft Windows" />
+<meta name="partno" content="E10845-01" />
+<meta name="docid" content="NTQRF" />
+<link rel="Start" href="../../index.htm" title="Home" type="text/html" />
+<link rel="Copyright" href="../../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+<link rel="Stylesheet" href="../../dcommon/css/blafdoc.css" title="Default" type="text/css" />
+<script type="text/javascript" src="../../dcommon/js/doccd.js">
+</script>
+<link rel="Contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="Index" href="index.htm" title="Index" type="text/html" />
+<link rel="Glossary" href="glossary.htm" title="Glossary" type="text/html" />
+<link rel="Prev" href="authen.htm" title="Previous" type="text/html" />
+<link rel="Next" href="wallets.htm" title="Next" type="text/html" />
+<link rel="alternate" href="../e10845.pdf" title="PDF version" type="application/pdf" />
+<title>Administering External Users and Roles on Windows</title>
+</head>
+<body>
+<div class="header">
+<div class="zz-skip-header"><a name="top" id="top" href="#BEGIN">Skip Headers</a></div>
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td align="left" valign="top"><b>Oracle&reg; Database Platform Guide<br />
+11<i>g</i> Release 2 (11.2) for Microsoft Windows</b><br />
+Part Number E10845-01</td>
+<td valign="bottom" align="right">
+<table class="icons oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="245">
+<tr>
+<td align="center" valign="top"><a href="../../index.htm"><img width="24" height="24" src="../../dcommon/gifs/doclib.gif" alt="Go to Documentation Home" /><br />
+<span class="icon">Home</span></a></td>
+<td align="center" valign="top"><a href="../../nav/portal_booklist.htm"><img width="24" height="24" src="../../dcommon/gifs/booklist.gif" alt="Go to Book List" /><br />
+<span class="icon">Book List</span></a></td>
+<td align="center" valign="top"><a href="toc.htm"><img width="24" height="24" src="../../dcommon/gifs/toc.gif" alt="Go to Table of Contents" /><br />
+<span class="icon">Contents</span></a></td>
+<td align="center" valign="top"><a href="index.htm"><img width="24" height="24" src="../../dcommon/gifs/index.gif" alt="Go to Index" /><br />
+<span class="icon">Index</span></a></td>
+<td align="center" valign="top"><a href="../../dcommon/html/feedback.htm"><img width="24" height="24" src="../../dcommon/gifs/feedbck2.gif" alt="Go to Feedback page" /><br />
+<span class="icon">Contact Us</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<hr />
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td align="left" valign="top">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="98">
+<tr>
+<td align="center" valign="top"><a href="authen.htm"><img width="24" height="24" src="../../dcommon/gifs/leftnav.gif" alt="Go to previous page" /><br />
+<span class="icon">Previous</span></a></td>
+<td align="center" valign="top"><a href="wallets.htm"><img width="24" height="24" src="../../dcommon/gifs/rightnav.gif" alt="Go to next page" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+</td>
+<td align="right" valign="top" style="font-size: 90%"><a href="../e10845.pdf">View PDF</a></td>
+</tr>
+</table>
+<a name="BEGIN" id="BEGIN"></a></div>
+<div class="IND"><!-- End Header --><a id="g1028005" name="g1028005"></a><a id="NTQRF130" name="NTQRF130"></a><a id="i1014912" name="i1014912"></a>
+<h1 class="chapter"><span class="secnum">10</span> Administering External Users and Roles on Windows</h1>
+<p>External users and roles are in general defined by something external to Oracle Database. In a Windows environment, they are defined by the operating system.</p>
+<p>This chapter describes <a href="glossary.htm#i433109"><span class="xrefglossterm">external user</span></a> and <a href="glossary.htm#i433097"><span class="xrefglossterm">external role</span></a> creation and management using either Oracle Administration Assistant for Windows or by a combination of Oracle Database command line tools, Registry Editor, and other Windows tools.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+See <a class="olink DBIMI276" href="http://www.oracle.com/pls/db112/lookup?id=DBIMI276"><span class="italic">Oracle Database Enterprise User Security Administrator's Guide</span></a> for more information on tools available for administering enterprise users and roles.</div>
+<p>This chapter contains these topics:</p>
+<ul>
+<li>
+<p><a href="#BJEECAGG">Oracle Administration Assistant for Windows</a></p>
+</li>
+<li>
+<p><a href="#i1006236">Manually Administering External Users and Roles</a></p>
+</li>
+</ul>
+<a id="BJEECAGG" name="BJEECAGG"></a><a id="NTQRF328" name="NTQRF328"></a>
+<div class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1"><a id="sthref390" name="sthref390"></a><a id="sthref391" name="sthref391"></a><a id="sthref392" name="sthref392"></a><a id="sthref393" name="sthref393"></a><a id="sthref394" name="sthref394"></a>Oracle Administration Assistant for Windows</h2>
+<p>Oracle Administration Assistant for Windows runs from <a href="glossary.htm#i432309"><span class="xrefglossterm">Microsoft Management Console</span></a> and enables you to configure the following Oracle Database users and roles so that the Windows operating system can <a href="glossary.htm#i432183"><span class="xrefglossterm">authenticate</span></a> them, and they can access Oracle Database without a password:</p>
+<ul>
+<li>
+<p>Regular Windows domain users and <a href="glossary.htm#i433130"><span class="xrefglossterm">global groups</span></a> as external users</p>
+</li>
+<li>
+<p>Windows database administrators (with the <a href="glossary.htm#i432528"><span class="xrefglossterm">SYSDBA</span></a> <a href="glossary.htm#i432451"><span class="xrefglossterm">privilege</span></a>)</p>
+</li>
+<li>
+<p>Windows database operators (with the <a href="glossary.htm#i432534"><span class="xrefglossterm">SYSOPER</span></a> privilege)</p>
+</li>
+</ul>
+<p>In addition, Oracle Administration Assistant for Windows can create and grant local and external database roles to Windows domain users and global groups.</p>
+<p>With Oracle Administration Assistant for Windows, none of the following need be done manually:</p>
+<ul>
+<li>
+<p>Create <a href="glossary.htm#i433171"><span class="xrefglossterm">local groups</span></a> that match the database <a href="glossary.htm#i432543"><span class="xrefglossterm">system identifier</span></a> and <a href="glossary.htm#i432481"><span class="xrefglossterm">role</span></a></p>
+</li>
+<li>
+<p>Assign domain users to these local groups</p>
+</li>
+<li>
+<p>Authenticate users in SQL*Plus with</p>
+<pre xml:space="preserve" class="oac_no_warn">SQL&gt; CREATE USER <span class="italic">username</span> IDENTIFIED EXTERNALLY
+</pre></li>
+</ul>
+<p>This section describes how to perform the following tasks with Oracle Administration Assistant for Windows:</p>
+<ul>
+<li>
+<p><a href="#CHDFGGJC">Managing a Remote Computer</a></p>
+</li>
+<li>
+<p><a href="#BJEFEJGH">Adding a Computer and Saving Your Configuration</a></p>
+</li>
+<li>
+<p><a href="#i1005787">Granting Administrator Privileges for All Databases on a Computer</a></p>
+</li>
+<li>
+<p><a href="#i1005810">Granting Operator Privileges for All Databases on a Computer</a></p>
+</li>
+<li>
+<p><a href="#i1005833">Connecting to a Database</a></p>
+</li>
+<li>
+<p><a href="#i1005979">Viewing Database Authentication Parameter Settings</a></p>
+</li>
+<li>
+<p><a href="#i1006016">Creating an External Operating System User</a></p>
+</li>
+<li>
+<p><a href="#i1006072">Creating a Local Database Role</a></p>
+</li>
+<li>
+<p><a href="#i1006123">Creating an External Operating System Role</a></p>
+</li>
+<li>
+<p><a href="#i1006206">Granting Administrator Privileges for a Single Database</a></p>
+</li>
+<li>
+<p><a href="#i1006220">Granting Operator Privileges for a Single Database</a></p>
+</li>
+</ul>
+<a id="CHDFGGJC" name="CHDFGGJC"></a><a id="NTQRF329" name="NTQRF329"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><a id="sthref395" name="sthref395"></a><a id="sthref396" name="sthref396"></a><a id="sthref397" name="sthref397"></a><a id="sthref398" name="sthref398"></a>Managing a Remote Computer</h3>
+<p>If you want to use Oracle Administration Assistant for Windows to manage a <a href="glossary.htm#i432934"><span class="xrefglossterm">remote computer</span></a>, you must have administrator privileges for the remote computer. Oracle Administration Assistant for Windows always creates users in Oracle Database with the domain name as the prefix. If you are managing Oracle7 release 7.<span class="italic">x</span> or later databases remotely, you must set registry parameter <code>OSAUTH_PREFIX_DOMAIN</code> to <code>true</code> on the remote computer. This parameter is located in</p>
+<pre xml:space="preserve" class="oac_no_warn">HKEY_LOCAL_MACHINE\SOFTWARE\ORACLE\KEY_<span class="italic">HOME_NAME</span>  
+</pre>
+<p>If a computer is not identified with a Domain Name System (DNS) domain name, you will receive the following error message:</p>
+<pre xml:space="preserve" class="oac_no_warn">Calling query w32RegQueries1.7.0.17.0  RegGetValue
+Key = HKEY_LOCAL_MACHINE
+SubKey = SYSTEM\CurrentControlSet\Services\Tcpip\Parameters
+Value = Domain
+Query Exception: GetValueKeyNotFoundException
+Query Exception Class: class oracle.sysman.oii.oiil.OiilQueryException
+...
+</pre>
+<p>To assign a DNS name:</p>
+<ol>
+<li>
+<p>From the <span class="bold">Start</span> menu, select <span class="bold">Settings</span>, then select <span class="bold">Control Panel</span>, then select <span class="bold">System</span>, then <span class="bold">Computer Name</span>, and then click then <span class="bold">Change.</span></p>
+</li>
+<li>
+<p>Enter the new computer name and a domain name, such as, <code>US.ORACLE.COM</code>.</p>
+</li>
+<li>
+<p>Click <span class="bold">More</span> if you want to change the primary DNS suffix.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<a id="BJEFEJGH" name="BJEFEJGH"></a><a id="NTQRF330" name="NTQRF330"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><a id="sthref399" name="sthref399"></a><a id="sthref400" name="sthref400"></a>Adding a Computer and Saving Your Configuration</h3>
+<p>When you use Oracle Administration Assistant for Windows for the first time, it adds the local computer to its navigation tree. You can then add other computers.</p>
+<p>To add a computer to the Microsoft Management Console tree:</p>
+<ol>
+<li>
+<p>From the <span class="bold">Start</span>, select <span class="bold">Programs</span>, then select <span class="bold">Oracle -</span> <span class="bolditalic">HOME_NAME</span>, then select <span class="bold">Configuration and Migration Tools</span> and then select <span class="bold">Administration Assistant for Windows</span>.</p>
+<p>Microsoft Management Console starts.</p>
+</li>
+<li>
+<p>Double-click <span class="bold">Oracle Managed Objects</span>.</p>
+<p>The Computer icon appears.</p>
+</li>
+<li>
+<p>Right-click <span class="bold">Computers</span>.</p>
+</li>
+<li>
+<p>Select <span class="bold">New</span> and then select <span class="bold">Computer</span>.</p>
+<p>The Add Computer dialog appears.</p>
+<img width="294" height="204" src="img/addcomp.gif" alt="Description of addcomp.gif follows" title="Description of addcomp.gif follows" longdesc="img_text/addcomp.htm" /><br />
+<a id="sthref401" name="sthref401" href="img_text/addcomp.htm">Description of the illustration addcomp.gif</a><br />
+<br /></li>
+<li>
+<p>Specify the domain and computer name for the computer on which Oracle Database is installed.</p>
+</li>
+<li>
+<p>Click <span class="bold">OK</span>.</p>
+</li>
+<li>
+<p>Double-click <span class="bold">Computers</span> to display the computer you added.</p>
+</li>
+<li>
+<p>Double-click the computer you added. Several nodes for authenticating database administrators and operators appear.</p>
+<p>The <span class="bold">OS Database Administrators - Computer</span> node creates an operating system-authenticated database administrator with <code>SYSDBA</code> privileges for every database <a href="glossary.htm#CHDFBCHH"><span class="xrefglossterm">instance</span></a> on the computer. The <span class="bold">OS Database Operators - Computer</span> node creates an operating system-authenticated database operator with <code>SYSOPER</code> privileges for every database instance on the computer.</p>
+</li>
+<li>
+<p>Save your configuration in a console file by choosing <span class="bold">Save</span> in the Console main menu. You can now authenticate database administrators and operators for all instances on the computer.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<a id="i1005787" name="i1005787"></a><a id="NTQRF331" name="NTQRF331"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><a id="sthref402" name="sthref402"></a><a id="sthref403" name="sthref403"></a>Granting Administrator Privileges for All Databases on a Computer</h3>
+<p>To grant database administrator (<code>SYSDBA</code>) privileges to database administrators (DBAs) for <span class="italic">all</span> databases on a computer:</p>
+<div class="infoboxnote">
+<p class="notep1">Note:</p>
+If you use a domain account for database installation, then the domain user must be granted local administrative privileges. It is not sufficient if the domain user has inherited membership privileges from another group. You must ensure that, the user performing the installation must be in the same domain, if not it results in an NTS authentication failure.</div>
+<ol>
+<li>
+<p>From the <span class="bold">Start</span>, select <span class="bold">Programs</span>, then select <span class="bold">Oracle -</span> <span class="bolditalic">HOME_NAME</span>, then select <span class="bold">Configuration and Migration Tools</span> and then select <span class="bold">Administration Assistant for Windows</span>.</p>
+<p>Oracle Administration Assistant for Windows starts.</p>
+</li>
+<li>
+<p>Right-click <span class="bold">OS Database Administrators - Computer</span>.</p>
+</li>
+<li>
+<p>Click <span class="bold">Add/Remove</span>.</p>
+<p>The OS Database Administrators - Computer for <code><span class="codeinlineitalic">hostname</span></code> dialog appears.</p>
+<img width="351" height="480" src="img/ntdba.gif" alt="Description of ntdba.gif follows" title="Description of ntdba.gif follows" longdesc="img_text/ntdba.htm" /><br />
+<a id="sthref404" name="sthref404" href="img_text/ntdba.htm">Description of the illustration ntdba.gif</a><br />
+<br /></li>
+<li>
+<p>Select the domain of the user to which to grant <code>SYSDBA</code> privileges from the <span class="bold">Domain</span> list.</p>
+</li>
+<li>
+<p>Select the user.</p>
+</li>
+<li>
+<p>Click <span class="bold">Add</span>.</p>
+<p>The user now appears in the OS Database Administrators - Computer window.</p>
+</li>
+<li>
+<p>Click <span class="bold">OK</span>.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<a id="i1005810" name="i1005810"></a><a id="NTQRF332" name="NTQRF332"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><a id="sthref405" name="sthref405"></a><a id="sthref406" name="sthref406"></a>Granting Operator Privileges for All Databases on a Computer</h3>
+<p>To grant database operator (<code>SYSOPER</code>) privileges to DBAs for <span class="italic">all</span> databases on a computer:</p>
+<ol>
+<li>
+<p>From the <span class="bold">Start</span>, select <span class="bold">Programs</span>, then select <span class="bold">Oracle -</span> <span class="bolditalic">HOME_NAME</span>, then select <span class="bold">Configuration and Migration Tools</span> and then select <span class="bold">Administration Assistant for Windows</span>.</p>
+<p>Oracle Administration Assistant for Windows starts.</p>
+</li>
+<li>
+<p>Right-click <span class="bold">OS Database Operators - Computer</span>.</p>
+</li>
+<li>
+<p>Click <span class="bold">Add/Remove</span>.</p>
+<p>The OS Database Operators - Computer for <code><span class="codeinlineitalic">hostname</span></code> dialog appears.</p>
+<img width="351" height="414" src="img/osdboper.gif" alt="Description of osdboper.gif follows" title="Description of osdboper.gif follows" longdesc="img_text/osdboper.htm" /><br />
+<a id="sthref407" name="sthref407" href="img_text/osdboper.htm">Description of the illustration osdboper.gif</a><br />
+<br /></li>
+<li>
+<p>Select the domain of the user to which to grant <code>SYSOPER</code> privileges from the Domain list.</p>
+</li>
+<li>
+<p>Select the user.</p>
+</li>
+<li>
+<p>Click <span class="bold">Add</span>.</p>
+<p>The user now appears in the OS Database Operators - Computer window.</p>
+</li>
+<li>
+<p>Click <span class="bold">OK</span>.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<a id="i1005833" name="i1005833"></a><a id="NTQRF333" name="NTQRF333"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><a id="sthref408" name="sthref408"></a>Connecting to a Database</h3>
+<p>To enable Secure Sockets Layer (SSL) when connecting to Oracle Database, start the Oracle Database service and the <a href="glossary.htm#i432300"><span class="xrefglossterm">listener</span></a> service in the same user account as the wallet created in Oracle Wallet Manager. Do not use the default user account in the Windows Services dialog. If the Oracle Database service and the listener service are started in the default user accounts, then SSL does not work, and the listener does not start. Support for SSL is an Oracle Advanced Security feature. Oracle Wallet Manager is also an Oracle Advanced Security feature.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<a class="olink ASOAG070" href="http://www.oracle.com/pls/db112/lookup?id=ASOAG070"><span class="italic">Oracle Database Advanced Security Administrator's Guide</span></a> for more information on SSL support</div>
+<p>To connect to a database:</p>
+<ol>
+<li>
+<p>Right-click the database instance you want to access in the Microsoft Management Console scope pane. In the example here, a connection is to be made to <code>ORCL</code>:</p>
+<img width="575" height="494" src="img/cntdb.gif" alt="Description of cntdb.gif follows" title="Description of cntdb.gif follows" longdesc="img_text/cntdb.htm" /><br />
+<a id="sthref409" name="sthref409" href="img_text/cntdb.htm">Description of the illustration cntdb.gif</a><br />
+<br /></li>
+<li>
+<p>Choose <span class="bold">Connect Database</span>.</p>
+<p>If you connect to Oracle Database, the following Windows nodes appear beneath the instance. If these nodes do not appear, double-click the instance.</p>
+<ul>
+<li>
+<p>External OS Users</p>
+</li>
+<li>
+<p>Local Roles</p>
+</li>
+<li>
+<p>External OS Roles</p>
+</li>
+<li>
+<p>OS Database Administrators</p>
+</li>
+<li>
+<p>OS Database Operators</p>
+</li>
+</ul>
+</li>
+</ol>
+<a id="NTQRF334" name="NTQRF334"></a>
+<div class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref410" name="sthref410"></a>
+<h4 class="sect3"><a id="sthref411" name="sthref411"></a>Troubleshooting Connection Problems</h4>
+<p>When connecting to a local computer, Oracle Administration Assistant for Windows first tries to connect to the database as a <code>SYSDBA</code>, using the Bequeath networking protocol. When connecting to a remote computer, Oracle Administration Assistant for Windows first tries to connect to the database using Windows native authentication as a <code>SYSDBA,</code> using the TCP/IP networking protocol (port 1521 or the deprecated 1526). If it is unsuccessful, one or more dialogs appear and prompt you to enter information to connect to the database.</p>
+<p>The dialog shown here appears because the Windows domain user with which you are attempting to connect to Oracle Database is not recognized as an authenticated user with <code>SYSDBA</code> privileges. Enter an Oracle Database <a href="glossary.htm#i432581"><span class="xrefglossterm">username</span></a> and password to access the database. To avoid being prompted with this dialog again, configure your domain user to be a database administrator authenticated by the Windows operating system.</p>
+<img width="297" height="251" src="img/cntdb4.gif" alt="Description of cntdb4.gif follows" title="Description of cntdb4.gif follows" longdesc="img_text/cntdb4.htm" /><br />
+<a id="sthref412" name="sthref412" href="img_text/cntdb4.htm">Description of the illustration cntdb4.gif</a><br />
+<br />
+<p>The next dialog appears either because you are not using the TCP/IP networking protocol to connect to a remote installation of Oracle Database or because Oracle Database is not running. Using a protocol other than TCP/IP (Named Pipes for example) causes this dialog to appear each time you attempt a remote connection.</p>
+<img width="311" height="292" src="img/cntdb2.gif" alt="Description of cntdb2.gif follows" title="Description of cntdb2.gif follows" longdesc="img_text/cntdb2.htm" /><br />
+<a id="sthref413" name="sthref413" href="img_text/cntdb2.htm">Description of the illustration cntdb2.gif</a><br />
+<br />
+<p>If you do not want this dialog to appear each time, then change to the TCP/IP protocol and make sure the <a href="glossary.htm#i433200"><span class="xrefglossterm">Oracle Net Services</span></a> listener for the database is listening on the default port 1521 (or the deprecated default port 1526). Otherwise, this dialog appears every time. Ensure also that Oracle Database is started.</p>
+<ol>
+<li>
+<p>Enter the <a href="glossary.htm#i432344"><span class="xrefglossterm">net service name</span></a> with which to connect to Oracle Database. You must enter a net service name regardless of the authentication method you select.</p>
+</li>
+<li>
+<p>If you want to access the database with an Oracle Database username and password, select the Database Authenticated option. This username and password must exist in Oracle Database and have the <code>SYSDBA</code> privilege.</p>
+</li>
+<li>
+<p>If you want to access the database with the Windows domain user with which you are currently logged in, select the OS Authenticated Connection as SYSDBA option. This domain user must already be recognized by Windows as an authenticated user with <code>SYSDBA</code> privileges. Otherwise, your logon fails.</p>
+<div class="infoboxnote">
+<p class="notep1">Note:</p>
+Oracle Net Services provides a Trace Assistant tool that helps diagnose connection problems by converting existing trace file text into a more readable format. See "Using the Trace Assistant to Examine Trace Files" in <a class="olink NETAG016" href="http://www.oracle.com/pls/db112/lookup?id=NETAG016"><span class="italic">Oracle Database Net Services Administrator's Guide</span></a>.</div>
+</li>
+</ol>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<a id="i1005979" name="i1005979"></a><a id="NTQRF335" name="NTQRF335"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><a id="sthref414" name="sthref414"></a><a id="sthref415" name="sthref415"></a><a id="sthref416" name="sthref416"></a><a id="sthref417" name="sthref417"></a><a id="sthref418" name="sthref418"></a>Viewing <a id="sthref419" name="sthref419"></a><a id="sthref420" name="sthref420"></a>Database Authentication Parameter Settings</h3>
+<p>To view database authentication parameter settings:</p>
+<ol>
+<li>
+<p>Right-click the database.</p>
+</li>
+<li>
+<p>Choose <span class="bold">Properties</span>.</p>
+</li>
+<li>
+<p>The Properties dialog appears displaying the following parameter values:</p>
+<ul>
+<li>
+<p><code>O</code><code>S_AUTHENT_PREFIX</code></p>
+</li>
+<li>
+<p><code>OS_ROLES</code></p>
+</li>
+</ul>
+</li>
+</ol>
+<p><code>OS_AUTHENT_PREFIX</code> is an <code>init.ora</code> file parameter that authenticates external users attempting to connect to Oracle Database with the user's Windows username and password. The value of this parameter is attached to the beginning of every user's Windows username.</p>
+<p>By default, the parameter is set to none ("") during Oracle Database creation. Therefore, a Windows domain username of <code>frank</code> is authenticated as username <code>frank</code>. If you set this parameter to <code>xyz</code>, then Windows domain user <code>frank</code> is authenticated as user <code>xyzfrank</code>.</p>
+<p><code>OS_ROLES</code> is an <code>init.ora</code> file parameter that, if set to <code>true</code>, enables the Windows operating system to manage <a href="glossary.htm#i432948"><span class="xrefglossterm">authorization</span></a> of an <a href="glossary.htm#i433097"><span class="xrefglossterm">external role</span></a> for a database user. By default, <code>OS_ROLES</code> is set to <code>false</code>. You must set <code>OS_ROLES</code> to <code>true</code> and restart Oracle Database before you can create external roles. If <code>OS_ROLES</code> is set to <code>false</code>, Oracle Database manages granting and revoking of roles for database users.</p>
+<p>If <code>OS_ROLES</code> is set to <code>true</code>, and you assign an external role to a Windows global group, then it is granted only at the Windows global group level, and not at the level of the individual user in this global group. This means that you cannot revoke or edit the external role assigned to an individual user in this global group through the Roles tab of the User Name Properties dialog at a later time. Instead, you must use the field in the Assign External OS Roles to a Global Group dialog to revoke the external role from this global group (and therefore all its individual users).</p>
+<p>External roles assigned to an individual domain user or <a href="glossary.htm#i433177"><span class="xrefglossterm">local roles</span></a> (with <code>OS_ROLES</code> set to <code>false</code>) assigned to an individual domain user or Windows global group are not affected by this issue. They can be edited or revoked.</p>
+<p>If <code>OS_ROLES</code> is set to <code>true</code>, you cannot grant local roles in the database to any database user. You must grant roles through Windows. See <a href="#i1006072">"Creating a Local Database Role"</a> and <a href="#i1006123">"Creating an External Operating System Role"</a> for more information.</p>
+</div>
+<!-- class="sect2" -->
+<a id="i1006016" name="i1006016"></a><a id="NTQRF336" name="NTQRF336"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><a id="sthref421" name="sthref421"></a><a id="sthref422" name="sthref422"></a><a id="sthref423" name="sthref423"></a>Creating an External Operating System User</h3>
+<p>The External OS Users node of Oracle Administration Assistant for Windows enables you to authenticate a Windows user to access Oracle Database as an external user without being prompted for a password. External users are typically regular database users (not database administrators) to which you assign standard database roles (such as <code>DBA</code>), but do not want to assign <code>SYSDBA</code> (database administrator) or <code>SYSOPER</code> (database operator) privileges.</p>
+<p>To create an external operating system user:</p>
+<ol>
+<li>
+<p>Follow the steps in <a href="#i1005833">"Connecting to a Database"</a> to connect to a database.</p>
+</li>
+<li>
+<p>Right-click <span class="bold">External OS Users</span>. A contextual menu appears.</p>
+<img width="571" height="396" src="img/mmc4.gif" alt="Description of mmc4.gif follows" title="Description of mmc4.gif follows" longdesc="img_text/mmc4.htm" /><br />
+<a id="sthref424" name="sthref424" href="img_text/mmc4.htm">Description of the illustration mmc4.gif</a><br />
+<br /></li>
+<li>
+<p>Choose <span class="bold">Create</span>.</p>
+<p>Create External OS User Wizard starts, and the first of three wizard dialogs appears. The first dialog is for Windows Users and Groups.</p>
+<img width="522" height="503" src="img/mmc5.gif" alt="Description of mmc5.gif follows" title="Description of mmc5.gif follows" longdesc="img_text/mmc5.htm" /><br />
+<a id="sthref425" name="sthref425" href="img_text/mmc5.htm">Description of the illustration mmc5.gif</a><br />
+<br /></li>
+<li>
+<p>In <span class="bold">Domain Users and Groups</span> select the domain in which your Windows domain users and global groups are located.</p>
+</li>
+<li>
+<p>Select the Windows domain users and global groups to which to grant access to the database.</p>
+</li>
+<li>
+<p>Click <span class="bold">Add</span>. The selected users and groups now appear in the New External OS Users list.</p>
+</li>
+<li>
+<p>Click <span class="bold">Next</span>. The Profile and Tablespace dialog appears.</p>
+<img width="522" height="503" src="img/mmc6stp2.gif" alt="Description of mmc6stp2.gif follows" title="Description of mmc6stp2.gif follows" longdesc="img_text/mmc6stp2.htm" /><br />
+<a id="sthref426" name="sthref426" href="img_text/mmc6stp2.htm">Description of the illustration mmc6stp2.gif</a><br />
+<br /></li>
+<li>
+<p>In the <span class="bold">Assigned Profile</span> list, select a profile for the new external users. A profile is a named set of resource limits. If resource limits are enabled, Oracle Database limits database usage and instance resources to whatever is defined in the user's profile. You can assign a profile to each user and a default profile to all users who do not have specific profiles.</p>
+</li>
+<li>
+<p>In <span class="bold">Tablespace Quota</span> double-click the <a href="glossary.htm#i432555"><span class="xrefglossterm">tablespace</span></a> to assign a tablespace <a href="glossary.htm#i433264"><span class="xrefglossterm">quota</span></a>.</p>
+</li>
+<li>
+<p>Click <span class="bold">Next</span>. The Roles dialog appears.</p>
+<img width="522" height="503" src="img/step3.gif" alt="Description of step3.gif follows" title="Description of step3.gif follows" longdesc="img_text/step3.htm" /><br />
+<a id="sthref427" name="sthref427" href="img_text/step3.htm">Description of the illustration step3.gif</a><br />
+<br /></li>
+<li>
+<p>In <span class="bold">Available Roles</span> select the database roles to grant to the new external users.</p>
+</li>
+<li>
+<p>Click <span class="bold">Grant</span>.</p>
+</li>
+<li>
+<p>Click <span class="bold">Finish</span>.</p>
+</li>
+<li>
+<p>Right-click the external user for which you want to view information and select <span class="bold">Properties</span>.</p>
+<p>The assigned properties appear.</p>
+<div class="infoboxnote">
+<p class="notep1">Note:</p>
+If you select a Windows global group for authentication when using Oracle Administration Assistant for Windows, all users currently in the group are added to Oracle Database. If at a later time, you use a Windows tool to add or remove users in this Windows global group, these updates are not reflected in Oracle Database. The newly added or removed users must be explicitly added or removed in Oracle Database with Oracle Administration Assistant for Windows.</div>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<a id="i1006072" name="i1006072"></a><a id="NTQRF337" name="NTQRF337"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><a id="sthref428" name="sthref428"></a><a id="sthref429" name="sthref429"></a><a id="sthref430" name="sthref430"></a>Creating a Local Database Role</h3>
+<p>The Local Roles node of Oracle Administration Assistant for Windows enables you to create a role and have it managed by the database. Once a local role is created, you can grant or revoke that role to a database user. To create a local database role:</p>
+<ol>
+<li>
+<p>Follow the steps in <a href="#i1005833">"Connecting to a Database"</a> to connect to a database.</p>
+</li>
+<li>
+<p>Right-click <span class="bold">Local Roles</span> for the database for which you want to create a local role.</p>
+</li>
+<li>
+<p>Choose <span class="bold">Create</span>.</p>
+<p>Create Local Role Wizard starts, and the first of three wizard dialogs appears. The first dialog is for Name and Authentication.</p>
+<img width="552" height="501" src="img/locrol1.gif" alt="Description of locrol1.gif follows" title="Description of locrol1.gif follows" longdesc="img_text/locrol1.htm" /><br />
+<a id="sthref431" name="sthref431" href="img_text/locrol1.htm">Description of the illustration locrol1.gif</a><br />
+<br /></li>
+<li>
+<p>Enter a local role name to use.</p>
+</li>
+<li>
+<p>In <span class="bold">Authentication</span> select <span class="bold">None</span> if you want a user to use this local role without being required to enter a password.</p>
+<p>Select <span class="bold">Password</span> if you want use of this role to be protected by a password. These roles can only be used by supplying an associated password with the <code>SET ROLE</code> command. See <a class="olink ADMQS007" href="../../server.112/e10897/users_secure.htm#ADMQS007"><span class="italic">Oracle Database 2 Day DBA</span></a> for additional information.</p>
+<p>Enter the password to use with this role.</p>
+<p>Confirm the password by entering it a second time.</p>
+</li>
+<li>
+<p>Click <span class="bold">Next</span>. The System Privileges dialog appears.</p>
+<img width="552" height="501" src="img/locrol2.gif" alt="Description of locrol2.gif follows" title="Description of locrol2.gif follows" longdesc="img_text/locrol2.htm" /><br />
+<a id="sthref432" name="sthref432" href="img_text/locrol2.htm">Description of the illustration locrol2.gif</a><br />
+<br /></li>
+<li>
+<p>In <span class="bold">Available System Privileges</span> select the system privileges you want to assign to the local role.</p>
+</li>
+<li>
+<p>Click <span class="bold">Grant</span> to grant the selected system privileges to the local role.</p>
+<p>The Granted System Privileges field displays the list of system privileges granted to the local role. To revoke a system privilege, make an appropriate selection, then choose <span class="bold">Revoke</span>.</p>
+</li>
+<li>
+<p>If you want to grant Admin Option to this role, click the value in the <span class="bold">Admin Option</span> column to display a list. This enables you to select Yes.</p>
+</li>
+<li>
+<p>Click <span class="bold">Next</span>. The Roles dialog appears.</p>
+<img width="552" height="501" src="img/locrol3.gif" alt="Description of locrol3.gif follows" title="Description of locrol3.gif follows" longdesc="img_text/locrol3.htm" /><br />
+<a id="sthref433" name="sthref433" href="img_text/locrol3.htm">Description of the illustration locrol3.gif</a><br />
+<br /></li>
+<li>
+<p>In <span class="bold">Available Roles</span> select the roles you want to assign to the local role. Both local roles and external roles appear in this list.</p>
+</li>
+<li>
+<p>Click <span class="bold">Grant</span> to grant the selected roles to the role.</p>
+<p>The Granted Roles field displays the list of roles granted to the role. Both local roles and external roles can appear in this list. To revoke roles, make appropriate selections, then choose <span class="bold">Revoke</span>.</p>
+</li>
+<li>
+<p>Click <span class="bold">Finish</span>.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<a id="i1006123" name="i1006123"></a><a id="NTQRF338" name="NTQRF338"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><a id="sthref434" name="sthref434"></a><a id="sthref435" name="sthref435"></a><a id="sthref436" name="sthref436"></a>Creating an External Operating System Role</h3>
+<p>The External OS Roles node of Oracle Administration Assistant for Windows enables you to create an external role and have it managed by the Windows operating system. Once an external role is created, you can grant or revoke that role to a database user. To create an external role:</p>
+<ol>
+<li>
+<p>Follow the steps in <a href="#i1005833">"Connecting to a Database"</a> to connect to a database.</p>
+</li>
+<li>
+<p>Right-click <span class="bold">External OS Roles</span> for the database for which to create an external role.</p>
+</li>
+<li>
+<p>Choose <span class="bold">Create</span>.</p>
+<p>Create External OS Role Wizard starts, and the first of three wizard dialogs appears. The first dialog is for Name. Authentication: External appears in this dialog to indicate that only external roles can be created.</p>
+<div class="infoboxnote">
+<p class="notep1">Note:</p>
+Create External OS Role Wizard is available only if <code>init.ora</code> parameter <code>OS_ROLES</code> is set to <code>true</code>. If it is set to <code>false</code>, then you must first change it to <code>true</code> and then restart Oracle Database.</div>
+<img width="552" height="501" src="img/exrol1.gif" alt="Description of exrol1.gif follows" title="Description of exrol1.gif follows" longdesc="img_text/exrol1.htm" /><br />
+<a id="sthref437" name="sthref437" href="img_text/exrol1.htm">Description of the illustration exrol1.gif</a><br />
+<br /></li>
+<li>
+<p>Enter an external role name to use. An external role is a role that is managed by the Windows operating system.</p>
+</li>
+<li>
+<p>Click <span class="bold">Next</span>.</p>
+<p>The System Privileges dialog appears.</p>
+<img width="552" height="501" src="img/exrol2.gif" alt="Description of exrol2.gif follows" title="Description of exrol2.gif follows" longdesc="img_text/exrol2.htm" /><br />
+<a id="sthref438" name="sthref438" href="img_text/exrol2.htm">Description of the illustration exrol2.gif</a><br />
+<br /></li>
+<li>
+<p>In <span class="bold">Available System Privileges</span> select the system privileges you want to assign to the external role.</p>
+</li>
+<li>
+<p>Choose <span class="bold">Grant</span> to grant the selected system privileges to the external role.</p>
+</li>
+<li>
+<p>The <span class="bold">Granted System Privileges</span> field displays the list of system privileges granted to the external role. To revoke a system privilege, make an appropriate selection, then click <span class="bold">Revoke</span>.</p>
+</li>
+<li>
+<p>If you want to grant Admin Option to this role, choose the value in the <span class="bold">Admin Option</span> column to display a list. This enables you to select Yes.</p>
+</li>
+<li>
+<p>Click <span class="bold">Next</span>.</p>
+<p>The Roles dialog appears.</p>
+<img width="552" height="501" src="img/exrol3.gif" alt="Description of exrol3.gif follows" title="Description of exrol3.gif follows" longdesc="img_text/exrol3.htm" /><br />
+<a id="sthref439" name="sthref439" href="img_text/exrol3.htm">Description of the illustration exrol3.gif</a><br />
+<br /></li>
+<li>
+<p>In <span class="bold">Available Roles</span> select the roles you want to assign to the external role. Both local roles and external roles appear in this list.</p>
+</li>
+<li>
+<p>Click <span class="bold">Grant</span> to grant the selected roles to the external role.</p>
+<p>The Granted Roles field displays the list of roles granted to the external role.</p>
+</li>
+<li>
+<p>Click <span class="bold">Finish</span>.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<a id="i1006206" name="i1006206"></a><a id="NTQRF339" name="NTQRF339"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><a id="sthref440" name="sthref440"></a><a id="sthref441" name="sthref441"></a><a id="sthref442" name="sthref442"></a>Granting Administrator Privileges for a Single Database</h3>
+<p>The OS Database Administrators node of Oracle Administration Assistant for Windows enables you to authorize a Windows user with <code>SYSDBA</code> privileges for a specific instance on a computer. To grant administrator <code>(SYSDBA)</code> privileges for a single database:</p>
+<ol>
+<li>
+<p>Follow the steps in <a href="#i1005833">"Connecting to a Database"</a> to connect to a database.</p>
+</li>
+<li>
+<p>Right-click <span class="bold">OS Database Administrators</span>.</p>
+</li>
+<li>
+<p>Choose <span class="bold">Add/Remove</span>.</p>
+<p>The OS Database Administrators for <code><span class="codeinlineitalic">instance</span></code> dialog appears. In the example shown here, the instance is <code>MARK</code>:</p>
+<img width="350" height="426" src="img/dba_one.gif" alt="Description of dba_one.gif follows" title="Description of dba_one.gif follows" longdesc="img_text/dba_one.htm" /><br />
+<a id="sthref443" name="sthref443" href="img_text/dba_one.htm">Description of the illustration dba_one.gif</a><br />
+<br /></li>
+<li>
+<p>In <span class="bold">Domain Users and Groups</span> select the domain of the user to which to grant <code>SYSDBA</code> privileges from the <span class="bold">Domain</span> list.</p>
+</li>
+<li>
+<p>Select the user.</p>
+<p>The user now appears in OS Database Administrators.</p>
+</li>
+<li>
+<p>Click <span class="bold">OK</span>.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<a id="i1006220" name="i1006220"></a><a id="NTQRF340" name="NTQRF340"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><a id="sthref444" name="sthref444"></a><a id="sthref445" name="sthref445"></a><a id="sthref446" name="sthref446"></a>Granting Operator Privileges for a Single Database</h3>
+<p>The OS Database Operators node of Oracle Administration Assistant for Windows enables you to authorize a Windows user with SYSOPER privileges for a specific instance on a computer. To grant operator (SYSOPER) privileges for a single database:</p>
+<ol>
+<li>
+<p>Follow the steps in <a href="#i1005833">"Connecting to a Database"</a> to connect to a database.</p>
+</li>
+<li>
+<p>Right-click <span class="bold">OS Database Operators</span>.</p>
+</li>
+<li>
+<p>Choose <span class="bold">Add/Remove</span>.</p>
+<p>The OS Database Operators for <code><span class="codeinlineitalic">instance</span></code> dialog appears. In the example shown here, the instance is <code>MARK</code>:</p>
+<img width="350" height="421" src="img/oper_one.gif" alt="Description of oper_one.gif follows" title="Description of oper_one.gif follows" longdesc="img_text/oper_one.htm" /><br />
+<a id="sthref447" name="sthref447" href="img_text/oper_one.htm">Description of the illustration oper_one.gif</a><br />
+<br /></li>
+<li>
+<p>In <span class="bold">Domain Users and Groups</span> select the domain of the user to which to grant <code>SYSOPER</code> privileges from the <span class="bold">Domain</span> list.</p>
+</li>
+<li>
+<p>Select the user.</p>
+</li>
+<li>
+<p>Click <span class="bold">Add</span>.</p>
+<p>The user now appears in OS Database Operators.</p>
+</li>
+<li>
+<p>Click <span class="bold">OK</span>.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="i1006236" name="i1006236"></a><a id="NTQRF341" name="NTQRF341"></a>
+<div class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1"><a id="sthref448" name="sthref448"></a><a id="sthref449" name="sthref449"></a><a id="sthref450" name="sthref450"></a><a id="sthref451" name="sthref451"></a>Manually Administering External Users and Roles</h2>
+<p>Instead of using Oracle Administration Assistant for Windows, you can manually configure administrators, operators, users, and roles to be authenticated by the operating system. Manual configuration involves using Oracle Database command line tools, editing the registry, and creating local groups in Active Directory Users and Computers.</p>
+<p>All of the following can be manually configured to access Oracle Database without a password:</p>
+<ul>
+<li>
+<p>External operating system users</p>
+</li>
+<li>
+<p>Windows database administrators (with <code>SYSDBA</code> privilege)</p>
+</li>
+<li>
+<p>Windows database operators (with <code>SYSOPER</code> privilege)</p>
+</li>
+</ul>
+<p>In addition, you can manually create and grant local and external database roles to Windows domain users and global groups.</p>
+<p>This section describes:</p>
+<ul>
+<li>
+<p><a href="#BJECGAHH">Manually Creating an External Operating System User</a></p>
+</li>
+<li>
+<p><a href="#i1013865">Manually Granting Administrator and Operator Privileges for Databases</a></p>
+</li>
+<li>
+<p><a href="#BJEECHJA">Manually Creating an External Role</a></p>
+</li>
+<li>
+<p><a href="#i1015696">Manually Migrating Users</a></p>
+<div class="infoboxnote">
+<p class="notep1">Note:</p>
+Use extreme care when manually configuring administrators, operators, users, and roles to be authenticated by the operating system. If possible, use Oracle Administration Assistant for Windows to perform configuration procedures.</div>
+</li>
+</ul>
+<a id="BJECGAHH" name="BJECGAHH"></a><a id="NTQRF342" name="NTQRF342"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><a id="sthref452" name="sthref452"></a><a id="sthref453" name="sthref453"></a>Manually Creating an External Operating System User</h3>
+<p>This section describes how to authenticate external operating system users (not database administrators) using Windows, so that a password is not required when accessing the database. When you use Windows to authenticate external operating system users, your database relies solely on the operating system to restrict access to database usernames.</p>
+<p>In the following procedure, two Windows usernames are authenticated:</p>
+<ul>
+<li>
+<p>Local user <code>frank</code></p>
+</li>
+<li>
+<p>Domain user <code>frank</code> on domain <code>sales</code></p>
+</li>
+</ul>
+<p>Local user <code>frank</code> logs into its local Windows client computer to access an Oracle Database server, which can be on a different computer. To access other databases and resources on other computers, the local user must provide a username and password each time.</p>
+<p>Domain user <code>frank</code> on domain <code>sales</code> logs into a <code>sales</code> domain that includes many other Windows computers and resources, one of which contains an Oracle Database server. The domain user can access all the resources the domain provides with a single username and password.</p>
+<p>The procedure is divided into two sets of tasks performed on different computers:</p>
+<ul>
+<li>
+<p><a href="#i1013563">External User Authentication Tasks on the Oracle Database Server</a></p>
+</li>
+<li>
+<p><a href="#i1013564">External User Authentication Tasks on the Client Computer</a></p>
+</li>
+</ul>
+<a id="i1013563" name="i1013563"></a><a id="NTQRF343" name="NTQRF343"></a>
+<div class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3"><a id="sthref454" name="sthref454"></a><a id="sthref455" name="sthref455"></a>External User Authentication Tasks on the Oracle Database Server</h4>
+<p>Perform the following external user authentication tasks on the Oracle Database server:</p>
+<ol>
+<li>
+<p>Add parameter <code>OS_AUTHENT_PREFIX</code> to your <code>init.ora</code> file.</p>
+<p>The <code>OS_AUTHENT_PREFIX</code> value is prefixed to local or domain usernames attempting to connect to the server with the user's operating system name and password. The prefixed username is compared with Oracle Database usernames in the database when a connection request is attempted. Using parameter <code>OS_AUTHENT_PREFIX</code> with Windows native authentication methods is the recommended method for performing secure, trusted client connections to your server.</p>
+</li>
+<li>
+<p><a id="sthref456" name="sthref456"></a><a id="sthref457" name="sthref457"></a><a id="sthref458" name="sthref458"></a><a id="sthref459" name="sthref459"></a><a id="sthref460" name="sthref460"></a><a id="sthref461" name="sthref461"></a>Set a value for <code>OS_AUTHENT_PREFIX</code>. Your choices are:</p>
+<ul>
+<li>
+<p>Any character string</p>
+<p>If you specify <code>xyz</code>, as in this procedure's example, then <code>xyz</code> is prefixed to the beginning of the Windows username (for example, <code>xyzfrank</code> for local user <code>frank</code> or <code>xyzsales\frank</code> for domain user <code>frank</code> on domain <code>sales</code>). String values are case insensitive.</p>
+</li>
+<li>
+<p><code>""</code> (two double quotes with no space between)</p>
+<p>This option is recommended, because it eliminates the need for any prefix to Windows usernames (for example, <code>frank</code> for local user <code>frank</code> or <code>sales\frank</code> for domain user <code>frank</code> on domain <code>sales</code>).</p>
+</li>
+<li>
+<p>No value specified</p>
+<p>If you do not specify a value for <code>OS_AUTHENT_PREFIX</code>, it defaults to <code>OPS$</code> (for example, <code>OPS$frank</code> for local user <code>frank</code> or <code>OPS$sales\frank</code> for domain user <code>frank</code> on domain <code>sales</code>).</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Create a Windows local username for <code>frank</code> with the Computer Management tool, or create a domain username for <code>frank</code> with Active Directory Users and Computers (if the appropriate name does not currently exist). See your operating system documentation for detailed instructions.</p>
+</li>
+<li>
+<p>Do this step <span class="italic">only</span> if you are <span class="italic">not</span> authenticating a domain name with a user (for example, just <code>frank</code> instead of <code>frank</code> on domain <code>sales</code>). Otherwise, go to step 8.</p>
+<ol>
+<li>
+<p>Start Registry Editor from the command prompt:</p>
+<pre xml:space="preserve" class="oac_no_warn">C:\&gt; regedit
+</pre></li>
+<li>
+<p>Go to <code>HKEY_LOCAL_MACHINE\SOFTWARE\ORACLE\HOME</code><code><span class="codeinlineitalic">ID</span></code>, where <code><span class="codeinlineitalic">ID</span></code> is the Oracle home directory you want to edit.</p>
+</li>
+<li>
+<p>Select <span class="bold">Edit</span> and then select <span class="bold">Add Value</span>.</p>
+<p>The Add Value dialog appears:</p>
+<img width="353" height="160" src="img/addval.gif" alt="Description of addval.gif follows" title="Description of addval.gif follows" longdesc="img_text/addval.htm" /><br />
+<a id="sthref462" name="sthref462" href="img_text/addval.htm">Description of the illustration addval.gif</a><br />
+<br /></li>
+<li>
+<p>Enter <code>OSAUTH_PREFIX_DOMAIN</code> in the <span class="bold">Value Name</span> field.</p>
+</li>
+<li>
+<p>Choose <code>REG_EXPAND_SZ</code> from the <span class="bold">Data Type</span> list.</p>
+</li>
+<li>
+<p>Click <span class="bold">OK</span>.</p>
+<p>The String Editor dialog appears:</p>
+<img width="378" height="116" src="img/addstr.gif" alt="Description of addstr.gif follows" title="Description of addstr.gif follows" longdesc="img_text/addstr.htm" /><br />
+<a id="sthref463" name="sthref463" href="img_text/addstr.htm">Description of the illustration addstr.gif</a><br />
+<br /></li>
+</ol>
+</li>
+<li>
+<p>Enter <code>true</code> in the <span class="bold">String</span> field to enable authentication at the domain level.</p>
+<p>There may be multiple <code>frank</code> usernames on your network, including local user <code>frank</code>, domain user <code>frank</code> on <code>sales</code>, and possibly several domain users <code>frank</code> on other domains. Entering <code>true</code> enables the server to differentiate among them. Entering <code>false</code> causes the domain to be ignored and local user <code>frank</code> to become the default value of the operating system user returned to the server.</p>
+</li>
+<li>
+<p>Click <span class="bold">OK</span>.</p>
+<p>Registry Editor adds the parameter.</p>
+</li>
+<li>
+<p>Choose <span class="bold">Exit</span> from the <span class="bold">Registry</span> menu.</p>
+<p>Registry Editor exits.</p>
+</li>
+<li>
+<p>Ensure that parameter <a id="i1014772" name="i1014772"></a><code>SQLNET.AUTHENTICATION_SERVICES</code> in file <code>sqlnet.ora</code> contains <code>nts</code>.</p>
+</li>
+<li>
+<p>Start SQL*Plus:</p>
+<pre xml:space="preserve" class="oac_no_warn">C:\&gt; sqlplus /NOLOG
+</pre></li>
+<li>
+<p>Connect to the database with the <a href="glossary.htm#i432552"><span class="xrefglossterm">SYSTEM</span></a> database administrator (DBA) name:</p>
+<pre xml:space="preserve" class="oac_no_warn">SQL&gt; CONNECT SYSTEM
+Enter password: <span class="italic">system_password</span>
+</pre>
+<p>Unless you have changed it, the <code>SYSTEM</code> password is <code>MANAGER</code> by default.</p>
+</li>
+<li>
+<p>Create a local external user by entering:</p>
+<pre xml:space="preserve" class="oac_no_warn">SQL&gt; CREATE USER xyzfrank IDENTIFIED EXTERNALLY;
+</pre>
+<p>where <code>xyz</code> is the value you chose for initialization parameter <code>OS_AUTHENT_PREFIX</code>, and <code>frank</code> is the Windows local username.</p>
+</li>
+<li>
+<p>Grant a local external user database roles by entering:</p>
+<pre xml:space="preserve" class="oac_no_warn">SQL&gt; GRANT DBA TO xyzfrank;
+</pre></li>
+<li>
+<p>Create a domain external user by entering:</p>
+<pre xml:space="preserve" class="oac_no_warn">SQL&gt; CREATE USER "XYZSALES\FRANK" IDENTIFIED EXTERNALLY;
+</pre>
+<p>where <code>XYZ</code> is the value you chose for initialization parameter <code>OS_AUTHENT_PREFIX</code>, and <code>SALES\FRANK</code> is the domain name and Windows domain username. Double quotes are required and the entire syntax must be in uppercase.</p>
+</li>
+<li>
+<p>Grant a domain external user database roles by entering:</p>
+<pre xml:space="preserve" class="oac_no_warn">SQL&gt; GRANT DBA TO "XYZSALES\FRANK";
+</pre>
+<p>Double quotes are required and the entire syntax must be in uppercase.</p>
+</li>
+<li>
+<p>Connect to the database with the <code>SYSDBA</code> name:</p>
+<pre xml:space="preserve" class="oac_no_warn">SQL&gt; CONNECT / AS SYSDBA
+</pre></li>
+<li>
+<p>Shut down the database:</p>
+<pre xml:space="preserve" class="oac_no_warn">SQL&gt; SHUTDOWN
+</pre></li>
+<li>
+<p>Restart the database:</p>
+<pre xml:space="preserve" class="oac_no_warn">SQL&gt; STARTUP
+</pre>
+<p>This causes the change to parameter <code>OS_AUTHENT_PREFIX</code> to take effect.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect3" -->
+<a id="i1013564" name="i1013564"></a><a id="NTQRF344" name="NTQRF344"></a>
+<div class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">External User Authentication Tasks on the Client Computer</h4>
+<p>Perform the following external user authentication tasks on the client computer:</p>
+<ol>
+<li>
+<p>Create Windows local or domain username <code>frank</code> with the same username and password that exist on the Windows server (if the appropriate name does not currently exist).</p>
+</li>
+<li>
+<p>Ensure that parameter <code>SQLNET.AUTHENTICATION_SERVICES</code> in file <code>sqlnet.ora</code> contains <code>nts</code>.</p>
+</li>
+<li>
+<p>Use Oracle Net Configuration Assistant to configure a network connection from your client computer to the Windows server on which Oracle Database is installed. See <a class="olink NETAG005" href="http://www.oracle.com/pls/db112/lookup?id=NETAG005"><span class="italic">Oracle Database Net Services Administrator's Guide</span></a> for instructions.</p>
+</li>
+<li>
+<p>Start SQL*Plus:</p>
+<pre xml:space="preserve" class="oac_no_warn">C:\&gt; sqlplus /NOLOG
+</pre></li>
+<li>
+<p>Connect to your Windows server:</p>
+<pre xml:space="preserve" class="oac_no_warn">SQL&gt; CONNECT /@<span class="italic">connect_identifier</span>
+</pre>
+<p>where <code><span class="codeinlineitalic">connect_identifier</span></code> is the net service name for Oracle Database.</p>
+<p>Oracle Database searches the <a href="glossary.htm#i432229"><span class="xrefglossterm">data dictionary</span></a> for an automatic login username corresponding to the Windows local or domain username, verifies it, and enables connection as <code>xyzfrank</code> or <code>xyzsales\frank</code>.</p>
+</li>
+<li>
+<p>Verify that you have connected to Oracle Database as local or domain user <code>frank</code> by viewing the roles assigned in steps 12 or 14 of <a href="#i1013563">"External User Authentication Tasks on the Oracle Database Server"</a>.</p>
+<pre xml:space="preserve" class="oac_no_warn">SQL&gt; SELECT * FROM USER_ROLE_PRIVS;
+</pre>
+<p>which outputs for local user <code>frank</code>:</p>
+<pre xml:space="preserve" class="oac_no_warn">USERNAME                       GRANTED_ROLE                   ADM DEF OS_
+------------------------------ ------------------------------ --- --- ---
+XYZFRANK                       DBA                            NO  YES NO 
+1 row selected.
+</pre>
+<p>or, for domain user <code>frank</code>:</p>
+<pre xml:space="preserve" class="oac_no_warn">USERNAME                       GRANTED_ROLE                   ADM DEF OS_
+------------------------------ ------------------------------ --- --- ---
+XYZSALES\FRANK                 DBA                            NO  YES NO 
+1 row selected.
+</pre>
+<p>Because the Oracle Database username is the whole name <code>xyzfrank</code> or <code>xyzsales\frank</code>, each object created by <code>xyzfrank</code> or <code>xyzsales\frank</code> (that is, table, <a href="glossary.htm#i432584"><span class="xrefglossterm">view</span></a>, index, and so on) is prefixed by this name. For another user to reference the table <code>shark</code> owned by <code>xyzfrank</code>, for example, the user must enter:</p>
+<pre xml:space="preserve" class="oac_no_warn">SQL&gt; SELECT * FROM xyzfrank.shark 
+</pre>
+<div class="infoboxnote">
+<p class="notep1">Note:</p>
+Automatic authorization is supported for all <a href="glossary.htm#i433191">Oracle Net</a> protocols.</div>
+</li>
+</ol>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<a id="i1013865" name="i1013865"></a><a id="NTQRF345" name="NTQRF345"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Manually Granting Administrator and Operator Privileges for Databases</h3>
+<p>This section describes how to enable Windows to grant the database administrator (<code>SYSDBA</code>), database operator (<code>SYSOPER</code>) and database administrator for ASM (<code>SYSASM</code>) privileges to database administrators. With this privilege, database administrators can issue the following commands from a client computer and connect to Oracle Database without entering a password:</p>
+<pre xml:space="preserve" class="oac_no_warn">SQL&gt; CONNECT / AS SYSOPER
+SQL&gt; CONNECT / AS SYSDBA
+SQL&gt; CONNECT / AS SYSASM
+</pre>
+<p>To enable this feature, the Windows local or domain username of the database administrator must belong to one of the Windows local groups listed in <a href="#g1018614">Table 10-1</a>.</p>
+<div class="tblhruleformal"><a id="NTQRF346" name="NTQRF346"></a><a id="sthref464" name="sthref464"></a><a id="g1018614" name="g1018614"></a>
+<p class="titleintable">Table 10-1 Windows Local Groups with SYSDBA, SYSOPER, and SYSASM Privileges</p>
+<table class="HRuleFormal" title="Windows Local Groups with SYSDBA, SYSOPER, and SYSASM Privileges" summary="Rows are local groups. For each group, the first column is its name, and the second column shows what privileges it has." dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
+<col width="31%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t10">Local Group</th>
+<th align="left" valign="bottom" id="r1c2-t10">Privileges</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t10" headers="r1c1-t10">
+<p><code>ORA_OPER</code></p>
+</td>
+<td align="left" headers="r2c1-t10 r1c2-t10">
+<p><code>SYSOPER</code> privileges for all databases on a computer</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t10" headers="r1c1-t10">
+<p><code>ORA_DBA</code><a href="#BJEJJBBF"><span class="xrefglossterm">Note</span></a></p>
+</td>
+<td align="left" headers="r3c1-t10 r1c2-t10">
+<p><code>SYSDBA</code> privileges for all databases on a computer</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t10" headers="r1c1-t10">
+<p><code>ORA_DBA</code></p>
+</td>
+<td align="left" headers="r4c1-t10 r1c2-t10">
+<p><code>SYSASM</code> privileges for all databases on a computer</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r5c1-t10" headers="r1c1-t10">
+<p><code>ORA_SID_OPER</code></p>
+</td>
+<td align="left" headers="r5c1-t10 r1c2-t10">
+<p><code>SYSOPER</code> privileges for a single database (identified by <code><span class="codeinlineitalic">SID</span></code>)</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r6c1-t10" headers="r1c1-t10">
+<p><code>ORA_SID_DBA</code></p>
+</td>
+<td align="left" headers="r6c1-t10 r1c2-t10">
+<p><code>SYSDBA</code> privileges for a single database (identified by <code><span class="codeinlineitalic">SID</span></code>)</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r7c1-t10" headers="r1c1-t10">
+<p><code>ORA_SID_DBA</code></p>
+</td>
+<td align="left" headers="r7c1-t10 r1c2-t10">
+<p><code>SYSASM</code> privileges for a single database (identified by <code><span class="codeinlineitalic">SID</span></code>)</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblhruleformal" -->
+<a id="BJEJJBBF" name="BJEJJBBF"></a><a id="NTQRF347" name="NTQRF347"></a>
+<p class="subhead2">Note</p>
+<p>ORA_DBA is automatically created during installation. See section "<a href="authen.htm#i1006045">Operating System Authentication Enabled at Installation</a>" on for information.</p>
+<p>The manual procedure for enabling database administrators to connect as <code>SYSOPER</code> or <code>SYSDBA</code> or <code>SYSASM</code> without a password is divided into two sets of tasks performed on different computers:</p>
+<ul>
+<li>
+<p><a href="#i1014020">SYSDBA/SYSOPER/SYSASM Authentication Tasks on the Oracle Database Server</a></p>
+</li>
+<li>
+<p><a href="#i1014021">SYSDBA/SYSOPER/SYSASM Authentication Tasks on the Client Computer</a></p>
+</li>
+</ul>
+<a id="i1014020" name="i1014020"></a><a id="NTQRF348" name="NTQRF348"></a>
+<div class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">SYSDBA/SYSOPER/SYSASM Authentication Tasks on the Oracle Database Server</h4>
+<ol>
+<li>
+<p>Create a Windows local group corresponding to the privileges you want Windows to grant (see <a href="#g1018614">Table 10-1</a>).</p>
+</li>
+<li>
+<p>Add your database administrator usernames to this group.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+Your operating system documentation for instructions on managing users and groups</div>
+</li>
+<li>
+<p>Ensure that parameter <code>SQLNET.AUTHENTICATION_SERVICES</code> in file <code>sqlnet.ora</code> contains <code>nts</code>.</p>
+</li>
+<li>
+<p>Start Registry Editor from the command prompt:</p>
+<pre xml:space="preserve" class="oac_no_warn">C:\&gt;regedit
+</pre></li>
+<li>
+<p>Go to <code>HKEY_LOCAL_MACHINE\SOFTWARE\ORACLE\HOME</code><code><span class="codeinlineitalic">ID</span></code></p>
+<p>where <code><span class="codeinlineitalic">ID</span></code> is the Oracle home that you want to edit.</p>
+</li>
+<li>
+<p>Set parameter <code>OSAUTH_PREFIX_DOMAIN</code> to <code>true</code>.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect3" -->
+<a id="i1014021" name="i1014021"></a><a id="NTQRF349" name="NTQRF349"></a>
+<div class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3"><a id="sthref465" name="sthref465"></a><a id="sthref466" name="sthref466"></a><a id="sthref467" name="sthref467"></a><a id="sthref468" name="sthref468"></a>SYSDBA/SYSOPER/SYSASM Authentication Tasks on the Client Computer</h4>
+<ol>
+<li>
+<p>Create a Windows local or domain username with the same username and password that exist on the Windows server (if the appropriate username does not currently exist).</p>
+</li>
+<li>
+<p>Ensure that parameter <code>SQLNET.AUTHENTICATION_SERVICES</code> in file <code>sqlnet.ora</code> contains <code>nts</code>.</p>
+</li>
+<li>
+<p>Use Oracle Net Configuration Assistant to configure a network connection from your client computer to the Windows server on which Oracle Database is installed. See <a class="olink NETAG005" href="http://www.oracle.com/pls/db112/lookup?id=NETAG005"><span class="italic">Oracle Database Net Services Administrator's Guide</span></a> for instructions.</p>
+</li>
+<li>
+<p>Start SQL*Plus:</p>
+<pre xml:space="preserve" class="oac_no_warn">C:\&gt; sqlplus /NOLOG
+</pre></li>
+<li>
+<p>Connect to Oracle Database:</p>
+<pre xml:space="preserve" class="oac_no_warn">SQL&gt; SET INSTANCE <span class="italic">net_service_name</span>
+</pre>
+<p>where <code><span class="codeinlineitalic">net_service_name</span></code> is the Oracle Net net service name for Oracle Database.</p>
+</li>
+<li>
+<p>If you specified <code>ORA_DBA</code> or <code>ORA_SID_DBA</code> in step 1 of <a href="#i1014020">"SYSDBA/SYSOPER/SYSASM Authentication Tasks on the Oracle Database Server"</a>, then enter either of the following:</p>
+<pre xml:space="preserve" class="oac_no_warn">SQL&gt; CONNECT / AS SYSOPER
+SQL&gt; CONNECT / AS SYSDBA
+SQL&gt; CONNECT / AS SYSASM
+</pre>
+<p>If you specified <code>ORA_OPER</code> or <code>ORA_</code><code><span class="codeinlineitalic">SID</span></code><code>_OPER</code> in step 1, then enter:</p>
+<pre xml:space="preserve" class="oac_no_warn">SQL&gt; CONNECT / AS SYSOPER
+</pre>
+<p>You are now connected to the Windows server. If you connect with <code>SYSDBA</code>, you are given DBA privileges.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<a id="BJEECHJA" name="BJEECHJA"></a><a id="NTQRF350" name="NTQRF350"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Manually Creating an External Role</h3>
+<p>This section describes how to grant Oracle Database roles to users directly through Windows (known as external roles). When you use Windows to authenticate users, Windows local groups can grant these users external roles.</p>
+<p>All privileges for these roles are active when the user connects. When using external roles, all roles are granted and managed through the operating system. You cannot use both external roles and Oracle Database roles at the same time.</p>
+<p>Consider the following example. With external roles enabled, you log on to a Windows domain with domain username <code>sales\frank</code> (<code>sales</code> is the domain name and <code>frank</code> is the domain username). You then connect to Oracle Database as Oracle Database user <code>scott</code>. In this case, you receive the roles granted to <code>sales\frank</code> but <span class="italic">not</span> the roles granted to <code>scott</code>.</p>
+<p>The procedure for manually creating an external role is divided into two sets of authorization tasks performed on different computers:</p>
+<ul>
+<li>
+<p><a href="#i1014230">External Role Authorization Tasks on the Oracle Database Server</a></p>
+</li>
+<li>
+<p><a href="#i1014231">External Role Authorization Tasks on the Client Computer</a></p>
+</li>
+</ul>
+<a id="i1014230" name="i1014230"></a><a id="NTQRF351" name="NTQRF351"></a>
+<div class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3"><a id="sthref469" name="sthref469"></a><a id="sthref470" name="sthref470"></a><a id="sthref471" name="sthref471"></a>External Role Authorization Tasks on the Oracle Database Server</h4>
+<ol>
+<li>
+<p>Add initialization parameter <code>OS_ROLES</code> to the <code>init.ora</code> file.</p>
+</li>
+<li>
+<p>Set <code>OS_ROLES</code> to <code>true</code>.</p>
+<p>The default setting for this parameter is <code>false</code>.</p>
+</li>
+<li>
+<p>Ensure that parameter <code>SQLNET.AUTHENTICATION_SERVICES</code> in file <code>sqlnet.ora</code> contains <code>nts</code>.</p>
+</li>
+<li>
+<p>Start SQL*Plus:</p>
+<pre xml:space="preserve" class="oac_no_warn">C:\&gt; sqlplus /NOLOG
+</pre></li>
+<li>
+<p>Connect to your Windows server:</p>
+<pre xml:space="preserve" class="oac_no_warn">SQL&gt; CONNECT / AS SYSDBA
+</pre></li>
+<li>
+<p>Create a new database role. You can give this new role whatever name you want. In this example the role is named <code>DBSALES3</code>:</p>
+<pre xml:space="preserve" class="oac_no_warn">SQL&gt; CREATE ROLE DBSALES3 IDENTIFIED EXTERNALLY;
+</pre></li>
+<li>
+<p>Grant to <code>DBSALES3</code> whatever Oracle Database roles are appropriate to your database environment:</p>
+<pre xml:space="preserve" class="oac_no_warn">SQL&gt; GRANT DBA TO DBSALES3 WITH ADMIN OPTION;
+</pre></li>
+<li>
+<p>Connect to the database as <code>SYSDBA</code>:</p>
+<pre xml:space="preserve" class="oac_no_warn">SQL&gt; CONNECT / AS SYSDBA
+</pre></li>
+<li>
+<p>Shut down the database:</p>
+<pre xml:space="preserve" class="oac_no_warn">SQL&gt; SHUTDOWN
+</pre></li>
+<li>
+<p>Restart the database:</p>
+<pre xml:space="preserve" class="oac_no_warn">SQL&gt; STARTUP
+</pre></li>
+<li>
+<p>Create a Windows local group with the following syntax:</p>
+<pre xml:space="preserve" class="oac_no_warn">ORA_<span class="italic">sid_rolename</span>[_D][_A] 
+</pre>
+<p>where</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">sid</span></code> identifies the database instance</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">rolename</span></code> identifies the database role granted</p>
+</li>
+<li>
+<p><code>D</code> indicates that this database role is to be a default role of the database user</p>
+</li>
+<li>
+<p><code>A</code> indicates that this database role includes <code>ADMIN</code> <code>OPTION</code></p>
+</li>
+</ul>
+<p>Characters <code>D</code> and <code>A</code> are optional. If specified, they must be preceded by an underscore.</p>
+<p>For this example, <code>ORA_orcl_dbsales3_D</code> is created.</p>
+</li>
+<li>
+<p>Add one or more Windows local or domain usernames to this group.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+Your operating system documentation for instructions on managing users and groups</div>
+<p><span class="bold"><a id="sthref472" name="sthref472"></a><a id="sthref473" name="sthref473"></a><a id="sthref474" name="sthref474"></a><a id="sthref475" name="sthref475"></a><a id="sthref476" name="sthref476"></a><a id="sthref477" name="sthref477"></a></span>You can create multiple database roles and grant them to several possible Windows groups with differing options, as shown in the following table. Users connecting to the <code>ORCL</code> instance and authenticated by Windows as members of all four of these Windows local groups will have the privileges associated with <code>dbsales3</code> and <code>dbsales4</code> by default (because of option <code>_D</code>). If these users first connect as members of <code>dbsales3</code> or <code>dbsales4</code> and use the <code>SET ROLE</code> command, then they can also gain access to database roles <code>dbsales1</code> and <code>dbsales2</code>. But if these users try to connect with <code>dbsales1</code> or <code>dbsales2</code> without first connecting with a default role, they are unable to connect. Finally, these users can grant <code>dbsales2</code> and <code>dbsales4</code> to other roles (because of option <code>_A</code>).</p>
+<div class="inftblinformal">
+<table class="Informal" title="Examples of Database Role Grants" summary="Rows are example database roles. For each role, the first column is its name, and the second column is a Windows group granted the role." dir="ltr" border="1" width="100%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<col width="49%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t13">Database Roles</th>
+<th align="left" valign="bottom" id="r1c2-t13">Windows Groups</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t13" headers="r1c1-t13"><code>dbsales1</code></td>
+<td align="left" headers="r2c1-t13 r1c2-t13"><code>ORA_ORCL_dbsales1</code></td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t13" headers="r1c1-t13"><code>dbsales2</code></td>
+<td align="left" headers="r3c1-t13 r1c2-t13"><code>ORA_ORCL_dbsales2_a</code></td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t13" headers="r1c1-t13"><code>dbsales3</code></td>
+<td align="left" headers="r4c1-t13 r1c2-t13"><code>ORA_ORCL_dbsales3_d</code></td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r5c1-t13" headers="r1c1-t13"><code>dbsales4</code></td>
+<td align="left" headers="r5c1-t13 r1c2-t13"><code>ORA_ORCL_dbsales4_da</code></td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblinformal" -->
+<div class="infoboxnote">
+<p class="notep1">Note:</p>
+When Oracle Database converts the group name to a role name, it changes the name to uppercase.</div>
+</li>
+</ol>
+</div>
+<!-- class="sect3" -->
+<a id="i1014231" name="i1014231"></a><a id="NTQRF352" name="NTQRF352"></a>
+<div class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">External Role Authorization Tasks on the Client Computer</h4>
+<ol>
+<li>
+<p>Create a Windows local or domain username with the same username and password that exist on the Windows server (if the appropriate username does not currently exist).</p>
+</li>
+<li>
+<p>Ensure that parameter <code>SQLNET.AUTHENTICATION_SERVICES</code> in file <code>sqlnet.ora</code> contains <code>nts</code>.</p>
+</li>
+<li>
+<p>Use Oracle Net Configuration Assistant to configure a network connection from your client computer to Oracle Database. See <a class="olink NETAG005" href="http://www.oracle.com/pls/db112/lookup?id=NETAG005"><span class="italic">Oracle Database Net Services Administrator's Guide</span></a> for instructions.</p>
+</li>
+<li>
+<p>Start SQL*Plus:</p>
+<pre xml:space="preserve" class="oac_no_warn">C:\&gt; sqlplus /NOLOG
+</pre></li>
+<li>
+<p>Connect to the correct instance:</p>
+<pre xml:space="preserve" class="oac_no_warn">SQL&gt; SET INSTANCE <span class="italic">connect_identifier</span>
+</pre>
+<p>where <code><span class="codeinlineitalic">connect_identifier</span></code> is the net service name for the Oracle Database connection that you created in Step 3.</p>
+</li>
+<li>
+<p>Connect to Oracle Database:</p>
+<pre xml:space="preserve" class="oac_no_warn">SQL&gt; CONNECT SCOTT
+Enter password: <span class="italic">password</span>
+</pre>
+<p>You are connected to the Windows server over net service with Oracle Database username <code>scott</code>. Roles applied to Oracle Database username <code>scott</code> consist of all roles defined for the Windows username that were previously mapped to the database roles (in this case, <code>ORA_DBSALES3_D</code>). All roles available under an authenticated connection are determined by the Windows username and the Oracle-specific Windows local groups to which the user belongs (for example, <code>ORA_</code><code><span class="codeinlineitalic">SID</span></code><code>_DBSALES1</code> or <code>ORA_</code><code><span class="codeinlineitalic">SID</span></code><code>_DBSALES4_DA</code>).</p>
+<div class="infoboxnote">
+<p class="notep1">Note:</p>
+OSDBA and OSOPER are generic names for two special operating system groups that control database administrator logins when using operating system authentication. Windows-specific names for OSDBA and OSOPER are described in <a href="#i1013865">"Manually Granting Administrator and Operator Privileges for Databases"</a>. See <a class="olink ADMIN001" href="http://www.oracle.com/pls/db112/lookup?id=ADMIN001"><span class="italic">Oracle Database Administrator's Guide</span></a> for more information on OSDBA and OSOPER.</div>
+</li>
+</ol>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<a id="i1015696" name="i1015696"></a><a id="NTQRF353" name="NTQRF353"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Manually Migrating Users</h3>
+<p>You can migrate local or external users to enterprise users with User Migration Utility. Migrating from a database user model to an enterprise user model provides solutions to administrative, security, and usability challenges in an enterprise environment. In an enterprise user model, all user information is moved to an LDAP directory service, which provides the following benefits:</p>
+<ul>
+<li>
+<p>Centralized storage and management of user information</p>
+</li>
+<li>
+<p>Centralized user authentication</p>
+</li>
+<li>
+<p>Enhanced security</p>
+</li>
+</ul>
+<p>User Migration Utility is a command-line tool. Its syntax is of the form:</p>
+<pre xml:space="preserve" class="oac_no_warn">C:\ umu <span class="italic">parameters</span>
+</pre>
+<p>To get a list of User Migration Utility parameters, enter:</p>
+<pre xml:space="preserve" class="oac_no_warn">C:\ umu help=yes
+</pre>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+"Using the User Migration Utility" in <a class="olink DBIMI200" href="http://www.oracle.com/pls/db112/lookup?id=DBIMI200"><span class="italic">Oracle Database Enterprise User Security Administrator's Guide</span></a></div>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" --></div>
+<!-- class="ind" -->
+<div class="footer">
+<hr />
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<col width="33%" />
+<col width="*" />
+<col width="33%" />
+<tr>
+<td align="left">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="98">
+<tr>
+<td align="center" valign="top"><a href="authen.htm"><img width="24" height="24" src="../../dcommon/gifs/leftnav.gif" alt="Go to previous page" /><br />
+<span class="icon">Previous</span></a></td>
+<td align="center" valign="top"><a href="wallets.htm"><img width="24" height="24" src="../../dcommon/gifs/rightnav.gif" alt="Go to next page" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+</td>
+<td style="font-size: 90%" align="center" class="copyrightlogo"><img width="144" height="18" src="../../dcommon/gifs/oracle.gif" alt="Oracle" /><br />
+Copyright&nbsp;&copy;&nbsp;1996, 2010,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.<br />
+<a href="../../dcommon/html/cpyr.htm">Legal Notices</a></td>
+<td align="right">
+<table class="icons oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="245">
+<tr>
+<td align="center" valign="top"><a href="../../index.htm"><img width="24" height="24" src="../../dcommon/gifs/doclib.gif" alt="Go to Documentation Home" /><br />
+<span class="icon">Home</span></a></td>
+<td align="center" valign="top"><a href="../../nav/portal_booklist.htm"><img width="24" height="24" src="../../dcommon/gifs/booklist.gif" alt="Go to Book List" /><br />
+<span class="icon">Book List</span></a></td>
+<td align="center" valign="top"><a href="toc.htm"><img width="24" height="24" src="../../dcommon/gifs/toc.gif" alt="Go to Table of Contents" /><br />
+<span class="icon">Contents</span></a></td>
+<td align="center" valign="top"><a href="index.htm"><img width="24" height="24" src="../../dcommon/gifs/index.gif" alt="Go to Index" /><br />
+<span class="icon">Index</span></a></td>
+<td align="center" valign="top"><a href="../../dcommon/html/feedback.htm"><img width="24" height="24" src="../../dcommon/gifs/feedbck2.gif" alt="Go to Feedback page" /><br />
+<span class="icon">Contact Us</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+</body>
+</html>

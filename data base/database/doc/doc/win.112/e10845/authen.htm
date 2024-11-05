@@ -1,0 +1,346 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii" />
+<meta http-equiv="Content-Language" content="en" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta name="robots" content="all" scheme="http://www.robotstxt.org/" />
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 5.1" />
+<meta name="Date" content="2010-03-05T15:45:36Z" />
+<meta name="doctitle" content="Oracle&reg; Database Platform Guide 11g Release 2 (11.2) for Microsoft Windows" />
+<meta name="partno" content="E10845-01" />
+<meta name="docid" content="NTQRF" />
+<link rel="Start" href="../../index.htm" title="Home" type="text/html" />
+<link rel="Copyright" href="../../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+<link rel="Stylesheet" href="../../dcommon/css/blafdoc.css" title="Default" type="text/css" />
+<script type="text/javascript" src="../../dcommon/js/doccd.js">
+</script>
+<link rel="Contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="Index" href="index.htm" title="Index" type="text/html" />
+<link rel="Glossary" href="glossary.htm" title="Glossary" type="text/html" />
+<link rel="Prev" href="vss.htm" title="Previous" type="text/html" />
+<link rel="Next" href="external.htm" title="Next" type="text/html" />
+<link rel="alternate" href="../e10845.pdf" title="PDF version" type="application/pdf" />
+<title>Authenticating Database Users with Windows</title>
+</head>
+<body>
+<div class="header">
+<div class="zz-skip-header"><a name="top" id="top" href="#BEGIN">Skip Headers</a></div>
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td align="left" valign="top"><b>Oracle&reg; Database Platform Guide<br />
+11<i>g</i> Release 2 (11.2) for Microsoft Windows</b><br />
+Part Number E10845-01</td>
+<td valign="bottom" align="right">
+<table class="icons oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="245">
+<tr>
+<td align="center" valign="top"><a href="../../index.htm"><img width="24" height="24" src="../../dcommon/gifs/doclib.gif" alt="Go to Documentation Home" /><br />
+<span class="icon">Home</span></a></td>
+<td align="center" valign="top"><a href="../../nav/portal_booklist.htm"><img width="24" height="24" src="../../dcommon/gifs/booklist.gif" alt="Go to Book List" /><br />
+<span class="icon">Book List</span></a></td>
+<td align="center" valign="top"><a href="toc.htm"><img width="24" height="24" src="../../dcommon/gifs/toc.gif" alt="Go to Table of Contents" /><br />
+<span class="icon">Contents</span></a></td>
+<td align="center" valign="top"><a href="index.htm"><img width="24" height="24" src="../../dcommon/gifs/index.gif" alt="Go to Index" /><br />
+<span class="icon">Index</span></a></td>
+<td align="center" valign="top"><a href="../../dcommon/html/feedback.htm"><img width="24" height="24" src="../../dcommon/gifs/feedbck2.gif" alt="Go to Feedback page" /><br />
+<span class="icon">Contact Us</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<hr />
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td align="left" valign="top">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="98">
+<tr>
+<td align="center" valign="top"><a href="vss.htm"><img width="24" height="24" src="../../dcommon/gifs/leftnav.gif" alt="Go to previous page" /><br />
+<span class="icon">Previous</span></a></td>
+<td align="center" valign="top"><a href="external.htm"><img width="24" height="24" src="../../dcommon/gifs/rightnav.gif" alt="Go to next page" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+</td>
+<td align="right" valign="top" style="font-size: 90%"><a href="../e10845.pdf">View PDF</a></td>
+</tr>
+</table>
+<a name="BEGIN" id="BEGIN"></a></div>
+<div class="IND"><!-- End Header --><a id="g1010864" name="g1010864"></a><a id="NTQRF120" name="NTQRF120"></a><a id="i1007802" name="i1007802"></a>
+<h1 class="chapter"><span class="secnum">9</span> Authenticating Database Users with Windows</h1>
+<p>This chapter describes authentication of Oracle Database users with Windows operating systems.</p>
+<p>This chapter contains these topics:</p>
+<ul>
+<li>
+<p><a href="#CHDHHBDD">Windows Native Authentication Overview</a></p>
+</li>
+<li>
+<p><a href="#CHDHFFDC">Windows Authentication Protocols</a></p>
+</li>
+<li>
+<p><a href="#CHDEDFJI">User Authentication and Role Authorization Methods</a></p>
+</li>
+<li>
+<p><a href="#i1006045">Operating System Authentication Enabled at Installation</a></p>
+</li>
+</ul>
+<a id="CHDHHBDD" name="CHDHHBDD"></a><a id="NTQRF319" name="NTQRF319"></a>
+<div class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1"><a id="sthref359" name="sthref359"></a><a id="sthref360" name="sthref360"></a><a id="sthref361" name="sthref361"></a>Windows <a id="sthref362" name="sthref362"></a><a id="sthref363" name="sthref363"></a><a id="sthref364" name="sthref364"></a><a id="sthref365" name="sthref365"></a>Native Authentication Overview</h2>
+<p>Oracle Database can use Windows user login <a href="glossary.htm#i433015"><span class="xrefglossterm">credentials</span></a> to <a href="glossary.htm#i432183"><span class="xrefglossterm">authenticate</span></a> database users. Benefits include:</p>
+<ul>
+<li>
+<p>Enabling users to connect to Oracle Database without supplying a <a href="glossary.htm#i432581"><span class="xrefglossterm">username</span></a> or password</p>
+</li>
+<li>
+<p>Centralizing Oracle Database user authentication and role <a href="glossary.htm#i432948"><span class="xrefglossterm">authorization</span></a> information in Windows, which frees Oracle Database from storing or managing user passwords or <a href="glossary.htm#i432481"><span class="xrefglossterm">role</span></a> information</p>
+</li>
+</ul>
+<p>The Windows native authentication adapter (automatically installed with <a href="glossary.htm#i433200"><span class="xrefglossterm">Oracle Net Services</span></a>) enables database user authentication through Windows. This enables client computers to make secure connections to Oracle Database on a Windows server. The server then permits the user to perform database actions on the server.</p>
+<div class="infoboxnote">
+<p class="notep1"><span class="bold">Note</span>:</p>
+<ul>
+<li>
+<p>Current user database links are not supported with Windows native authentication.</p>
+</li>
+<li>
+<p>This chapter describes using Windows native authentication methods with Windows XP and later. For information on Secure Sockets Layer (SSL) protocol and Oracle Internet Directory, see <a class="olink ASOAG070" href="http://www.oracle.com/pls/db112/lookup?id=ASOAG070"><span class="italic">Oracle Database Advanced Security Administrator's Guide</span></a> and <a class="olink OIDAG" href="http://www.oracle.com/pls/db112/lookup?id=OIDAG"><span class="italic">Oracle Internet Directory Administrator's Guide</span></a>.</p>
+</li>
+</ul>
+</div>
+</div>
+<!-- class="sect1" -->
+<a id="CHDHFFDC" name="CHDHFFDC"></a><a id="NTQRF320" name="NTQRF320"></a>
+<div class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Windows Authentication Protocols</h2>
+<p>The Windows native authentication adapter works with Windows authentication protocols to enable access to Oracle Database.</p>
+<p>NTLM and Kerberos are the authentication mechanisms used by the NTS adapter.</p>
+<p>Client computers do not need to specify an authentication protocol when attempting a connection to Oracle Database. Instead, Oracle Database determines the protocol to use, completely transparent to the user. The only Oracle Database requirement is to ensure that parameter <code>SQLNET.AUTHENTICATION_SERVICES</code> contains <code>nts</code> in the following file on both the client and database server:</p>
+<pre xml:space="preserve" class="oac_no_warn"><span class="italic">ORACLE_HOME</span>\network\admin\sqlnet.ora
+</pre>
+<p>This is the default setting for both after installation. For Oracle8 release 8.0.x releases, you must manually set this value.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<a href="ap_net.htm#BABGBAFC">"Configuring Oracle Database to Communicate with ASM"</a></div>
+<p>If typical, your Oracle Database network includes client computers and database servers, and computers on this network may use different Oracle Database software releases on different Windows operating systems on different domains. This combination of different releases means that the authentication protocol being used can vary.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+Your operating system documentation for more information on authentication protocol</div>
+</div>
+<!-- class="sect1" -->
+<a id="CHDEDFJI" name="CHDEDFJI"></a><a id="NTQRF322" name="NTQRF322"></a>
+<div class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1"><a id="sthref366" name="sthref366"></a><a id="sthref367" name="sthref367"></a><a id="sthref368" name="sthref368"></a><a id="sthref369" name="sthref369"></a>User <a id="sthref370" name="sthref370"></a><a id="sthref371" name="sthref371"></a><a id="sthref372" name="sthref372"></a><a id="sthref373" name="sthref373"></a><a id="sthref374" name="sthref374"></a>Authentication and Role Authorization Methods</h2>
+<p>This section describes how user login credentials are authenticated and database roles are authorized in Windows domains. User authentication and role authorization are defined in <a href="#g1008974">Table 9-1</a>.</p>
+<div class="tblformal"><a id="NTQRF323" name="NTQRF323"></a><a id="sthref375" name="sthref375"></a><a id="g1008974" name="g1008974"></a>
+<p class="titleintable">Table 9-1 User Authentication and Role Authorization Defined</p>
+<table class="Formal" title="User Authentication and Role Authorization Defined" summary="Rows are features. For each feature, the first column is its name, the second column describes it, and the third column shows where to get more information about it." dir="ltr" border="1" width="100%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<col width="22%" />
+<col width="*" />
+<col width="22%" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t5">Feature</th>
+<th align="left" valign="bottom" id="r1c2-t5">Description</th>
+<th align="left" valign="bottom" id="r1c3-t5">More Information</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t5" headers="r1c1-t5">
+<p>User authentication</p>
+</td>
+<td align="left" headers="r2c1-t5 r1c2-t5">
+<p>Process by which the database uses the user's Windows login credentials to authenticate the user.</p>
+</td>
+<td align="left" headers="r2c1-t5 r1c3-t5">
+<p><a class="olink ADMQS007" href="../../server.112/e10897/users_secure.htm#ADMQS007"><span class="italic">Oracle Database 2 Day DBA</span></a></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t5" headers="r1c1-t5">
+<p>Role <a href="glossary.htm#i432948"><span class="xrefglossterm">authorization</span></a></p>
+</td>
+<td align="left" headers="r3c1-t5 r1c2-t5">
+<p>Process of granting an assigned set of roles to authenticated users.</p>
+</td>
+<td align="left" headers="r3c1-t5 r1c3-t5">
+<p><a class="olink ADMQS007" href="../../server.112/e10897/users_secure.htm#ADMQS007"><span class="italic">Oracle Database 2 Day DBA</span></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblformal" -->
+<p><a id="sthref376" name="sthref376"></a>Oracle Database supports user authentication and role authorization in Windows domains. <a href="#g1008990">Table 9-2</a> describes these basic features.</p>
+<div class="tblformal"><a id="NTQRF324" name="NTQRF324"></a><a id="sthref377" name="sthref377"></a><a id="g1008990" name="g1008990"></a>
+<p class="titleintable">Table 9-2 <a id="sthref378" name="sthref378"></a><a id="sthref379" name="sthref379"></a>Basic Features of User Authentication and Role Authorization</p>
+<table class="Formal" title="Basic Features of User Authentication and Role Authorization" summary="Rows are features. For each feature, the first column is its name, and the second column describes it." dir="ltr" border="1" width="100%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<col width="18%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t6">Feature</th>
+<th align="left" valign="bottom" id="r1c2-t6">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t6" headers="r1c1-t6">
+<p>Authentication of external users</p>
+</td>
+<td align="left" headers="r2c1-t6 r1c2-t6">
+<p>Users are authenticated by the database using the user's Windows login credentials enabling them to access Oracle Database without being prompted for additional login credentials.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t6" headers="r1c1-t6">
+<p>Authorization of external roles</p>
+</td>
+<td align="left" headers="r3c1-t6 r1c2-t6">
+<p>Roles are authorized using <a href="glossary.htm#i433301"><span class="xrefglossterm">Windows local groups</span></a>. Once an <a href="glossary.htm#i433097"><span class="xrefglossterm">external role</span></a> is created, you can grant or revoke that role to a database user. Initialization parameter <code>OS_ROLES</code> is set to <code>false</code> by default. You must set <code>OS_ROLES</code> to <code>true</code> to authorize external roles.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblformal" -->
+<a id="NTQRF325" name="NTQRF325"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref380" name="sthref380"></a>
+<h3 class="sect2">Authentication and Authorization Methods To Use</h3>
+<p><a href="#CACEIJJI">Table 9-3</a> describes user authentication and role authorization methods to use based on your Oracle Database environment:</p>
+<div class="tblformal"><a id="sthref381" name="sthref381"></a><a id="CACEIJJI" name="CACEIJJI"></a>
+<p class="titleintable">Table 9-3 User Authentication and Role Authorization Methods</p>
+<table class="Formal" title="User Authentication and Role Authorization Methods" summary="User authentication and role authorization methods" dir="ltr" border="1" width="100%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<col width="31%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t7">Method</th>
+<th align="left" valign="bottom" id="r1c2-t7">Database Environment</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t7" headers="r1c1-t7">
+<p>Enterprise users and roles</p>
+</td>
+<td align="left" headers="r2c1-t7 r1c2-t7">
+<p>You have many users connecting to multiple databases.</p>
+<p>Enterprise users have the same identity across multiple databases. Enterprise users require use of a directory server.</p>
+<p>Use enterprise roles in environments where enterprise users assigned to these roles are located in many geographic regions and must access multiple databases. Each enterprise role can be assigned to multiple enterprise user in the directory. If you do not use enterprise roles, then you must assign database roles manually to each database user. Enterprise roles require use of a directory server.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t7" headers="r1c1-t7">
+<p>External users and roles</p>
+</td>
+<td align="left" headers="r3c1-t7 r1c2-t7">
+<p>You have a smaller number of users accessing a limited number of databases. External users must be created individually in each database and do not require use of a directory server.</p>
+<p>External roles must also be created individually in each database, and do not require use of a directory server. External roles are authorized using group membership of the users in <a href="glossary.htm#i433171"><span class="xrefglossterm">local groups</span></a> on the system.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t7" headers="r1c1-t7">
+<p>Enterprise users and roles</p>
+</td>
+<td align="left" headers="r4c1-t7 r1c2-t7">
+<p>You have many users connecting to multiple databases.</p>
+<p>Enterprise users have the same identity across multiple databases. Enterprise users require use of a directory server.</p>
+<p>Use enterprise roles in environments where enterprise users assigned to these roles are located in many geographic regions and must access multiple databases. Each enterprise role can be assigned to multiple enterprise user in the directory. If you do not use enterprise roles, then you must assign database roles manually to each database user. Enterprise roles require use of a directory server.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r5c1-t7" headers="r1c1-t7">
+<p>External users and roles</p>
+</td>
+<td align="left" headers="r5c1-t7 r1c2-t7">
+<p>You have a smaller number of users accessing a limited number of databases. External users must be created individually in each database and do not require use of a directory server.</p>
+<p>External roles must also be created individually in each database, and do not require use of a directory server. External roles are authorized using group membership of the users in <a href="glossary.htm#i433171"><span class="xrefglossterm">local groups</span></a> on the system.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblformal" -->
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<a class="olink DBIMI212" href="http://www.oracle.com/pls/db112/lookup?id=DBIMI212"><span class="italic">Oracle Database Enterprise User Security Administrator's Guide</span></a> for more information on Enterprise users and roles</div>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="i1006045" name="i1006045"></a><a id="NTQRF327" name="NTQRF327"></a>
+<div class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1"><a id="sthref382" name="sthref382"></a><a id="sthref383" name="sthref383"></a><a id="sthref384" name="sthref384"></a><a id="sthref385" name="sthref385"></a>Operating <a id="sthref386" name="sthref386"></a><a id="sthref387" name="sthref387"></a><a id="sthref388" name="sthref388"></a><a id="sthref389" name="sthref389"></a>System Authentication Enabled at Installation</h2>
+<p>When you install Oracle Database, a special Windows local group called <code>ORA_DBA</code> is created (if it does not already exist from an earlier Oracle Database installation), and your Windows username is automatically added to it. Members of local group <code>ORA_DBA</code> automatically receive the <a href="glossary.htm#i432528"><span class="xrefglossterm">SYSDBA</span></a> <a href="glossary.htm#i432451"><span class="xrefglossterm">privilege</span></a>.</p>
+<div class="infoboxnote">
+<p class="notep1">Note:</p>
+If you use a domain account for database installation, then the domain user must be explicitly granted local administrative privileges and <code>ORA_DBA</code> membership. It is not sufficient if the domain user has inherited membership privileges from another group. You must ensure that, the user performing the installation must be in the same domain, if not it results in an NTS authetication failure.</div>
+<p>Membership in <code>ORA_DBA</code> enables you to:</p>
+<ul>
+<li>
+<p>Connect to local Oracle Database servers without a password with the command</p>
+<pre xml:space="preserve" class="oac_no_warn">SQL&gt; CONNECT / AS SYSDBA
+</pre></li>
+<li>
+<p>Connect to remote Oracle Database servers without a password with the command</p>
+<pre xml:space="preserve" class="oac_no_warn">SQL&gt; CONNECT /@<span class="italic">net_service_name</span> AS SYSDBA 
+</pre>
+<p>where <code><span class="codeinlineitalic">net_service_name</span></code> is the <a href="glossary.htm#i432344"><span class="xrefglossterm">net service name</span></a> of the remote Oracle Database server</p>
+</li>
+<li>
+<p>Perform database administration procedures such as starting and shutting down local databases</p>
+</li>
+<li>
+<p>Add additional Windows users to <code>ORA_DBA</code>, enabling them to have the <code>SYSDBA</code> privilege</p>
+</li>
+</ul>
+</div>
+<!-- class="sect1" --></div>
+<!-- class="ind" -->
+<div class="footer">
+<hr />
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<col width="33%" />
+<col width="*" />
+<col width="33%" />
+<tr>
+<td align="left">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="98">
+<tr>
+<td align="center" valign="top"><a href="vss.htm"><img width="24" height="24" src="../../dcommon/gifs/leftnav.gif" alt="Go to previous page" /><br />
+<span class="icon">Previous</span></a></td>
+<td align="center" valign="top"><a href="external.htm"><img width="24" height="24" src="../../dcommon/gifs/rightnav.gif" alt="Go to next page" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+</td>
+<td style="font-size: 90%" align="center" class="copyrightlogo"><img width="144" height="18" src="../../dcommon/gifs/oracle.gif" alt="Oracle" /><br />
+Copyright&nbsp;&copy;&nbsp;1996, 2010,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.<br />
+<a href="../../dcommon/html/cpyr.htm">Legal Notices</a></td>
+<td align="right">
+<table class="icons oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="245">
+<tr>
+<td align="center" valign="top"><a href="../../index.htm"><img width="24" height="24" src="../../dcommon/gifs/doclib.gif" alt="Go to Documentation Home" /><br />
+<span class="icon">Home</span></a></td>
+<td align="center" valign="top"><a href="../../nav/portal_booklist.htm"><img width="24" height="24" src="../../dcommon/gifs/booklist.gif" alt="Go to Book List" /><br />
+<span class="icon">Book List</span></a></td>
+<td align="center" valign="top"><a href="toc.htm"><img width="24" height="24" src="../../dcommon/gifs/toc.gif" alt="Go to Table of Contents" /><br />
+<span class="icon">Contents</span></a></td>
+<td align="center" valign="top"><a href="index.htm"><img width="24" height="24" src="../../dcommon/gifs/index.gif" alt="Go to Index" /><br />
+<span class="icon">Index</span></a></td>
+<td align="center" valign="top"><a href="../../dcommon/html/feedback.htm"><img width="24" height="24" src="../../dcommon/gifs/feedbck2.gif" alt="Go to Feedback page" /><br />
+<span class="icon">Contact Us</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+</body>
+</html>

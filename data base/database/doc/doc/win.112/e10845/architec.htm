@@ -1,0 +1,557 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii" />
+<meta http-equiv="Content-Language" content="en" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta name="robots" content="all" scheme="http://www.robotstxt.org/" />
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 5.1" />
+<meta name="Date" content="2010-03-05T15:45:34Z" />
+<meta name="doctitle" content="Oracle&reg; Database Platform Guide 11g Release 2 (11.2) for Microsoft Windows" />
+<meta name="partno" content="E10845-01" />
+<meta name="docid" content="NTQRF" />
+<link rel="Start" href="../../index.htm" title="Home" type="text/html" />
+<link rel="Copyright" href="../../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+<link rel="Stylesheet" href="../../dcommon/css/blafdoc.css" title="Default" type="text/css" />
+<script type="text/javascript" src="../../dcommon/js/doccd.js">
+</script>
+<link rel="Contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="Index" href="index.htm" title="Index" type="text/html" />
+<link rel="Glossary" href="glossary.htm" title="Glossary" type="text/html" />
+<link rel="Prev" href="what_new.htm" title="Previous" type="text/html" />
+<link rel="Next" href="tools.htm" title="Next" type="text/html" />
+<link rel="alternate" href="../e10845.pdf" title="PDF version" type="application/pdf" />
+<title>Oracle Database Architecture on Windows</title>
+</head>
+<body>
+<div class="header">
+<div class="zz-skip-header"><a name="top" id="top" href="#BEGIN">Skip Headers</a></div>
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td align="left" valign="top"><b>Oracle&reg; Database Platform Guide<br />
+11<i>g</i> Release 2 (11.2) for Microsoft Windows</b><br />
+Part Number E10845-01</td>
+<td valign="bottom" align="right">
+<table class="icons oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="245">
+<tr>
+<td align="center" valign="top"><a href="../../index.htm"><img width="24" height="24" src="../../dcommon/gifs/doclib.gif" alt="Go to Documentation Home" /><br />
+<span class="icon">Home</span></a></td>
+<td align="center" valign="top"><a href="../../nav/portal_booklist.htm"><img width="24" height="24" src="../../dcommon/gifs/booklist.gif" alt="Go to Book List" /><br />
+<span class="icon">Book List</span></a></td>
+<td align="center" valign="top"><a href="toc.htm"><img width="24" height="24" src="../../dcommon/gifs/toc.gif" alt="Go to Table of Contents" /><br />
+<span class="icon">Contents</span></a></td>
+<td align="center" valign="top"><a href="index.htm"><img width="24" height="24" src="../../dcommon/gifs/index.gif" alt="Go to Index" /><br />
+<span class="icon">Index</span></a></td>
+<td align="center" valign="top"><a href="../../dcommon/html/feedback.htm"><img width="24" height="24" src="../../dcommon/gifs/feedbck2.gif" alt="Go to Feedback page" /><br />
+<span class="icon">Contact Us</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<hr />
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td align="left" valign="top">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="98">
+<tr>
+<td align="center" valign="top"><a href="what_new.htm"><img width="24" height="24" src="../../dcommon/gifs/leftnav.gif" alt="Go to previous page" /><br />
+<span class="icon">Previous</span></a></td>
+<td align="center" valign="top"><a href="tools.htm"><img width="24" height="24" src="../../dcommon/gifs/rightnav.gif" alt="Go to next page" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+</td>
+<td align="right" valign="top" style="font-size: 90%"><a href="../e10845.pdf">View PDF</a></td>
+</tr>
+</table>
+<a name="BEGIN" id="BEGIN"></a></div>
+<div class="IND"><!-- End Header --><a id="g1010749" name="g1010749"></a><a id="NTQRF010" name="NTQRF010"></a><a id="i1006272" name="i1006272"></a>
+<h1 class="chapter"><span class="secnum">1</span> Oracle Database Architecture on Windows</h1>
+<p>This chapter describes how Oracle Database architecture takes advantage of some more advanced <a href="glossary.htm#i432487"><span class="xrefglossterm">services</span></a> in Windows operating systems.</p>
+<p>This chapter contains these topics:</p>
+<ul>
+<li>
+<p><a href="#i1005644">Oracle Database on Windows Architecture</a></p>
+</li>
+<li>
+<p><a href="#i1005805">Oracle Database Scalability on Windows</a></p>
+</li>
+<li>
+<p><a href="#i1005964">Oracle Database Integration with Windows</a></p>
+</li>
+<li>
+<p><a href="#i1006105">Other Sources of Information</a></p>
+</li>
+</ul>
+<a id="i1005644" name="i1005644"></a><a id="NTQRF99974" name="NTQRF99974"></a>
+<div class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Oracle Database on Windows Architecture</h2>
+<p>Oracle Database on Windows is a stable, reliable, and high performing system upon which to build applications. Each release of the database provides new platform-specific features for high performance on Windows.</p>
+<p>Oracle Database operates the same way on Windows as it does on other platforms. The architecture offers several advantages on Windows, such as:</p>
+<ul>
+<li>
+<p><a href="#CHDEHAFA">Automatic Storage Management</a></p>
+</li>
+<li>
+<p><a href="#i1005670">Thread-Based Architecture</a></p>
+</li>
+<li>
+<p><a href="#i1005782">File I/O Enhancements</a></p>
+</li>
+<li>
+<p><a href="#i1005793">Raw File Support</a></p>
+</li>
+</ul>
+<a id="CHDEHAFA" name="CHDEHAFA"></a><a id="NTQRF99975" name="NTQRF99975"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><a id="sthref6" name="sthref6"></a>Automatic Storage Management</h3>
+<p>Automatic Storage Management (ASM) is an integrated file system and volume manager expressly built for Oracle Database files. ASM provides the performance of raw I/O with the easy management of a file system. It simplifies database administration by eliminating the need for you to directly manage potentially thousands of Oracle Database files. It does this by enabling you to divide all available storage into disk groups. You manage a small set of disk groups, and ASM automates the placement of the database files within those disk groups.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+"Using Automatic Storage Management" in <a class="olink ADMIN11011" href="http://www.oracle.com/pls/db112/lookup?id=ADMIN11011"><span class="italic">Oracle Database Administrator's Guide</span></a></div>
+</div>
+<!-- class="sect2" -->
+<a id="i1005670" name="i1005670"></a><a id="NTQRF99976" name="NTQRF99976"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><a id="sthref7" name="sthref7"></a><a id="sthref8" name="sthref8"></a>Thread-Based Architecture</h3>
+<p>The internal <a href="glossary.htm#i432454"><span class="xrefglossterm">process</span></a> architecture of Oracle Database is <a href="glossary.htm#i432558"><span class="xrefglossterm">thread</span></a>-based. Threads are objects within a process that run program instructions. Threads allow concurrent operations within a process so that a process can run different parts of its program simultaneously on different processors. A thread-based architecture provides the following advantages:</p>
+<ul>
+<li>
+<p>Faster context switching</p>
+</li>
+<li>
+<p>Simpler <a href="glossary.htm#i432537"><span class="xrefglossterm">System Global Area</span></a> allocation routine, because it does not require use of shared memory</p>
+</li>
+<li>
+<p>Faster spawning of new connections, because threads are created more quickly than processes</p>
+</li>
+<li>
+<p>Decreased memory usage, because threads share more data structures than processes</p>
+</li>
+</ul>
+<p>Internally, the code to implement the thread model is compact and separate from the main body of Oracle Database code. Exception handlers and routines track and de-allocate resources. They add robustness, with no downtime because of resource leaks or an ill-behaved program.</p>
+<p><a id="sthref9" name="sthref9"></a>Oracle Database is not a typical Windows process. On Windows, an Oracle Database or Automatic Storage Management <a href="glossary.htm#CHDFBCHH"><span class="xrefglossterm">instance</span></a> (threads and memory structures) is a Windows service: a background process registered with the operating system. The service is started by Windows and requires no user interaction to start. This enables the database to open automatically at computer startup.</p>
+<p><a id="sthref10" name="sthref10"></a><a id="sthref11" name="sthref11"></a>When running multiple Oracle Database or Automatic Storage Management instances on Windows, each instance runs its own Windows service with multiple component threads. Each thread may be required for the database to be available, or it may be optional and specific to certain platforms. The background processes read and write from various datafiles, depending on your configuration. Oracle Database architecture on Windows is illustrated in <a href="#i1008963">Figure 1-1</a>. Examples of Oracle Database required threads on Windows are listed in <a href="#BCGDEJAA">Table 1-1</a>.</p>
+<div class="figure"><a id="i1008963" name="i1008963"></a><a id="NTQRF99977" name="NTQRF99977"></a>
+<p class="titleinfigure">Figure 1-1 Oracle Database Architecture on Windows</p>
+<img width="603" height="711" src="img/ntqrf003.gif" alt="Description of Figure 1-1 follows" title="Description of Figure 1-1 follows" longdesc="img_text/ntqrf003.htm" /><br />
+<a id="sthref12" name="sthref12" href="img_text/ntqrf003.htm">Description of "Figure 1-1 Oracle Database Architecture on Windows"</a><br />
+<br /></div>
+<!-- class="figure" -->
+<div class="tblhruleformal"><a id="NTQRF99978" name="NTQRF99978"></a><a id="sthref13" name="sthref13"></a><a id="BCGDEJAA" name="BCGDEJAA"></a>
+<p class="titleintable">Table 1-1 Oracle Database Threads</p>
+<table class="HRuleFormal" title="Oracle Database Threads" summary="Rows are threads. For each thread, the first column is its name, the second column describes it, and the third column shows whether it is required or optional." dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
+<col width="30%" />
+<col width="*" />
+<col width="22%" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t3">Oracle Database Thread</th>
+<th align="left" valign="bottom" id="r1c2-t3">Description</th>
+<th align="left" valign="bottom" id="r1c3-t3">Required/Optional</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t3" headers="r1c1-t3">
+<p><code>DBW0</code></p>
+</td>
+<td align="left" headers="r2c1-t3 r1c2-t3">
+<p>database writer</p>
+</td>
+<td align="left" headers="r2c1-t3 r1c3-t3">
+<p>Required</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t3" headers="r1c1-t3">
+<p><code>LGWR</code></p>
+</td>
+<td align="left" headers="r3c1-t3 r1c2-t3">
+<p>log writer</p>
+</td>
+<td align="left" headers="r3c1-t3 r1c3-t3">
+<p>Required</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t3" headers="r1c1-t3">
+<p><code>MMAN</code></p>
+</td>
+<td align="left" headers="r4c1-t3 r1c2-t3">
+<p>memory manager process</p>
+</td>
+<td align="left" headers="r4c1-t3 r1c3-t3">
+<p>Required</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r5c1-t3" headers="r1c1-t3">
+<p><code>PMON</code></p>
+</td>
+<td align="left" headers="r5c1-t3 r1c2-t3">
+<p>process monitor</p>
+</td>
+<td align="left" headers="r5c1-t3 r1c3-t3">
+<p>Required</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r6c1-t3" headers="r1c1-t3">
+<p><code>PSPO</code></p>
+</td>
+<td align="left" headers="r6c1-t3 r1c2-t3">
+<p>process spawner process</p>
+</td>
+<td align="left" headers="r6c1-t3 r1c3-t3">
+<p>Required</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r7c1-t3" headers="r1c1-t3">
+<p><code>SMON</code></p>
+</td>
+<td align="left" headers="r7c1-t3 r1c2-t3">
+<p>system monitor</p>
+</td>
+<td align="left" headers="r7c1-t3 r1c3-t3">
+<p>Required</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r8c1-t3" headers="r1c1-t3">
+<p><code>CKPT</code></p>
+</td>
+<td align="left" headers="r8c1-t3 r1c2-t3">
+<p>checkpoint process (thread on Windows) that runs by default on Windows</p>
+</td>
+<td align="left" headers="r8c1-t3 r1c3-t3">
+<p>Required</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r9c1-t3" headers="r1c1-t3">
+<p><code>ARCH0</code></p>
+</td>
+<td align="left" headers="r9c1-t3 r1c2-t3">
+<p>archive process (or thread on Windows)</p>
+</td>
+<td align="left" headers="r9c1-t3 r1c3-t3">
+<p>Required</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r10c1-t3" headers="r1c1-t3">
+<p><code>RECO</code></p>
+</td>
+<td align="left" headers="r10c1-t3 r1c2-t3">
+<p>distributed recovery background process</p>
+</td>
+<td align="left" headers="r10c1-t3 r1c3-t3">
+<p>Required</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblhruleformal" -->
+<div class="infoboxnote">
+<p class="notep1">Note:</p>
+<a id="sthref14" name="sthref14"></a>You can view running background processes by issuing the following query:
+<pre xml:space="preserve" class="oac_no_warn">SQL&gt; select * from v$bgprocess where paddr &lt;&gt; '00'; 
+</pre></div>
+<p><a id="sthref15" name="sthref15"></a><a id="sthref16" name="sthref16"></a>Oracle Database for Windows is supplied as a set of executables and dynamic link libraries (DLLs). Executable images can be modified using <code>ORASTACK</code> to change the size of the stack used by the threads of the Oracle Database process. Oracle recommends you use this tool only under the guidance of Oracle Support Services.</p>
+</div>
+<!-- class="sect2" -->
+<a id="i1005782" name="i1005782"></a><a id="NTQRF99979" name="NTQRF99979"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><a id="sthref17" name="sthref17"></a>File I/O Enhancements</h3>
+<p>Oracle Database supports 64-bit file I/O to allow use of files larger than 4 gigabytes (GB). In addition, physical and logical raw files are supported as data, log, and <a href="glossary.htm#i432217"><span class="xrefglossterm">control files</span></a> to support Oracle Real Application Clusters (Oracle RAC) on Windows and for those cases where performance needs to be maximized.</p>
+<p>With Oracle Database 11<span class="italic">g</span>, instead of using the operating system kernel NFS client, you can configure Oracle Database to access NFS V3 servers directly using an Oracle internal Direct NFS client. Through this integration, Oracle can optimize the I/O path between Oracle and the NFS server providing significantly superior performance. In addition, Direct NFS client simplifies and optimizes the NFS client configuration for database workloads.</p>
+<p>Oracle Direct NFS Client currently supports up to four parallel network paths to provide scalability and high availability. Direct NFS Client delivers optimized performance by automatically load balancing requests across all specified paths. If one network path fails, then Direct NFS Client will reissue commands over any remaining paths ensuring fault tolerance and high availability.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+Your vendor documentation to complete NFS configuration and mounting</div>
+</div>
+<!-- class="sect2" -->
+<a id="i1005793" name="i1005793"></a><a id="NTQRF99980" name="NTQRF99980"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Raw File Support</h3>
+<p>Oracle recommends that you use Automatic Storage Management instead of raw files. It provides the performance benefits of raw files with much better manageability. Automatic Storage Management is available for both single instance and Oracle RAC databases.</p>
+<p>Raw files are unformatted disk partitions that can be used as one large file. <a id="sthref18" name="sthref18"></a>Raw files have the benefit of no file system overhead, because they are unformatted partitions. Windows supports raw files, similar to UNIX. Using raw files for database or log files can have a slight performance gain. Windows XP has a disk manager (<code>diskmgmt.msc</code>) to manage all volumes. Windows 2003 and later includes command line utilities (<code>diskpart.exe</code>) to manage volumes including raw. Oracle recommends that you use Windows volume mount points for addressing raw volumes.</p>
+<p><a id="sthref19" name="sthref19"></a>To Oracle Database, raw files are no different from other Oracle Database files. They are treated in the same way by Oracle Database as any other file and can be backed up and restored through Recovery Manager or <code>OCOPY</code>.</p>
+<div class="infoboxnote">
+<p class="notep1">Note:</p>
+<ul>
+<li>
+<p>You must be logged on either as Administrator or a user name that is a member of the Administrators group.</p>
+</li>
+<li>
+<p>To open Disk Management console, click <span class="bold">Start</span>, <span class="bold">Run</span>, and then type: diskmgmt.msc.</p>
+</li>
+</ul>
+</div>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="ap_raw.htm#g637025">Appendix B, "Storing Tablespaces on Raw Partitions"</a></p>
+</li>
+<li>
+<p>"Using Automatic Storage Management" in <a class="olink ADMIN11011" href="http://www.oracle.com/pls/db112/lookup?id=ADMIN11011"><span class="italic">Oracle Database Administrator's Guide</span></a></p>
+</li>
+</ul>
+</div>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="i1005805" name="i1005805"></a><a id="NTQRF99981" name="NTQRF99981"></a>
+<div class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Oracle Database Scalability on Windows</h2>
+<p>Features in Oracle Database and in the Windows operating system work together to help increase scalability, throughput, and database capacity. These features include:</p>
+<ul>
+<li>
+<p><a href="#i1005826">Support for Very Large Memory (VLM) Configurations</a></p>
+</li>
+<li>
+<p><a href="#i1005940">Windows 4 GB RAM Tuning (4GT)</a></p>
+</li>
+<li>
+<p><a href="#i1005947">Large User Populations</a></p>
+</li>
+</ul>
+<a id="i1005826" name="i1005826"></a><a id="NTQRF99982" name="NTQRF99982"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Support for Very Large Memory (VLM) Configurations</h3>
+<p>Oracle Database for Windows 32-Bit supports Very Large Memory (VLM) configurations, which allows Oracle Database to access more than the 4 gigabyte (GB) of RAM traditionally available to Windows applications. Specifically, Oracle Database uses Address Windowing Extensions (AWE) to access more than 4 GB of RAM.</p>
+<div class="infoboxnote">
+<p class="notep1">Note:</p>
+This feature is available on Windows with Intel Pentium II and later processors.</div>
+<p>The requirements for taking advantage of this support are:</p>
+<ol>
+<li>
+<p>The computer on which Oracle Database is installed must have more than 4 GB of memory.</p>
+</li>
+<li>
+<p>The operating system must be configured to take advantage of Physical Address Extensions (PAE) by adding the /PAE switch in <code>boot.ini</code>. See Microsoft Knowledge Base article 268363 for instructions on modifying <code>boot.ini</code> to enable PAE.</p>
+</li>
+<li>
+<p>It is advisable (though not necessary) to enable 4GT support by adding the /3GB parameter in <code>boot.ini</code>. See Microsoft Knowledge Base article Q171793 for additional requirements and instructions on modifying <code>boot.ini</code> to enable 4GT.</p>
+</li>
+<li>
+<p>The user account under which Oracle Database runs (typically the <code>LocalSystem</code> account), must have the "Lock memory pages" privilege.</p>
+</li>
+<li>
+<p><code>USE_INDIRECT_DATA_BUFFERS=TRUE</code> must be present in the initialization parameter file for the database instance that uses VLM support. If this parameter is not set, then Oracle Database 10<span class="italic">g</span> Release 1 (10.1) or later behaves in same way as previous releases.</p>
+</li>
+<li>
+<p>Initialization parameters <code>DB_BLOCK_BUFFERS</code> and <code>DB_BLOCK_SIZE</code> must be set to values you have chosen for Oracle Database.</p>
+<div class="infoboxnote">
+<p class="notep1">Note:</p>
+The total number of bytes of database buffers (that is, <code>DB_BLOCK_BUFFERS</code> multiplied by <code>DB_BLOCK_SIZE</code>) is no longer limited to 3 GB.
+<p>Dynamic SGA and multiple block size are not supported with VLM. When VLM is enabled, the following new buffer cache parameters are not supported:</p>
+<ul>
+<li>
+<p><code>DB_CACHE_SIZE</code></p>
+</li>
+<li>
+<p><code>DB_2K_CACHE_SIZE</code></p>
+</li>
+<li>
+<p><code>DB_4K_CACHE_SIZE</code></p>
+</li>
+<li>
+<p><code>DB_8K_CACHE_SIZE</code></p>
+</li>
+<li>
+<p><code>DB_16K_CACHE_SIZE</code></p>
+</li>
+<li>
+<p><code>DB_32K_CACHE_SIZE</code></p>
+</li>
+</ul>
+<p>To select the block size for the instance, use the initialization parameter <code>DB_BLOCK_SIZE</code>. The buffer cache size is set by the initialization parameter <code>DB_BLOCK_BUFFERS</code>.</p>
+</div>
+</li>
+<li>
+<p>Registry parameter <code>AWE_WINDOW_MEMORY</code> must be created and set in the appropriate key for your Oracle home. This parameter is specified in bytes and has a default value of 1 GB. <code>AWE_WINDOW_MEMORY</code> tells Oracle Database how much of its 2 GB (3 GB if you enabled 4 GT) address space to reserve for mapping in database buffers.</p>
+<p>This memory comes from the 2 GB (3 GB if you enabled 4 GT) virtual address space in Oracle Database, so its value must be less than 3 GB. Setting this parameter to a large value has the effect of using more of the address space for buffers and using less AWE memory for buffers. However, since accessing AWE buffers is somewhat slower than accessing virtual address space buffers, Oracle recommends that you tune these parameters to be as large as possible without adversely limiting database operations.</p>
+<p>In general, the higher <code>AWE_WINDOW_MEMORY</code> is set, the fewer connections and memory allocations are possible for Oracle Database. The lower <code>AWE_WINDOW_MEMORY</code> is set, the lower the performance.</p>
+</li>
+<li>
+<p>Once this parameter is set, Oracle Database can be started and it functions the same as before except that more database buffers are available to the instance. In addition, disk I/O may be reduced because more Oracle Database data blocks can be cached in the <a href="glossary.htm#i432537"><span class="xrefglossterm">System Global Area</span></a> (SGA).</p>
+<div class="infoboxnote">
+<p class="notep1">Note:</p>
+Registry parameter <code>VLM_BUFFER_MEMORY</code>, which enabled VLM configurations in earlier releases, is not supported in Oracle Database 10<span class="italic">g</span> Release 1 (10.1) or later.</div>
+</li>
+</ol>
+<a id="NTQRF99983" name="NTQRF99983"></a>
+<p class="subhead1">VLM Instance Tuning</p>
+<p>VLM configurations improve database performance by caching more database buffers in memory. This reduces disk I/O compared to configurations without VLM. VLM support in Oracle Database 10<span class="italic">g</span> Release 1 (10.1) or later has been re-written to integrate very closely with Windows. Compared to Oracle8<span class="italic">i</span> Release 2 (8.1.6), VLM users should see better performance with the newer implementation.</p>
+<p>Tuning for VLM is no different than tuning for configurations without VLM. It is an iterative task that begins by selecting appropriate <code>DB_BLOCK_SIZE</code> and <code>DB_BLOCK_BUFFERS</code> initialization parameters for the application being supported.</p>
+<div class="infoboxnote">
+<p class="notep1">Note:</p>
+VLM configurations do not support multiple database block sizes.</div>
+<p><code>AWE_WINDOW_MEMORY</code>, a new registry parameter specific to VLM, tells Oracle Database how much of its address space to reserve for mapping in database buffers. It defaults to a value of 1 GB, which should be suitable for most installations. If <code>DB_BLOCK_SIZE</code> is large, however, the default <code>AWE_WINDOW_MEMORY</code> value of 1 GB may not be sufficient to start the database.</p>
+<p>Increasing the value of <code>AWE_WINDOW_MEMORY</code> improves performance, but it also limits the amount of memory available for other Oracle Database threads (like foreground threads). Clients may see "out of memory" errors if this value is set too large. As a general guideline, increase the <code>AWE_WINDOW_MEMORY</code> registry value by 20 percent.</p>
+<p>For example, if <code>DB_BLOCK_SIZE</code> is set to 8 KB, <code>AWE_WINDOW_MEMORY</code> is set to 1 GB, and the number of LRU latches is set to 32 (16 processor computer), then database startup fails with out of memory errors 27102 and 34. Increasing the value of <code>AWE_WINDOW_MEMORY</code> to 1.2 GB fixes the problem.</p>
+<p>Having a large cache in a VLM configuration may also slow down database writer (<code>DBWR</code>) threads. Having more <code>DBWR</code> threads will distribute work required to identify and write buffers to disk and will distribute I/O loads among threads. Initialization parameter <code>DB_WRITER_PROCESSES</code> enables you to configure multiple database writer threads.</p>
+<p>A large cache can also introduce contention on the LRU (least recently used) <a href="glossary.htm#i432716"><span class="xrefglossterm">latch</span></a>. On symmetric multiprocessor (SMP) systems, Oracle Database sets the number of LRU latches to a value equal to one half the number of processors on the system. You can reduce contention on such configurations by increasing the number of LRU latches to twice (or four times) the number of processors on the system.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<a class="olink PFGRF024" href="http://www.oracle.com/pls/db112/lookup?id=PFGRF024"><span class="italic">Oracle Database Performance Tuning Guide</span></a> for more information on instance tuning</div>
+</div>
+<!-- class="sect2" -->
+<a id="i1005940" name="i1005940"></a><a id="NTQRF99984" name="NTQRF99984"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Windows <a id="sthref20" name="sthref20"></a><a id="sthref21" name="sthref21"></a>4 GB RAM Tuning (4GT)</h3>
+<p>The following 32-Bit Windows operating systems include a feature called 4 GB RAM Tuning (4GT):</p>
+<ul>
+<li>
+<p>Windows Server 2003 R2</p>
+</li>
+<li>
+<p>Windows Server 2003</p>
+</li>
+<li>
+<p>Windows Vista</p>
+</li>
+<li>
+<p>Windows Server 2008</p>
+</li>
+<li>
+<p>Windows 7</p>
+</li>
+</ul>
+<p>This feature allows memory-intensive applications running on Oracle Database Enterprise Edition to access up to 3 GB of memory, as opposed to the standard 2 GB in previous operating system versions. 4GT provides a tremendous benefit: 50 percent more memory is available for database use, increasing SGA sizes or connection counts.</p>
+</div>
+<!-- class="sect2" -->
+<a id="i1005947" name="i1005947"></a><a id="NTQRF99985" name="NTQRF99985"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><a id="sthref22" name="sthref22"></a>Large User Populations</h3>
+<p>Several features allow Oracle Database to support an increasingly large number of database connections on Windows:</p>
+<ul>
+<li>
+<p><a id="sthref23" name="sthref23"></a><a id="sthref24" name="sthref24"></a>Oracle Database <a href="glossary.htm#i432503"><span class="xrefglossterm">Shared Server Process</span></a>, which limits the number of threads needed in the Oracle Database process, supports over 10,000 simultaneous connections to a single database instance.</p>
+</li>
+<li>
+<p><a href="glossary.htm#i433191"><span class="xrefglossterm">Oracle Net</span></a> multiplexing and connection pooling features allow a large configuration to connect more users to a single database instance.</p>
+</li>
+<li>
+<p>Oracle RAC raises connection counts dramatically by allowing multiple server computers to access the same database files, increasing the number of user connections by tens of thousands, also increasing throughput.</p>
+<div class="infoboxnote">
+<p class="notep1">Note:</p>
+Oracle RAC is not supported on Windows XP and Windows Vista.</div>
+</li>
+</ul>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="i1005964" name="i1005964"></a><a id="NTQRF99986" name="NTQRF99986"></a>
+<div class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Oracle Database Integration with Windows</h2>
+<p>Oracle Database is increasingly integrated with Windows, easing maintenance and improving enterprise-level deployment in security, directory, and transaction services. Integration features in Oracle Database include:</p>
+<ul>
+<li>
+<p><a href="#i1005993">Oracle PKI Integration with Windows</a></p>
+</li>
+<li>
+<p><a href="#i1006048">Oracle Services for Microsoft Transaction Server</a></p>
+</li>
+<li>
+<p><a href="#i1006071">Oracle Fail Safe Integration with Windows</a></p>
+</li>
+</ul>
+<a id="i1005993" name="i1005993"></a><a id="NTQRF99987" name="NTQRF99987"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><a id="sthref25" name="sthref25"></a><a id="sthref26" name="sthref26"></a>Oracle PKI Integration with Windows</h3>
+<p>Oracle Advanced Security includes <a href="glossary.htm#i432412"><span class="xrefglossterm">Oracle PKI</span></a> (public key infrastructure) integration for authentication and single sign-on. You can integrate Oracle-based applications with the PKI authentication and encryption framework, using Oracle Wallet Manager.</p>
+</div>
+<!-- class="sect2" -->
+<a id="i1006048" name="i1006048"></a><a id="NTQRF99988" name="NTQRF99988"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><a id="sthref27" name="sthref27"></a>Oracle Services for Microsoft Transaction Server</h3>
+<p><a href="glossary.htm#i432315"><span class="xrefglossterm">Microsoft Transaction Server</span></a> (MTS) is used in the middle tier as an application server for <a href="glossary.htm#i432205"><span class="xrefglossterm">COM</span></a> objects and transactions in distributed environments. It is also called COM+ and Enterprise Services. Oracle Services for Microsoft Transaction Server allows Oracle Database to be used as a resource manager in Microsoft Transaction Server-coordinated transactions, providing strong integration between Oracle solutions and Microsoft Transaction Server. Oracle Services for Microsoft Transaction Server can operate with Oracle Database running on any operating system.</p>
+<p>Oracle Database takes advantage of a native implementation and also stores <a href="glossary.htm#i432925"><span class="xrefglossterm">recovery</span></a> information in Oracle Database itself. Oracle Services for Microsoft Transaction Server allows development in all industry-wide data access interfaces, including Oracle Objects for OLE (OO4O), <a href="glossary.htm#i432389"><span class="xrefglossterm">Oracle Call Interface</span></a> (OCI), ActiveX Data Objects (ADO), OLE DB, and Open Database Connectivity (ODBC). The Oracle APIs, Oracle Data Provider for .NET, OO4O and OCI, offer greatest efficiency.</p>
+</div>
+<!-- class="sect2" -->
+<a id="i1006071" name="i1006071"></a><a id="NTQRF99989" name="NTQRF99989"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><a id="sthref28" name="sthref28"></a>Oracle Fail Safe Integration with Windows</h3>
+<p>Oracle Fail Safe ensures that Oracle Database (and also other Oracle and third-party applications) can be configured and managed for high availability on Windows clusters. An instance runs on only one node at a time.</p>
+<p>A cluster is a group of independent computing systems that operates as a single virtual system, eliminating individual host systems as points of failure. Oracle Fail Safe works with Microsoft Cluster Server to ensure that if a failure occurs on one cluster system, then workloads running on that system fail over quickly and automatically to a surviving system. Oracle Database combined with Oracle Fail Safe on a Windows cluster ensures protection from both hardware and software failures.</p>
+<p>For well-configured solutions, Oracle Fail Safe ensures a surviving system to be operational in less than a minute, even for heavily-used databases.</p>
+<div class="infoboxnote">
+<p class="notep1">Note:</p>
+Windows operating systems, Windows XP, Windows Vista, and Windows 7 do not support the clustering technology found in Microsoft Cluster Server. Therefore, Oracle Fail Safe Server, which integrates with Microsoft Cluster Server, is not supported on these operating systems.</div>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+Oracle Fail Safe documentation set is available on separate media in the Oracle Database media pack</div>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="i1006105" name="i1006105"></a><a id="NTQRF99991" name="NTQRF99991"></a>
+<div class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Other Sources of Information</h2>
+<p>See the following sources for additional information:</p>
+<ul>
+<li>
+<p><a href="ap_unix.htm#g636701">Appendix E, "Oracle Database Windows/UNIX Differences"</a></p>
+</li>
+<li>
+<p><a href="tools.htm#g1019547">Chapter 2, "Database Tools on Windows"</a> for more information about Oracle Database integration with Windows tools</p>
+</li>
+<li>
+<p><a href="apps.htm#g1012237">Chapter 16, "Developing Applications for Windows"</a> for more information about Oracle Database integration with Windows features</p>
+</li>
+</ul>
+</div>
+<!-- class="sect1" --></div>
+<!-- class="ind" -->
+<div class="footer">
+<hr />
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<col width="33%" />
+<col width="*" />
+<col width="33%" />
+<tr>
+<td align="left">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="98">
+<tr>
+<td align="center" valign="top"><a href="what_new.htm"><img width="24" height="24" src="../../dcommon/gifs/leftnav.gif" alt="Go to previous page" /><br />
+<span class="icon">Previous</span></a></td>
+<td align="center" valign="top"><a href="tools.htm"><img width="24" height="24" src="../../dcommon/gifs/rightnav.gif" alt="Go to next page" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+</td>
+<td style="font-size: 90%" align="center" class="copyrightlogo"><img width="144" height="18" src="../../dcommon/gifs/oracle.gif" alt="Oracle" /><br />
+Copyright&nbsp;&copy;&nbsp;1996, 2010,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.<br />
+<a href="../../dcommon/html/cpyr.htm">Legal Notices</a></td>
+<td align="right">
+<table class="icons oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="245">
+<tr>
+<td align="center" valign="top"><a href="../../index.htm"><img width="24" height="24" src="../../dcommon/gifs/doclib.gif" alt="Go to Documentation Home" /><br />
+<span class="icon">Home</span></a></td>
+<td align="center" valign="top"><a href="../../nav/portal_booklist.htm"><img width="24" height="24" src="../../dcommon/gifs/booklist.gif" alt="Go to Book List" /><br />
+<span class="icon">Book List</span></a></td>
+<td align="center" valign="top"><a href="toc.htm"><img width="24" height="24" src="../../dcommon/gifs/toc.gif" alt="Go to Table of Contents" /><br />
+<span class="icon">Contents</span></a></td>
+<td align="center" valign="top"><a href="index.htm"><img width="24" height="24" src="../../dcommon/gifs/index.gif" alt="Go to Index" /><br />
+<span class="icon">Index</span></a></td>
+<td align="center" valign="top"><a href="../../dcommon/html/feedback.htm"><img width="24" height="24" src="../../dcommon/gifs/feedbck2.gif" alt="Go to Feedback page" /><br />
+<span class="icon">Contact Us</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+</body>
+</html>

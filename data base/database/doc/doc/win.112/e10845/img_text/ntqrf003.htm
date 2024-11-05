@@ -1,0 +1,16 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 5.1" />
+<title>Description of the illustration ntqrf003.gif</title>
+</head>
+<body>
+<p>Oracle Database architecture on Windows. An Oracle instance is shown as a Windows service (a background process registered with the operating system). The service is started by Windows and requires no user interaction to start. It contains the memory structures and threads needed to access the database.</p>
+<p>The client connects through a <span class="bold">shadow thread</span> to the Oracle instance. The <span class="bold">shadow thread</span> connects directly with the <span class="bold">process monitor</span>. The memory structures include a shared pool of a <span class="bold">library cache</span> and a <span class="bold">data dictionary cache</span>, a <span class="bold">database buffer cache</span>, and a <span class="bold">redo log buffer</span>.</p>
+<p>The threads include the <span class="bold">database writer</span>, <span class="bold">log writer</span>, <span class="bold">process monitor</span>, <span class="bold">system monitor</span>, <span class="bold">checkpoint process</span>, <span class="bold">distributed recovery process</span> (all required while the database is available), and <span class="bold">archive process</span> (optional while the database is available).</p>
+<p>There is an Oracle Database containing <span class="bold">data files</span>, <span class="bold">control files</span>, and <span class="bold">redo log files</span>. Associated with the database is the <span class="bold">parameter file</span>, <span class="bold">password file</span>, and <span class="bold">archived log files</span>.</p>
+</body>
+</html>

@@ -1,0 +1,846 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii" />
+<meta http-equiv="Content-Language" content="en" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta name="robots" content="all" scheme="http://www.robotstxt.org/" />
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 5.1" />
+<meta name="Date" content="2010-03-05T15:45:38Z" />
+<meta name="doctitle" content="Oracle&reg; Database Platform Guide 11g Release 2 (11.2) for Microsoft Windows" />
+<meta name="partno" content="E10845-01" />
+<meta name="docid" content="NTQRF" />
+<link rel="Start" href="../../index.htm" title="Home" type="text/html" />
+<link rel="Copyright" href="../../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+<link rel="Stylesheet" href="../../dcommon/css/blafdoc.css" title="Default" type="text/css" />
+<script type="text/javascript" src="../../dcommon/js/doccd.js">
+</script>
+<link rel="Contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="Index" href="index.htm" title="Index" type="text/html" />
+<link rel="Glossary" href="glossary.htm" title="Glossary" type="text/html" />
+<link rel="Prev" href="specs.htm" title="Previous" type="text/html" />
+<link rel="Next" href="apps.htm" title="Next" type="text/html" />
+<link rel="alternate" href="../e10845.pdf" title="PDF version" type="application/pdf" />
+<title>Configuration Parameters and the Registry</title>
+</head>
+<body>
+<div class="header">
+<div class="zz-skip-header"><a name="top" id="top" href="#BEGIN">Skip Headers</a></div>
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td align="left" valign="top"><b>Oracle&reg; Database Platform Guide<br />
+11<i>g</i> Release 2 (11.2) for Microsoft Windows</b><br />
+Part Number E10845-01</td>
+<td valign="bottom" align="right">
+<table class="icons oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="245">
+<tr>
+<td align="center" valign="top"><a href="../../index.htm"><img width="24" height="24" src="../../dcommon/gifs/doclib.gif" alt="Go to Documentation Home" /><br />
+<span class="icon">Home</span></a></td>
+<td align="center" valign="top"><a href="../../nav/portal_booklist.htm"><img width="24" height="24" src="../../dcommon/gifs/booklist.gif" alt="Go to Book List" /><br />
+<span class="icon">Book List</span></a></td>
+<td align="center" valign="top"><a href="toc.htm"><img width="24" height="24" src="../../dcommon/gifs/toc.gif" alt="Go to Table of Contents" /><br />
+<span class="icon">Contents</span></a></td>
+<td align="center" valign="top"><a href="index.htm"><img width="24" height="24" src="../../dcommon/gifs/index.gif" alt="Go to Index" /><br />
+<span class="icon">Index</span></a></td>
+<td align="center" valign="top"><a href="../../dcommon/html/feedback.htm"><img width="24" height="24" src="../../dcommon/gifs/feedbck2.gif" alt="Go to Feedback page" /><br />
+<span class="icon">Contact Us</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<hr />
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td align="left" valign="top">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="98">
+<tr>
+<td align="center" valign="top"><a href="specs.htm"><img width="24" height="24" src="../../dcommon/gifs/leftnav.gif" alt="Go to previous page" /><br />
+<span class="icon">Previous</span></a></td>
+<td align="center" valign="top"><a href="apps.htm"><img width="24" height="24" src="../../dcommon/gifs/rightnav.gif" alt="Go to next page" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+</td>
+<td align="right" valign="top" style="font-size: 90%"><a href="../e10845.pdf">View PDF</a></td>
+</tr>
+</table>
+<a name="BEGIN" id="BEGIN"></a></div>
+<div class="IND"><!-- End Header --><a id="g1015622" name="g1015622"></a><a id="NTQRF180" name="NTQRF180"></a><a id="i1006544" name="i1006544"></a>
+<h1 class="chapter"><span class="secnum">15</span> Configuration Parameters and the Registry</h1>
+<p>This chapter describes use of the <a href="glossary.htm#i432474"><span class="xrefglossterm">registry</span></a> for various Oracle Database for Windows components. It also lists recommended values and ranges for configuration parameters.</p>
+<p>This chapter contains these topics:</p>
+<ul>
+<li>
+<p><a href="#i1005658">About Configuration Parameters</a></p>
+</li>
+<li>
+<p><a href="#CBAFEECF">Registry Overview</a></p>
+</li>
+<li>
+<p><a href="#i1005699">Registry Parameters</a></p>
+</li>
+<li>
+<p><a href="#i1005998">Oracle RAC Registry Parameters</a></p>
+</li>
+<li>
+<p><a href="#i1006146">Managing Registry Parameters with regedit</a></p>
+</li>
+<li>
+<p><a href="#i1006222">Managing Registry Parameters with Oracle Administration Assistant for Windows</a></p>
+</li>
+<li>
+<p><a href="#i1006295">Modifying Oracle Counters for Windows Performance Monitor Parameters</a></p>
+</li>
+</ul>
+<a id="i1005658" name="i1005658"></a><a id="NTQRF413" name="NTQRF413"></a>
+<div class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1"><a id="sthref567" name="sthref567"></a><a id="sthref568" name="sthref568"></a><a id="sthref569" name="sthref569"></a>About Configuration Parameters</h2>
+<p>Oracle Database for Windows uses configuration parameters to locate files and specify run-time parameters common to all Oracle products. When an Oracle program or application requires a translation for a particular configuration variable, Oracle Database for Windows uses the associated parameter. All Oracle parameters are stored in the registry.</p>
+</div>
+<!-- class="sect1" -->
+<a id="CBAFEECF" name="CBAFEECF"></a><a id="NTQRF414" name="NTQRF414"></a>
+<div class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Registry Overview</h2>
+<p><a id="sthref570" name="sthref570"></a>Oracle Database for Windows stores its configuration information in a repository (the registry) that is organized in a tree format. The tree format consists of keys in the registry and parameter values for the keys. Keys and parameter values can be viewed and modified in Registry Editor.</p>
+<p><a id="sthref571" name="sthref571"></a><a id="sthref572" name="sthref572"></a>Keys are folders that appear in the left pane of a Registry Editor window. A key contains subkeys or parameters.</p>
+<div class="infoboxnote">
+<p class="notep1"><span class="bold">Caution</span>:</p>
+Although Registry Editor lets you view and modify registry keys and parameter values, you normally are not required to do so. In fact, you can render your system useless if you make incorrect changes. Therefore, only advanced users should edit the registry. Back up your system before making any changes in the registry.</div>
+<p>Parameters in Registry Editor appear as a string, consisting of three components:</p>
+<ul>
+<li>
+<p>Parameter name</p>
+</li>
+<li>
+<p>Value class or type of entry</p>
+</li>
+<li>
+<p>Value itself</p>
+</li>
+</ul>
+<p>For example, parameter <code>ORACLE_SID</code> can have the following entry in the registry:</p>
+<pre xml:space="preserve" class="oac_no_warn">ORACLE_SID:reg_sz:orcl1
+</pre>
+<p><a id="sthref573" name="sthref573"></a><a id="sthref574" name="sthref574"></a><a id="sthref575" name="sthref575"></a><a id="sthref576" name="sthref576"></a>Value classes for Oracle Database for Windows parameters are:</p>
+<ul>
+<li>
+<p>String value with a <code>REG_SZ</code>, <code>REG_EXPAND_SZ</code> (for an expandable string), or a <code>REG_MULTI_SZ</code> (for multiple strings) prefix to identify a parameter value entry as a data string</p>
+</li>
+<li>
+<p>Binary value with a <code>REG_DWORD</code> prefix to identify a value entry as a <code>dword</code> (hexadecimal data) entry</p>
+</li>
+</ul>
+<p>Most Oracle Database for Windows parameter values are string types. Use Oracle Universal Installer defaults when a type is not given.</p>
+</div>
+<!-- class="sect1" -->
+<a id="i1005699" name="i1005699"></a><a id="NTQRF415" name="NTQRF415"></a>
+<div class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Registry Parameters</h2>
+<p>This section describes Oracle Database for Windows registry parameters for the following keys. Other products, such as Oracle Enterprise Manager, have additional keys and parameters that are not described in this chapter.</p>
+<ul>
+<li>
+<p><a href="#i1005733">HKEY_LOCAL_MACHINE\SOFTWARE\ORACLE\KEY_HOME_NAME</a></p>
+</li>
+<li>
+<p><a href="#CBAECBAB">HKEY_LOCAL_MACHINE\SOFTWARE\ORACLE</a></p>
+</li>
+<li>
+<p><a href="#i1005920">HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services</a></p>
+</li>
+</ul>
+<p>To modify these registry values, see <a href="#i1006146">"Managing Registry Parameters with regedit"</a>.</p>
+<a id="i1005733" name="i1005733"></a><a id="NTQRF416" name="NTQRF416"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">HKEY_LOCAL_MACHINE\SOFTWARE\ORACLE\KEY_HOME_NAME</h3>
+<p>Each time you install Oracle products into a new Oracle home on your computer, <code>HKEY_LOCAL_MACHINE\SOFTWARE\ORACLE\KEY_</code><code><span class="codeinlineitalic">HOME_NAME</span></code> is created. This subkey contains parameter values for most Oracle products.</p>
+<div class="infoboxnote">
+<p class="notep1">Note:</p>
+See Appendix B, "Optimal Flexible Architecture", in <a class="olink NTDBI" href="../../install.112/e10843/toc.htm"><span class="italic">Oracle Database Installation Guide for Microsoft Windows</span></a> for details on the PATH variable and registry values when you are working with <a href="glossary.htm#i432341"><span class="xrefglossterm">multiple Oracle homes</span></a>.</div>
+<p><code>HKEY_LOCAL_MACHINE\SOFTWARE\ORACLE\KEY_</code><code><span class="codeinlineitalic">HOME_NAME</span></code> includes the following parameters for an Oracle home directory. Depending on products you install, additional parameters can also be created. See your Windows development manuals.</p>
+<a id="NTQRF417" name="NTQRF417"></a>
+<div class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref577" name="sthref577"></a>
+<h4 class="sect3"><a id="sthref578" name="sthref578"></a><a id="sthref579" name="sthref579"></a>MSHELP_TOOLS</h4>
+<p>Specifies the location of Windows help files. The default value is</p>
+<pre xml:space="preserve" class="oac_no_warn"><span class="italic">ORACLE_HOME</span>\mshelp
+</pre></div>
+<!-- class="sect3" -->
+<a id="NTQRF418" name="NTQRF418"></a>
+<div class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref580" name="sthref580"></a>
+<h4 class="sect3"><a id="sthref581" name="sthref581"></a><a id="sthref582" name="sthref582"></a>NLS_LANG and Other Globalization Parameters</h4>
+<p>Specifies supported language, territory, and character set. This parameter specifies the language in which messages appear, the territory and its conventions for calculating week and day numbers, and the character set displayed. Oracle Universal Installer sets this value during installation based on the language setting of the operating system.</p>
+<p>The default value for <code><span class="codeinlineitalic">NLS_LANG,</span></code> if not set, is <code>AMERICAN_AMERICA.US7ASCII.</code></p>
+<p>There are other globalization parameters that can be set along <code><span class="codeinlineitalic">NLS_LANG</span></code> to override some values implicitly determined by <code><span class="codeinlineitalic">NLS_LANG.</span></code> These parameters are:</p>
+<pre xml:space="preserve" class="oac_no_warn">NLS_DATE_FORMAT
+NLS_TIMESTAMP_FORMAT
+NLS_TIMESTAMP_TZ_FORMAT
+NLS_DATE_LANGUAGE
+NLS_NUMERIC_CHARACTERS
+NLS_CURRENCY
+NLS_ISO_CURRENCY
+NLS_DUAL_CURRENCY
+NLS_SORT
+</pre>
+<p>The following parameters can also be set along <code><span class="codeinlineitalic">NLS_LANG</span></code> to determine globalization behavior that is independent from the value of <code><span class="codeinlineitalic">NLS_LANG:</span></code></p>
+<pre xml:space="preserve" class="oac_no_warn">NLS_CALENDAR
+NLS_COMP
+NLS_NCHAR_CONV_EXCP
+NLS_LENGTH_SEMANTICS
+</pre>
+<div class="infoboxnote">
+<p class="notep1">Note:</p>
+All globalization parameters set in the environment and Registry for a database client are ignored if <code><span class="codeinlineitalic">NLS_LANG</span></code> is not set.</div>
+<p>See <a class="olink NLSPG003" href="http://www.oracle.com/pls/db112/lookup?id=NLSPG003"><span class="italic">Oracle Database Globalization Support Guide</span></a> for more information about NLS_LANG and other globalization parameters</p>
+</div>
+<!-- class="sect3" -->
+<a id="NTQRF419" name="NTQRF419"></a>
+<div class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref583" name="sthref583"></a>
+<h4 class="sect3"><a id="sthref584" name="sthref584"></a><a id="sthref585" name="sthref585"></a>ORA_CWD</h4>
+<p>Specifies current working directory. For example, if you set this parameter and then use ORADIM, a log file called <code>oradim.log</code> is created in this directory. This parameter must be manually set.</p>
+</div>
+<!-- class="sect3" -->
+<a id="NTQRF420" name="NTQRF420"></a>
+<div class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref586" name="sthref586"></a>
+<h4 class="sect3"><a id="sthref587" name="sthref587"></a><a id="sthref588" name="sthref588"></a>ORA_SID_AUTOSTART</h4>
+<p>Starts Oracle Database when <code>OracleService</code><code><span class="codeinlineitalic">SID</span></code> service is started. The default value is <code>true.</code></p>
+</div>
+<!-- class="sect3" -->
+<a id="NTQRF421" name="NTQRF421"></a>
+<div class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref589" name="sthref589"></a>
+<h4 class="sect3"><a id="sthref590" name="sthref590"></a><a id="sthref591" name="sthref591"></a><a id="sthref592" name="sthref592"></a>ORA_SID_PFILE</h4>
+<p>Specifies full path to <a href="glossary.htm#i432288"><span class="xrefglossterm">initialization parameter file</span></a>. The default value is <code><span class="codeinlineitalic">ORACLE_BASE</span></code><code>\admin\DB_NAME\pfile\init.ora</code></p>
+</div>
+<!-- class="sect3" -->
+<a id="NTQRF422" name="NTQRF422"></a>
+<div class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref593" name="sthref593"></a>
+<h4 class="sect3"><a id="sthref594" name="sthref594"></a><a id="sthref595" name="sthref595"></a>ORA_SID_SHUTDOWN</h4>
+<p>When set to <code>true</code>, the default value, this parameter shuts down the instance of Oracle Database identified by <code><span class="codeinlineitalic">SID</span></code> when <code>OracleService</code><code><span class="codeinlineitalic">SID</span></code> is stopped manually&#x2014;using either the Control Panel or Net stop command.</p>
+</div>
+<!-- class="sect3" -->
+<a id="NTQRF423" name="NTQRF423"></a>
+<div class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref596" name="sthref596"></a>
+<h4 class="sect3"><a id="sthref597" name="sthref597"></a><a id="sthref598" name="sthref598"></a>ORA_SID_SHUTDOWN_TIMEOUT</h4>
+<p>Sets maximum time (in seconds) to wait for shutdown to complete before the service for a particular <code><span class="codeinlineitalic">SID</span></code> stops. The default value is <code>30</code>.</p>
+</div>
+<!-- class="sect3" -->
+<a id="NTQRF424" name="NTQRF424"></a>
+<div class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref599" name="sthref599"></a>
+<h4 class="sect3"><a id="sthref600" name="sthref600"></a><a id="sthref601" name="sthref601"></a>ORA_SID_SHUTDOWNTYPE</h4>
+<p>Specifies mode in which Oracle Database is shut down when you stop <code>OracleService</code><code><span class="codeinlineitalic">SID</span></code>. Valid values are <code>a</code> (abort), <code>i</code> (immediate), and <code>n</code> (normal). The default value is <code>i</code>.</p>
+</div>
+<!-- class="sect3" -->
+<a id="NTQRF425" name="NTQRF425"></a>
+<div class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref602" name="sthref602"></a>
+<h4 class="sect3">ORA_TZFILE</h4>
+<p>Specifies location of time zone file. Each file contains:</p>
+<ul>
+<li>
+<p>Valid time zone names</p>
+</li>
+<li>
+<p>Offset from UTC</p>
+</li>
+<li>
+<p>Abbreviation for standard time</p>
+</li>
+<li>
+<p>Abbreviation for daylight savings time</p>
+</li>
+</ul>
+<p>In previous releases, the default value for <code>ORA _TZFILE</code> was</p>
+<pre xml:space="preserve" class="oac_no_warn"><span class="italic">ORACLE_BASE</span>\<span class="italic">ORACLE_HOME</span>\oracore\zoneinfo\timezlrg.dat
+</pre>
+<p>Beginning with Oracle Database 11g Release 2 (11.2), the default value is</p>
+<pre xml:space="preserve" class="oac_no_warn"><span class="italic">ORACLE_HOME</span>\oracore\zoneinfo\timezlrg_11.dat
+</pre>
+<p>The <code>timezone_</code><code><span class="codeinlineitalic">version_number</span></code><code>.dat</code> datafiles contain most commonly used time zones and are smaller for better database performance. The new default, <code>timezlrg_</code><code><span class="codeinlineitalic">version_number</span></code><code>.dat</code>, includes time zones not defined in the smaller file.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<a class="olink NLSPG0141" href="http://www.oracle.com/pls/db112/lookup?id=NLSPG0141"><span class="italic">Oracle Database Globalization Support Guide</span></a> for additional details about time zone files</div>
+</div>
+<!-- class="sect3" -->
+<a id="NTQRF426" name="NTQRF426"></a>
+<div class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref603" name="sthref603"></a>
+<h4 class="sect3"><a id="sthref604" name="sthref604"></a><a id="sthref605" name="sthref605"></a><a id="sthref606" name="sthref606"></a>ORACLE_AFFINITY</h4>
+<p>Specifies Windows processor affinity of each <a href="glossary.htm#i432558"><span class="xrefglossterm">thread</span></a> within the Oracle Database <a href="glossary.htm#i432454"><span class="xrefglossterm">process</span></a>. This parameter must be manually added. Oracle recommends consulting Oracle Support Services before changing this parameter. The format is:</p>
+<pre xml:space="preserve" class="oac_no_warn">name1:cpumask1;name2:cpumask2
+</pre>
+<p>Each <code>name</code> setting must be the name of a background thread, <code>user</code> for non-background (shadow) threads, or <code>def</code> for any thread type not handled specifically.</p>
+<p>The <code>name</code> mask sets the affinity mask of the Oracle Database process. Valid background thread names include <code>DBW0</code>, <code>LGWR</code>, <code>PMON</code>, <code>SMON</code>, <code>ARCH</code>, <code>RECO</code>, <code>CKPT</code>, <code>TRWR</code>, <code>J000</code> through <code>J999</code>, <code>P000</code> through <code>P481</code>, and any other name found in the <code>NAME</code> column of the <code>v$bgprocess</code> <a href="glossary.htm#i432229"><span class="xrefglossterm">data dictionary</span></a> <a href="glossary.htm#i432584"><span class="xrefglossterm">view</span></a>.</p>
+<p>Each affinity setting must be a valid affinity mask (or its numeric equivalent) for the corresponding name. Process affinity masks are used only when <a href="glossary.htm#i432421"><span class="xrefglossterm">Oracle services</span></a> are first started. Each thread's affinity is set only when the individual thread is started (for example, at database startup time for the background threads).</p>
+</div>
+<!-- class="sect3" -->
+<a id="NTQRF427" name="NTQRF427"></a>
+<div class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref607" name="sthref607"></a>
+<h4 class="sect3"><a id="sthref608" name="sthref608"></a><a id="sthref609" name="sthref609"></a>ORACLE_BASE</h4>
+<p>Specifies the top-level Oracle directory (for example, <code>C:\app\oracle\product\11.2.0</code>) that contains <code><span class="codeinlineitalic">ORACLE_HOME</span></code>, <code>admin</code>, and <code>oradata</code>. The default is <code>ORACLE_BASE</code>.</p>
+</div>
+<!-- class="sect3" -->
+<a id="NTQRF428" name="NTQRF428"></a>
+<div class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref610" name="sthref610"></a>
+<h4 class="sect3"><a id="sthref611" name="sthref611"></a><a id="sthref612" name="sthref612"></a>ORACLE_GROUP_NAME</h4>
+<p>Specifies the name of the group containing icons of the Oracle products installed. The parameter is added to your registry when you first install Oracle products, even if Oracle Universal Installer does not create a program group for Oracle products you have installed (for example, if you have installed only <a href="glossary.htm#i433191"><span class="xrefglossterm">Oracle Net</span></a> software). The default value is <code>Oracle</code> <code>-</code> <code><span class="codeinlineitalic">HOME_NAME</span></code>.</p>
+</div>
+<!-- class="sect3" -->
+<a id="NTQRF429" name="NTQRF429"></a>
+<div class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref613" name="sthref613"></a>
+<h4 class="sect3"><a id="sthref614" name="sthref614"></a><a id="sthref615" name="sthref615"></a>ORACLE_HOME</h4>
+<p>Specifies Oracle home directory in which Oracle products are installed. This directory is immediately beneath the Oracle base directory in the Oracle directory hierarchy. The default value is the drive letter and name that you specify during installation.</p>
+</div>
+<!-- class="sect3" -->
+<a id="NTQRF430" name="NTQRF430"></a>
+<div class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref616" name="sthref616"></a>
+<h4 class="sect3"><a id="sthref617" name="sthref617"></a><a id="sthref618" name="sthref618"></a>ORACLE_HOME_KEY</h4>
+<p>The <code>HKEY_LOCAL_MACHINE</code> location of Oracle parameters. The default value is <code>software\oracle\HOME</code><code><span class="codeinlineitalic">ID.</span></code></p>
+</div>
+<!-- class="sect3" -->
+<a id="NTQRF431" name="NTQRF431"></a>
+<div class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref619" name="sthref619"></a>
+<h4 class="sect3"><a id="sthref620" name="sthref620"></a><a id="sthref621" name="sthref621"></a>ORACLE_HOME_NAME</h4>
+<p>Specifies home name of Oracle home directory in which Oracle products are installed. The default value is the name that you specify during installation.</p>
+</div>
+<!-- class="sect3" -->
+<a id="NTQRF432" name="NTQRF432"></a>
+<div class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref622" name="sthref622"></a>
+<h4 class="sect3"><a id="sthref623" name="sthref623"></a><a id="sthref624" name="sthref624"></a><a id="sthref625" name="sthref625"></a>ORACLE_PRIORITY</h4>
+<p>Determines Windows scheduling priorities of threads within the Oracle Database management system process. The format is:</p>
+<pre xml:space="preserve" class="oac_no_warn">name1:priority1;name2:priority2 . . .
+</pre>
+<p>The <code>name</code> class sets the <code>priority</code> class of the Oracle Database process. Threads can be assigned priority either collectively or individually. The collective name <code>user</code> designates non-background (shadow) threads; the collective name <code>def</code> designates any thread type not handled specifically. Valid individual background thread names include <code>DBW0</code>, <code>LGWR</code>, <code>PMON</code>, <code>SMON</code>, <code>ARCH0</code>, <code>RECO</code>, <code>CKPT</code>, <code>TRWR</code>, <code>J000</code> through <code>J999</code><code>SNP0</code>through <code>SNP9</code>, and any other name found in the <code>NAME</code> column of the <code>v$bgprocess</code> data dictionary view.</p>
+<p>The default value is <code>class:normal; def:normal</code>.</p>
+<div class="infoboxnote">
+<p class="notep1">Note:</p>
+<code>ORACLE_PRIORITY</code> is not automatically created for you in the registry. When it is not defined in the registry, Windows default values are used for thread priorities.</div>
+</div>
+<!-- class="sect3" -->
+<a id="NTQRF433" name="NTQRF433"></a>
+<div class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref626" name="sthref626"></a>
+<h4 class="sect3"><a id="sthref627" name="sthref627"></a><a id="sthref628" name="sthref628"></a>ORACLE_SID</h4>
+<p>Specifies the name of the Oracle Database <a href="glossary.htm#CHDFBCHH"><span class="xrefglossterm">instance</span></a> on the host computer. The value of this parameter is the <code><span class="codeinlineitalic">SID</span></code> for the instance. The default value is specified by the entry in the Database Identification window of Oracle Universal Installer.</p>
+</div>
+<!-- class="sect3" -->
+<a id="NTQRF434" name="NTQRF434"></a>
+<div class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref629" name="sthref629"></a>
+<h4 class="sect3"><a id="sthref630" name="sthref630"></a><a id="sthref631" name="sthref631"></a>OSAUTH_ENFORCE_STRICT</h4>
+<p>Specifies if an operating system user must belong to an authorized group to connect using operating system authentication, in addition to the normal operating system authentication checking and permission lookup.</p>
+<p>If the value of this entry is <code>true</code>, then the user must belong to one of the following local groups on the Windows computer to connect using operating system authentication:</p>
+<ul>
+<li>
+<p><code>ORA_DBA</code></p>
+</li>
+<li>
+<p><code>ORA_sid_DBA</code></p>
+</li>
+<li>
+<p><code>ORA_OPER</code></p>
+</li>
+<li>
+<p><code>ORA_sid_OPER</code></p>
+</li>
+<li>
+<p><code>ORA_USER</code></p>
+</li>
+<li>
+<p><code>ORA_sid_USER</code></p>
+</li>
+</ul>
+<p>The default value is <code>false</code>.</p>
+</div>
+<!-- class="sect3" -->
+<a id="NTQRF435" name="NTQRF435"></a>
+<div class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref632" name="sthref632"></a>
+<h4 class="sect3"><a id="sthref633" name="sthref633"></a><a id="sthref634" name="sthref634"></a>OSAUTH_PREFIX_DOMAIN</h4>
+<p>Enables user authentication. When it is set to <code>true</code>, it enables the server to differentiate between one <a href="glossary.htm#i432581"><span class="xrefglossterm">username</span></a> and another, whether they are local users, domain users, or domain users on another domain in your network. When it is set to <code>false</code>, the domain is ignored, and the local user becomes the default value of the operating system user returned to the server. The default value is <code>false</code>.</p>
+</div>
+<!-- class="sect3" -->
+<a id="NTQRF437" name="NTQRF437"></a>
+<div class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref635" name="sthref635"></a>
+<h4 class="sect3"><a id="sthref636" name="sthref636"></a><a id="sthref637" name="sthref637"></a>RDBMS_ARCHIVE</h4>
+<p>Specifies the location of <a href="glossary.htm#i432192"><span class="xrefglossterm">backup</span></a> database files. The default value is <code><span class="codeinlineitalic">ORACLE_HOME</span></code><code>\database\archive</code>.</p>
+</div>
+<!-- class="sect3" -->
+<a id="NTQRF438" name="NTQRF438"></a>
+<div class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref638" name="sthref638"></a>
+<h4 class="sect3"><a id="sthref639" name="sthref639"></a><a id="sthref640" name="sthref640"></a><a id="sthref641" name="sthref641"></a>RDBMS_CONTROL</h4>
+<p>Specifies the location of backup database <a href="glossary.htm#i432217"><span class="xrefglossterm">control files</span></a>. The default value is <code><span class="codeinlineitalic">ORACLE_HOME</span></code><code>\database</code>.</p>
+</div>
+<!-- class="sect3" -->
+<a id="NTQRF439" name="NTQRF439"></a>
+<div class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref642" name="sthref642"></a>
+<h4 class="sect3"><a id="sthref643" name="sthref643"></a><a id="sthref644" name="sthref644"></a>SQLPATH</h4>
+<p>Specifies the location of SQL scripts. The default value is <code><span class="codeinlineitalic">ORACLE_HOME</span></code><code>\dbs</code>.</p>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<a id="CBAECBAB" name="CBAECBAB"></a><a id="NTQRF440" name="NTQRF440"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">HKEY_LOCAL_MACHINE\SOFTWARE\ORACLE</h3>
+<p>This subkey contains the following parameters:</p>
+<a id="NTQRF441" name="NTQRF441"></a>
+<div class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref645" name="sthref645"></a>
+<h4 class="sect3"><a id="sthref646" name="sthref646"></a><a id="sthref647" name="sthref647"></a>INST_LOC</h4>
+<p>Specifies the location of Oracle Universal Installer files. The default value is <code><span class="codeinlineitalic">System Drive</span></code><code>:\program files\oracle\inventory.</code></p>
+</div>
+<!-- class="sect3" -->
+<a id="NTQRF442" name="NTQRF442"></a>
+<div class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref648" name="sthref648"></a>
+<h4 class="sect3"><a id="sthref649" name="sthref649"></a><a id="sthref650" name="sthref650"></a>OO4O</h4>
+<p>Specifies the location of Oracle Objects for OLE message files. The default value is <code><span class="codeinlineitalic">ORACLE_HOME</span></code><code>\oo4o\mesg.</code></p>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<a id="i1005920" name="i1005920"></a><a id="NTQRF443" name="NTQRF443"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services</h3>
+<p><code>HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet</code> contains four keys:</p>
+<ul>
+<li>
+<p>Control</p>
+</li>
+<li>
+<p>Enum</p>
+</li>
+<li>
+<p>HardwareProfiles</p>
+</li>
+<li>
+<p>Services</p>
+</li>
+</ul>
+<a id="i1005928" name="i1005928"></a>
+<p>The first three are used by the operating system. You can edit only the <code>Services</code> subkey, which contains:</p>
+<ul>
+<li>
+<p><a href="#i1005938">Parameters for Oracle Counters for Windows Performance Monitor</a></p>
+</li>
+<li>
+<p><a href="#i1005988">Parameters for Oracle Database Services</a></p>
+</li>
+</ul>
+<a id="i1005938" name="i1005938"></a><a id="NTQRF444" name="NTQRF444"></a>
+<div class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3"><a id="sthref651" name="sthref651"></a><a id="sthref652" name="sthref652"></a><a id="sthref653" name="sthref653"></a>Parameters for Oracle Counters for Windows Performance Monitor</h4>
+<p>Oracle Counters for Windows Performance Monitor parameters appear in:</p>
+<pre xml:space="preserve" class="oac_no_warn">HKEY_LOCAL_MACHINE\SYSTEM\CURRENTCONTROLSET\SERVICES\ORACLE<span class="italic">ver</span>\PERFORMANCE
+</pre>
+<p>where <code>ORACLE</code><code><span class="codeinlineitalic">ver</span></code> refers to whatever version of Oracle Database is installed.</p>
+<p>For multiple Oracle homes compliance starting with Oracle Database 10<span class="italic">g</span> Release 1 (10.1), parameters <code>Hostname</code>, <code>Username</code>, <code>Password</code>, <code>LOGFILE</code>, and <code>PERF_FILE_NAME</code> have been moved to</p>
+<pre xml:space="preserve" class="oac_no_warn">HKEY_LOCAL_MACHINE\SYSTEM\CURRENTCONTROLSET\SERVICES\ORACLEver\PERFORMANCE\KEY_HOME_NAME.
+</pre>
+<div class="infoboxnote">
+<p class="notep1">Note:</p>
+Modify only the <code>Hostname</code>, <code>Password</code>, and <code>Username</code> values to point to any database. Oracle recommends that you use <code>operfcfg</code>. See <a href="#i1006308">"Using operfcfg"</a>.</div>
+<p>For Oracle Counters for Windows Performance Monitor to display information for Oracle Database performance objects, it must log in to the database. Modify the following parameters if the default information is not applicable or if you want to access another database:</p>
+<ul>
+<li>
+<p><a id="sthref654" name="sthref654"></a><a id="sthref655" name="sthref655"></a><code>Hostname</code> displays the <code><span class="codeinlineitalic">SID</span></code> of the database that Oracle Counters for Windows Performance Monitor will connect to. The default value is blank, causing Oracle Counters for Windows Performance Monitor to connect to the default database on the computer.</p>
+<p>If you specify a different <code><span class="codeinlineitalic">SID</span></code>, you must also add a connect descriptor for that <code><span class="codeinlineitalic">SID</span></code> to your <code>tnsnames.ora</code> file. Oracle recommends that you use Oracle Net Configuration Assistant, but you can also copy, paste, and modify the following example:</p>
+<pre xml:space="preserve" class="oac_no_warn"><span class="italic">SERVICE_NAME</span> =
+  (DESCRIPTION =
+    (ADDRESS_LIST =
+      (ADDRESS = (PROTOCOL = TCP)(HOST = <span class="italic">HOST_NAME</span>)(PORT = 1521))
+    )
+    (CONNECT_DATA =
+      (SERVER = DEDICATED)
+      (SERVICE_NAME = <span class="italic">SERVICE_NAME</span>)
+    )
+  )
+</pre></li>
+<li>
+<p><code><a id="sthref656" name="sthref656"></a><a id="sthref657" name="sthref657"></a>Password</code> displays the encrypted password for the username to access the database. The default value is <code>MANAGER</code> (encrypted).</p>
+</li>
+<li>
+<p><code><a id="sthref658" name="sthref658"></a><a id="sthref659" name="sthref659"></a>Username</code> displays the username to access the database. The default value is <code>SYSTEM</code>.</p>
+</li>
+</ul>
+<p><a id="sthref660" name="sthref660"></a>Oracle Counters for Windows Performance Monitor requires the following parameters as entry points:</p>
+<ul>
+<li>
+<p><code>Close</code> specifies the close entry point for the DLL. The default value is <code>CloseOracle</code><code><span class="codeinlineitalic">ver</span></code><code>PerformanceData</code>.</p>
+</li>
+<li>
+<p><code>Collect</code> specifies the collect entry point for the DLL. The default value is <code>CollectOracle</code><code><span class="codeinlineitalic">ver</span></code><code>PerformanceData</code>.</p>
+</li>
+<li>
+<p><code>Library</code> specifies the name of the Oracle Counters for Windows Performance Monitor DLL. The default value is <code>ORAPERF</code><code><span class="codeinlineitalic">ver</span></code><code>.dll</code></p>
+</li>
+<li>
+<p><code>Open</code> specifies the open entry point for the DLL. The default value is <code>OpenOracle</code><code><span class="codeinlineitalic">ver</span></code><code>PerformanceData</code>.</p>
+</li>
+</ul>
+<p>The following parameters specify Oracle Counters for Windows Performance Monitor log file and object configuration files:</p>
+<ul>
+<li>
+<p><code><a id="sthref661" name="sthref661"></a><a id="sthref662" name="sthref662"></a>LOGFILE</code> specifies the name of the Oracle Counters for Windows Performance Monitor log file. This log file reports any errors, such as Oracle Database objects not appearing or database access problems. The default value is <code><span class="codeinlineitalic">ORACLE_HOME</span></code><code>\dbs\operf</code><code><span class="codeinlineitalic">ver</span></code>.<code>log</code>.</p>
+</li>
+<li>
+<p><code><a id="sthref663" name="sthref663"></a><a id="sthref664" name="sthref664"></a>PERF_FILE_NAME</code> specifies the location of the <code>PERF</code><code><span class="codeinlineitalic">ver</span></code><code>.ora</code> file, which contains all performance objects displayed by Oracle Counters for Windows Performance Monitor. The default value is <code><span class="codeinlineitalic">ORACLE_HOME</span></code><code>\dbs\perf</code><code><span class="codeinlineitalic">ver</span></code><code>.ora</code></p>
+</li>
+</ul>
+</div>
+<!-- class="sect3" -->
+<a id="i1005988" name="i1005988"></a><a id="NTQRF445" name="NTQRF445"></a>
+<div class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3">Parameters for Oracle Database Services</h4>
+<p><code>HKEY_LOCAL_MACHINE\SYSTEM\CURRENTCONTROLSET\SERVICES</code> subkey contains additional subkeys that correspond to each Oracle Database service.</p>
+<p>Each service subkey contains the following parameters:</p>
+<ul>
+<li>
+<p><code><a id="sthref665" name="sthref665"></a><a id="sthref666" name="sthref666"></a>DisplayName</code> specifies the service name of the instance whose <code><span class="codeinlineitalic">SID</span></code> is <code><span class="codeinlineitalic">SID</span></code>. The default value is the name of the service. For example, <code>OracleServiceORCL1</code>, where <code>ORCL1</code> is the <code><span class="codeinlineitalic">SID</span></code>.</p>
+</li>
+<li>
+<p><code><a id="sthref667" name="sthref667"></a><a id="sthref668" name="sthref668"></a>ImagePath</code> specifies the fully qualified path name of the executable started by the service and any command-line arguments passed into the executable at run time. The default value is the path to the executable file of the product.</p>
+</li>
+<li>
+<p><code><a id="sthref669" name="sthref669"></a><a id="sthref670" name="sthref670"></a>ObjectName</code> specifies the logon user account and computer to which the service should log on. The default value is <code>LocalSystem</code>.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="i1005998" name="i1005998"></a><a id="NTQRF446" name="NTQRF446"></a>
+<div class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1"><a id="sthref671" name="sthref671"></a><a id="sthref672" name="sthref672"></a><a id="sthref673" name="sthref673"></a>Oracle RAC Registry Parameters</h2>
+<p>Oracle RAC registry values are based on the clusterware. If you are not using the clusterware, then some of this information may not be applicable to your particular cluster environment.</p>
+<div class="infoboxnote">
+<p class="notep1">Note:</p>
+Oracle RAC is not supported on Windows XP, Windows Vista, Winodws 7, and any 32-bit Windows operating system.</div>
+<a id="i1006006" name="i1006006"></a><a id="NTQRF447" name="NTQRF447"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">HKEY_LOCAL_MACHINE\SOFTWARE\ORACLE\OCR</h3>
+<p>This subkey contains the following values:</p>
+<ul>
+<li>
+<p><code>OCRROOT</code> points to the location of the Oracle Cluster Registry file</p>
+</li>
+<li>
+<p><code>LOCAL_ONLY</code> which is set to <code>False</code> for a cluster installation and <code>True</code> for a single-instance database installation</p>
+</li>
+</ul>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="i1006146" name="i1006146"></a><a id="NTQRF448" name="NTQRF448"></a>
+<div class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1"><a id="sthref674" name="sthref674"></a>Managing Registry Parameters with regedit</h2>
+<div class="infoboxnote">
+<p class="notep1">Caution:</p>
+Do not edit your registry unless absolutely necessary. If an error occurs in your registry, then Oracle Database for Windows can stop functioning, and the registry itself can become unusable.</div>
+<a id="NTQRF449" name="NTQRF449"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref675" name="sthref675"></a>
+<h3 class="sect2">Modifying a Parameter Value with regedit</h3>
+<p><a id="sthref676" name="sthref676"></a>To edit Oracle-related settings:</p>
+<ol>
+<li>
+<p>Start Registry Editor in one of two ways:</p>
+<ul>
+<li>
+<p>From the command prompt, enter:</p>
+<pre xml:space="preserve" class="oac_no_warn">C:\&gt; regedit
+</pre></li>
+<li>
+<p>From the <span class="bold">Start</span> menu, select <span class="bold">Run</span>, enter <code>regedit</code> in the <span class="bold">Open</span> field, and click <span class="bold">OK</span>.</p>
+</li>
+</ul>
+<p>The Registry Editor window appears.</p>
+</li>
+<li>
+<p>Navigate to the values you want to view or modify by double-clicking appropriate keys.</p>
+<p>The left-hand side of the window shows the hierarchy of registry keys, and the right-hand side of the window shows various values associated with a key.</p>
+</li>
+<li>
+<p>Double-click the parameter to edit.</p>
+<p>The String Editor dialog appears:</p>
+<img width="378" height="116" src="img/stringre.gif" alt="Description of stringre.gif follows" title="Description of stringre.gif follows" longdesc="img_text/stringre.htm" /><br />
+<a id="sthref677" name="sthref677" href="img_text/stringre.htm">Description of the illustration stringre.gif</a><br />
+<br /></li>
+<li>
+<p>Make any necessary edits.</p>
+</li>
+<li>
+<p>Click <span class="bold">OK</span>.</p>
+</li>
+<li>
+<p>Choose <span class="bold">Exit</span> from the <span class="bold">Registry</span> menu.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<a id="NTQRF450" name="NTQRF450"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref678" name="sthref678"></a>
+<h3 class="sect2"><a id="sthref679" name="sthref679"></a>Adding a Registry Parameter with regedit</h3>
+<p><a id="sthref680" name="sthref680"></a>To add a parameter to the registry:</p>
+<ol>
+<li>
+<p>Start Registry Editor in one of two ways:</p>
+<ul>
+<li>
+<p>From the command prompt, enter:</p>
+<pre xml:space="preserve" class="oac_no_warn">C:\&gt; regedit
+</pre></li>
+<li>
+<p>From the <span class="bold">Start</span> menu, select <span class="bold">Run</span>, enter <code>regedit</code> in the <span class="bold">Open</span> field, and click <span class="bold">OK</span>.</p>
+</li>
+</ul>
+<p>The Registry Editor window appears.</p>
+</li>
+<li>
+<p>Navigate to the key to which you want to add the new value.</p>
+</li>
+<li>
+<p>Choose <span class="bold">Add Value</span> from the <span class="bold">Edit</span> menu.</p>
+<p>The Add Value dialog appears:</p>
+<img width="353" height="160" src="img/addvalue.gif" alt="Description of addvalue.gif follows" title="Description of addvalue.gif follows" longdesc="img_text/addvalue.htm" /><br />
+<a id="sthref681" name="sthref681" href="img_text/addvalue.htm">Description of the illustration addvalue.gif</a><br />
+<br /></li>
+<li>
+<p>In the V<span class="bold">alue Name</span> field, type the name of the value that you want to add to the currently selected key.</p>
+</li>
+<li>
+<p><a id="sthref682" name="sthref682"></a><a id="sthref683" name="sthref683"></a><a id="sthref684" name="sthref684"></a><a id="sthref685" name="sthref685"></a>In the <span class="bold">Data Type</span> list, select the data type that you want to assign to the added value:</p>
+<ul>
+<li>
+<p><code>REG_SZ</code>, <code>REG_EXPAND_SZ</code> (for an expandable string), or <code>REG_MULTI_SZ</code> (for multiple strings) for a data string</p>
+</li>
+<li>
+<p>Binary value with a <code>REG_DWORD</code> prefix to identify a value entry as a <code>DWORD</code> (hexadecimal data) entry</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Click <span class="bold">OK</span>.</p>
+<p>The String Editor dialog appears:</p>
+<img width="378" height="116" src="img/stringre.gif" alt="Description of stringre.gif follows" title="Description of stringre.gif follows" longdesc="img_text/stringre.htm" /><br />
+<a id="sthref686" name="sthref686" href="img_text/stringre.htm">Description of the illustration stringre.gif</a><br />
+<br /></li>
+<li>
+<p>Type the value for the parameter.</p>
+</li>
+<li>
+<p>Click <span class="bold">OK</span>.</p>
+<p>Registry Editor adds the parameter.</p>
+</li>
+<li>
+<p>Choose <span class="bold">Exit</span> from the <span class="bold">Registry</span> menu.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="i1006222" name="i1006222"></a><a id="NTQRF454" name="NTQRF454"></a>
+<div class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1"><a id="sthref687" name="sthref687"></a><a id="sthref688" name="sthref688"></a><a id="sthref689" name="sthref689"></a><a id="sthref690" name="sthref690"></a>Managing Registry Parameters with Oracle Administration Assistant for Windows</h2>
+<p>Instead of using <code>regedit</code> to add, edit, and delete parameters for an Oracle home, you can use the Oracle Home Configuration snap-in, one of several <a href="glossary.htm#i432512"><span class="xrefglossterm">snap-ins</span></a> included as part of Oracle Administration Assistant for Windows. You must have <a href="glossary.htm#i432309"><span class="xrefglossterm">Microsoft Management Console</span></a> on your computer to use this product.</p>
+<p>See <a href="#i1005733">"HKEY_LOCAL_MACHINE\SOFTWARE\ORACLE\KEY_HOME_NAME"</a> for more information about Oracle home parameters.</p>
+<a id="NTQRF455" name="NTQRF455"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref691" name="sthref691"></a>
+<h3 class="sect2">Starting Oracle Administration Assistant for Windows</h3>
+<p>To start Oracle Administration Assistant for Windows:</p>
+<ol>
+<li>
+<p>From the <span class="bold">Start</span> menu, select <span class="bold">Programs</span>, then select <span class="bold">Oracle -</span> <span class="bolditalic">HOME_NAME</span>, then select <span class="bold">Configuration and Migration Tools</span>, and then select <span class="bold">Administration Assistant for Windows</span>.</p>
+<p>Oracle Administration Assistant for Windows starts.</p>
+</li>
+<li>
+<p>Expand <span class="bold">Oracle Homes</span>.</p>
+</li>
+<li>
+<p>Right-click the Oracle home that you want to modify.</p>
+<img width="512" height="252" src="img/admin1.gif" alt="Description of admin1.gif follows" title="Description of admin1.gif follows" longdesc="img_text/admin1.htm" /><br />
+<a id="sthref692" name="sthref692" href="img_text/admin1.htm">Description of the illustration admin1.gif</a><br />
+<br /></li>
+<li>
+<p>Click <span class="bold">Properties</span>. The Properties dialog appears.</p>
+<img width="556" height="409" src="img/admin2.gif" alt="Description of admin2.gif follows" title="Description of admin2.gif follows" longdesc="img_text/admin2.htm" /><br />
+<a id="sthref693" name="sthref693" href="img_text/admin2.htm">Description of the illustration admin2.gif</a><br />
+<br /></li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<a id="i1007825" name="i1007825"></a><a id="NTQRF456" name="NTQRF456"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Adding Oracle Home Parameters</h3>
+<p>To add an Oracle home parameter:</p>
+<ol>
+<li>
+<p>Click <span class="bold">Add</span> in the Properties dialog.</p>
+<p>The Add Value dialog appears.</p>
+<img width="285" height="175" src="img/admin3.gif" alt="Description of admin3.gif follows" title="Description of admin3.gif follows" longdesc="img_text/admin3.htm" /><br />
+<a id="sthref694" name="sthref694" href="img_text/admin3.htm">Description of the illustration admin3.gif</a><br />
+<br /></li>
+<li>
+<p>Enter the name in the <span class="bold">Parameter Name</span> field.</p>
+</li>
+<li>
+<p>Enter the value in the <span class="bold">Parameter Value</span> field.</p>
+</li>
+<li>
+<p>Click <span class="bold">OK</span>.</p>
+</li>
+<li>
+<p>Click <span class="bold">Apply</span>.</p>
+<div class="infoboxnote">
+<p class="notep1">Note:</p>
+With Oracle Administration Assistant for Windows, you can add parameters only with a data type of <code>REG_SZ</code>. Use <code>regedit</code> to add parameters with a data type of <code>REG_EXPAND_SZ</code>, <code>REG_MULTI_SZ</code>, or <code>REG_DWORD</code>.</div>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<a id="NTQRF457" name="NTQRF457"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref695" name="sthref695"></a>
+<h3 class="sect2">Editing Oracle Home Parameters</h3>
+<p>To change the default <code><span class="codeinlineitalic">SID</span></code>, select the <code><span class="codeinlineitalic">SID</span></code> from the Default <code><span class="codeinlineitalic">SID</span></code> list in the Properties dialog. To edit one of the other parameters:</p>
+<ol>
+<li>
+<p>Select the parameter in the <span class="bold">Other Settings</span> list in the Properties dialog.</p>
+</li>
+<li>
+<p>Click <span class="bold">Edit</span>.</p>
+<img width="549" height="409" src="img/admin4.gif" alt="Description of admin4.gif follows" title="Description of admin4.gif follows" longdesc="img_text/admin4.htm" /><br />
+<a id="sthref696" name="sthref696" href="img_text/admin4.htm">Description of the illustration admin4.gif</a><br />
+<br />
+<p>The Edit Value dialog appears.</p>
+<img width="285" height="145" src="img/admin5.gif" alt="Description of admin5.gif follows" title="Description of admin5.gif follows" longdesc="img_text/admin5.htm" /><br />
+<a id="sthref697" name="sthref697" href="img_text/admin5.htm">Description of the illustration admin5.gif</a><br />
+<br /></li>
+<li>
+<p>Modify the value.</p>
+</li>
+<li>
+<p>Click <span class="bold">OK</span>.</p>
+</li>
+<li>
+<p>Click <span class="bold">Apply</span>.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<a id="i1006290" name="i1006290"></a><a id="NTQRF458" name="NTQRF458"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Deleting Oracle Home Parameters</h3>
+<p>To delete an Oracle home parameter:</p>
+<ol>
+<li>
+<p>Select the parameter in the <span class="bold">Other Settings</span> list in the Properties dialog.</p>
+</li>
+<li>
+<p>Click <span class="bold">Delete</span>.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="i1006295" name="i1006295"></a><a id="NTQRF459" name="NTQRF459"></a>
+<div class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1"><a id="sthref698" name="sthref698"></a>Modifying Oracle Counters for Windows Performance Monitor Parameters</h2>
+<p>Instead of using <code>regedit</code> to modify Oracle Counters for Windows Performance Monitor's <code>Hostname</code>, <code>Password</code>, and <code>Username</code> parameters, you can use <code>operfcfg</code> or Oracle Administration Assistant for Windows.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<a href="#i1005938">"Parameters for Oracle Counters for Windows Performance Monitor"</a> for more information about <code>Hostname</code>, <code>Password</code>, and <code>Username</code> parameters</div>
+<a id="i1006308" name="i1006308"></a><a id="NTQRF460" name="NTQRF460"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><a id="sthref699" name="sthref699"></a><a id="sthref700" name="sthref700"></a>Using operfcfg</h3>
+<p><code>operfcfg</code> is an Oracle Database tool that you run from the command prompt. Use this syntax:</p>
+<pre xml:space="preserve" class="oac_no_warn">operfcfg.exe -U SYSTEM -P <span class="italic">Password</span> -D <span class="italic">TNS_Alias_for_database</span>
+</pre>
+<p>where:</p>
+<ul>
+<li>
+<p><code>SYSTEM</code> is the <code>username</code> registry parameter value that Oracle Counters for Windows Performance Monitor uses to log in to the database. You must have a <code>DBA</code> <a href="glossary.htm#i432451"><span class="xrefglossterm">privilege</span></a> on this database.</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">Password</span></code> is the password registry parameter value for username.</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">TNS_Alias_for_database</span></code> is the <a href="glossary.htm#i432344"><span class="xrefglossterm">net service name</span></a> that Oracle Counters for Windows Performance Monitor uses to connect to the database. It affects the <code>Hostname</code> registry parameter. The net service name corresponds to the <code><span class="codeinlineitalic">SID</span></code> of the database that you want to monitor. The <code>-D</code> command can be specified without providing a database name value.</p>
+</li>
+</ul>
+<p>The <code>-U</code> and <code>-D</code> commands are optional.</p>
+<p>The following examples illustrate use of <code>operfcfg</code>. First, to change username to <code>dba_admin</code> and leave database name at its current value, you would enter:</p>
+<pre xml:space="preserve" class="oac_no_warn">C:\&gt; operfcfg -U dba_admin
+</pre>
+<p>To change username to <code>dba_admin</code> and database name to <code>prod</code>, you would enter:</p>
+<pre xml:space="preserve" class="oac_no_warn">C:\&gt; operfcfg -U dba_admin -D prod
+</pre>
+<p>To change password to <code>frank</code> for the current username and database name, you would enter:</p>
+<pre xml:space="preserve" class="oac_no_warn">C:\&gt; operfcfg -P frank
+</pre>
+<p>In the final example, you change <code>Hostname</code> to a blank value, causing Oracle Counters for Windows Performance Monitor to connect to the default database on the computer. The current username and password must be valid user accounts on this database. Enter:</p>
+<pre xml:space="preserve" class="oac_no_warn">C:\&gt; operfcfg -D
+</pre></div>
+<!-- class="sect2" -->
+<a id="CBABDDDB" name="CBABDDDB"></a><a id="NTQRF461" name="NTQRF461"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><a id="sthref701" name="sthref701"></a><a id="sthref702" name="sthref702"></a>Using <a id="sthref703" name="sthref703"></a><a id="sthref704" name="sthref704"></a>Oracle Administration Assistant for Windows</h3>
+<p>Oracle Counters for Windows Performance Monitor snap-in is part of Oracle Administration Assistant for Windows. You must have Microsoft Management Console on your computer to use this product.</p>
+<p>To use Oracle Counters for Windows Performance Monitor snap-in:</p>
+<ol>
+<li>
+<p>From the <span class="bold">Start</span> menu, select <span class="bold">Programs</span>, then select <span class="bold">Oracle -</span> <span class="bolditalic">HOME_NAME</span>, then select <span class="bold">Configuration and Migration Tools</span>, and then select <span class="bold">Administration Assistant for Windows</span>.</p>
+<p>Oracle Administration Assistant for Windows starts.</p>
+</li>
+<li>
+<p>Right-click <span class="bold">Performance Monitor</span>.</p>
+</li>
+<li>
+<p>Click <span class="bold">Properties</span>.</p>
+<p>The Performance Monitor Properties dialog appears.</p>
+</li>
+<li>
+<p>Modify the text in the <span class="bold">Username</span>, <span class="bold">Password</span>, or <span class="bold">Database</span> fields.</p>
+</li>
+<li>
+<p>Click <span class="bold">Apply</span>.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" --></div>
+<!-- class="ind" -->
+<div class="footer">
+<hr />
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<col width="33%" />
+<col width="*" />
+<col width="33%" />
+<tr>
+<td align="left">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="98">
+<tr>
+<td align="center" valign="top"><a href="specs.htm"><img width="24" height="24" src="../../dcommon/gifs/leftnav.gif" alt="Go to previous page" /><br />
+<span class="icon">Previous</span></a></td>
+<td align="center" valign="top"><a href="apps.htm"><img width="24" height="24" src="../../dcommon/gifs/rightnav.gif" alt="Go to next page" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+</td>
+<td style="font-size: 90%" align="center" class="copyrightlogo"><img width="144" height="18" src="../../dcommon/gifs/oracle.gif" alt="Oracle" /><br />
+Copyright&nbsp;&copy;&nbsp;1996, 2010,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.<br />
+<a href="../../dcommon/html/cpyr.htm">Legal Notices</a></td>
+<td align="right">
+<table class="icons oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="245">
+<tr>
+<td align="center" valign="top"><a href="../../index.htm"><img width="24" height="24" src="../../dcommon/gifs/doclib.gif" alt="Go to Documentation Home" /><br />
+<span class="icon">Home</span></a></td>
+<td align="center" valign="top"><a href="../../nav/portal_booklist.htm"><img width="24" height="24" src="../../dcommon/gifs/booklist.gif" alt="Go to Book List" /><br />
+<span class="icon">Book List</span></a></td>
+<td align="center" valign="top"><a href="toc.htm"><img width="24" height="24" src="../../dcommon/gifs/toc.gif" alt="Go to Table of Contents" /><br />
+<span class="icon">Contents</span></a></td>
+<td align="center" valign="top"><a href="index.htm"><img width="24" height="24" src="../../dcommon/gifs/index.gif" alt="Go to Index" /><br />
+<span class="icon">Index</span></a></td>
+<td align="center" valign="top"><a href="../../dcommon/html/feedback.htm"><img width="24" height="24" src="../../dcommon/gifs/feedbck2.gif" alt="Go to Feedback page" /><br />
+<span class="icon">Contact Us</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+</body>
+</html>

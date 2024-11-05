@@ -1,0 +1,2357 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<div element="book" href="toc.htm" number="" targetptr="NTQRF">
+  <ttl>Oracle&#x00AE; Database Platform Guide for Microsoft Windows</ttl>
+  <xreftext><cite>Oracle&#x00AE; Database Platform Guide for Microsoft Windows</cite></xreftext>
+  <div element="preface" href="preface.htm" number="" targetptr="NTQRF99961">
+    <ttl>Preface</ttl>
+    <xreftext>&#x201C;<span class="bold"></span>Preface&#x201D;</xreftext>
+    <div element="prefsect1" href="preface.htm" number="" targetptr="NTQRF99962">
+      <ttl>Audience</ttl>
+      <xreftext>&#x201C;Audience&#x201D;</xreftext>
+    </div>
+    <div element="prefsect1" href="preface.htm" number="" targetptr="NTQRF99963">
+      <ttl>Documentation Accessibility</ttl>
+      <xreftext>&#x201C;Documentation Accessibility&#x201D;</xreftext>
+      <obj element="formalpara" href="preface.htm" number="" targetptr="NTQRF99964">
+        <ttl>Accessibility of Code Examples in Documentation</ttl>
+        <xreftext>&#x201C;Accessibility of Code Examples in Documentation&#x201D;</xreftext>
+      </obj>
+      <obj element="formalpara" href="preface.htm" number="" targetptr="NTQRF99965">
+        <ttl>Accessibility of Links to External Web Sites in Documentation</ttl>
+        <xreftext>&#x201C;Accessibility of Links to External Web Sites in Documentation&#x201D;</xreftext>
+      </obj>
+      <obj element="formalpara" href="preface.htm" number="" targetptr="NTQRF99966">
+        <ttl>Deaf/Hard of Hearing Access to Oracle Support Services</ttl>
+        <xreftext>&#x201C;Deaf/Hard of Hearing Access to Oracle Support Services&#x201D;</xreftext>
+      </obj>
+    </div>
+    <div element="prefsect1" href="preface.htm" number="" targetptr="NTQRF99967">
+      <ttl>Related Documents</ttl>
+      <xreftext>&#x201C;Related Documents&#x201D;</xreftext>
+    </div>
+    <div element="prefsect1" href="preface.htm" number="" targetptr="NTQRF99968">
+      <ttl>Conventions</ttl>
+      <xreftext>&#x201C;Conventions&#x201D;</xreftext>
+    </div>
+  </div>
+  <div element="preface" href="what_new.htm" number="" targetptr="NTQRF000">
+    <ttl>What's New in Oracle Database for Windows</ttl>
+    <xreftext>&#x201C;What's New in Oracle Database for Windows&#x201D;</xreftext>
+    <obj element="bridgehead" href="what_new.htm" number="" targetptr="NTQRF99970">
+      <ttl>Secure Database Services</ttl>
+      <xreftext>&#x201C;Secure Database Services&#x201D;</xreftext>
+    </obj>
+    <obj element="bridgehead" href="what_new.htm" number="" targetptr="NTQRF99971">
+      <ttl>Active Directory Security Enhancements</ttl>
+      <xreftext>&#x201C;Active Directory Security Enhancements&#x201D;</xreftext>
+    </obj>
+    <obj element="bridgehead" href="what_new.htm" number="" targetptr="NTQRF99972">
+      <ttl>Volume Shadow Copy Service (VSS) Writer</ttl>
+      <xreftext>&#x201C;Volume Shadow Copy Service (VSS) Writer&#x201D;</xreftext>
+    </obj>
+    <obj element="bridgehead" href="what_new.htm" number="" targetptr="NTQRF99973">
+      <ttl>Windows Operating System Support</ttl>
+      <xreftext>&#x201C;Windows Operating System Support&#x201D;</xreftext>
+    </obj>
+    <obj element="bridgehead" href="what_new.htm" number="" targetptr="BGGHGCGE">
+      <ttl>Support for Online Patching</ttl>
+      <xreftext>&#x201C;Support for Online Patching&#x201D;</xreftext>
+    </obj>
+  </div>
+  <div element="chapter" href="architec.htm" number="1" targetptr="NTQRF010">
+    <ttl>Oracle Database Architecture on Windows</ttl>
+    <xreftext>&#x201C;Oracle Database<span class="italic"></span> Architecture on Windows&#x201D;</xreftext>
+    <div element="sect1" href="architec.htm" number="1.1" targetptr="NTQRF99974">
+      <ttl>Oracle Database on Windows Architecture</ttl>
+      <xreftext>&#x201C;Oracle Database on Windows Architecture&#x201D;</xreftext>
+      <div element="sect2" href="architec.htm" number="1.1.1" targetptr="NTQRF99975">
+        <ttl>Automatic Storage Management</ttl>
+        <xreftext>&#x201C;Automatic Storage Management&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="architec.htm" number="1.1.2" targetptr="NTQRF99976">
+        <ttl>Thread-Based Architecture</ttl>
+        <xreftext>&#x201C;Thread-Based Architecture&#x201D;</xreftext>
+        <obj element="figure" href="architec.htm" number="1-1" targetptr="NTQRF99977">
+          <ttl>Oracle Database Architecture on Windows</ttl>
+          <xreftext>&#x201C;Oracle Database Architecture on Windows&#x201D;</xreftext>
+        </obj>
+        <obj element="table" href="architec.htm" number="1-1" targetptr="NTQRF99978">
+          <ttl>Oracle Database Threads</ttl>
+          <xreftext>&#x201C;Oracle Database Threads&#x201D;</xreftext>
+        </obj>
+      </div>
+      <div element="sect2" href="architec.htm" number="1.1.3" targetptr="NTQRF99979">
+        <ttl>File I/O Enhancements</ttl>
+        <xreftext>&#x201C;File I/O Enhancements&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="architec.htm" number="1.1.4" targetptr="NTQRF99980">
+        <ttl>Raw File Support</ttl>
+        <xreftext>&#x201C;Raw File Support&#x201D;</xreftext>
+      </div>
+    </div>
+    <div element="sect1" href="architec.htm" number="1.2" targetptr="NTQRF99981">
+      <ttl>Oracle Database Scalability on Windows</ttl>
+      <xreftext>&#x201C;Oracle Database Scalability on Windows&#x201D;</xreftext>
+      <div element="sect2" href="architec.htm" number="1.2.1" targetptr="NTQRF99982">
+        <ttl>Support for Very Large Memory (VLM) Configurations</ttl>
+        <xreftext>&#x201C;Support for Very Large Memory (VLM) Configurations&#x201D;</xreftext>
+        <obj element="bridgehead" href="architec.htm" number="" targetptr="NTQRF99983">
+          <ttl>VLM Instance Tuning</ttl>
+          <xreftext>&#x201C;VLM Instance Tuning&#x201D;</xreftext>
+        </obj>
+      </div>
+      <div element="sect2" href="architec.htm" number="1.2.2" targetptr="NTQRF99984">
+        <ttl>Windows 4 GB RAM Tuning (4GT)</ttl>
+        <xreftext>&#x201C;Windows 4 GB RAM Tuning (4GT)&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="architec.htm" number="1.2.3" targetptr="NTQRF99985">
+        <ttl>Large User Populations</ttl>
+        <xreftext>&#x201C;Large User Populations&#x201D;</xreftext>
+      </div>
+    </div>
+    <div element="sect1" href="architec.htm" number="1.3" targetptr="NTQRF99986">
+      <ttl>Oracle Database Integration with Windows</ttl>
+      <xreftext>&#x201C;Oracle Database Integration with Windows&#x201D;</xreftext>
+      <div element="sect2" href="architec.htm" number="1.3.1" targetptr="NTQRF99987">
+        <ttl>Oracle PKI Integration with Windows</ttl>
+        <xreftext>&#x201C;Oracle PKI Integration with Windows&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="architec.htm" number="1.3.2" targetptr="NTQRF99988">
+        <ttl>Oracle Services for Microsoft Transaction Server</ttl>
+        <xreftext>&#x201C;Oracle Services for Microsoft Transaction Server&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="architec.htm" number="1.3.3" targetptr="NTQRF99989">
+        <ttl>Oracle Fail Safe Integration with Windows</ttl>
+        <xreftext>&#x201C;Oracle Fail Safe Integration with Windows&#x201D;</xreftext>
+      </div>
+    </div>
+    <div element="sect1" href="architec.htm" number="1.4" targetptr="NTQRF99991">
+      <ttl>Other Sources of Information</ttl>
+      <xreftext>&#x201C;Other Sources of Information&#x201D;</xreftext>
+    </div>
+  </div>
+  <div element="chapter" href="tools.htm" number="2" targetptr="NTQRF040">
+    <ttl>Database Tools on Windows</ttl>
+    <xreftext>&#x201C;Database Tools on Windows&#x201D;</xreftext>
+    <div element="sect1" href="tools.htm" number="2.1" targetptr="NTQRF99992">
+      <ttl>Choosing a Database Tool</ttl>
+      <xreftext>&#x201C;Choosing a Database Tool&#x201D;</xreftext>
+      <div element="sect2" href="tools.htm" number="2.1.1" targetptr="NTQRF99993">
+        <ttl>Database Tools and Operating System Compatibility</ttl>
+        <xreftext>&#x201C;Database Tools and Operating System Compatibility&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="tools.htm" number="2.1.2" targetptr="NTQRF99996">
+        <ttl>Preferred Database Tools</ttl>
+        <xreftext>&#x201C;Preferred Database Tools&#x201D;</xreftext>
+        <obj element="table" href="tools.htm" number="2-1" targetptr="NTQRF99997">
+          <ttl>Preferred Database Tools</ttl>
+          <xreftext>&#x201C;Preferred Database Tools&#x201D;</xreftext>
+        </obj>
+      </div>
+    </div>
+    <div element="sect1" href="tools.htm" number="2.2" targetptr="NTQRF99998">
+      <ttl>Starting Database Tools</ttl>
+      <xreftext>&#x201C;Starting Database Tools&#x201D;</xreftext>
+      <div element="sect2" href="tools.htm" number="2.2.1" targetptr="NTQRF99999">
+        <ttl>Starting Database Tools in Multiple Oracle Homes</ttl>
+        <xreftext>&#x201C;Starting Database Tools in Multiple Oracle Homes&#x201D;</xreftext>
+        <div element="sect3" href="tools.htm" number="2.2.1.1" targetptr="NTQRF101">
+          <ttl>Starting Tools from Oracle8i Release 8.1.3 and Later Multiple Oracle Homes</ttl>
+          <xreftext>&#x201C;Starting Tools from Oracle8<span class="italic">i</span> Release 8.1.3 and Later Multiple Oracle Homes&#x201D;</xreftext>
+        </div>
+      </div>
+      <div element="sect2" href="tools.htm" number="2.2.2" targetptr="NTQRF102">
+        <ttl>Running Tools with Windows User Account Control</ttl>
+        <xreftext>&#x201C;Running Tools with Windows User Account Control&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="tools.htm" number="2.2.3" targetptr="NTQRF103">
+        <ttl>Starting Database Tools from the Start Menu</ttl>
+        <xreftext>&#x201C;Starting Database Tools from the Start Menu&#x201D;</xreftext>
+        <obj element="table" href="tools.htm" number="2-2" targetptr="NTQRF104">
+          <ttl>Starting Database Tools from the Start Menu</ttl>
+          <xreftext>&#x201C;Starting Database Tools from the Start Menu&#x201D;</xreftext>
+        </obj>
+      </div>
+      <div element="sect2" href="tools.htm" number="2.2.4" targetptr="NTQRF105">
+        <ttl>Starting Database Tools from the Command Line</ttl>
+        <xreftext>&#x201C;Starting Database Tools from the Command Line&#x201D;</xreftext>
+        <obj element="table" href="tools.htm" number="2-3" targetptr="NTQRF106">
+          <ttl>Starting Database Tools from the Command Line</ttl>
+          <xreftext>&#x201C;Starting Database Tools from the Command Line&#x201D;</xreftext>
+        </obj>
+      </div>
+      <div element="sect2" href="tools.htm" number="2.2.5" targetptr="NTQRF107">
+        <ttl>Starting Windows Tools</ttl>
+        <xreftext>&#x201C;Starting Windows Tools&#x201D;</xreftext>
+        <obj element="table" href="tools.htm" number="2-4" targetptr="NTQRF108">
+          <ttl>Starting Windows Tools</ttl>
+          <xreftext>&#x201C;Starting Windows Tools&#x201D;</xreftext>
+        </obj>
+      </div>
+    </div>
+    <div element="sect1" href="tools.htm" number="2.3" targetptr="NTQRF110">
+      <ttl>Using SQL*Loader</ttl>
+      <xreftext>&#x201C;Using SQL*Loader&#x201D;</xreftext>
+      <div element="sect2" href="tools.htm" number="2.3.1" targetptr="NTQRF111">
+        <ttl>Windows Processing Options</ttl>
+        <xreftext>&#x201C;Windows Processing Options&#x201D;</xreftext>
+        <div element="sect3" href="tools.htm" number="2.3.1.1" targetptr="NTQRF112">
+          <ttl>Default (No Processing Option) or &quot;str terminator_string&quot;</ttl>
+          <xreftext>&#x201C;Default (No Processing Option) or "str terminator_string"&#x201D;</xreftext>
+        </div>
+      </div>
+      <div element="sect2" href="tools.htm" number="2.3.2" targetptr="NTQRF117">
+        <ttl>Control File Conventions</ttl>
+        <xreftext>&#x201C;Control File Conventions&#x201D;</xreftext>
+        <obj element="table" href="tools.htm" number="2-5" targetptr="NTQRF118">
+          <ttl>Default Sizes of Native Data types</ttl>
+          <xreftext>&#x201C;Default Sizes of Native Data types&#x201D;</xreftext>
+        </obj>
+        <obj element="formalpara" href="tools.htm" number="" targetptr="NTQRF119">
+          <ttl>Note</ttl>
+          <xreftext>&#x201C;Note&#x201D;</xreftext>
+        </obj>
+      </div>
+    </div>
+    <div element="sect1" href="tools.htm" number="2.4" targetptr="NTQRF121">
+      <ttl>Using Windows Tools</ttl>
+      <xreftext>&#x201C;Using Windows Tools&#x201D;</xreftext>
+      <div element="sect2" href="tools.htm" number="2.4.1" targetptr="NTQRF122">
+        <ttl>Using Event Viewer to Monitor a Database</ttl>
+        <xreftext>&#x201C;Using Event Viewer to Monitor a Database&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="tools.htm" number="2.4.2" targetptr="NTQRF123">
+        <ttl>Using Microsoft Management Console to Administer a Database</ttl>
+        <xreftext>&#x201C;Using Microsoft Management Console to Administer a Database&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="tools.htm" number="2.4.3" targetptr="NTQRF124">
+        <ttl>Using Oracle Counters for Windows Performance Monitor</ttl>
+        <xreftext>&#x201C;Using Oracle Counters for Windows Performance Monitor&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="tools.htm" number="2.4.4" targetptr="NTQRF125">
+        <ttl>Using Registry Editor to Modify Configuration Information</ttl>
+        <xreftext>&#x201C;Using Registry Editor to Modify Configuration Information&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="tools.htm" number="2.4.5" targetptr="NTQRF126">
+        <ttl>Using Task Manager to Monitor Applications and Processes</ttl>
+        <xreftext>&#x201C;Using Task Manager to Monitor Applications and Processes&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="tools.htm" number="2.4.6" targetptr="NTQRF127">
+        <ttl>Using Local Users and Groups to Manage Users and Groups</ttl>
+        <xreftext>&#x201C;Using Local Users and Groups to Manage Users and Groups&#x201D;</xreftext>
+      </div>
+    </div>
+    <div element="sect1" href="tools.htm" number="2.5" targetptr="NTQRF128">
+      <ttl>Optional Windows Diagnostic and Tuning Utilities</ttl>
+      <xreftext>&#x201C;Optional Windows Diagnostic and Tuning Utilities&#x201D;</xreftext>
+    </div>
+  </div>
+  <div element="chapter" href="create.htm" number="3" targetptr="NTQRF050">
+    <ttl>Postinstallation Database Creation on Windows</ttl>
+    <xreftext>&#x201C;Postinstallation Database Creation on Windows&#x201D;</xreftext>
+    <div element="sect1" href="create.htm" number="3.1" targetptr="NTQRF129">
+      <ttl>Naming Conventions for Oracle Database</ttl>
+      <xreftext>&#x201C;Naming Conventions for Oracle Database&#x201D;</xreftext>
+    </div>
+    <div element="sect1" href="create.htm" number="3.2" targetptr="NTQRF132">
+      <ttl>Creating a Database on Windows Using Database Configuration Assistant</ttl>
+      <xreftext>&#x201C;Creating a Database on Windows Using Database Configuration Assistant&#x201D;</xreftext>
+    </div>
+    <div element="sect1" href="create.htm" number="3.3" targetptr="NTQRF133">
+      <ttl>Creating a Database on Windows Using Command-Line Tools</ttl>
+      <xreftext>&#x201C;Creating a Database on Windows Using Command-Line Tools&#x201D;</xreftext>
+      <obj element="table" href="create.htm" number="3-1" targetptr="NTQRF134">
+        <ttl>Manual Database Creation Tasks</ttl>
+        <xreftext>&#x201C;Manual Database Creation Tasks&#x201D;</xreftext>
+      </obj>
+      <obj element="formalpara" href="create.htm" number="" targetptr="NTQRF135">
+        <ttl>Note 1</ttl>
+        <xreftext>&#x201C;Note 1&#x201D;</xreftext>
+      </obj>
+      <obj element="formalpara" href="create.htm" number="" targetptr="NTQRF136">
+        <ttl>Note 2</ttl>
+        <xreftext>&#x201C;Note 2&#x201D;</xreftext>
+      </obj>
+      <div element="sect2" href="create.htm" number="3.3.1" targetptr="NTQRF138">
+        <ttl>Exporting an Existing Database</ttl>
+        <xreftext>&#x201C;Exporting an Existing Database&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="create.htm" number="3.3.2" targetptr="NTQRF139">
+        <ttl>Deleting Database Files</ttl>
+        <xreftext>&#x201C;Deleting Database Files&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="create.htm" number="3.3.3" targetptr="NTQRF140">
+        <ttl>Modifying the Initialization Parameter File</ttl>
+        <xreftext>&#x201C;Modifying the Initialization Parameter File&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="create.htm" number="3.3.4" targetptr="NTQRF141">
+        <ttl>Creating and Starting an Oracle Database Service</ttl>
+        <xreftext>&#x201C;Creating and Starting an Oracle Database Service&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="create.htm" number="3.3.5" targetptr="NTQRF142">
+        <ttl>Starting an Oracle Database Instance</ttl>
+        <xreftext>&#x201C;Starting an Oracle Database Instance&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="create.htm" number="3.3.6" targetptr="NTQRF143">
+        <ttl>Putting the CREATE DATABASE Statement in a Script</ttl>
+        <xreftext>&#x201C;Putting the CREATE DATABASE Statement in a Script&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="create.htm" number="3.3.7" targetptr="NTQRF144">
+        <ttl>Running the CREATE DATABASE Script</ttl>
+        <xreftext>&#x201C;Running the CREATE DATABASE Script&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="create.htm" number="3.3.8" targetptr="NTQRF145">
+        <ttl>Importing a Database</ttl>
+        <xreftext>&#x201C;Importing a Database&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="create.htm" number="3.3.9" targetptr="NTQRF146">
+        <ttl>Updating ORACLE_SID in the Registry</ttl>
+        <xreftext>&#x201C;Updating ORACLE_SID in the Registry&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="create.htm" number="3.3.10" targetptr="NTQRF147">
+        <ttl>Backing Up the New Database</ttl>
+        <xreftext>&#x201C;Backing Up the New Database&#x201D;</xreftext>
+      </div>
+    </div>
+    <div element="sect1" href="create.htm" number="3.4" targetptr="NTQRF05011">
+      <ttl>Using ORADIM to Administer an Oracle Database Instance</ttl>
+      <xreftext>&#x201C;Using ORADIM to Administer an Oracle Database Instance&#x201D;</xreftext>
+      <div element="sect2" href="create.htm" number="3.4.1" targetptr="NTQRF148">
+        <ttl>Creating an Instance</ttl>
+        <xreftext>&#x201C;Creating an Instance&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="create.htm" number="3.4.2" targetptr="NTQRF149">
+        <ttl>Starting an Instance and Services</ttl>
+        <xreftext>&#x201C;Starting an Instance and Services&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="create.htm" number="3.4.3" targetptr="NTQRF151">
+        <ttl>Stopping an Instance and Services</ttl>
+        <xreftext>&#x201C;Stopping an Instance and Services&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="create.htm" number="3.4.4" targetptr="NTQRF152">
+        <ttl>Editing an Instance</ttl>
+        <xreftext>&#x201C;Editing an Instance&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="create.htm" number="3.4.5" targetptr="NTQRF153">
+        <ttl>Deleting an Instance</ttl>
+        <xreftext>&#x201C;Deleting an Instance&#x201D;</xreftext>
+      </div>
+    </div>
+    <div element="sect1" href="create.htm" number="3.5" targetptr="NTQRF154">
+      <ttl>Database Migration from a 32-bit Windows Computer</ttl>
+      <xreftext>&#x201C;Database Migration from a 32-bit Windows Computer&#x201D;</xreftext>
+      <div element="sect2" href="create.htm" number="3.5.1" targetptr="NTQRF155">
+        <ttl>Backing Up a 32-Bit Oracle Database</ttl>
+        <xreftext>&#x201C;Backing Up a 32-Bit Oracle Database&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="create.htm" number="3.5.2" targetptr="NTQRF001">
+        <ttl>Migrating an Oracle Database 11g Release 2 (11.2)</ttl>
+        <xreftext>&#x201C;Migrating an Oracle Database 11<span class="italic">g</span> Release 2 (11.2)&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="create.htm" number="3.5.3" targetptr="NTQRF156">
+        <ttl>Migrating an Oracle Database 10g Release 2 (10.2) or Earlier Database</ttl>
+        <xreftext>&#x201C;Migrating an Oracle Database 10<span class="italic">g</span> Release 2 (10.2)<span class="italic"></span> or Earlier Database&#x201D;</xreftext>
+      </div>
+    </div>
+  </div>
+  <div element="chapter" href="config.htm" number="4" targetptr="NTQRF060">
+    <ttl>Postinstallation Configuration Tasks on Windows</ttl>
+    <xreftext>&#x201C;Postinstallation Configuration Tasks on Windows&#x201D;</xreftext>
+    <div element="sect1" href="config.htm" number="4.1" targetptr="NTQRF157">
+      <ttl>Windows Firewall</ttl>
+      <xreftext>&#x201C;Windows Firewall&#x201D;</xreftext>
+      <div element="sect2" href="config.htm" number="4.1.1" targetptr="NTQRF158">
+        <ttl>Oracle Executables Requiring Firewall Exceptions</ttl>
+        <xreftext>&#x201C;Oracle Executables Requiring Firewall Exceptions&#x201D;</xreftext>
+        <div element="sect3" href="config.htm" number="4.1.1.1" targetptr="CEGIFJDI">
+          <ttl>Firewall Exceptions for Oracle Database</ttl>
+          <xreftext>&#x201C;Firewall Exceptions for Oracle Database&#x201D;</xreftext>
+        </div>
+        <div element="sect3" href="config.htm" number="4.1.1.2" targetptr="CEGEIAEJ">
+          <ttl>Firewall Exceptions for Oracle Database Examples</ttl>
+          <xreftext>&#x201C;Firewall Exceptions for Oracle Database Examples&#x201D;</xreftext>
+        </div>
+        <div element="sect3" href="config.htm" number="4.1.1.3" targetptr="CEGJBHBE">
+          <ttl>Firewall Exceptions for Oracle Gateways</ttl>
+          <xreftext>&#x201C;Firewall Exceptions for Oracle Gateways&#x201D;</xreftext>
+          <obj element="table" href="config.htm" number="4-1" targetptr="">
+            <ttl>Oracle Executables Requiring Windows Firewall Exceptions</ttl>
+            <xreftext>&#x201C;Oracle Executables Requiring Windows Firewall Exceptions&#x201D;</xreftext>
+          </obj>
+        </div>
+        <div element="sect3" href="config.htm" number="4.1.1.4" targetptr="CEGFDJHJ">
+          <ttl>Firewall Exceptions for Oracle Clusterware and Oracle ASM</ttl>
+          <xreftext>&#x201C;Firewall Exceptions for Oracle Clusterware and Oracle ASM&#x201D;</xreftext>
+        </div>
+        <div element="sect3" href="config.htm" number="4.1.1.5" targetptr="CEGHCAHC">
+          <ttl>Firewall Exceptions for Other Oracle Products</ttl>
+          <xreftext>&#x201C;Firewall Exceptions for Other Oracle Products&#x201D;</xreftext>
+          <obj element="table" href="config.htm" number="4-2" targetptr="">
+            <ttl>Other Oracle Software Products Requiring Windows Firewall Exceptions</ttl>
+            <xreftext>&#x201C;Other Oracle Software Products Requiring Windows Firewall Exceptions&#x201D;</xreftext>
+          </obj>
+        </div>
+      </div>
+      <div element="sect2" href="config.htm" number="4.1.2" targetptr="NTQRF161">
+        <ttl>Configuring the Windows Firewall</ttl>
+        <xreftext>&#x201C;Configuring the Windows Firewall&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="config.htm" number="4.1.3" targetptr="NTQRF162">
+        <ttl>Troubleshooting Windows Firewall Exceptions</ttl>
+        <xreftext>&#x201C;Troubleshooting Windows Firewall Exceptions&#x201D;</xreftext>
+      </div>
+    </div>
+    <div element="sect1" href="config.htm" number="4.2" targetptr="NTQRF163">
+      <ttl>Resetting Passwords for Default Accounts</ttl>
+      <xreftext>&#x201C;Resetting Passwords for Default Accounts&#x201D;</xreftext>
+    </div>
+    <div element="sect1" href="config.htm" number="4.3" targetptr="NTQRF164">
+      <ttl>NTFS File System and Windows Registry Permissions</ttl>
+      <xreftext>&#x201C;NTFS File System and Windows Registry Permissions&#x201D;</xreftext>
+      <div element="sect2" href="config.htm" number="4.3.1" targetptr="NTQRF165">
+        <ttl>File Permissions</ttl>
+        <xreftext>&#x201C;File Permissions&#x201D;</xreftext>
+        <div element="sect3" href="config.htm" number="4.3.1.1" targetptr="NTQRF166">
+          <ttl>File Permissions Set by Oracle Universal Installer</ttl>
+          <xreftext>&#x201C;File Permissions Set by Oracle Universal Installer&#x201D;</xreftext>
+        </div>
+        <div element="sect3" href="config.htm" number="4.3.1.2" targetptr="NTQRF167">
+          <ttl>File Permissions Set by Database Configuration Assistant</ttl>
+          <xreftext>&#x201C;File Permissions Set by Database Configuration Assistant&#x201D;</xreftext>
+        </div>
+        <div element="sect3" href="config.htm" number="4.3.1.3" targetptr="NTQRF168">
+          <ttl>File Permissions Set by Database Upgrade Assistant</ttl>
+          <xreftext>&#x201C;File Permissions Set by Database Upgrade Assistant&#x201D;</xreftext>
+        </div>
+      </div>
+      <div element="sect2" href="config.htm" number="4.3.2" targetptr="NTQRF169">
+        <ttl>Setting NTFS File System Security</ttl>
+        <xreftext>&#x201C;Setting NTFS File System Security&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="config.htm" number="4.3.3" targetptr="NTQRF171">
+        <ttl>Setting Windows Registry Security</ttl>
+        <xreftext>&#x201C;Setting Windows Registry Security&#x201D;</xreftext>
+      </div>
+    </div>
+    <div element="sect1" href="config.htm" number="4.4" targetptr="NTQRF172">
+      <ttl>Configuring External Job Support for the Scheduler on Windows</ttl>
+      <xreftext>&#x201C;Configuring External Job Support for the Scheduler on Windows&#x201D;</xreftext>
+    </div>
+    <div element="sect1" href="config.htm" number="4.5" targetptr="NTQRF183">
+      <ttl>Configuring Oracle Multimedia on Windows</ttl>
+      <xreftext>&#x201C;Configuring Oracle Multimedia on Windows&#x201D;</xreftext>
+    </div>
+    <div element="sect1" href="config.htm" number="4.6" targetptr="NTQRF184">
+      <ttl>Configuring Oracle Text on Windows</ttl>
+      <xreftext>&#x201C;Configuring Oracle Text on Windows&#x201D;</xreftext>
+      <obj element="bridgehead" href="config.htm" number="" targetptr="NTQRF185">
+        <ttl>Upgrading Oracle Text from a Previous Release</ttl>
+        <xreftext>&#x201C;Upgrading Oracle Text from a Previous Release&#x201D;</xreftext>
+      </obj>
+      <obj element="bridgehead" href="config.htm" number="" targetptr="NTQRF186">
+        <ttl>Configuring Oracle Text Using Database Configuration Assistant</ttl>
+        <xreftext>&#x201C;Configuring Oracle Text Using Database Configuration Assistant&#x201D;</xreftext>
+      </obj>
+    </div>
+    <div element="sect1" href="config.htm" number="4.7" targetptr="NTQRF189">
+      <ttl>Configuring Oracle Spatial on Windows</ttl>
+      <xreftext>&#x201C;Configuring Oracle Spatial on Windows&#x201D;</xreftext>
+    </div>
+    <div element="sect1" href="config.htm" number="4.8" targetptr="NTQRF191">
+      <ttl>Configuring Advanced Replication on Windows</ttl>
+      <xreftext>&#x201C;Configuring Advanced Replication on Windows&#x201D;</xreftext>
+      <div element="sect2" href="config.htm" number="4.8.1" targetptr="NTQRF192">
+        <ttl>Checking Tablespace and Rollback Segment Requirements</ttl>
+        <xreftext>&#x201C;Checking Tablespace and Rollback Segment Requirements&#x201D;</xreftext>
+        <obj element="table" href="config.htm" number="4-3" targetptr="NTQRF193">
+          <ttl>Advanced Replication Tablespace/Rollback Segment Requirements</ttl>
+          <xreftext>&#x201C;Advanced Replication Tablespace/Rollback Segment Requirements&#x201D;</xreftext>
+        </obj>
+        <obj element="formalpara" href="config.htm" number="" targetptr="NTQRF194">
+          <ttl>Note</ttl>
+          <xreftext>&#x201C;Note&#x201D;</xreftext>
+        </obj>
+      </div>
+      <div element="sect2" href="config.htm" number="4.8.2" targetptr="NTQRF195">
+        <ttl>Adding and Modifying Initialization Parameters</ttl>
+        <xreftext>&#x201C;Adding and Modifying Initialization Parameters&#x201D;</xreftext>
+        <obj element="table" href="config.htm" number="4-4" targetptr="NTQRF196">
+          <ttl>Advanced Replication Initialization Parameters</ttl>
+          <xreftext>&#x201C;Advanced Replication Initialization Parameters&#x201D;</xreftext>
+        </obj>
+        <obj element="formalpara" href="config.htm" number="" targetptr="NTQRF197">
+          <ttl>Note</ttl>
+          <xreftext>&#x201C;Note&#x201D;</xreftext>
+        </obj>
+      </div>
+      <div element="sect2" href="config.htm" number="4.8.3" targetptr="NTQRF198">
+        <ttl>Monitoring Data Dictionary Tables</ttl>
+        <xreftext>&#x201C;Monitoring Data Dictionary Tables&#x201D;</xreftext>
+      </div>
+    </div>
+  </div>
+  <div element="chapter" href="admin.htm" number="5" targetptr="NTQRF070">
+    <ttl>Administering a Database on Windows</ttl>
+    <xreftext>&#x201C;Administering a Database on Windows&#x201D;</xreftext>
+    <div element="sect1" href="admin.htm" number="5.1" targetptr="NTQRF199">
+      <ttl>Managing Oracle Database Services</ttl>
+      <xreftext>&#x201C;Managing Oracle Database Services&#x201D;</xreftext>
+      <div element="sect2" href="admin.htm" number="5.1.1" targetptr="NTQRF201">
+        <ttl>Oracle Database Service Naming Conventions for Multiple Oracle Homes</ttl>
+        <xreftext>&#x201C;Oracle Database Service Naming Conventions for Multiple Oracle Homes&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="admin.htm" number="5.1.2" targetptr="NTQRF202">
+        <ttl>Starting Oracle Database Services</ttl>
+        <xreftext>&#x201C;Starting Oracle Database Services&#x201D;</xreftext>
+        <obj element="bridgehead" href="admin.htm" number="" targetptr="NTQRF203">
+          <ttl>Control Panel</ttl>
+          <xreftext>&#x201C;Control Panel&#x201D;</xreftext>
+        </obj>
+        <obj element="bridgehead" href="admin.htm" number="" targetptr="NTQRF204">
+          <ttl>Command Prompt</ttl>
+          <xreftext>&#x201C;Command Prompt&#x201D;</xreftext>
+        </obj>
+        <obj element="bridgehead" href="admin.htm" number="" targetptr="NTQRF205">
+          <ttl>Oracle Administration Assistant for Windows</ttl>
+          <xreftext>&#x201C;Oracle Administration Assistant for Windows&#x201D;</xreftext>
+        </obj>
+      </div>
+      <div element="sect2" href="admin.htm" number="5.1.3" targetptr="NTQRF206">
+        <ttl>Stopping Oracle Database Services</ttl>
+        <xreftext>&#x201C;Stopping Oracle Database Services&#x201D;</xreftext>
+        <obj element="bridgehead" href="admin.htm" number="" targetptr="NTQRF207">
+          <ttl>Control Panel</ttl>
+          <xreftext>&#x201C;Control Panel&#x201D;</xreftext>
+        </obj>
+        <obj element="bridgehead" href="admin.htm" number="" targetptr="NTQRF208">
+          <ttl>Command Prompt</ttl>
+          <xreftext>&#x201C;Command Prompt&#x201D;</xreftext>
+        </obj>
+        <obj element="bridgehead" href="admin.htm" number="" targetptr="NTQRF209">
+          <ttl>Oracle Administration Assistant for Windows</ttl>
+          <xreftext>&#x201C;Oracle Administration Assistant for Windows&#x201D;</xreftext>
+        </obj>
+      </div>
+      <div element="sect2" href="admin.htm" number="5.1.4" targetptr="NTQRF211">
+        <ttl>Auto-starting Oracle Database Services</ttl>
+        <xreftext>&#x201C;Auto-starting Oracle Database Services&#x201D;</xreftext>
+        <obj element="bridgehead" href="admin.htm" number="" targetptr="NTQRF212">
+          <ttl>Control Panel</ttl>
+          <xreftext>&#x201C;Control Panel&#x201D;</xreftext>
+        </obj>
+        <obj element="bridgehead" href="admin.htm" number="" targetptr="NTQRF213">
+          <ttl>Oracle Administration Assistant for Windows</ttl>
+          <xreftext>&#x201C;Oracle Administration Assistant for Windows&#x201D;</xreftext>
+        </obj>
+      </div>
+    </div>
+    <div element="sect1" href="admin.htm" number="5.2" targetptr="NTQRF214">
+      <ttl>Starting and Shutting Down a Database with SQL*Plus</ttl>
+      <xreftext>&#x201C;Starting and Shutting Down a Database with SQL*Plus&#x201D;</xreftext>
+    </div>
+    <div element="sect1" href="admin.htm" number="5.3" targetptr="NTQRF215">
+      <ttl>Starting and Shutting Down a Database Using Services</ttl>
+      <xreftext>&#x201C;Starting and Shutting Down a Database Using Services&#x201D;</xreftext>
+      <obj element="bridgehead" href="admin.htm" number="" targetptr="NTQRF216">
+        <ttl>Oracle Administration Assistant for Windows</ttl>
+        <xreftext>&#x201C;Oracle Administration Assistant for Windows&#x201D;</xreftext>
+      </obj>
+      <obj element="bridgehead" href="admin.htm" number="" targetptr="NTQRF217">
+        <ttl>Setting Registry Parameters</ttl>
+        <xreftext>&#x201C;Setting Registry Parameters&#x201D;</xreftext>
+      </obj>
+      <obj element="bridgehead" href="admin.htm" number="" targetptr="NTQRF218">
+        <ttl>Starting or Stopping OracleServiceSID from the Control Panel</ttl>
+        <xreftext>&#x201C;Starting or Stopping OracleService<code><span class="codeinlineboldital">SID</span></code> from the Control Panel&#x201D;</xreftext>
+      </obj>
+    </div>
+    <div element="sect1" href="admin.htm" number="5.4" targetptr="NTQRF219">
+      <ttl>Starting Multiple Instances</ttl>
+      <xreftext>&#x201C;Starting Multiple Instances&#x201D;</xreftext>
+    </div>
+    <div element="sect1" href="admin.htm" number="5.5" targetptr="NTQRF221">
+      <ttl>Creating and Populating Password Files</ttl>
+      <xreftext>&#x201C;Creating and Populating Password Files&#x201D;</xreftext>
+      <div element="sect2" href="admin.htm" number="5.5.1" targetptr="NTQRF222">
+        <ttl>Viewing and Hiding the Password File</ttl>
+        <xreftext>&#x201C;Viewing and Hiding the Password File&#x201D;</xreftext>
+        <obj element="bridgehead" href="admin.htm" number="" targetptr="NTQRF223">
+          <ttl>Command Prompt</ttl>
+          <xreftext>&#x201C;Command Prompt&#x201D;</xreftext>
+        </obj>
+        <obj element="bridgehead" href="admin.htm" number="" targetptr="NTQRF224">
+          <ttl>Windows Explorer</ttl>
+          <xreftext>&#x201C;Windows Explorer&#x201D;</xreftext>
+        </obj>
+      </div>
+    </div>
+    <div element="sect1" href="admin.htm" number="5.6" targetptr="NTQRF225">
+      <ttl>Connecting Remotely to the Database as SYS</ttl>
+      <xreftext>&#x201C;Connecting Remotely to the Database as SYS&#x201D;</xreftext>
+    </div>
+    <div element="sect1" href="admin.htm" number="5.7" targetptr="NTQRF226">
+      <ttl>Automatically Encrypted Database Passwords</ttl>
+      <xreftext>&#x201C;Automatically Encrypted Database Passwords&#x201D;</xreftext>
+    </div>
+    <div element="sect1" href="admin.htm" number="5.8" targetptr="NTQRF227">
+      <ttl>Accessing Database Files on Remote Computers</ttl>
+      <xreftext>&#x201C;Accessing Database Files on Remote Computers&#x201D;</xreftext>
+    </div>
+    <div element="sect1" href="admin.htm" number="5.9" targetptr="NTQRF228">
+      <ttl>Archiving Redo Log Files</ttl>
+      <xreftext>&#x201C;Archiving Redo Log Files&#x201D;</xreftext>
+    </div>
+  </div>
+  <div element="chapter" href="monitor.htm" number="6" targetptr="NTQRF080">
+    <ttl>Monitoring a Database on Windows</ttl>
+    <xreftext>&#x201C;Monitoring a Database on Windows&#x201D;</xreftext>
+    <div element="sect1" href="monitor.htm" number="6.1" targetptr="NTQRF232">
+      <ttl>Database Monitoring Overview</ttl>
+      <xreftext>&#x201C;Database Monitoring Overview&#x201D;</xreftext>
+      <obj element="table" href="monitor.htm" number="6-1" targetptr="NTQRF233">
+        <ttl>Database Monitoring Tools</ttl>
+        <xreftext>&#x201C;Database Monitoring Tools&#x201D;</xreftext>
+      </obj>
+    </div>
+    <div element="sect1" href="monitor.htm" number="6.2" targetptr="NTQRF234">
+      <ttl>Using Oracle Counters for Windows Performance Monitor</ttl>
+      <xreftext>&#x201C;Using Oracle Counters for Windows Performance Monitor&#x201D;</xreftext>
+      <div element="sect2" href="monitor.htm" number="6.2.1" targetptr="NTQRF235">
+        <ttl>Registry Information</ttl>
+        <xreftext>&#x201C;Registry Information&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="monitor.htm" number="6.2.2" targetptr="NTQRF236">
+        <ttl>Accessing Oracle Counters for Windows Performance Monitor</ttl>
+        <xreftext>&#x201C;Accessing Oracle Counters for Windows Performance Monitor&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="monitor.htm" number="6.2.3" targetptr="NTQRF237">
+        <ttl>Modifying Views</ttl>
+        <xreftext>&#x201C;Modifying Views&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="monitor.htm" number="6.2.4" targetptr="NTQRF238">
+        <ttl>Understanding Oracle Database Performance Objects</ttl>
+        <xreftext>&#x201C;Understanding Oracle Database Performance Objects&#x201D;</xreftext>
+        <obj element="bridgehead" href="monitor.htm" number="" targetptr="NTQRF239">
+          <ttl>Oracle Database Buffer Cache</ttl>
+          <xreftext>&#x201C;Oracle Database Buffer Cache&#x201D;</xreftext>
+        </obj>
+        <obj element="bridgehead" href="monitor.htm" number="" targetptr="NTQRF240">
+          <ttl>Oracle Database Redo Log Buffer</ttl>
+          <xreftext>&#x201C;Oracle Database Redo Log Buffer&#x201D;</xreftext>
+        </obj>
+        <obj element="bridgehead" href="monitor.htm" number="" targetptr="NTQRF241">
+          <ttl>Oracle Database Data Dictionary Cache</ttl>
+          <xreftext>&#x201C;Oracle Database Data Dictionary Cache&#x201D;</xreftext>
+        </obj>
+        <obj element="bridgehead" href="monitor.htm" number="" targetptr="NTQRF242">
+          <ttl>Oracle Database Library Cache</ttl>
+          <xreftext>&#x201C;Oracle Database Library Cache&#x201D;</xreftext>
+        </obj>
+        <obj element="bridgehead" href="monitor.htm" number="" targetptr="NTQRF243">
+          <ttl>Oracle Database Datafiles</ttl>
+          <xreftext>&#x201C;Oracle Database Datafiles&#x201D;</xreftext>
+        </obj>
+        <obj element="bridgehead" href="monitor.htm" number="" targetptr="NTQRF244">
+          <ttl>Oracle Database DBWR stats1</ttl>
+          <xreftext>&#x201C;Oracle Database DBWR stats1&#x201D;</xreftext>
+        </obj>
+        <obj element="bridgehead" href="monitor.htm" number="" targetptr="NTQRF245">
+          <ttl>Oracle Database DBWR stats2</ttl>
+          <xreftext>&#x201C;Oracle Database DBWR stats2&#x201D;</xreftext>
+        </obj>
+        <obj element="bridgehead" href="monitor.htm" number="" targetptr="NTQRF246">
+          <ttl>Oracle Database Dynamic Space Management</ttl>
+          <xreftext>&#x201C;Oracle Database Dynamic Space Management&#x201D;</xreftext>
+        </obj>
+        <obj element="bridgehead" href="monitor.htm" number="" targetptr="NTQRF247">
+          <ttl>Oracle Database Free List</ttl>
+          <xreftext>&#x201C;Oracle Database Free List&#x201D;</xreftext>
+        </obj>
+        <obj element="bridgehead" href="monitor.htm" number="" targetptr="NTQRF248">
+          <ttl>Oracle Database Sorts</ttl>
+          <xreftext>&#x201C;Oracle Database Sorts&#x201D;</xreftext>
+        </obj>
+      </div>
+      <div element="sect2" href="monitor.htm" number="6.2.5" targetptr="NTQRF249">
+        <ttl>Oracle Counters for Windows Performance Monitor Troubleshooting Information</ttl>
+        <xreftext>&#x201C;Oracle Counters for Windows Performance Monitor Troubleshooting Information&#x201D;</xreftext>
+      </div>
+    </div>
+    <div element="sect1" href="monitor.htm" number="6.3" targetptr="NTQRF251">
+      <ttl>Using Event Viewer</ttl>
+      <xreftext>&#x201C;Using Event Viewer&#x201D;</xreftext>
+      <obj element="figure" href="monitor.htm" number="6-1" targetptr="NTQRF252">
+        <ttl>Application View Window</ttl>
+        <xreftext>&#x201C;Application View Window&#x201D;</xreftext>
+      </obj>
+      <obj element="table" href="monitor.htm" number="6-2" targetptr="NTQRF253">
+        <ttl>Application View Definitions</ttl>
+        <xreftext>&#x201C;Application View Definitions&#x201D;</xreftext>
+      </obj>
+      <obj element="table" href="monitor.htm" number="6-3" targetptr="NTQRF254">
+        <ttl>Event Viewer Icons</ttl>
+        <xreftext>&#x201C;Event Viewer Icons&#x201D;</xreftext>
+      </obj>
+      <div element="sect2" href="monitor.htm" number="6.3.1" targetptr="NTQRF255">
+        <ttl>Reading Event Viewer</ttl>
+        <xreftext>&#x201C;Reading Event Viewer&#x201D;</xreftext>
+        <obj element="figure" href="monitor.htm" number="6-2" targetptr="NTQRF256">
+          <ttl>Event Detail Dialog</ttl>
+          <xreftext>&#x201C;Event Detail Dialog&#x201D;</xreftext>
+        </obj>
+      </div>
+      <div element="sect2" href="monitor.htm" number="6.3.2" targetptr="NTQRF257">
+        <ttl>Managing Event Viewer</ttl>
+        <xreftext>&#x201C;Managing Event Viewer&#x201D;</xreftext>
+      </div>
+    </div>
+    <div element="sect1" href="monitor.htm" number="6.4" targetptr="NTQRF258">
+      <ttl>Trace Files</ttl>
+      <xreftext>&#x201C;Trace Files&#x201D;</xreftext>
+    </div>
+    <div element="sect1" href="monitor.htm" number="6.5" targetptr="NTQRF259">
+      <ttl>Alert Logs</ttl>
+      <xreftext>&#x201C;Alert Logs&#x201D;</xreftext>
+    </div>
+    <div element="sect1" href="monitor.htm" number="6.6" targetptr="NTQRF260">
+      <ttl>Viewing Threads</ttl>
+      <xreftext>&#x201C;Viewing Threads&#x201D;</xreftext>
+    </div>
+  </div>
+  <div element="chapter" href="tuning.htm" number="7" targetptr="NTQRF090">
+    <ttl>Tuning Windows to Optimize Oracle Database</ttl>
+    <xreftext>&#x201C;Tuning Windows to Optimize Oracle Database&#x201D;</xreftext>
+    <div element="sect1" href="tuning.htm" number="7.1" targetptr="NTQRF261">
+      <ttl>Windows Tuning Overview</ttl>
+      <xreftext>&#x201C;Windows Tuning Overview&#x201D;</xreftext>
+    </div>
+    <div element="sect1" href="tuning.htm" number="7.2" targetptr="NTQRF262">
+      <ttl>Large Page Support</ttl>
+      <xreftext>&#x201C;Large Page Support&#x201D;</xreftext>
+    </div>
+    <div element="sect1" href="tuning.htm" number="7.3" targetptr="NTQRF263">
+      <ttl>Reduce Priority of Foreground Applications on Server Console</ttl>
+      <xreftext>&#x201C;Reduce Priority of Foreground Applications on Server Console&#x201D;</xreftext>
+    </div>
+    <div element="sect1" href="tuning.htm" number="7.4" targetptr="NTQRF264">
+      <ttl>Configure Windows Server to Be an Application Server</ttl>
+      <xreftext>&#x201C;Configure Windows Server to Be an Application Server&#x201D;</xreftext>
+      <obj element="table" href="tuning.htm" number="7-1" targetptr="NTQRF265">
+        <ttl>Windows Server Memory Shares</ttl>
+        <xreftext>&#x201C;Windows Server Memory Shares&#x201D;</xreftext>
+      </obj>
+    </div>
+    <div element="sect1" href="tuning.htm" number="7.5" targetptr="NTQRF266">
+      <ttl>Disable Unnecessary Services</ttl>
+      <xreftext>&#x201C;Disable Unnecessary Services&#x201D;</xreftext>
+    </div>
+    <div element="sect1" href="tuning.htm" number="7.6" targetptr="NTQRF267">
+      <ttl>Remove Unused Network Protocols</ttl>
+      <xreftext>&#x201C;Remove Unused Network Protocols&#x201D;</xreftext>
+    </div>
+    <div element="sect1" href="tuning.htm" number="7.7" targetptr="NTQRF268">
+      <ttl>Reset Network Protocol Bind Order</ttl>
+      <xreftext>&#x201C;Reset Network Protocol Bind Order&#x201D;</xreftext>
+    </div>
+    <div element="sect1" href="tuning.htm" number="7.8" targetptr="NTQRF269">
+      <ttl>Setting the Order of Multiple Network Interface Cards</ttl>
+      <xreftext>&#x201C;Setting the Order of Multiple Network Interface Cards&#x201D;</xreftext>
+    </div>
+    <div element="sect1" href="tuning.htm" number="7.9" targetptr="NTQRF271">
+      <ttl>Apply Latest Reliable Windows Server Service Pack</ttl>
+      <xreftext>&#x201C;Apply Latest Reliable Windows Server Service Pack&#x201D;</xreftext>
+    </div>
+    <div element="sect1" href="tuning.htm" number="7.10" targetptr="NTQRF272">
+      <ttl>Use Hardware or Operating System Striping</ttl>
+      <xreftext>&#x201C;Use Hardware or Operating System Striping&#x201D;</xreftext>
+      <obj element="table" href="tuning.htm" number="7-2" targetptr="NTQRF273">
+        <ttl>RAID Levels in Oracle Database Installations</ttl>
+        <xreftext>&#x201C;RAID Levels in Oracle Database Installations&#x201D;</xreftext>
+      </obj>
+      <obj element="formalpara" href="tuning.htm" number="" targetptr="NTQRF274">
+        <ttl>Note</ttl>
+        <xreftext>&#x201C;Note&#x201D;</xreftext>
+      </obj>
+      <obj element="formalpara" href="tuning.htm" number="" targetptr="NTQRF275">
+        <ttl>Note</ttl>
+        <xreftext>&#x201C;Note&#x201D;</xreftext>
+      </obj>
+      <obj element="bridgehead" href="tuning.htm" number="" targetptr="NTQRF276">
+        <ttl>Disk Striping</ttl>
+        <xreftext>&#x201C;Disk Striping&#x201D;</xreftext>
+      </obj>
+      <obj element="bridgehead" href="tuning.htm" number="" targetptr="NTQRF277">
+        <ttl>Disk Mirroring</ttl>
+        <xreftext>&#x201C;Disk Mirroring&#x201D;</xreftext>
+      </obj>
+      <obj element="bridgehead" href="tuning.htm" number="" targetptr="NTQRF278">
+        <ttl>Disk Striping + Mirroring</ttl>
+        <xreftext>&#x201C;Disk Striping + Mirroring&#x201D;</xreftext>
+      </obj>
+      <obj element="bridgehead" href="tuning.htm" number="" targetptr="NTQRF279">
+        <ttl>Distributed Data Guarding</ttl>
+        <xreftext>&#x201C;Distributed Data Guarding&#x201D;</xreftext>
+      </obj>
+      <div element="sect2" href="tuning.htm" number="7.10.1" targetptr="NTQRF281">
+        <ttl>Multiple Striped Volumes for Sequential and Random Access</ttl>
+        <xreftext>&#x201C;Multiple Striped Volumes for Sequential and Random Access&#x201D;</xreftext>
+      </div>
+    </div>
+    <div element="sect1" href="tuning.htm" number="7.11" targetptr="NTQRF282">
+      <ttl>Multiplex Windows Server Virtual Memory Paging File</ttl>
+      <xreftext>&#x201C;Multiplex Windows Server Virtual Memory Paging File&#x201D;</xreftext>
+      <obj element="bridgehead" href="tuning.htm" number="" targetptr="NTQRF283">
+        <ttl>General Page File Sizing Tip</ttl>
+        <xreftext>&#x201C;General Page File Sizing Tip&#x201D;</xreftext>
+      </obj>
+    </div>
+    <div element="sect1" href="tuning.htm" number="7.12" targetptr="NTQRF284">
+      <ttl>Close All Unnecessary Foreground Applications</ttl>
+      <xreftext>&#x201C;Close All Unnecessary Foreground Applications&#x201D;</xreftext>
+    </div>
+  </div>
+  <div element="chapter" href="vss.htm" number="8" targetptr="NTQRF280">
+    <ttl>Performing Database Backup and Recovery with VSS</ttl>
+    <xreftext>&#x201C;Performing Database Backup and Recovery with VSS&#x201D;</xreftext>
+    <div element="sect1" href="vss.htm" number="8.1" targetptr="NTQRF285">
+      <ttl>Overview of Database Backup and Recovery with VSS</ttl>
+      <xreftext>&#x201C;Overview of Database Backup and Recovery with VSS&#x201D;</xreftext>
+      <div element="sect2" href="vss.htm" number="8.1.1" targetptr="NTQRF286">
+        <ttl>Purpose of Database Backup and Recovery with VSS</ttl>
+        <xreftext>&#x201C;Purpose of Database Backup and Recovery with VSS&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="vss.htm" number="8.1.2" targetptr="NTQRF287">
+        <ttl>Scope of This Chapter</ttl>
+        <xreftext>&#x201C;Scope of This Chapter&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="vss.htm" number="8.1.3" targetptr="NTQRF288">
+        <ttl>Basic Concepts of Database Backup and Recovery with VSS</ttl>
+        <xreftext>&#x201C;Basic Concepts of Database Backup and Recovery with VSS&#x201D;</xreftext>
+        <div element="sect3" href="vss.htm" number="8.1.3.1" targetptr="NTQRF289">
+          <ttl>Component-Based Shadow Copies</ttl>
+          <xreftext>&#x201C;Component-Based Shadow Copies&#x201D;</xreftext>
+        </div>
+        <div element="sect3" href="vss.htm" number="8.1.3.2" targetptr="NTQRF290">
+          <ttl>Volume-Based Shadow Copies</ttl>
+          <xreftext>&#x201C;Volume-Based Shadow Copies&#x201D;</xreftext>
+        </div>
+        <div element="sect3" href="vss.htm" number="8.1.3.3" targetptr="NTQRF291">
+          <ttl>Oracle VSS Backup Types</ttl>
+          <xreftext>&#x201C;Oracle VSS Backup Types&#x201D;</xreftext>
+        </div>
+      </div>
+      <div element="sect2" href="vss.htm" number="8.1.4" targetptr="NTQRF292">
+        <ttl>Basic Steps of Backup and Recovery with VSS</ttl>
+        <xreftext>&#x201C;Basic Steps of Backup and Recovery with VSS&#x201D;</xreftext>
+      </div>
+    </div>
+    <div element="sect1" href="vss.htm" number="8.2" targetptr="NTQRF293">
+      <ttl>Installing and Uninstalling the Oracle VSS Writer Service</ttl>
+      <xreftext>&#x201C;Installing and Uninstalling the Oracle VSS Writer Service&#x201D;</xreftext>
+      <obj element="table" href="vss.htm" number="8-1" targetptr="NTQRF294">
+        <ttl>Oracle VSS Writer Options</ttl>
+        <xreftext>&#x201C;Oracle VSS Writer Options&#x201D;</xreftext>
+      </obj>
+      <obj element="example" href="vss.htm" number="8-1" targetptr="NTQRF295">
+        <ttl>Installing Oracle VSS Writer</ttl>
+        <xreftext>&#x201C;Installing Oracle VSS Writer&#x201D;</xreftext>
+      </obj>
+    </div>
+    <div element="sect1" href="vss.htm" number="8.3" targetptr="NTQRF296">
+      <ttl>Backing Up a Database</ttl>
+      <xreftext>&#x201C;Backing Up a Database&#x201D;</xreftext>
+      <obj element="figure" href="vss.htm" number="8-1" targetptr="BEIHAAJE">
+        <ttl>Oracle VSS Writer Component Hierarchy</ttl>
+        <xreftext>&#x201C;Oracle VSS Writer Component Hierarchy&#x201D;</xreftext>
+      </obj>
+      <div element="sect2" href="vss.htm" number="8.3.1" targetptr="NTQRF297">
+        <ttl>About Component-Based Backups</ttl>
+        <xreftext>&#x201C;About Component-Based Backups&#x201D;</xreftext>
+        <obj element="table" href="vss.htm" number="8-2" targetptr="NTQRF298">
+          <ttl>Components Backed Up by the Oracle VSS Writer</ttl>
+          <xreftext>&#x201C;Components Backed Up by the Oracle VSS Writer&#x201D;</xreftext>
+        </obj>
+      </div>
+      <div element="sect2" href="vss.htm" number="8.3.2" targetptr="NTQRF299">
+        <ttl>Backing Up a Database in ARCHIVELOG Mode</ttl>
+        <xreftext>&#x201C;Backing Up a Database in ARCHIVELOG Mode&#x201D;</xreftext>
+        <div element="sect3" href="vss.htm" number="8.3.2.1" targetptr="NTQRF300">
+          <ttl>Making Component-Based Backups of an ARCHIVELOG Database</ttl>
+          <xreftext>&#x201C;Making Component-Based Backups of an ARCHIVELOG Database&#x201D;</xreftext>
+        </div>
+        <div element="sect3" href="vss.htm" number="8.3.2.2" targetptr="NTQRF301">
+          <ttl>Making Volume-Based Backups of an ARCHIVELOG Database</ttl>
+          <xreftext>&#x201C;Making Volume-Based Backups of an ARCHIVELOG Database&#x201D;</xreftext>
+        </div>
+      </div>
+      <div element="sect2" href="vss.htm" number="8.3.3" targetptr="NTQRF302">
+        <ttl>Backing Up a Database in NOARCHIVELOG Mode</ttl>
+        <xreftext>&#x201C;Backing Up a Database in NOARCHIVELOG Mode&#x201D;</xreftext>
+        <div element="sect3" href="vss.htm" number="8.3.3.1" targetptr="NTQRF303">
+          <ttl>Making Component-Based Backups of a NOARCHIVELOG Database</ttl>
+          <xreftext>&#x201C;Making Component-Based Backups of a NOARCHIVELOG Database&#x201D;</xreftext>
+        </div>
+        <div element="sect3" href="vss.htm" number="8.3.3.2" targetptr="NTQRF304">
+          <ttl>Making Volume-Based Backups of a NOARCHIVELOG Database</ttl>
+          <xreftext>&#x201C;Making Volume-Based Backups of a NOARCHIVELOG Database&#x201D;</xreftext>
+        </div>
+      </div>
+    </div>
+    <div element="sect1" href="vss.htm" number="8.4" targetptr="NTQRF305">
+      <ttl>Restoring and Recovering a Database</ttl>
+      <xreftext>&#x201C;Restoring and Recovering a Database&#x201D;</xreftext>
+      <div element="sect2" href="vss.htm" number="8.4.1" targetptr="NTQRF306">
+        <ttl>Restoring and Recovering a Database in ARCHIVELOG Mode</ttl>
+        <xreftext>&#x201C;Restoring and Recovering a Database in ARCHIVELOG Mode&#x201D;</xreftext>
+        <obj element="table" href="vss.htm" number="8-3" targetptr="NTQRF307">
+          <ttl>Components Usable in a Restore Operation</ttl>
+          <xreftext>&#x201C;Components Usable in a Restore Operation&#x201D;</xreftext>
+        </obj>
+        <div element="sect3" href="vss.htm" number="8.4.1.1" targetptr="NTQRF308">
+          <ttl>Restoring the Server Parameter File</ttl>
+          <xreftext>&#x201C;Restoring the Server Parameter File&#x201D;</xreftext>
+        </div>
+        <div element="sect3" href="vss.htm" number="8.4.1.2" targetptr="NTQRF309">
+          <ttl>Recovering from the Loss of All Control Files</ttl>
+          <xreftext>&#x201C;Recovering from the Loss of All Control Files&#x201D;</xreftext>
+        </div>
+        <div element="sect3" href="vss.htm" number="8.4.1.3" targetptr="NTQRF310">
+          <ttl>Recovering Tablespaces or Datafiles</ttl>
+          <xreftext>&#x201C;Recovering Tablespaces or Datafiles&#x201D;</xreftext>
+        </div>
+        <div element="sect3" href="vss.htm" number="8.4.1.4" targetptr="NTQRF311">
+          <ttl>Recovering All Tablespaces</ttl>
+          <xreftext>&#x201C;Recovering All Tablespaces&#x201D;</xreftext>
+        </div>
+        <div element="sect3" href="vss.htm" number="8.4.1.5" targetptr="NTQRF312">
+          <ttl>Performing Disaster Recovery</ttl>
+          <xreftext>&#x201C;Performing Disaster Recovery&#x201D;</xreftext>
+        </div>
+      </div>
+      <div element="sect2" href="vss.htm" number="8.4.2" targetptr="NTQRF313">
+        <ttl>Restoring a Database in NOARCHIVELOG Mode</ttl>
+        <xreftext>&#x201C;Restoring a Database in NOARCHIVELOG Mode&#x201D;</xreftext>
+        <div element="sect3" href="vss.htm" number="8.4.2.1" targetptr="NTQRF314">
+          <ttl>Restoring Component-Based Backups of a NOARCHIVELOG Database</ttl>
+          <xreftext>&#x201C;Restoring Component-Based Backups of a NOARCHIVELOG Database&#x201D;</xreftext>
+        </div>
+        <div element="sect3" href="vss.htm" number="8.4.2.2" targetptr="NTQRF315">
+          <ttl>Restoring Volume-Based Backups of a NOARCHIVELOG Database</ttl>
+          <xreftext>&#x201C;Restoring Volume-Based Backups of a NOARCHIVELOG Database&#x201D;</xreftext>
+        </div>
+      </div>
+    </div>
+    <div element="sect1" href="vss.htm" number="8.5" targetptr="BEICDDBD">
+      <ttl>Integrating VSS with Third-Party Requester Applications</ttl>
+      <xreftext>&#x201C;Integrating VSS with Third-Party Requester Applications&#x201D;</xreftext>
+      <div element="sect2" href="vss.htm" number="8.5.1" targetptr="BEIDJAFB">
+        <ttl>Writer Control Commands</ttl>
+        <xreftext>&#x201C;Writer Control Commands&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="vss.htm" number="8.5.2" targetptr="BEIGFDIE">
+        <ttl>Control Commands for Database or All Tablespaces Component</ttl>
+        <xreftext>&#x201C;Control Commands for Database or All Tablespaces Component&#x201D;</xreftext>
+      </div>
+    </div>
+    <div element="sect1" href="vss.htm" number="8.6" targetptr="NTQRF316">
+      <ttl>Duplicating a Database</ttl>
+      <xreftext>&#x201C;Duplicating a Database&#x201D;</xreftext>
+      <div element="sect2" href="vss.htm" number="8.6.1" targetptr="NTQRF317">
+        <ttl>Creating a Nonstandby Database from Shadow Copies</ttl>
+        <xreftext>&#x201C;Creating a Nonstandby Database from Shadow Copies&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="vss.htm" number="8.6.2" targetptr="NTQRF318">
+        <ttl>Creating a Standby Database From Shadow Copies</ttl>
+        <xreftext>&#x201C;Creating a Standby Database From Shadow Copies&#x201D;</xreftext>
+      </div>
+    </div>
+  </div>
+  <div element="chapter" href="authen.htm" number="9" targetptr="NTQRF120">
+    <ttl>Authenticating Database Users with Windows</ttl>
+    <xreftext>&#x201C;Authenticating Database Users with Windows&#x201D;</xreftext>
+    <div element="sect1" href="authen.htm" number="9.1" targetptr="NTQRF319">
+      <ttl>Windows Native Authentication Overview</ttl>
+      <xreftext>&#x201C;Windows Native Authentication Overview&#x201D;</xreftext>
+    </div>
+    <div element="sect1" href="authen.htm" number="9.2" targetptr="NTQRF320">
+      <ttl>Windows Authentication Protocols</ttl>
+      <xreftext>&#x201C;Windows Authentication Protocols&#x201D;</xreftext>
+    </div>
+    <div element="sect1" href="authen.htm" number="9.3" targetptr="NTQRF322">
+      <ttl>User Authentication and Role Authorization Methods</ttl>
+      <xreftext>&#x201C;User Authentication and Role Authorization Methods&#x201D;</xreftext>
+      <obj element="table" href="authen.htm" number="9-1" targetptr="NTQRF323">
+        <ttl>User Authentication and Role Authorization Defined</ttl>
+        <xreftext>&#x201C;User Authentication and Role Authorization Defined&#x201D;</xreftext>
+      </obj>
+      <obj element="table" href="authen.htm" number="9-2" targetptr="NTQRF324">
+        <ttl>Basic Features of User Authentication and Role Authorization</ttl>
+        <xreftext>&#x201C;Basic Features of User Authentication and Role Authorization&#x201D;</xreftext>
+      </obj>
+      <div element="sect2" href="authen.htm" number="9.3.1" targetptr="NTQRF325">
+        <ttl>Authentication and Authorization Methods To Use</ttl>
+        <xreftext>&#x201C;Authentication and Authorization Methods To Use&#x201D;</xreftext>
+        <obj element="table" href="authen.htm" number="9-3" targetptr="">
+          <ttl>User Authentication and Role Authorization Methods</ttl>
+          <xreftext>&#x201C;User Authentication and Role Authorization Methods&#x201D;</xreftext>
+        </obj>
+      </div>
+    </div>
+    <div element="sect1" href="authen.htm" number="9.4" targetptr="NTQRF327">
+      <ttl>Operating System Authentication Enabled at Installation</ttl>
+      <xreftext>&#x201C;Operating System Authentication Enabled at Installation&#x201D;</xreftext>
+    </div>
+  </div>
+  <div element="chapter" href="external.htm" number="10" targetptr="NTQRF130">
+    <ttl>Administering External Users and Roles on Windows</ttl>
+    <xreftext>&#x201C;Administering External Users and Roles on Windows&#x201D;</xreftext>
+    <div element="sect1" href="external.htm" number="10.1" targetptr="NTQRF328">
+      <ttl>Oracle Administration Assistant for Windows</ttl>
+      <xreftext>&#x201C;Oracle Administration Assistant for Windows&#x201D;</xreftext>
+      <div element="sect2" href="external.htm" number="10.1.1" targetptr="NTQRF329">
+        <ttl>Managing a Remote Computer</ttl>
+        <xreftext>&#x201C;Managing a Remote Computer&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="external.htm" number="10.1.2" targetptr="NTQRF330">
+        <ttl>Adding a Computer and Saving Your Configuration</ttl>
+        <xreftext>&#x201C;Adding a Computer and Saving Your Configuration&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="external.htm" number="10.1.3" targetptr="NTQRF331">
+        <ttl>Granting Administrator Privileges for All Databases on a Computer</ttl>
+        <xreftext>&#x201C;Granting Administrator Privileges for All Databases on a Computer&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="external.htm" number="10.1.4" targetptr="NTQRF332">
+        <ttl>Granting Operator Privileges for All Databases on a Computer</ttl>
+        <xreftext>&#x201C;Granting Operator Privileges for All Databases on a Computer&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="external.htm" number="10.1.5" targetptr="NTQRF333">
+        <ttl>Connecting to a Database</ttl>
+        <xreftext>&#x201C;Connecting to a Database&#x201D;</xreftext>
+        <div element="sect3" href="external.htm" number="10.1.5.1" targetptr="NTQRF334">
+          <ttl>Troubleshooting Connection Problems</ttl>
+          <xreftext>&#x201C;Troubleshooting Connection Problems&#x201D;</xreftext>
+        </div>
+      </div>
+      <div element="sect2" href="external.htm" number="10.1.6" targetptr="NTQRF335">
+        <ttl>Viewing Database Authentication Parameter Settings</ttl>
+        <xreftext>&#x201C;Viewing Database Authentication Parameter Settings&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="external.htm" number="10.1.7" targetptr="NTQRF336">
+        <ttl>Creating an External Operating System User</ttl>
+        <xreftext>&#x201C;Creating an External Operating System User&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="external.htm" number="10.1.8" targetptr="NTQRF337">
+        <ttl>Creating a Local Database Role</ttl>
+        <xreftext>&#x201C;Creating a Local Database Role&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="external.htm" number="10.1.9" targetptr="NTQRF338">
+        <ttl>Creating an External Operating System Role</ttl>
+        <xreftext>&#x201C;Creating an External Operating System Role&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="external.htm" number="10.1.10" targetptr="NTQRF339">
+        <ttl>Granting Administrator Privileges for a Single Database</ttl>
+        <xreftext>&#x201C;Granting Administrator Privileges for a Single Database&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="external.htm" number="10.1.11" targetptr="NTQRF340">
+        <ttl>Granting Operator Privileges for a Single Database</ttl>
+        <xreftext>&#x201C;Granting Operator Privileges for a Single Database&#x201D;</xreftext>
+      </div>
+    </div>
+    <div element="sect1" href="external.htm" number="10.2" targetptr="NTQRF341">
+      <ttl>Manually Administering External Users and Roles</ttl>
+      <xreftext>&#x201C;Manually Administering External Users and Roles&#x201D;</xreftext>
+      <div element="sect2" href="external.htm" number="10.2.1" targetptr="NTQRF342">
+        <ttl>Manually Creating an External Operating System User</ttl>
+        <xreftext>&#x201C;Manually Creating an External Operating System User&#x201D;</xreftext>
+        <div element="sect3" href="external.htm" number="10.2.1.1" targetptr="NTQRF343">
+          <ttl>External User Authentication Tasks on the Oracle Database Server</ttl>
+          <xreftext>&#x201C;External User Authentication Tasks on the Oracle Database Server&#x201D;</xreftext>
+        </div>
+        <div element="sect3" href="external.htm" number="10.2.1.2" targetptr="NTQRF344">
+          <ttl>External User Authentication Tasks on the Client Computer</ttl>
+          <xreftext>&#x201C;External User Authentication Tasks on the Client Computer&#x201D;</xreftext>
+        </div>
+      </div>
+      <div element="sect2" href="external.htm" number="10.2.2" targetptr="NTQRF345">
+        <ttl>Manually Granting Administrator and Operator Privileges for Databases</ttl>
+        <xreftext>&#x201C;Manually Granting Administrator and Operator Privileges for Databases&#x201D;</xreftext>
+        <obj element="table" href="external.htm" number="10-1" targetptr="NTQRF346">
+          <ttl>Windows Local Groups with SYSDBA, SYSOPER, and SYSASM Privileges</ttl>
+          <xreftext>&#x201C;Windows Local Groups with SYSDBA, SYSOPER, and SYSASM Privileges&#x201D;</xreftext>
+        </obj>
+        <obj element="formalpara" href="external.htm" number="" targetptr="NTQRF347">
+          <ttl>Note</ttl>
+          <xreftext>&#x201C;Note&#x201D;</xreftext>
+        </obj>
+        <div element="sect3" href="external.htm" number="10.2.2.1" targetptr="NTQRF348">
+          <ttl>SYSDBA/SYSOPER/SYSASM Authentication Tasks on the Oracle Database Server</ttl>
+          <xreftext>&#x201C;SYSDBA/SYSOPER/SYSASM Authentication Tasks on the Oracle Database Server&#x201D;</xreftext>
+        </div>
+        <div element="sect3" href="external.htm" number="10.2.2.2" targetptr="NTQRF349">
+          <ttl>SYSDBA/SYSOPER/SYSASM Authentication Tasks on the Client Computer</ttl>
+          <xreftext>&#x201C;SYSDBA/SYSOPER/SYSASM Authentication Tasks on the Client Computer&#x201D;</xreftext>
+        </div>
+      </div>
+      <div element="sect2" href="external.htm" number="10.2.3" targetptr="NTQRF350">
+        <ttl>Manually Creating an External Role</ttl>
+        <xreftext>&#x201C;Manually Creating an External Role&#x201D;</xreftext>
+        <div element="sect3" href="external.htm" number="10.2.3.1" targetptr="NTQRF351">
+          <ttl>External Role Authorization Tasks on the Oracle Database Server</ttl>
+          <xreftext>&#x201C;External Role Authorization Tasks on the Oracle Database Server&#x201D;</xreftext>
+        </div>
+        <div element="sect3" href="external.htm" number="10.2.3.2" targetptr="NTQRF352">
+          <ttl>External Role Authorization Tasks on the Client Computer</ttl>
+          <xreftext>&#x201C;External Role Authorization Tasks on the Client Computer&#x201D;</xreftext>
+        </div>
+      </div>
+      <div element="sect2" href="external.htm" number="10.2.4" targetptr="NTQRF353">
+        <ttl>Manually Migrating Users</ttl>
+        <xreftext>&#x201C;Manually Migrating Users&#x201D;</xreftext>
+      </div>
+    </div>
+  </div>
+  <div element="chapter" href="wallets.htm" number="11" targetptr="NTQRF150">
+    <ttl>Storing Oracle Wallets in the Windows Registry</ttl>
+    <xreftext>&#x201C;Storing Oracle Wallets in the Windows Registry&#x201D;</xreftext>
+    <div element="sect1" href="wallets.htm" number="11.1" targetptr="NTQRF354">
+      <ttl>Storing Private Keys and Trust Points</ttl>
+      <xreftext>&#x201C;Storing Private Keys and Trust Points&#x201D;</xreftext>
+    </div>
+    <div element="sect1" href="wallets.htm" number="11.2" targetptr="NTQRF355">
+      <ttl>Storing User's Profile</ttl>
+      <xreftext>&#x201C;Storing User's Profile&#x201D;</xreftext>
+    </div>
+    <div element="sect1" href="wallets.htm" number="11.3" targetptr="NTQRF356">
+      <ttl>Registry Parameters for Wallet Storage</ttl>
+      <xreftext>&#x201C;Registry Parameters for Wallet Storage&#x201D;</xreftext>
+      <div element="sect2" href="wallets.htm" number="11.3.1" targetptr="NTQRF357">
+        <ttl>Oracle Wallet Manager</ttl>
+        <xreftext>&#x201C;Oracle Wallet Manager&#x201D;</xreftext>
+        <div element="sect3" href="wallets.htm" number="11.3.1.1" targetptr="NTQRF358">
+          <ttl>Sharing Wallets and sqlnet.ora Files Among Multiple Databases</ttl>
+          <xreftext>&#x201C;Sharing Wallets and sqlnet.ora Files Among Multiple Databases&#x201D;</xreftext>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div element="chapter" href="pki.htm" number="12" targetptr="NTQRF160">
+    <ttl>Oracle PKI Integration with Windows</ttl>
+    <xreftext>&#x201C;Oracle PKI Integration with Windows&#x201D;</xreftext>
+    <div element="sect1" href="pki.htm" number="12.1" targetptr="NTQRF359">
+      <ttl>Oracle Public Key Infrastructure</ttl>
+      <xreftext>&#x201C;Oracle Public Key Infrastructure&#x201D;</xreftext>
+    </div>
+    <div element="sect1" href="pki.htm" number="12.2" targetptr="NTQRF360">
+      <ttl>Windows Public Key Infrastructure</ttl>
+      <xreftext>&#x201C;Windows Public Key Infrastructure&#x201D;</xreftext>
+      <div element="sect2" href="pki.htm" number="12.2.1" targetptr="NTQRF361">
+        <ttl>Microsoft Certificate Stores</ttl>
+        <xreftext>&#x201C;Microsoft Certificate Stores&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="pki.htm" number="12.2.2" targetptr="NTQRF362">
+        <ttl>Microsoft Certificate Services</ttl>
+        <xreftext>&#x201C;Microsoft Certificate Services&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="pki.htm" number="12.2.3" targetptr="NTQRF363">
+        <ttl>Using Microsoft Certificate Stores with Oracle PKI Applications</ttl>
+        <xreftext>&#x201C;Using Microsoft Certificate Stores with Oracle PKI Applications&#x201D;</xreftext>
+      </div>
+    </div>
+  </div>
+  <div element="chapter" href="active_dir.htm" number="13" targetptr="NTQRF270">
+    <ttl>Using Oracle Database with Microsoft Active Directory</ttl>
+    <xreftext>&#x201C;Using Oracle Database with Microsoft Active Directory&#x201D;</xreftext>
+    <div element="sect1" href="active_dir.htm" number="13.1" targetptr="NTQRF364">
+      <ttl>Microsoft Active Directory Support</ttl>
+      <xreftext>&#x201C;Microsoft Active Directory Support&#x201D;</xreftext>
+      <div element="sect2" href="active_dir.htm" number="13.1.1" targetptr="NTQRF365">
+        <ttl>About Microsoft Active Directory</ttl>
+        <xreftext>&#x201C;About Microsoft Active Directory&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="active_dir.htm" number="13.1.2" targetptr="NTQRF366">
+        <ttl>Accessing Active Directory</ttl>
+        <xreftext>&#x201C;Accessing Active Directory&#x201D;</xreftext>
+      </div>
+    </div>
+    <div element="sect1" href="active_dir.htm" number="13.2" targetptr="NTQRF367">
+      <ttl>Oracle Components That Integrate with Active Directory</ttl>
+      <xreftext>&#x201C;Oracle Components That Integrate with Active Directory&#x201D;</xreftext>
+      <div element="sect2" href="active_dir.htm" number="13.2.1" targetptr="NTQRF368">
+        <ttl>Directory Naming</ttl>
+        <xreftext>&#x201C;Directory Naming&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="active_dir.htm" number="13.2.2" targetptr="NTQRF369">
+        <ttl>Automatic Discovery of Directory Servers</ttl>
+        <xreftext>&#x201C;Automatic Discovery of Directory Servers&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="active_dir.htm" number="13.2.3" targetptr="NTQRF370">
+        <ttl>Integration with Windows Tools</ttl>
+        <xreftext>&#x201C;Integration with Windows Tools&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="active_dir.htm" number="13.2.4" targetptr="NTQRF371">
+        <ttl>User Interface Extensions for Oracle Net Directory Naming</ttl>
+        <xreftext>&#x201C;User Interface Extensions for Oracle Net Directory Naming&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="active_dir.htm" number="13.2.5" targetptr="NTQRF372">
+        <ttl>Enhancement of Directory Object Type Descriptions</ttl>
+        <xreftext>&#x201C;Enhancement of Directory Object Type Descriptions&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="active_dir.htm" number="13.2.6" targetptr="NTQRF373">
+        <ttl>Integration with Windows Login Credentials</ttl>
+        <xreftext>&#x201C;Integration with Windows Login Credentials&#x201D;</xreftext>
+        <obj element="bridgehead" href="active_dir.htm" number="" targetptr="NTQRF374">
+          <ttl>Configuration on machines that require authenticated name lookups</ttl>
+          <xreftext>&#x201C;Configuration on machines that require authenticated name lookups&#x201D;</xreftext>
+        </obj>
+      </div>
+      <div element="sect2" href="active_dir.htm" number="13.2.7" targetptr="NTQRF376">
+        <ttl>Oracle Directory Objects in Active Directory</ttl>
+        <xreftext>&#x201C;Oracle Directory Objects in Active Directory&#x201D;</xreftext>
+        <obj element="figure" href="active_dir.htm" number="13-1" targetptr="NTQRF377">
+          <ttl>Oracle Directory Objects in Active Directory Users and Computers</ttl>
+          <xreftext>&#x201C;Oracle Directory Objects in Active Directory Users and Computers&#x201D;</xreftext>
+        </obj>
+        <obj element="table" href="active_dir.htm" number="13-1" targetptr="NTQRF378">
+          <ttl>Oracle Directory Objects</ttl>
+          <xreftext>&#x201C;Oracle Directory Objects&#x201D;</xreftext>
+        </obj>
+      </div>
+    </div>
+    <div element="sect1" href="active_dir.htm" number="13.3" targetptr="NTQRF379">
+      <ttl>Requirements for Using Oracle Database with Active Directory</ttl>
+      <xreftext>&#x201C;Requirements for Using Oracle Database with Active Directory&#x201D;</xreftext>
+      <div element="sect2" href="active_dir.htm" number="13.3.1" targetptr="NTQRF380">
+        <ttl>Directory Naming Software Requirements</ttl>
+        <xreftext>&#x201C;Directory Naming Software Requirements&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="active_dir.htm" number="13.3.2" targetptr="NTQRF381">
+        <ttl>Creating an OracleContext</ttl>
+        <xreftext>&#x201C;Creating an OracleContext&#x201D;</xreftext>
+        <div element="sect3" href="active_dir.htm" number="13.3.2.1" targetptr="NTQRF382">
+          <ttl>Network Configuration Assistant (NetCA)</ttl>
+          <xreftext>&#x201C;Network Configuration Assistant (NetCA)&#x201D;</xreftext>
+        </div>
+      </div>
+      <div element="sect2" href="active_dir.htm" number="13.3.3" targetptr="NTQRF383">
+        <ttl>Oracle Schema Objects Creation</ttl>
+        <xreftext>&#x201C;Oracle Schema Objects Creation&#x201D;</xreftext>
+        <obj element="bridgehead" href="active_dir.htm" number="" targetptr="NTQRF384">
+          <ttl>Display Specifiers Not Created</ttl>
+          <xreftext>&#x201C;Display Specifiers Not Created&#x201D;</xreftext>
+        </obj>
+      </div>
+    </div>
+    <div element="sect1" href="active_dir.htm" number="13.4" targetptr="NTQRF385">
+      <ttl>Configuring Oracle Database to Use Active Directory</ttl>
+      <xreftext>&#x201C;Configuring Oracle Database to Use Active Directory&#x201D;</xreftext>
+    </div>
+    <div element="sect1" href="active_dir.htm" number="13.5" targetptr="NTQRF386">
+      <ttl>Testing Connectivity</ttl>
+      <xreftext>&#x201C;Testing Connectivity&#x201D;</xreftext>
+      <div element="sect2" href="active_dir.htm" number="13.5.1" targetptr="NTQRF387">
+        <ttl>Testing Connectivity from Client Computers</ttl>
+        <xreftext>&#x201C;Testing Connectivity from Client Computers&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="active_dir.htm" number="13.5.2" targetptr="NTQRF388">
+        <ttl>Testing Connectivity from Microsoft Tools</ttl>
+        <xreftext>&#x201C;Testing Connectivity from Microsoft Tools&#x201D;</xreftext>
+      </div>
+    </div>
+    <div element="sect1" href="active_dir.htm" number="13.6" targetptr="NTQRF389">
+      <ttl>Access Control List Management for Oracle Directory Objects</ttl>
+      <xreftext>&#x201C;Access Control List Management for Oracle Directory Objects&#x201D;</xreftext>
+      <div element="sect2" href="active_dir.htm" number="13.6.1" targetptr="NTQRF390">
+        <ttl>Security Groups</ttl>
+        <xreftext>&#x201C;Security Groups&#x201D;</xreftext>
+        <div element="sect3" href="active_dir.htm" number="13.6.1.1" targetptr="NTQRF391">
+          <ttl>OracleDBCreators</ttl>
+          <xreftext>&#x201C;OracleDBCreators&#x201D;</xreftext>
+        </div>
+        <div element="sect3" href="active_dir.htm" number="13.6.1.2" targetptr="NTQRF392">
+          <ttl>OracleNetAdmins</ttl>
+          <xreftext>&#x201C;OracleNetAdmins&#x201D;</xreftext>
+        </div>
+        <div element="sect3" href="active_dir.htm" number="13.6.1.3" targetptr="NTQRF393">
+          <ttl>NetService Objects</ttl>
+          <xreftext>&#x201C;NetService Objects&#x201D;</xreftext>
+        </div>
+      </div>
+      <div element="sect2" href="active_dir.htm" number="13.6.2" targetptr="NTQRF394">
+        <ttl>Setting ACLs on NetService Entries</ttl>
+        <xreftext>&#x201C;Setting ACLs on NetService Entries&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="active_dir.htm" number="13.6.3" targetptr="NTQRF395">
+        <ttl>Adding and Deleting Security Group Members</ttl>
+        <xreftext>&#x201C;Adding and Deleting Security Group Members&#x201D;</xreftext>
+      </div>
+    </div>
+  </div>
+  <div element="chapter" href="specs.htm" number="14" targetptr="NTQRF170">
+    <ttl>Oracle Database Specifications for Windows</ttl>
+    <xreftext>&#x201C;Oracle Database Specifications for Windows&#x201D;</xreftext>
+    <div element="sect1" href="specs.htm" number="14.1" targetptr="NTQRF396">
+      <ttl>Initialization Parameter File Overview</ttl>
+      <xreftext>&#x201C;Initialization Parameter File Overview&#x201D;</xreftext>
+      <div element="sect2" href="specs.htm" number="14.1.1" targetptr="NTQRF397">
+        <ttl>Location of the Initialization Parameter File</ttl>
+        <xreftext>&#x201C;Location of the Initialization Parameter File&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="specs.htm" number="14.1.2" targetptr="NTQRF398">
+        <ttl>Editing The Initialization Parameter File</ttl>
+        <xreftext>&#x201C;Editing The Initialization Parameter File&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="specs.htm" number="14.1.3" targetptr="NTQRF399">
+        <ttl>Database Configuration Assistant Renames init.ora</ttl>
+        <xreftext>&#x201C;Database Configuration Assistant Renames init.ora&#x201D;</xreftext>
+      </div>
+    </div>
+    <div element="sect1" href="specs.htm" number="14.2" targetptr="NTQRF400">
+      <ttl>Sample File</ttl>
+      <xreftext>&#x201C;Sample File&#x201D;</xreftext>
+    </div>
+    <div element="sect1" href="specs.htm" number="14.3" targetptr="NTQRF401">
+      <ttl>SGA_MAX_SIZE Parameter</ttl>
+      <xreftext>&#x201C;SGA_MAX_SIZE Parameter&#x201D;</xreftext>
+    </div>
+    <div element="sect1" href="specs.htm" number="14.4" targetptr="NTQRF402">
+      <ttl>Initialization Parameters Without Windows-Specific Values</ttl>
+      <xreftext>&#x201C;Initialization Parameters Without Windows-Specific Values&#x201D;</xreftext>
+      <obj element="table" href="specs.htm" number="14-1" targetptr="NTQRF403">
+        <ttl>Initialization Parameters Without Windows-Specific Values</ttl>
+        <xreftext>&#x201C;Initialization Parameters Without Windows-Specific Values&#x201D;</xreftext>
+      </obj>
+    </div>
+    <div element="sect1" href="specs.htm" number="14.5" targetptr="NTQRF404">
+      <ttl>Displaying Initialization Parameter Values</ttl>
+      <xreftext>&#x201C;Displaying Initialization Parameter Values&#x201D;</xreftext>
+    </div>
+    <div element="sect1" href="specs.htm" number="14.6" targetptr="NTQRF405">
+      <ttl>Uneditable Database Initialization Parameters</ttl>
+      <xreftext>&#x201C;Uneditable Database Initialization Parameters&#x201D;</xreftext>
+      <obj element="table" href="specs.htm" number="14-2" targetptr="NTQRF406">
+        <ttl>Uneditable Database Initialization Parameters</ttl>
+        <xreftext>&#x201C;Uneditable Database Initialization Parameters&#x201D;</xreftext>
+      </obj>
+      <obj element="formalpara" href="specs.htm" number="" targetptr="NTQRF407">
+        <ttl>Note</ttl>
+        <xreftext>&#x201C;Note&#x201D;</xreftext>
+      </obj>
+    </div>
+    <div element="sect1" href="specs.htm" number="14.7" targetptr="NTQRF408">
+      <ttl>Calculating Database Limits</ttl>
+      <xreftext>&#x201C;Calculating Database Limits&#x201D;</xreftext>
+      <obj element="table" href="specs.htm" number="14-3" targetptr="NTQRF409">
+        <ttl>Block Size Guidelines</ttl>
+        <xreftext>&#x201C;Block Size Guidelines&#x201D;</xreftext>
+      </obj>
+      <obj element="table" href="specs.htm" number="14-4" targetptr="NTQRF410">
+        <ttl>Maximum Number of Files for Each Database</ttl>
+        <xreftext>&#x201C;Maximum Number of Files for Each Database&#x201D;</xreftext>
+      </obj>
+      <obj element="table" href="specs.htm" number="14-5" targetptr="NTQRF411">
+        <ttl>Maximum File Sizes</ttl>
+        <xreftext>&#x201C;Maximum File Sizes&#x201D;</xreftext>
+      </obj>
+      <obj element="table" href="specs.htm" number="14-6" targetptr="NTQRF412">
+        <ttl>Shadow Process Memory</ttl>
+        <xreftext>&#x201C;Shadow Process Memory&#x201D;</xreftext>
+      </obj>
+    </div>
+  </div>
+  <div element="chapter" href="registry.htm" number="15" targetptr="NTQRF180">
+    <ttl>Configuration Parameters and the Registry</ttl>
+    <xreftext>&#x201C;Configuration Parameters and the Registry&#x201D;</xreftext>
+    <div element="sect1" href="registry.htm" number="15.1" targetptr="NTQRF413">
+      <ttl>About Configuration Parameters</ttl>
+      <xreftext>&#x201C;About Configuration Parameters&#x201D;</xreftext>
+    </div>
+    <div element="sect1" href="registry.htm" number="15.2" targetptr="NTQRF414">
+      <ttl>Registry Overview</ttl>
+      <xreftext>&#x201C;Registry Overview&#x201D;</xreftext>
+    </div>
+    <div element="sect1" href="registry.htm" number="15.3" targetptr="NTQRF415">
+      <ttl>Registry Parameters</ttl>
+      <xreftext>&#x201C;Registry Parameters&#x201D;</xreftext>
+      <div element="sect2" href="registry.htm" number="15.3.1" targetptr="NTQRF416">
+        <ttl>HKEY_LOCAL_MACHINE\SOFTWARE\ORACLE\KEY_HOME_NAME</ttl>
+        <xreftext>&#x201C;HKEY_LOCAL_MACHINE\SOFTWARE\ORACLE\KEY_HOME_NAME&#x201D;</xreftext>
+        <div element="sect3" href="registry.htm" number="15.3.1.1" targetptr="NTQRF417">
+          <ttl>MSHELP_TOOLS</ttl>
+          <xreftext>&#x201C;MSHELP_TOOLS&#x201D;</xreftext>
+        </div>
+        <div element="sect3" href="registry.htm" number="15.3.1.2" targetptr="NTQRF418">
+          <ttl>NLS_LANG and Other Globalization Parameters</ttl>
+          <xreftext>&#x201C;NLS_LANG and Other Globalization Parameters&#x201D;</xreftext>
+        </div>
+        <div element="sect3" href="registry.htm" number="15.3.1.3" targetptr="NTQRF419">
+          <ttl>ORA_CWD</ttl>
+          <xreftext>&#x201C;ORA_CWD&#x201D;</xreftext>
+        </div>
+        <div element="sect3" href="registry.htm" number="15.3.1.4" targetptr="NTQRF420">
+          <ttl>ORA_SID_AUTOSTART</ttl>
+          <xreftext>&#x201C;ORA_SID_AUTOSTART&#x201D;</xreftext>
+        </div>
+        <div element="sect3" href="registry.htm" number="15.3.1.5" targetptr="NTQRF421">
+          <ttl>ORA_SID_PFILE</ttl>
+          <xreftext>&#x201C;ORA_SID_PFILE&#x201D;</xreftext>
+        </div>
+        <div element="sect3" href="registry.htm" number="15.3.1.6" targetptr="NTQRF422">
+          <ttl>ORA_SID_SHUTDOWN</ttl>
+          <xreftext>&#x201C;ORA_SID_SHUTDOWN&#x201D;</xreftext>
+        </div>
+        <div element="sect3" href="registry.htm" number="15.3.1.7" targetptr="NTQRF423">
+          <ttl>ORA_SID_SHUTDOWN_TIMEOUT</ttl>
+          <xreftext>&#x201C;ORA_SID_SHUTDOWN_TIMEOUT&#x201D;</xreftext>
+        </div>
+        <div element="sect3" href="registry.htm" number="15.3.1.8" targetptr="NTQRF424">
+          <ttl>ORA_SID_SHUTDOWNTYPE</ttl>
+          <xreftext>&#x201C;ORA_SID_SHUTDOWNTYPE&#x201D;</xreftext>
+        </div>
+        <div element="sect3" href="registry.htm" number="15.3.1.9" targetptr="NTQRF425">
+          <ttl>ORA_TZFILE</ttl>
+          <xreftext>&#x201C;ORA_TZFILE&#x201D;</xreftext>
+        </div>
+        <div element="sect3" href="registry.htm" number="15.3.1.10" targetptr="NTQRF426">
+          <ttl>ORACLE_AFFINITY</ttl>
+          <xreftext>&#x201C;ORACLE_AFFINITY&#x201D;</xreftext>
+        </div>
+        <div element="sect3" href="registry.htm" number="15.3.1.11" targetptr="NTQRF427">
+          <ttl>ORACLE_BASE</ttl>
+          <xreftext>&#x201C;ORACLE_BASE&#x201D;</xreftext>
+        </div>
+        <div element="sect3" href="registry.htm" number="15.3.1.12" targetptr="NTQRF428">
+          <ttl>ORACLE_GROUP_NAME</ttl>
+          <xreftext>&#x201C;ORACLE_GROUP_NAME&#x201D;</xreftext>
+        </div>
+        <div element="sect3" href="registry.htm" number="15.3.1.13" targetptr="NTQRF429">
+          <ttl>ORACLE_HOME</ttl>
+          <xreftext>&#x201C;ORACLE_HOME&#x201D;</xreftext>
+        </div>
+        <div element="sect3" href="registry.htm" number="15.3.1.14" targetptr="NTQRF430">
+          <ttl>ORACLE_HOME_KEY</ttl>
+          <xreftext>&#x201C;ORACLE_HOME_KEY&#x201D;</xreftext>
+        </div>
+        <div element="sect3" href="registry.htm" number="15.3.1.15" targetptr="NTQRF431">
+          <ttl>ORACLE_HOME_NAME</ttl>
+          <xreftext>&#x201C;ORACLE_HOME_NAME&#x201D;</xreftext>
+        </div>
+        <div element="sect3" href="registry.htm" number="15.3.1.16" targetptr="NTQRF432">
+          <ttl>ORACLE_PRIORITY</ttl>
+          <xreftext>&#x201C;ORACLE_PRIORITY&#x201D;</xreftext>
+        </div>
+        <div element="sect3" href="registry.htm" number="15.3.1.17" targetptr="NTQRF433">
+          <ttl>ORACLE_SID</ttl>
+          <xreftext>&#x201C;ORACLE_SID&#x201D;</xreftext>
+        </div>
+        <div element="sect3" href="registry.htm" number="15.3.1.18" targetptr="NTQRF434">
+          <ttl>OSAUTH_ENFORCE_STRICT</ttl>
+          <xreftext>&#x201C;OSAUTH_ENFORCE_STRICT&#x201D;</xreftext>
+        </div>
+        <div element="sect3" href="registry.htm" number="15.3.1.19" targetptr="NTQRF435">
+          <ttl>OSAUTH_PREFIX_DOMAIN</ttl>
+          <xreftext>&#x201C;OSAUTH_PREFIX_DOMAIN&#x201D;</xreftext>
+        </div>
+        <div element="sect3" href="registry.htm" number="15.3.1.20" targetptr="NTQRF437">
+          <ttl>RDBMS_ARCHIVE</ttl>
+          <xreftext>&#x201C;RDBMS_ARCHIVE&#x201D;</xreftext>
+        </div>
+        <div element="sect3" href="registry.htm" number="15.3.1.21" targetptr="NTQRF438">
+          <ttl>RDBMS_CONTROL</ttl>
+          <xreftext>&#x201C;RDBMS_CONTROL&#x201D;</xreftext>
+        </div>
+        <div element="sect3" href="registry.htm" number="15.3.1.22" targetptr="NTQRF439">
+          <ttl>SQLPATH</ttl>
+          <xreftext>&#x201C;SQLPATH&#x201D;</xreftext>
+        </div>
+      </div>
+      <div element="sect2" href="registry.htm" number="15.3.2" targetptr="NTQRF440">
+        <ttl>HKEY_LOCAL_MACHINE\SOFTWARE\ORACLE</ttl>
+        <xreftext>&#x201C;HKEY_LOCAL_MACHINE\SOFTWARE\ORACLE&#x201D;</xreftext>
+        <div element="sect3" href="registry.htm" number="15.3.2.1" targetptr="NTQRF441">
+          <ttl>INST_LOC</ttl>
+          <xreftext>&#x201C;INST_LOC&#x201D;</xreftext>
+        </div>
+        <div element="sect3" href="registry.htm" number="15.3.2.2" targetptr="NTQRF442">
+          <ttl>OO4O</ttl>
+          <xreftext>&#x201C;OO4O&#x201D;</xreftext>
+        </div>
+      </div>
+      <div element="sect2" href="registry.htm" number="15.3.3" targetptr="NTQRF443">
+        <ttl>HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services</ttl>
+        <xreftext>&#x201C;HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services&#x201D;</xreftext>
+        <div element="sect3" href="registry.htm" number="15.3.3.1" targetptr="NTQRF444">
+          <ttl>Parameters for Oracle Counters for Windows Performance Monitor</ttl>
+          <xreftext>&#x201C;Parameters for Oracle Counters for Windows Performance Monitor&#x201D;</xreftext>
+        </div>
+        <div element="sect3" href="registry.htm" number="15.3.3.2" targetptr="NTQRF445">
+          <ttl>Parameters for Oracle Database Services</ttl>
+          <xreftext>&#x201C;Parameters for Oracle Database Services&#x201D;</xreftext>
+        </div>
+      </div>
+    </div>
+    <div element="sect1" href="registry.htm" number="15.4" targetptr="NTQRF446">
+      <ttl>Oracle RAC Registry Parameters</ttl>
+      <xreftext>&#x201C;Oracle RAC Registry Parameters&#x201D;</xreftext>
+      <div element="sect2" href="registry.htm" number="15.4.1" targetptr="NTQRF447">
+        <ttl>HKEY_LOCAL_MACHINE\SOFTWARE\ORACLE\OCR</ttl>
+        <xreftext>&#x201C;HKEY_LOCAL_MACHINE\SOFTWARE\ORACLE\OCR&#x201D;</xreftext>
+      </div>
+    </div>
+    <div element="sect1" href="registry.htm" number="15.5" targetptr="NTQRF448">
+      <ttl>Managing Registry Parameters with regedit</ttl>
+      <xreftext>&#x201C;Managing Registry Parameters with regedit&#x201D;</xreftext>
+      <div element="sect2" href="registry.htm" number="15.5.1" targetptr="NTQRF449">
+        <ttl>Modifying a Parameter Value with regedit</ttl>
+        <xreftext>&#x201C;Modifying a Parameter Value with regedit&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="registry.htm" number="15.5.2" targetptr="NTQRF450">
+        <ttl>Adding a Registry Parameter with regedit</ttl>
+        <xreftext>&#x201C;Adding a Registry Parameter with regedit&#x201D;</xreftext>
+      </div>
+    </div>
+    <div element="sect1" href="registry.htm" number="15.6" targetptr="NTQRF454">
+      <ttl>Managing Registry Parameters with Oracle Administration Assistant for Windows</ttl>
+      <xreftext>&#x201C;Managing Registry Parameters with Oracle Administration Assistant for Windows&#x201D;</xreftext>
+      <div element="sect2" href="registry.htm" number="15.6.1" targetptr="NTQRF455">
+        <ttl>Starting Oracle Administration Assistant for Windows</ttl>
+        <xreftext>&#x201C;Starting Oracle Administration Assistant for Windows&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="registry.htm" number="15.6.2" targetptr="NTQRF456">
+        <ttl>Adding Oracle Home Parameters</ttl>
+        <xreftext>&#x201C;Adding Oracle Home Parameters&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="registry.htm" number="15.6.3" targetptr="NTQRF457">
+        <ttl>Editing Oracle Home Parameters</ttl>
+        <xreftext>&#x201C;Editing Oracle Home Parameters&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="registry.htm" number="15.6.4" targetptr="NTQRF458">
+        <ttl>Deleting Oracle Home Parameters</ttl>
+        <xreftext>&#x201C;Deleting Oracle Home Parameters&#x201D;</xreftext>
+      </div>
+    </div>
+    <div element="sect1" href="registry.htm" number="15.7" targetptr="NTQRF459">
+      <ttl>Modifying Oracle Counters for Windows Performance Monitor Parameters</ttl>
+      <xreftext>&#x201C;Modifying Oracle Counters for Windows Performance Monitor Parameters&#x201D;</xreftext>
+      <div element="sect2" href="registry.htm" number="15.7.1" targetptr="NTQRF460">
+        <ttl>Using operfcfg</ttl>
+        <xreftext>&#x201C;Using operfcfg&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="registry.htm" number="15.7.2" targetptr="NTQRF461">
+        <ttl>Using Oracle Administration Assistant for Windows</ttl>
+        <xreftext>&#x201C;Using Oracle Administration Assistant for Windows&#x201D;</xreftext>
+      </div>
+    </div>
+  </div>
+  <div element="chapter" href="apps.htm" number="16" targetptr="NTQRF190">
+    <ttl>Developing Applications for Windows</ttl>
+    <xreftext>&#x201C;Developing Applications for Windows&#x201D;</xreftext>
+    <div element="sect1" href="apps.htm" number="16.1" targetptr="NTQRF462">
+      <ttl>Finding Information on Application Development for Windows</ttl>
+      <xreftext>&#x201C;Finding Information on Application Development for Windows&#x201D;</xreftext>
+      <div element="sect2" href="apps.htm" number="16.1.1" targetptr="NTQRF463">
+        <ttl>Java Enhancements</ttl>
+        <xreftext>&#x201C;Java Enhancements&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="apps.htm" number="16.1.2" targetptr="NTQRF469">
+        <ttl>ODP.NET</ttl>
+        <xreftext>&#x201C;ODP.NET&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="apps.htm" number="16.1.3" targetptr="">
+        <ttl>Oracle Developer Tools for Visual Studio</ttl>
+        <xreftext>&#x201C;Oracle Developer Tools for Visual Studio&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="apps.htm" number="16.1.4" targetptr="">
+        <ttl>Oracle Providers for ASP.NET</ttl>
+        <xreftext>&#x201C;Oracle Providers for ASP.NET&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="apps.htm" number="16.1.5" targetptr="NTQRF464">
+        <ttl>XML Support</ttl>
+        <xreftext>&#x201C;XML Support&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="apps.htm" number="16.1.6" targetptr="NTQRF465">
+        <ttl>Support for Internet Applications</ttl>
+        <xreftext>&#x201C;Support for Internet Applications&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="apps.htm" number="16.1.7" targetptr="NTQRF470">
+        <ttl>Oracle Services For Microsoft Transaction Server</ttl>
+        <xreftext>&#x201C;Oracle Services For Microsoft Transaction Server&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="apps.htm" number="16.1.8" targetptr="NTQRF468">
+        <ttl>Oracle Objects for OLE</ttl>
+        <xreftext>&#x201C;Oracle Objects for OLE&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="apps.htm" number="16.1.9" targetptr="NTQRF472">
+        <ttl>Oracle Provider for OLE DB</ttl>
+        <xreftext>&#x201C;Oracle Provider for OLE DB&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="apps.htm" number="16.1.10" targetptr="NTQRF467">
+        <ttl>Oracle COM Automation Feature</ttl>
+        <xreftext>&#x201C;Oracle COM Automation Feature&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="apps.htm" number="16.1.11" targetptr="NTQRF471">
+        <ttl>Pro*C/C++ and Pro*COBOL Applications</ttl>
+        <xreftext>&#x201C;Pro*C/C++ and Pro*COBOL Applications&#x201D;</xreftext>
+      </div>
+    </div>
+    <div element="sect1" href="apps.htm" number="16.2" targetptr="NTQRF478">
+      <ttl>Building External Procedures</ttl>
+      <xreftext>&#x201C;Building External Procedures&#x201D;</xreftext>
+      <div element="sect2" href="apps.htm" number="16.2.1" targetptr="NTQRF479">
+        <ttl>External Procedures Overview</ttl>
+        <xreftext>&#x201C;External Procedures Overview&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="apps.htm" number="16.2.2" targetptr="NTQRF480">
+        <ttl>Installing and Configuring</ttl>
+        <xreftext>&#x201C;Installing and Configuring&#x201D;</xreftext>
+        <div element="sect3" href="apps.htm" number="16.2.2.1" targetptr="NTQRF481">
+          <ttl>Installing Oracle Database</ttl>
+          <xreftext>&#x201C;Installing Oracle Database&#x201D;</xreftext>
+        </div>
+        <div element="sect3" href="apps.htm" number="16.2.2.2" targetptr="NTQRF482">
+          <ttl>Configuring Oracle Net Services</ttl>
+          <xreftext>&#x201C;Configuring Oracle Net Services&#x201D;</xreftext>
+        </div>
+      </div>
+      <div element="sect2" href="apps.htm" number="16.2.3" targetptr="NTQRF483">
+        <ttl>Writing an External Procedure</ttl>
+        <xreftext>&#x201C;Writing an External Procedure&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="apps.htm" number="16.2.4" targetptr="NTQRF484">
+        <ttl>Building a DLL</ttl>
+        <xreftext>&#x201C;Building a DLL&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="apps.htm" number="16.2.5" targetptr="NTQRF485">
+        <ttl>Registering an External Procedure</ttl>
+        <xreftext>&#x201C;Registering an External Procedure&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="apps.htm" number="16.2.6" targetptr="NTQRF486">
+        <ttl>Executing an External Procedure</ttl>
+        <xreftext>&#x201C;Executing an External Procedure&#x201D;</xreftext>
+      </div>
+    </div>
+    <div element="sect1" href="apps.htm" number="16.3" targetptr="NTQRF487">
+      <ttl>Multithreaded Agent Architecture</ttl>
+      <xreftext>&#x201C;Multithreaded Agent Architecture&#x201D;</xreftext>
+    </div>
+    <div element="sect1" href="apps.htm" number="16.4" targetptr="NTQRF488">
+      <ttl>Debugging External Procedures</ttl>
+      <xreftext>&#x201C;Debugging External Procedures&#x201D;</xreftext>
+      <div element="sect2" href="apps.htm" number="16.4.1" targetptr="NTQRF489">
+        <ttl>Using Package DEBUG_EXTPROC</ttl>
+        <xreftext>&#x201C;Using Package DEBUG_EXTPROC&#x201D;</xreftext>
+      </div>
+    </div>
+    <div element="sect1" href="apps.htm" number="16.5" targetptr="NTQRF490">
+      <ttl>Accessing Text Files with UTL_FILE</ttl>
+      <xreftext>&#x201C;Accessing Text Files with UTL_FILE&#x201D;</xreftext>
+    </div>
+    <div element="sect1" href="apps.htm" number="16.6" targetptr="NTQRF491">
+      <ttl>Accessing Web Data with Intercartridge Exchange</ttl>
+      <xreftext>&#x201C;Accessing Web Data with Intercartridge Exchange&#x201D;</xreftext>
+      <div element="sect2" href="apps.htm" number="16.6.1" targetptr="NTQRF492">
+        <ttl>Configuring Intercartridge Exchange</ttl>
+        <xreftext>&#x201C;Configuring Intercartridge Exchange&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="apps.htm" number="16.6.2" targetptr="NTQRF493">
+        <ttl>Using Intercartridge Exchange</ttl>
+        <xreftext>&#x201C;Using Intercartridge Exchange&#x201D;</xreftext>
+        <div element="sect3" href="apps.htm" number="16.6.2.1" targetptr="NTQRF494">
+          <ttl>Packaged Function UTL_HTTP.REQUEST</ttl>
+          <xreftext>&#x201C;Packaged Function UTL_HTTP.REQUEST&#x201D;</xreftext>
+        </div>
+        <div element="sect3" href="apps.htm" number="16.6.2.2" targetptr="NTQRF495">
+          <ttl>Packaged Function UTL_HTTP.REQUEST_PIECES</ttl>
+          <xreftext>&#x201C;Packaged Function UTL_HTTP.REQUEST_PIECES&#x201D;</xreftext>
+        </div>
+      </div>
+      <div element="sect2" href="apps.htm" number="16.6.3" targetptr="NTQRF496">
+        <ttl>UTL_HTTP Exception Conditions</ttl>
+        <xreftext>&#x201C;UTL_HTTP Exception Conditions&#x201D;</xreftext>
+        <div element="sect3" href="apps.htm" number="16.6.3.1" targetptr="NTQRF497">
+          <ttl>UTL_HTTP.REQUEST</ttl>
+          <xreftext>&#x201C;UTL_HTTP.REQUEST&#x201D;</xreftext>
+        </div>
+        <div element="sect3" href="apps.htm" number="16.6.3.2" targetptr="NTQRF498">
+          <ttl>UTL_HTTP.REQUEST_PIECES</ttl>
+          <xreftext>&#x201C;UTL_HTTP.REQUEST_PIECES&#x201D;</xreftext>
+        </div>
+      </div>
+      <div element="sect2" href="apps.htm" number="16.6.4" targetptr="NTQRF499">
+        <ttl>Exception Conditions and Error Messages</ttl>
+        <xreftext>&#x201C;Exception Conditions and Error Messages&#x201D;</xreftext>
+      </div>
+    </div>
+  </div>
+  <div element="appendix" href="ap_doc.htm" number="A" targetptr="NTQRF200">
+    <ttl>Getting Started with Your Documentation</ttl>
+    <xreftext>&#x201C;Getting Started with Your Documentation&#x201D;</xreftext>
+  </div>
+  <div element="appendix" href="ap_raw.htm" number="B" targetptr="NTQRF210">
+    <ttl>Storing Tablespaces on Raw Partitions</ttl>
+    <xreftext>&#x201C;Storing Tablespaces on Raw Partitions&#x201D;</xreftext>
+    <div element="sect1" href="ap_raw.htm" number="B.1" targetptr="NTQRF500">
+      <ttl>Raw Partition Overview</ttl>
+      <xreftext>&#x201C;Raw Partition Overview&#x201D;</xreftext>
+      <div element="sect2" href="ap_raw.htm" number="B.1.1" targetptr="NTQRF501">
+        <ttl>Physical Disk</ttl>
+        <xreftext>&#x201C;Physical Disk&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="ap_raw.htm" number="B.1.2" targetptr="NTQRF502">
+        <ttl>Logical Partition</ttl>
+        <xreftext>&#x201C;Logical Partition&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="ap_raw.htm" number="B.1.3" targetptr="NTQRF503">
+        <ttl>Physical Disk and Logical Partition Considerations</ttl>
+        <xreftext>&#x201C;Physical Disk and Logical Partition Considerations&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="ap_raw.htm" number="B.1.4" targetptr="NTQRF504">
+        <ttl>Compatibility Issues</ttl>
+        <xreftext>&#x201C;Compatibility Issues&#x201D;</xreftext>
+      </div>
+    </div>
+    <div element="sect1" href="ap_raw.htm" number="B.2" targetptr="NTQRF505">
+      <ttl>Creating a Raw Partition and a Mount Point</ttl>
+      <xreftext>&#x201C;Creating a Raw Partition and a Mount Point&#x201D;</xreftext>
+    </div>
+    <div element="sect1" href="ap_raw.htm" number="B.3" targetptr="NTQRF506">
+      <ttl>Creating a Tablespace in a Raw Partition</ttl>
+      <xreftext>&#x201C;Creating a Tablespace in a Raw Partition&#x201D;</xreftext>
+    </div>
+    <div element="sect1" href="ap_raw.htm" number="B.4" targetptr="NTQRF507">
+      <ttl>Configuring Disks for Automatic Storage Management</ttl>
+      <xreftext>&#x201C;Configuring Disks for Automatic Storage Management&#x201D;</xreftext>
+    </div>
+  </div>
+  <div element="appendix" href="ap_net.htm" number="C" targetptr="NTQRF220">
+    <ttl>Oracle Net Services Configuration on Windows</ttl>
+    <xreftext>&#x201C;Oracle Net Services Configuration on Windows&#x201D;</xreftext>
+    <div element="sect1" href="ap_net.htm" number="C.1" targetptr="NTQRF508">
+      <ttl>Configuring Oracle Database to Communicate with ASM</ttl>
+      <xreftext>&#x201C;Configuring Oracle Database to Communicate with ASM&#x201D;</xreftext>
+    </div>
+    <div element="sect1" href="ap_net.htm" number="C.2" targetptr="NTQRF509">
+      <ttl>Understanding Oracle Net Services Registry Parameters and Subkeys</ttl>
+      <xreftext>&#x201C;Understanding Oracle Net Services Registry Parameters and Subkeys&#x201D;</xreftext>
+      <div element="sect2" href="ap_net.htm" number="C.2.1" targetptr="NTQRF510">
+        <ttl>Oracle Net Service Subkeys</ttl>
+        <xreftext>&#x201C;Oracle Net Service Subkeys&#x201D;</xreftext>
+        <obj element="table" href="ap_net.htm" number="C-1" targetptr="NTQRF511">
+          <ttl>Service Subkey Parameters</ttl>
+          <xreftext>&#x201C;Service Subkey Parameters&#x201D;</xreftext>
+        </obj>
+      </div>
+    </div>
+    <div element="sect1" href="ap_net.htm" number="C.3" targetptr="NTQRF512">
+      <ttl>Listener Requirements</ttl>
+      <xreftext>&#x201C;Listener Requirements&#x201D;</xreftext>
+    </div>
+    <div element="sect1" href="ap_net.htm" number="C.4" targetptr="NTQRF513">
+      <ttl>Understanding Optional Configuration Parameters</ttl>
+      <xreftext>&#x201C;Understanding Optional Configuration Parameters&#x201D;</xreftext>
+      <div element="sect2" href="ap_net.htm" number="C.4.1" targetptr="NTQRF514">
+        <ttl>LOCAL</ttl>
+        <xreftext>&#x201C;LOCAL&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="ap_net.htm" number="C.4.2" targetptr="NTQRF515">
+        <ttl>TNS_ADMIN</ttl>
+        <xreftext>&#x201C;TNS_ADMIN&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="ap_net.htm" number="C.4.3" targetptr="NTQRF516">
+        <ttl>USE_SHARED_SOCKET</ttl>
+        <xreftext>&#x201C;USE_SHARED_SOCKET&#x201D;</xreftext>
+      </div>
+    </div>
+    <div element="sect1" href="ap_net.htm" number="C.5" targetptr="NTQRF517">
+      <ttl>Advanced Network Configuration</ttl>
+      <xreftext>&#x201C;Advanced Network Configuration&#x201D;</xreftext>
+      <div element="sect2" href="ap_net.htm" number="C.5.1" targetptr="NTQRF518">
+        <ttl>Configuring Authentication Method</ttl>
+        <xreftext>&#x201C;Configuring Authentication Method&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="ap_net.htm" number="C.5.2" targetptr="NTQRF519">
+        <ttl>Configuring Security for Named Pipes Protocol</ttl>
+        <xreftext>&#x201C;Configuring Security for Named Pipes Protocol&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="ap_net.htm" number="C.5.3" targetptr="NTQRF520">
+        <ttl>Modifying Configuration of External Procedures for Higher Security</ttl>
+        <xreftext>&#x201C;Modifying Configuration of External Procedures for Higher Security&#x201D;</xreftext>
+      </div>
+    </div>
+  </div>
+  <div element="appendix" href="ap_error.htm" number="D" targetptr="NTQRF230">
+    <ttl>Error Messages on Windows</ttl>
+    <xreftext>&#x201C;Error Messages on Windows&#x201D;</xreftext>
+    <div element="sect1" href="ap_error.htm" number="D.1" targetptr="NTQRF521">
+      <ttl>ORA-09275: CONNECT INTERNAL No Longer Supported</ttl>
+      <xreftext>&#x201C;ORA-09275: CONNECT INTERNAL No Longer Supported&#x201D;</xreftext>
+    </div>
+    <div element="sect1" href="ap_error.htm" number="D.2" targetptr="NTQRF522">
+      <ttl>OSD-04000 to OSD-04599: Windows-Specific Oracle Database Messages</ttl>
+      <xreftext>&#x201C;OSD-04000 to OSD-04599: Windows-Specific Oracle Database Messages&#x201D;</xreftext>
+      <div element="sect2" href="ap_error.htm" number="D.2.1" targetptr="NTQRF523">
+        <ttl>File I/O Errors: OSD-04000 to OSD-04099</ttl>
+        <xreftext>&#x201C;File I/O Errors: OSD-04000 to OSD-04099&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="ap_error.htm" number="D.2.2" targetptr="NTQRF524">
+        <ttl>Memory Errors: OSD-04100 to OSD-04199</ttl>
+        <xreftext>&#x201C;Memory Errors: OSD-04100 to OSD-04199&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="ap_error.htm" number="D.2.3" targetptr="NTQRF525">
+        <ttl>Process Errors: OSD-04200 to OSD-04299</ttl>
+        <xreftext>&#x201C;Process Errors: OSD-04200 to OSD-04299&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="ap_error.htm" number="D.2.4" targetptr="NTQRF526">
+        <ttl>Loader Errors: OSD-04300 to OSD-04399</ttl>
+        <xreftext>&#x201C;Loader Errors: OSD-04300 to OSD-04399&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="ap_error.htm" number="D.2.5" targetptr="NTQRF527">
+        <ttl>Semaphore Errors: OSD-04400 to OSD-04499</ttl>
+        <xreftext>&#x201C;Semaphore Errors: OSD-04400 to OSD-04499&#x201D;</xreftext>
+      </div>
+      <div element="sect2" href="ap_error.htm" number="D.2.6" targetptr="NTQRF528">
+        <ttl>Miscellaneous Errors: OSD-04500 to OSD-04599</ttl>
+        <xreftext>&#x201C;Miscellaneous Errors: OSD-04500 to OSD-04599&#x201D;</xreftext>
+      </div>
+    </div>
+    <div element="sect1" href="ap_error.htm" number="D.3" targetptr="NTQRF529">
+      <ttl>DIM-00000 to DIM-00039: ORADIM Command Syntax Errors</ttl>
+      <xreftext>&#x201C;DIM-00000 to DIM-00039: ORADIM Command Syntax Errors&#x201D;</xreftext>
+    </div>
+    <div element="sect1" href="ap_error.htm" number="D.4" targetptr="NTQRF530">
+      <ttl>Database Connection Issues</ttl>
+      <xreftext>&#x201C;Database Connection Issues&#x201D;</xreftext>
+    </div>
+  </div>
+  <div element="appendix" href="ap_unix.htm" number="E" targetptr="NTQRF250">
+    <ttl>Oracle Database Windows/UNIX Differences</ttl>
+    <xreftext>&#x201C;Oracle Database Windows/UNIX Differences&#x201D;</xreftext>
+    <div element="sect1" href="ap_unix.htm" number="E.1" targetptr="NTQRF531">
+      <ttl>Automatic Startup and Shutdown</ttl>
+      <xreftext>&#x201C;Automatic Startup and Shutdown&#x201D;</xreftext>
+    </div>
+    <div element="sect1" href="ap_unix.htm" number="E.2" targetptr="NTQRF532">
+      <ttl>Background Processing and Batch Jobs</ttl>
+      <xreftext>&#x201C;Background Processing and Batch Jobs&#x201D;</xreftext>
+    </div>
+    <div element="sect1" href="ap_unix.htm" number="E.3" targetptr="NTQRF533">
+      <ttl>Diagnostic and Tuning Utilities</ttl>
+      <xreftext>&#x201C;Diagnostic and Tuning Utilities&#x201D;</xreftext>
+    </div>
+    <div element="sect1" href="ap_unix.htm" number="E.4" targetptr="NTQRF534">
+      <ttl>Direct Writes to Disk</ttl>
+      <xreftext>&#x201C;Direct Writes to Disk&#x201D;</xreftext>
+    </div>
+    <div element="sect1" href="ap_unix.htm" number="E.5" targetptr="NTQRF535">
+      <ttl>Dynamic Link Libraries (DLLs)</ttl>
+      <xreftext>&#x201C;Dynamic Link Libraries (DLLs)&#x201D;</xreftext>
+    </div>
+    <div element="sect1" href="ap_unix.htm" number="E.6" targetptr="NTQRF536">
+      <ttl>Hot Backups</ttl>
+      <xreftext>&#x201C;Hot Backups&#x201D;</xreftext>
+    </div>
+    <div element="sect1" href="ap_unix.htm" number="E.7" targetptr="NTQRF537">
+      <ttl>Initialization Parameters: Multiple Database Writers</ttl>
+      <xreftext>&#x201C;Initialization Parameters: Multiple Database Writers&#x201D;</xreftext>
+    </div>
+    <div element="sect1" href="ap_unix.htm" number="E.8" targetptr="NTQRF538">
+      <ttl>Install Accounts and Groups</ttl>
+      <xreftext>&#x201C;Install Accounts and Groups&#x201D;</xreftext>
+    </div>
+    <div element="sect1" href="ap_unix.htm" number="E.9" targetptr="NTQRF539">
+      <ttl>Installation</ttl>
+      <xreftext>&#x201C;Installation&#x201D;</xreftext>
+    </div>
+    <div element="sect1" href="ap_unix.htm" number="E.10" targetptr="NTQRF540">
+      <ttl>Memory Resources</ttl>
+      <xreftext>&#x201C;Memory Resources&#x201D;</xreftext>
+    </div>
+    <div element="sect1" href="ap_unix.htm" number="E.11" targetptr="NTQRF541">
+      <ttl>Microsoft Transaction Server</ttl>
+      <xreftext>&#x201C;Microsoft Transaction Server&#x201D;</xreftext>
+    </div>
+    <div element="sect1" href="ap_unix.htm" number="E.12" targetptr="NTQRF542">
+      <ttl>Multiple Oracle Homes and OFA</ttl>
+      <xreftext>&#x201C;Multiple Oracle Homes and OFA&#x201D;</xreftext>
+    </div>
+    <div element="sect1" href="ap_unix.htm" number="E.13" targetptr="NTQRF543">
+      <ttl>Processes and Threads</ttl>
+      <xreftext>&#x201C;Processes and Threads&#x201D;</xreftext>
+    </div>
+    <div element="sect1" href="ap_unix.htm" number="E.14" targetptr="NTQRF544">
+      <ttl>Raw Partitions</ttl>
+      <xreftext>&#x201C;Raw Partitions&#x201D;</xreftext>
+    </div>
+    <div element="sect1" href="ap_unix.htm" number="E.15" targetptr="NTQRF545">
+      <ttl>Services</ttl>
+      <xreftext>&#x201C;Services&#x201D;</xreftext>
+    </div>
+  </div>
+  <div element="glossary" href="glossary.htm" number="" targetptr="NTQRF546">
+    <ttl>Glossary</ttl>
+    <xreftext>&#x201C;Glossary&#x201D;</xreftext>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="NTQRF547">
+      <ttl>alert log</ttl>
+      <xreftext>&#x201C;alert log&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="NTQRF548">
+      <ttl>authenticate</ttl>
+      <xreftext>&#x201C;authenticate&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="NTQRF550">
+      <ttl>authorization</ttl>
+      <xreftext>&#x201C;authorization&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="NTQRF551">
+      <ttl>backup</ttl>
+      <xreftext>&#x201C;backup&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="NTQRF552">
+      <ttl>certificate authority</ttl>
+      <xreftext>&#x201C;certificate authority&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="NTQRF553">
+      <ttl>COM</ttl>
+      <xreftext>&#x201C;COM&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="NTQRF554">
+      <ttl>component-based shadow copies</ttl>
+      <xreftext>&#x201C;component-based shadow copies&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="NTQRF555">
+      <ttl>connect descriptor</ttl>
+      <xreftext>&#x201C;connect descriptor&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="NTQRF556">
+      <ttl>connect identifier</ttl>
+      <xreftext>&#x201C;connect identifier&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="NTQRF557">
+      <ttl>connect string</ttl>
+      <xreftext>&#x201C;connect string&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="NTQRF558">
+      <ttl>control files</ttl>
+      <xreftext>&#x201C;control files&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="NTQRF559">
+      <ttl>credentials</ttl>
+      <xreftext>&#x201C;credentials&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="NTQRF560">
+      <ttl>data dictionary</ttl>
+      <xreftext>&#x201C;data dictionary&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="NTQRF561">
+      <ttl>database alias</ttl>
+      <xreftext>&#x201C;database alias&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="NTQRF562">
+      <ttl>decryption</ttl>
+      <xreftext>&#x201C;decryption&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="NTQRF563">
+      <ttl>digital certificates</ttl>
+      <xreftext>&#x201C;digital certificates&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="NTQRF564">
+      <ttl>digital signature</ttl>
+      <xreftext>&#x201C;digital signature&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="NTQRF565">
+      <ttl>DLL</ttl>
+      <xreftext>&#x201C;DLL&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="NTQRF566">
+      <ttl>downgrade</ttl>
+      <xreftext>&#x201C;downgrade&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="NTQRF567">
+      <ttl>dynamic link library</ttl>
+      <xreftext>&#x201C;dynamic link library&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="NTQRF568">
+      <ttl>encryption</ttl>
+      <xreftext>&#x201C;encryption&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="NTQRF569">
+      <ttl>enterprise domains</ttl>
+      <xreftext>&#x201C;enterprise domains&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="NTQRF570">
+      <ttl>enterprise role</ttl>
+      <xreftext>&#x201C;enterprise role&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="NTQRF571">
+      <ttl>enterprise user</ttl>
+      <xreftext>&#x201C;enterprise user&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="NTQRF572">
+      <ttl>external procedures</ttl>
+      <xreftext>&#x201C;external procedures&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="NTQRF573">
+      <ttl>external role</ttl>
+      <xreftext>&#x201C;external role&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="NTQRF574">
+      <ttl>external routine</ttl>
+      <xreftext>&#x201C;external routine&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="NTQRF575">
+      <ttl>external user</ttl>
+      <xreftext>&#x201C;external user&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="NTQRF576">
+      <ttl>external user</ttl>
+      <xreftext>&#x201C;external user&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="NTQRF577">
+      <ttl>global groups</ttl>
+      <xreftext>&#x201C;global groups&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="NTQRF578">
+      <ttl>global role</ttl>
+      <xreftext>&#x201C;global role&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="NTQRF579">
+      <ttl>Globalization Support</ttl>
+      <xreftext>&#x201C;Globalization Support&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="NTQRF580">
+      <ttl>HOME_NAME</ttl>
+      <xreftext>&#x201C;<span class="italic">HOME_NAME</span>&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="NTQRF581">
+      <ttl>init.ora</ttl>
+      <xreftext>&#x201C;init.ora&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="NTQRF582">
+      <ttl>initialization parameter file</ttl>
+      <xreftext>&#x201C;initialization parameter file&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="NTQRF583">
+      <ttl>instance</ttl>
+      <xreftext>&#x201C;instance&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="NTQRF584">
+      <ttl>instantiate</ttl>
+      <xreftext>&#x201C;instantiate&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="NTQRF585">
+      <ttl>latch</ttl>
+      <xreftext>&#x201C;latch&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="NTQRF586">
+      <ttl>LDAP</ttl>
+      <xreftext>&#x201C;LDAP&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="NTQRF587">
+      <ttl>Lightweight Directory Access Protocol (LDAP)</ttl>
+      <xreftext>&#x201C;Lightweight Directory Access Protocol (LDAP)&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="NTQRF588">
+      <ttl>listener</ttl>
+      <xreftext>&#x201C;listener&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="NTQRF589">
+      <ttl>listener.ora</ttl>
+      <xreftext>&#x201C;listener.ora&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="NTQRF590">
+      <ttl>local groups</ttl>
+      <xreftext>&#x201C;local groups&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="NTQRF591">
+      <ttl>local roles</ttl>
+      <xreftext>&#x201C;local roles&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="NTQRF592">
+      <ttl>Microsoft Management Console</ttl>
+      <xreftext>&#x201C;Microsoft Management Console&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="NTQRF593">
+      <ttl>Microsoft Transaction Server</ttl>
+      <xreftext>&#x201C;Microsoft Transaction Server&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="NTQRF594">
+      <ttl>migrate</ttl>
+      <xreftext>&#x201C;migrate&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="NTQRF595">
+      <ttl>mount</ttl>
+      <xreftext>&#x201C;mount&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="NTQRF596">
+      <ttl>MTS</ttl>
+      <xreftext>&#x201C;MTS&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="NTQRF597">
+      <ttl>multiple Oracle homes</ttl>
+      <xreftext>&#x201C;multiple Oracle homes&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="NTQRF598">
+      <ttl>net service name</ttl>
+      <xreftext>&#x201C;net service name&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="NTQRF599">
+      <ttl>network listener</ttl>
+      <xreftext>&#x201C;network listener&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="NTQRF600">
+      <ttl>network service</ttl>
+      <xreftext>&#x201C;network service&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="NTQRF601">
+      <ttl>obfuscated</ttl>
+      <xreftext>&#x201C;obfuscated&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="NTQRF602">
+      <ttl>OCI</ttl>
+      <xreftext>&#x201C;OCI&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="NTQRF603">
+      <ttl>OFA</ttl>
+      <xreftext>&#x201C;OFA&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="NTQRF604">
+      <ttl>Optimal Flexible Architecture</ttl>
+      <xreftext>&#x201C;Optimal Flexible Architecture&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="NTQRF605">
+      <ttl>ORACLE_BASE</ttl>
+      <xreftext>&#x201C;<span class="italic">ORACLE_BASE</span>&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="NTQRF606">
+      <ttl>Oracle Call Interface</ttl>
+      <xreftext>&#x201C;Oracle Call Interface&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="NTQRF607">
+      <ttl>ORACLE_HOME</ttl>
+      <xreftext>&#x201C;<span class="italic">ORACLE_HOME</span>&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="NTQRF608">
+      <ttl>Oracle Internet Directory</ttl>
+      <xreftext>&#x201C;Oracle Internet Directory&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="NTQRF609">
+      <ttl>Oracle Net</ttl>
+      <xreftext>&#x201C;Oracle Net&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="NTQRF610">
+      <ttl>Oracle Net Services</ttl>
+      <xreftext>&#x201C;Oracle Net Services&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="NTQRF611">
+      <ttl>Oracle PKI</ttl>
+      <xreftext>&#x201C;Oracle PKI&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="NTQRF612">
+      <ttl>Oracle Protocol Support</ttl>
+      <xreftext>&#x201C;Oracle Protocol Support&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="NTQRF613">
+      <ttl>Oracle services</ttl>
+      <xreftext>&#x201C;Oracle services&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="NTQRF614">
+      <ttl>Oracle VSS writer</ttl>
+      <xreftext>&#x201C;Oracle VSS writer&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="NTQRF615">
+      <ttl>PL/SQL</ttl>
+      <xreftext>&#x201C;PL/SQL&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="NTQRF616">
+      <ttl>precompiler</ttl>
+      <xreftext>&#x201C;precompiler&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="NTQRF617">
+      <ttl>private keys</ttl>
+      <xreftext>&#x201C;private keys&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="NTQRF618">
+      <ttl>privilege</ttl>
+      <xreftext>&#x201C;privilege&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="NTQRF619">
+      <ttl>process</ttl>
+      <xreftext>&#x201C;process&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="NTQRF620">
+      <ttl>provider</ttl>
+      <xreftext>&#x201C;provider&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="NTQRF621">
+      <ttl>public key</ttl>
+      <xreftext>&#x201C;public key&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="NTQRF622">
+      <ttl>public key cryptography</ttl>
+      <xreftext>&#x201C;public key cryptography&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="NTQRF623">
+      <ttl>quota</ttl>
+      <xreftext>&#x201C;quota&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="NTQRF624">
+      <ttl>raw partitions</ttl>
+      <xreftext>&#x201C;raw partitions&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="NTQRF625">
+      <ttl>recovery</ttl>
+      <xreftext>&#x201C;recovery&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="NTQRF626">
+      <ttl>redo log buffer</ttl>
+      <xreftext>&#x201C;redo log buffer&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="NTQRF627">
+      <ttl>redo log files</ttl>
+      <xreftext>&#x201C;redo log files&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="NTQRF628">
+      <ttl>registry</ttl>
+      <xreftext>&#x201C;registry&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="NTQRF629">
+      <ttl>remote computer</ttl>
+      <xreftext>&#x201C;remote computer&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="NTQRF630">
+      <ttl>remote database</ttl>
+      <xreftext>&#x201C;remote database&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="NTQRF631">
+      <ttl>requester</ttl>
+      <xreftext>&#x201C;requester&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="NTQRF632">
+      <ttl>replication</ttl>
+      <xreftext>&#x201C;replication&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="NTQRF633">
+      <ttl>role</ttl>
+      <xreftext>&#x201C;role&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="NTQRF634">
+      <ttl>schema</ttl>
+      <xreftext>&#x201C;schema&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="NTQRF635">
+      <ttl>services</ttl>
+      <xreftext>&#x201C;services&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="NTQRF636">
+      <ttl>service name</ttl>
+      <xreftext>&#x201C;service name&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="NTQRF637">
+      <ttl>SGA</ttl>
+      <xreftext>&#x201C;SGA&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="NTQRF638">
+      <ttl>shadow copy</ttl>
+      <xreftext>&#x201C;shadow copy&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="NTQRF639">
+      <ttl>shadow copy set</ttl>
+      <xreftext>&#x201C;shadow copy set&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="NTQRF640">
+      <ttl>Shared Server Process</ttl>
+      <xreftext>&#x201C;Shared Server Process&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="NTQRF641">
+      <ttl>SID</ttl>
+      <xreftext>&#x201C;SID&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="NTQRF642">
+      <ttl>snap-ins</ttl>
+      <xreftext>&#x201C;snap-ins&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="NTQRF643">
+      <ttl>snapshot</ttl>
+      <xreftext>&#x201C;snapshot&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="NTQRF644">
+      <ttl>starter database</ttl>
+      <xreftext>&#x201C;starter database&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="NTQRF645">
+      <ttl>SYSDBA</ttl>
+      <xreftext>&#x201C;SYSDBA&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="NTQRF646">
+      <ttl>SYSOPER</ttl>
+      <xreftext>&#x201C;SYSOPER&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="NTQRF647">
+      <ttl>System Global Area</ttl>
+      <xreftext>&#x201C;System Global Area&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="NTQRF648">
+      <ttl>system identifier</ttl>
+      <xreftext>&#x201C;system identifier&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="NTQRF649">
+      <ttl>SYSTEM</ttl>
+      <xreftext>&#x201C;SYSTEM&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="NTQRF650">
+      <ttl>tablespace</ttl>
+      <xreftext>&#x201C;tablespace&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="NTQRF651">
+      <ttl>thread</ttl>
+      <xreftext>&#x201C;thread&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="NTQRF652">
+      <ttl>tnsnames.ora</ttl>
+      <xreftext>&#x201C;tnsnames.ora&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="NTQRF653">
+      <ttl>trace file</ttl>
+      <xreftext>&#x201C;trace file&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="NTQRF654">
+      <ttl>trust points</ttl>
+      <xreftext>&#x201C;trust points&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="NTQRF655">
+      <ttl>universal groups</ttl>
+      <xreftext>&#x201C;universal groups&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="NTQRF656">
+      <ttl>upgrade</ttl>
+      <xreftext>&#x201C;upgrade&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="NTQRF657">
+      <ttl>username</ttl>
+      <xreftext>&#x201C;username&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="NTQRF658">
+      <ttl>view</ttl>
+      <xreftext>&#x201C;view&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="NTQRF659">
+      <ttl>volume-based shadow copies</ttl>
+      <xreftext>&#x201C;volume-based shadow copies&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="NTQRF660">
+      <ttl>Volume Shadow Copy Service (VSS)</ttl>
+      <xreftext>&#x201C;Volume Shadow Copy Service (VSS)&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="NTQRF661">
+      <ttl>Windows global groups</ttl>
+      <xreftext>&#x201C;Windows global groups&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="NTQRF662">
+      <ttl>Windows local groups</ttl>
+      <xreftext>&#x201C;Windows local groups&#x201D;</xreftext>
+    </obj>
+    <obj element="glossentry" href="glossary.htm" number="" targetptr="NTQRF663">
+      <ttl>writer</ttl>
+      <xreftext>&#x201C;writer&#x201D;</xreftext>
+    </obj>
+  </div>
+</div>

@@ -1,0 +1,371 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii" />
+<meta http-equiv="Content-Language" content="en" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta name="robots" content="all" scheme="http://www.robotstxt.org/" />
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 5.1" />
+<meta name="Date" content="2010-03-05T15:45:40Z" />
+<meta name="doctitle" content="Oracle&reg; Database Platform Guide 11g Release 2 (11.2) for Microsoft Windows" />
+<meta name="partno" content="E10845-01" />
+<meta name="docid" content="NTQRF" />
+<link rel="Start" href="../../index.htm" title="Home" type="text/html" />
+<link rel="Copyright" href="../../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+<link rel="Stylesheet" href="../../dcommon/css/blafdoc.css" title="Default" type="text/css" />
+<script type="text/javascript" src="../../dcommon/js/doccd.js">
+</script>
+<link rel="Contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="Index" href="index.htm" title="Index" type="text/html" />
+<link rel="Glossary" href="glossary.htm" title="Glossary" type="text/html" />
+<link rel="Prev" href="ap_error.htm" title="Previous" type="text/html" />
+<link rel="Next" href="glossary.htm" title="Next" type="text/html" />
+<link rel="alternate" href="../e10845.pdf" title="PDF version" type="application/pdf" />
+<title>Oracle Database Windows/UNIX Differences</title>
+</head>
+<body>
+<div class="header">
+<div class="zz-skip-header"><a name="top" id="top" href="#BEGIN">Skip Headers</a></div>
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td align="left" valign="top"><b>Oracle&reg; Database Platform Guide<br />
+11<i>g</i> Release 2 (11.2) for Microsoft Windows</b><br />
+Part Number E10845-01</td>
+<td valign="bottom" align="right">
+<table class="icons oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="245">
+<tr>
+<td align="center" valign="top"><a href="../../index.htm"><img width="24" height="24" src="../../dcommon/gifs/doclib.gif" alt="Go to Documentation Home" /><br />
+<span class="icon">Home</span></a></td>
+<td align="center" valign="top"><a href="../../nav/portal_booklist.htm"><img width="24" height="24" src="../../dcommon/gifs/booklist.gif" alt="Go to Book List" /><br />
+<span class="icon">Book List</span></a></td>
+<td align="center" valign="top"><a href="toc.htm"><img width="24" height="24" src="../../dcommon/gifs/toc.gif" alt="Go to Table of Contents" /><br />
+<span class="icon">Contents</span></a></td>
+<td align="center" valign="top"><a href="index.htm"><img width="24" height="24" src="../../dcommon/gifs/index.gif" alt="Go to Index" /><br />
+<span class="icon">Index</span></a></td>
+<td align="center" valign="top"><a href="../../dcommon/html/feedback.htm"><img width="24" height="24" src="../../dcommon/gifs/feedbck2.gif" alt="Go to Feedback page" /><br />
+<span class="icon">Contact Us</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<hr />
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td align="left" valign="top">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="98">
+<tr>
+<td align="center" valign="top"><a href="ap_error.htm"><img width="24" height="24" src="../../dcommon/gifs/leftnav.gif" alt="Go to previous page" /><br />
+<span class="icon">Previous</span></a></td>
+<td align="center" valign="top"><a href="glossary.htm"><img width="24" height="24" src="../../dcommon/gifs/rightnav.gif" alt="Go to next page" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+</td>
+<td align="right" valign="top" style="font-size: 90%"><a href="../e10845.pdf">View PDF</a></td>
+</tr>
+</table>
+<a name="BEGIN" id="BEGIN"></a></div>
+<div class="IND"><!-- End Header --><a id="g636701" name="g636701"></a><a id="NTQRF250" name="NTQRF250"></a>
+<h1 class="appendix"><span class="secnum">E</span> Oracle Database Windows/UNIX Differences</h1>
+<p><a id="sthref965" name="sthref965"></a><a id="sthref966" name="sthref966"></a>This chapter lists major differences between Oracle Database on Windows and UNIX. For Oracle Database developers and database administrators moving from a UNIX platform to Windows, this information can be helpful in understanding Windows features that are relevant to Oracle Database.</p>
+<p>This chapter contains these topics:</p>
+<ul>
+<li>
+<p><a href="#i634279">Automatic Startup and Shutdown</a></p>
+</li>
+<li>
+<p><a href="#i634316">Background Processing and Batch Jobs</a></p>
+</li>
+<li>
+<p><a href="#i634320">Diagnostic and Tuning Utilities</a></p>
+</li>
+<li>
+<p><a href="#CEGEFGCF">Direct Writes to Disk</a></p>
+</li>
+<li>
+<p><a href="#i634365">Dynamic Link Libraries (DLLs)</a></p>
+</li>
+<li>
+<p><a href="#i634381">Hot Backups</a></p>
+</li>
+<li>
+<p><a href="#i634410">Initialization Parameters: Multiple Database Writers</a></p>
+</li>
+<li>
+<p><a href="#i634430">Install Accounts and Groups</a></p>
+</li>
+<li>
+<p><a href="#i634457">Installation</a></p>
+</li>
+<li>
+<p><a href="#i634474">Memory Resources</a></p>
+</li>
+<li>
+<p><a href="#i634491">Microsoft Transaction Server</a></p>
+</li>
+<li>
+<p><a href="#i634514">Multiple Oracle Homes and OFA</a></p>
+</li>
+<li>
+<p><a href="#i634536">Processes and Threads</a></p>
+</li>
+<li>
+<p><a href="#i634567">Raw Partitions</a></p>
+</li>
+<li>
+<p><a href="#i634593">Services</a></p>
+</li>
+</ul>
+<a id="i634279" name="i634279"></a><a id="NTQRF531" name="NTQRF531"></a>
+<div class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Automatic Startup and Shutdown</h2>
+<p>On UNIX, several files and scripts in different directories are used to start an <a href="glossary.htm#CHDFBCHH"><span class="xrefglossterm">instance</span></a> automatically. Other scripts are run on computer shutdown, allowing applications such as Oracle Database to shut down cleanly.</p>
+<p>For automatic startup on Windows, set <a href="glossary.htm#i432474"><span class="xrefglossterm">registry</span></a> parameter <code>ORA_</code><code><span class="codeinlineitalic">SID</span></code><code>_AUTOSTART</code> to <code>true</code> using an Oracle Database tool such as ORADIM. Enter the following with parameters at the command prompt:</p>
+<pre xml:space="preserve" class="oac_no_warn">C:\&gt; oradim <span class="italic">options</span>
+</pre>
+<p>To start the <a href="glossary.htm#i432300"><span class="xrefglossterm">listener</span></a> automatically, set <a href="glossary.htm#i432487"><span class="xrefglossterm">services</span></a> startup type to automatic.</p>
+<p>For automatic shutdown on Windows, set registry parameters <code>ORA_SHUTDOWN</code> and <code>ORA_</code><code><span class="codeinlineitalic">SID</span></code><code>_SHUTDOWN</code> to stop the relevant OracleService<span class="italic">SID</span> and shut down. Set registry parameter <code>ORA_</code><code><span class="codeinlineitalic">SID</span></code><code>_SHUTDOWNTYPE</code> to control shutdown mode (default is <code>i</code>, or <code>immediate</code>).</p>
+<div class="infoboxnotealso">
+<p class="notep1"><span class="bold">See Also</span>:</p>
+<ul>
+<li>
+<p><a href="admin.htm#g1021616">Chapter 5, "Administering a Database on Windows"</a></p>
+</li>
+<li>
+<p><a class="olink ADMQS005" href="../../server.112/e10897/instance.htm#ADMQS005"><span class="italic">Oracle Database 2 Day DBA</span></a></p>
+</li>
+</ul>
+</div>
+</div>
+<!-- class="sect1" -->
+<a id="i634316" name="i634316"></a><a id="NTQRF532" name="NTQRF532"></a>
+<div class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Background Processing and Batch Jobs</h2>
+<p>UNIX provides sophisticated control mechanisms for background processing and batch jobs.</p>
+<p>For similar functionality on Windows, use the AT command or a GUI version in the Microsoft Resource Kit.</p>
+</div>
+<!-- class="sect1" -->
+<a id="i634320" name="i634320"></a><a id="NTQRF533" name="NTQRF533"></a>
+<div class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Diagnostic and Tuning Utilities</h2>
+<p>On UNIX, utilities such as <code>sar</code> and <code>vmstat</code> are used to monitor Oracle Database background and shadow processes. These utilities are not integrated with Oracle Database.</p>
+<p>Performance utilities available on Windows include Oracle Counters for Windows Performance Monitor, Task Manager, Control Panel, Event Viewer, and <a href="glossary.htm#i432309"><span class="xrefglossterm">Microsoft Management Console</span></a>.</p>
+<p><a id="sthref967" name="sthref967"></a>Oracle Database is integrated with several of these tools. For example:</p>
+<ul>
+<li>
+<p>Oracle Counters for Windows Performance Monitor displays key Oracle Database information. This tool is the same in appearance and operation as Windows Performance Monitor, except it has been loaded with Oracle Database performance elements.</p>
+</li>
+<li>
+<p>Event Viewer displays system alert messages, including Oracle Database startup/shutdown messages and audit trail.</p>
+</li>
+<li>
+<p>Task Manager on Windows displays currently running processes and their resource usage, similar to the UNIX <code>ps -ef</code> command or HP OpenVMS <code>SHOW SYSTEM</code>. But Task Manager is easier to interpret and the columns can be customized.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p><a href="tools.htm#g1019547">Chapter 2, "Database Tools on Windows"</a></p>
+</li>
+<li>
+<p><a href="monitor.htm#g1012722">Chapter 6, "Monitoring a Database on Windows"</a></p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<!-- class="sect1" -->
+<a id="CEGEFGCF" name="CEGEFGCF"></a><a id="NTQRF534" name="NTQRF534"></a>
+<div class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Direct Writes to Disk</h2>
+<p>On both UNIX and Windows platforms, bypassing the file system buffer cache ensures data is written to disk.</p>
+<p>On UNIX, Oracle Database uses the <code>O_SYNC</code> flag to bypass the file system buffer cache. The flag name depends on the UNIX port.</p>
+<p>On Windows, Oracle Database bypasses the file system buffer cache completely.</p>
+</div>
+<!-- class="sect1" -->
+<a id="i634365" name="i634365"></a><a id="NTQRF535" name="NTQRF535"></a>
+<div class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1"><a id="sthref968" name="sthref968"></a>Dynamic Link Libraries (DLLs)</h2>
+<p>Shared libraries on UNIX are similar to shared DLLs on Windows. Object files and archive libraries are linked to generate Oracle Database executables. Relinking is necessary after certain operations, such as installation of a patch.</p>
+<p>On Windows, Oracle Database DLLs form part of the executable at run time and are therefore smaller. DLLs can be shared between multiple executables. Relinking by the user is not supported, but executable images can be modified using ORASTACK.</p>
+<p>Modifying executable images on Windows reduces the chances of running out of virtual memory when using a large SGA or when supporting thousands of connections. However, Oracle recommends doing this only under the guidance of Oracle Support Services.</p>
+</div>
+<!-- class="sect1" -->
+<a id="i634381" name="i634381"></a><a id="NTQRF536" name="NTQRF536"></a>
+<div class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Hot Backups</h2>
+<p>A (manual) hot <a href="glossary.htm#i432192"><span class="xrefglossterm">backup</span></a> is equivalent to backing up a <a href="glossary.htm#i432555"><span class="xrefglossterm">tablespace</span></a> that is in offline backup mode.</p>
+<p>Backup strategy on UNIX is as follows: put the tablespace into backup mode, copy the files to the backup location, and bring the tablespace out of backup mode.</p>
+<p>Windows supports the same backup strategy, but you cannot copy files in use with normal Windows utilities. Use OCOPY to copy open database files to another disk location. Then use a utility to copy the files to tape.</p>
+</div>
+<!-- class="sect1" -->
+<a id="i634410" name="i634410"></a><a id="NTQRF537" name="NTQRF537"></a>
+<div class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Initialization Parameters: Multiple Database Writers</h2>
+<p>On UNIX, you can specify many database writer <a href="glossary.htm#i432454"><span class="xrefglossterm">process</span></a> with initialization parameter <code>DB_WRITERS</code>. Multiple database writers can help, for example, when a UNIX port does not support asynchronous I/O.</p>
+<p><code>DB_WRITERS</code> is supported but typically unnecessary on Windows, which has its own asynchronous I/O capabilities.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<a href="specs.htm#g1011800">Chapter 14, "Oracle Database Specifications for Windows"</a></div>
+</div>
+<!-- class="sect1" -->
+<a id="i634430" name="i634430"></a><a id="NTQRF538" name="NTQRF538"></a>
+<div class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Install Accounts and Groups</h2>
+<p>UNIX uses the concept of a DBA group. The <code>root</code> account cannot be used to install Oracle Database. A separate Oracle Database account must be created manually.</p>
+<p>On Windows, Oracle Database must be installed by a Windows <a href="glossary.htm#i432581"><span class="xrefglossterm">username</span></a> in the Administrators group. The username is automatically added to the Windows local group <code>ORA_DBA</code>, which receives the <a href="glossary.htm#i432528"><span class="xrefglossterm">SYSDBA</span></a> <a href="glossary.htm#i432451"><span class="xrefglossterm">privilege</span></a>. This allows the user to log in to the database using <code>CONNECT</code> <code>/</code> <code>AS SYSDBA</code> and not be prompted for a password.</p>
+<p>You can also create an <code>ORA_OPER</code> group to grant <code>SYSOPER</code> privileges to the other Windows users.</p>
+<p>Password files are located in the <code><span class="codeinlineitalic">ORACLE_HOME</span></code><code>\database</code> directory and are named <code>pwd</code><code><span class="codeinlineitalic">SID</span></code><code>.ora</code>, where <code><span class="codeinlineitalic">SID</span></code> identifies the Oracle Database instance.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<a href="admin.htm#g1021616">Chapter 5, "Administering a Database on Windows"</a></div>
+</div>
+<!-- class="sect1" -->
+<a id="i634457" name="i634457"></a><a id="NTQRF539" name="NTQRF539"></a>
+<div class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Installation</h2>
+<p>The following manual setup tasks, all required on UNIX, are <span class="italic">not</span> required on Windows:</p>
+<ul>
+<li>
+<p>Set environment variables</p>
+</li>
+<li>
+<p>Create a DBA group for database administrators</p>
+</li>
+<li>
+<p>Create a group for users running Oracle Universal Installer</p>
+</li>
+<li>
+<p>Create an account dedicated to installing and upgrading Oracle Database components</p>
+</li>
+</ul>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<a class="olink NTDBI" href="../../install.112/e10843/toc.htm"><span class="italic">Oracle Database Installation Guide for Microsoft Windows</span></a></div>
+</div>
+<!-- class="sect1" -->
+<a id="i634474" name="i634474"></a><a id="NTQRF540" name="NTQRF540"></a>
+<div class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Memory Resources</h2>
+<p>The resources provided by the UNIX default kernels are often inadequate for a medium or large instance of Oracle Database. The maximum size of a shared memory segment (<code>SHMMAX</code>) and maximum number of semaphores available (<code>SEMMNS</code>) may be too low for Oracle Database recommendations.</p>
+<p>On Windows, fewer resources are needed for interprocess communication (IPC), because the Oracle Database relational database management system is <a href="glossary.htm#i432558"><span class="xrefglossterm">thread</span></a>-based and not process-based. These resources, including shared memory and semaphores, are not adjustable by the user.</p>
+</div>
+<!-- class="sect1" -->
+<a id="i634491" name="i634491"></a><a id="NTQRF541" name="NTQRF541"></a>
+<div class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Microsoft Transaction Server</h2>
+<p>UNIX does not support <a href="glossary.htm#i432315"><span class="xrefglossterm">Microsoft Transaction Server</span></a>.</p>
+<p>Windows supports Microsoft Transaction Server beginning with Oracle8. Using Oracle Services for Microsoft Transaction Server, you can develop and deploy applications based on <a href="glossary.htm#i432205"><span class="xrefglossterm">COM</span></a>. Microsoft Transaction Server coordinates application transactions for Oracle Database.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<a class="olink NTMTS" href="http://www.oracle.com/pls/db112/lookup?id=NTMTS"><span class="italic">Oracle Services for Microsoft Transaction Server Developer's Guide for Microsoft Windows</span></a></div>
+</div>
+<!-- class="sect1" -->
+<a id="i634514" name="i634514"></a><a id="NTQRF542" name="NTQRF542"></a>
+<div class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Multiple Oracle Homes and OFA</h2>
+<p>The goal of OFA is to place all Oracle Database software under one <a href="glossary.htm#CHDHBEDE"><span class="xrefglossterm"><span class="italic">ORACLE_HOME</span></span></a> directory and to spread database files across different physical drives as databases increase in size. OFA is implemented on Windows and UNIX in the same way, and main subdirectory and filenames are the same on both operating systems. Windows and UNIX differ, however, in their OFA directory tree top-level names and in the way variables are set.</p>
+<p>On UNIX, <code><span class="codeinlineitalic">ORACLE_BASE</span></code> is associated with a user's environment. <span class="italic">ORACLE_HOME</span> and <code><span class="codeinlineitalic">ORACLE_SID</span></code> must be set in system or user login scripts. Symbolic links are supported. Although everything seems to be in one directory on the same hard drive, files may be on different hard drives if they are symbolically linked or have that directory as a <a href="glossary.htm#i432330"><span class="xrefglossterm">mount</span></a> point.</p>
+<p>On Windows, <code><span class="codeinlineitalic">ORACLE_BASE</span></code> is defined in the registry (for example, in <code>HKEY_LOCAL_MACHINE\SOFTWARE\ORACLE\HOME0</code>). <code><span class="codeinlineitalic">ORACLE_HOME</span></code> and <code><span class="codeinlineitalic">ORACLE_SID</span></code> are variables defined in the registry. Symbolic links like those on UNIX are not supported, although Microsoft has announced the intention to support them.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+Appendix B, "Optimal Flexible Architecture" in <a class="olink NTDBI" href="../../install.112/e10843/toc.htm"><span class="italic">Oracle Database Installation Guide for Microsoft Windows</span></a></div>
+</div>
+<!-- class="sect1" -->
+<a id="i634536" name="i634536"></a><a id="NTQRF543" name="NTQRF543"></a>
+<div class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Processes and Threads</h2>
+<p>On UNIX, Oracle Database uses a process to implement each of such background tasks as database writer (<code>DBW0</code>), log writer (<code>LGWR</code>), shared server process dispatchers, and shared servers. Each dedicated connection made to the database causes another operating system process to be spawned on behalf of that session.</p>
+<p><a id="sthref969" name="sthref969"></a>On Windows, each background process is implemented as a thread inside a single, large process. For each Oracle Database instance or <a href="glossary.htm#i432543"><span class="xrefglossterm">system identifier</span></a>, there is one corresponding process for Oracle Database. For example, 100 Oracle Database processes for a database instance on UNIX are handled by 100 threads inside one process on Windows.</p>
+<p>All Oracle Database background, dedicated server, and client processes are threads of the master Oracle Database Windows process, and all threads of the Oracle Database process share resources. This multithreaded architecture is highly efficient, allowing fast context switches with low overhead.</p>
+<p>To view processes or end individual threads, use Oracle Administration Assistant for Windows. From the <span class="bold">Start</span> menu, select <span class="bold">Programs</span>, then select <span class="bold">Oracle -</span> <span class="bolditalic">HOME_NAME</span>, then select <span class="bold">Configuration and Migration Tools</span> and then select <span class="bold">Administration Assistant for Windows</span>. Right-click the <code>SID</code> and choose <span class="bold">Process Information</span>.</p>
+<div class="infoboxnote">
+<p class="notep1">Note:</p>
+Microsoft Management Console (MMC) is started when Oracle Administration Assistant for Windows is started. Oracle Database has integrated several database administration <a href="glossary.htm#i432512"><span class="xrefglossterm">snap-ins</span></a> into Microsoft Management Console.</div>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<ul>
+<li>
+<p>Oracle Administration Assistant for Windows online help</p>
+</li>
+<li>
+<p><a href="architec.htm#g1010749">Chapter 1, "Oracle Database Architecture on Windows"</a></p>
+</li>
+</ul>
+</div>
+</div>
+<!-- class="sect1" -->
+<a id="i634567" name="i634567"></a><a id="NTQRF544" name="NTQRF544"></a>
+<div class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Raw Partitions</h2>
+<p>Datafiles for tablespaces may be stored on a file system or on <a href="glossary.htm#i432460"><span class="xrefglossterm">raw partitions</span></a>. A raw partition is a portion of a physical disk that is accessed at the lowest possible level.</p>
+<p>UNIX supports raw partitions (logical drives). There is no limitation on the number of disk drives.</p>
+<p>Windows is limited to using drive letters A-Z, but creating raw partitions lets you bypass the disk drive limitation and divide disks into smaller sections.</p>
+<p>Use Windows disk management tools to create an extended partition on a physical drive. An extended partition points to raw space on the disk that can be assigned multiple logical partitions for database files.</p>
+<p>An extended partition avoids the four-partition limit on Windows by allowing you to define large numbers of logical partitions to accommodate applications using Oracle Database. Logical partitions can then be given symbolic link names to free up drive letters.</p>
+<p>On Windows Vista, Windows Server 2008, and Windows Server 2008 R2, create primary partitions and logical drives in extended partitions by selecting the <span class="bold">New Simple Volume</span> option. To create a raw device, select <span class="bold">Do not assign a drive letter or drive path.</span> To mount the raw device, assign and remove a drive letter. Do not use spanned volumes or striped volumes. These options will convert the volume to a dynamic disk. Automatic Storage Management does not support dynamic disks.</p>
+<div class="infoboxnote">
+<p class="notep1">Note:</p>
+Oracle RAC is not supported on Windows XP, Windows Vista, Winodws 7, and any 32-bit Windows operating system.</div>
+</div>
+<!-- class="sect1" -->
+<a id="i634593" name="i634593"></a><a id="NTQRF545" name="NTQRF545"></a>
+<div class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Services</h2>
+<p>Windows services are similar to UNIX daemons.</p>
+<p>Oracle Database registers a database instance as a service (OracleService<span class="italic">SID</span>). Services start background processes.</p>
+<p>To connect to and use an Oracle Database instance, an Oracle Database service is created during database creation and associated with Oracle Database. Once a service is created with Oracle Database, the service can run even while no user is logged on.</p>
+<p>By default, services run under the <a href="glossary.htm#i432552"><span class="xrefglossterm">SYSTEM</span></a> account. From the <span class="bold">Start</span> menu, select <span class="bold">Settings</span>, then select <span class="bold">Control Panel</span> and then select <span class="bold">Services</span> to access the Services dialog.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<a href="admin.htm#g1021616">Chapter 5, "Administering a Database on Windows"</a></div>
+</div>
+<!-- class="sect1" --></div>
+<!-- class="ind" -->
+<div class="footer">
+<hr />
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<col width="33%" />
+<col width="*" />
+<col width="33%" />
+<tr>
+<td align="left">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="98">
+<tr>
+<td align="center" valign="top"><a href="ap_error.htm"><img width="24" height="24" src="../../dcommon/gifs/leftnav.gif" alt="Go to previous page" /><br />
+<span class="icon">Previous</span></a></td>
+<td align="center" valign="top"><a href="glossary.htm"><img width="24" height="24" src="../../dcommon/gifs/rightnav.gif" alt="Go to next page" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+</td>
+<td style="font-size: 90%" align="center" class="copyrightlogo"><img width="144" height="18" src="../../dcommon/gifs/oracle.gif" alt="Oracle" /><br />
+Copyright&nbsp;&copy;&nbsp;1996, 2010,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.<br />
+<a href="../../dcommon/html/cpyr.htm">Legal Notices</a></td>
+<td align="right">
+<table class="icons oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="245">
+<tr>
+<td align="center" valign="top"><a href="../../index.htm"><img width="24" height="24" src="../../dcommon/gifs/doclib.gif" alt="Go to Documentation Home" /><br />
+<span class="icon">Home</span></a></td>
+<td align="center" valign="top"><a href="../../nav/portal_booklist.htm"><img width="24" height="24" src="../../dcommon/gifs/booklist.gif" alt="Go to Book List" /><br />
+<span class="icon">Book List</span></a></td>
+<td align="center" valign="top"><a href="toc.htm"><img width="24" height="24" src="../../dcommon/gifs/toc.gif" alt="Go to Table of Contents" /><br />
+<span class="icon">Contents</span></a></td>
+<td align="center" valign="top"><a href="index.htm"><img width="24" height="24" src="../../dcommon/gifs/index.gif" alt="Go to Index" /><br />
+<span class="icon">Index</span></a></td>
+<td align="center" valign="top"><a href="../../dcommon/html/feedback.htm"><img width="24" height="24" src="../../dcommon/gifs/feedbck2.gif" alt="Go to Feedback page" /><br />
+<span class="icon">Contact Us</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+</body>
+</html>

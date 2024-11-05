@@ -1,0 +1,3005 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii" />
+<meta http-equiv="Content-Language" content="en" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta name="robots" content="all" scheme="http://www.robotstxt.org/" />
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 5.1" />
+<meta name="Date" content="2010-03-05T15:45:40Z" />
+<meta name="doctitle" content="Oracle&reg; Database Platform Guide 11g Release 2 (11.2) for Microsoft Windows" />
+<meta name="partno" content="E10845-01" />
+<meta name="docid" content="NTQRF" />
+<link rel="Start" href="../../index.htm" title="Home" type="text/html" />
+<link rel="Copyright" href="../../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+<link rel="Stylesheet" href="../../dcommon/css/blafdoc.css" title="Default" type="text/css" />
+<script type="text/javascript" src="../../dcommon/js/doccd.js">
+</script>
+<link rel="Contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="Index" href="index.htm" title="Index" type="text/html" />
+<link rel="Glossary" href="glossary.htm" title="Glossary" type="text/html" />
+<link rel="Prev" href="ap_net.htm" title="Previous" type="text/html" />
+<link rel="Next" href="ap_unix.htm" title="Next" type="text/html" />
+<link rel="alternate" href="../e10845.pdf" title="PDF version" type="application/pdf" />
+<title>Error Messages on Windows</title>
+</head>
+<body>
+<div class="header">
+<div class="zz-skip-header"><a name="top" id="top" href="#BEGIN">Skip Headers</a></div>
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td align="left" valign="top"><b>Oracle&reg; Database Platform Guide<br />
+11<i>g</i> Release 2 (11.2) for Microsoft Windows</b><br />
+Part Number E10845-01</td>
+<td valign="bottom" align="right">
+<table class="icons oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="245">
+<tr>
+<td align="center" valign="top"><a href="../../index.htm"><img width="24" height="24" src="../../dcommon/gifs/doclib.gif" alt="Go to Documentation Home" /><br />
+<span class="icon">Home</span></a></td>
+<td align="center" valign="top"><a href="../../nav/portal_booklist.htm"><img width="24" height="24" src="../../dcommon/gifs/booklist.gif" alt="Go to Book List" /><br />
+<span class="icon">Book List</span></a></td>
+<td align="center" valign="top"><a href="toc.htm"><img width="24" height="24" src="../../dcommon/gifs/toc.gif" alt="Go to Table of Contents" /><br />
+<span class="icon">Contents</span></a></td>
+<td align="center" valign="top"><a href="index.htm"><img width="24" height="24" src="../../dcommon/gifs/index.gif" alt="Go to Index" /><br />
+<span class="icon">Index</span></a></td>
+<td align="center" valign="top"><a href="../../dcommon/html/feedback.htm"><img width="24" height="24" src="../../dcommon/gifs/feedbck2.gif" alt="Go to Feedback page" /><br />
+<span class="icon">Contact Us</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<hr />
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td align="left" valign="top">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="98">
+<tr>
+<td align="center" valign="top"><a href="ap_net.htm"><img width="24" height="24" src="../../dcommon/gifs/leftnav.gif" alt="Go to previous page" /><br />
+<span class="icon">Previous</span></a></td>
+<td align="center" valign="top"><a href="ap_unix.htm"><img width="24" height="24" src="../../dcommon/gifs/rightnav.gif" alt="Go to next page" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+</td>
+<td align="right" valign="top" style="font-size: 90%"><a href="../e10845.pdf">View PDF</a></td>
+</tr>
+</table>
+<a name="BEGIN" id="BEGIN"></a></div>
+<div class="IND"><!-- End Header --><a id="g643413" name="g643413"></a><a id="NTQRF230" name="NTQRF230"></a><a id="i635554" name="i635554"></a>
+<h1 class="appendix"><span class="secnum">D</span> Error Messages on Windows</h1>
+<p>This appendix lists error messages, causes, and corrective actions that are specific to operation of Oracle Database for Windows. This appendix also includes database connection issues.</p>
+<p>This appendix contains these topics:</p>
+<ul>
+<li>
+<p><a href="#i634254">ORA-09275: CONNECT INTERNAL No Longer Supported</a></p>
+</li>
+<li>
+<p><a href="#CFAFEEAB">OSD-04000 to OSD-04599: Windows-Specific Oracle Database Messages</a></p>
+</li>
+<li>
+<p><a href="#i634964">DIM-00000 to DIM-00039: ORADIM Command Syntax Errors</a></p>
+</li>
+<li>
+<p><a href="#i635282">Database Connection Issues</a></p>
+<div class="infoboxnote">
+<p class="notep1">Note:</p>
+The <code>ora.hlp</code> file, which was shipped in previous releases, is no longer available. See this Appendix, <a class="olink ERRMG" href="http://www.oracle.com/pls/db112/lookup?id=ERRMG"><span class="italic">Oracle Database Error Messages</span></a>, and <a class="olink OEMMM" href="http://www.oracle.com/pls/db112/lookup?id=OEMMM"><span class="italic">Oracle Enterprise Manager Messages Manual</span></a> for information on error messages.</div>
+</li>
+</ul>
+<a id="i634254" name="i634254"></a><a id="NTQRF521" name="NTQRF521"></a>
+<div class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1"><a id="sthref814" name="sthref814"></a>ORA-09275: CONNECT INTERNAL No Longer Supported</h2>
+<div class="msgset"><a id="tahiti642532" name="tahiti642532"></a>
+<div class="msgentry">
+<dl>
+<dt><span class="msg"><a id="sthref815" name="sthref815"></a>ORA-09275</span> <!-- class="msg" --></dt>
+<dd>
+<div class="msginfo">Connect internal is not a valid DBA connection</div>
+<!-- class="msginfo" --></dd>
+<dd>
+<div class="msgexplan"><span class="msgexplankw">Cause:</span> <code>CONNECT INTERNAL</code> is no longer supported for DBA connections.</div>
+<!-- class="msgexplan" --></dd>
+<dd>
+<div class="msgaction"><span class="msgactionkw">Action:</span> If NTS is enabled, you can connect to the database as <code>CONNECT / AS SYSDBA</code> or <code>CONNECT / AS SYSOPER.</code> If NTS is not enabled, you can connect as <code>CONNECT SYS AS SYSDBA</code>. You can also connect as an existing user with the appropriate password.</div>
+<!-- class="msgaction" --></dd>
+</dl>
+</div>
+<!-- class="msgentry" --></div>
+<!-- class="msgset" --></div>
+<!-- class="sect1" -->
+<a id="CFAFEEAB" name="CFAFEEAB"></a><a id="NTQRF522" name="NTQRF522"></a>
+<div class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">OSD-04000 to OSD-04599: Windows-Specific Oracle Database Messages</h2>
+<p>Error messages in this section are Oracle Database operating system-dependent (OSD) messages displayed in response to an error condition in Windows. Each message in this section triggers an Oracle Database error message.</p>
+<p>Error messages appear first in summary tables consisting of error numbers and the corresponding error message. Following the tables is a more detailed discussion of errors, including causes and corrective actions.</p>
+<ul>
+<li>
+<p><a href="#i634634">File I/O Errors: OSD-04000 to OSD-04099</a></p>
+</li>
+<li>
+<p><a href="#i634748">Memory Errors: OSD-04100 to OSD-04199</a></p>
+</li>
+<li>
+<p><a href="#i634790">Process Errors: OSD-04200 to OSD-04299</a></p>
+</li>
+<li>
+<p><a href="#i634889">Loader Errors: OSD-04300 to OSD-04399</a></p>
+</li>
+<li>
+<p><a href="#i634905">Semaphore Errors: OSD-04400 to OSD-04499</a></p>
+</li>
+<li>
+<p><a href="#i634916">Miscellaneous Errors: OSD-04500 to OSD-04599</a></p>
+<div class="inftblinformalwidemax">
+<table class="InformalWideMax" title="File I/O Error Messages" summary="Rows are errors. For each error, the first column is the error number, and the second column is the error message." dir="ltr" border="1" width="100%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<col width="24%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t3">File I/O Errors:</th>
+<th align="left" valign="bottom" id="r1c2-t3">OSD-04000 to OSD-04099</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t3" headers="r1c1-t3">4000</td>
+<td align="left" headers="r2c1-t3 r1c2-t3">Logical block size mismatch</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t3" headers="r1c1-t3">4001</td>
+<td align="left" headers="r3c1-t3 r1c2-t3">Invalid logical block size</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t3" headers="r1c1-t3">4002</td>
+<td align="left" headers="r4c1-t3 r1c2-t3">Unable to open file</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r5c1-t3" headers="r1c1-t3">4003</td>
+<td align="left" headers="r5c1-t3 r1c2-t3">Unable to read file header block</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r6c1-t3" headers="r1c1-t3">4004</td>
+<td align="left" headers="r6c1-t3 r1c2-t3">Invalid file header</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r7c1-t3" headers="r1c1-t3">4005</td>
+<td align="left" headers="r7c1-t3 r1c2-t3">SetFilePointer() failure, unable to read from file</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r8c1-t3" headers="r1c1-t3">4006</td>
+<td align="left" headers="r8c1-t3 r1c2-t3">ReadFile() failure, unable to read from file</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r9c1-t3" headers="r1c1-t3">4007</td>
+<td align="left" headers="r9c1-t3 r1c2-t3">Truncated read</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r10c1-t3" headers="r1c1-t3">4008</td>
+<td align="left" headers="r10c1-t3 r1c2-t3">WriteFile() failure, unable to write to file</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r11c1-t3" headers="r1c1-t3">4009</td>
+<td align="left" headers="r11c1-t3 r1c2-t3">Truncated write</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r12c1-t3" headers="r1c1-t3">4010</td>
+<td align="left" headers="r12c1-t3 r1c2-t3">&lt;create&gt; option specified, file already exists</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r13c1-t3" headers="r1c1-t3">4011</td>
+<td align="left" headers="r13c1-t3 r1c2-t3">GetFileInformationByHandle() failure, unable to obtain file info</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r14c1-t3" headers="r1c1-t3">4012</td>
+<td align="left" headers="r14c1-t3 r1c2-t3">File size mismatch</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r15c1-t3" headers="r1c1-t3">4013</td>
+<td align="left" headers="r15c1-t3 r1c2-t3">Unable to read line from file</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r16c1-t3" headers="r1c1-t3">4014</td>
+<td align="left" headers="r16c1-t3 r1c2-t3">Unable to close file</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r17c1-t3" headers="r1c1-t3">4015</td>
+<td align="left" headers="r17c1-t3 r1c2-t3">An asynchronous I/O request returned an error</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r18c1-t3" headers="r1c1-t3">4016</td>
+<td align="left" headers="r18c1-t3 r1c2-t3">Error queuing an asynchronous I/O request</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r19c1-t3" headers="r1c1-t3">4017</td>
+<td align="left" headers="r19c1-t3 r1c2-t3">Unable to open the specified RAW device</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r20c1-t3" headers="r1c1-t3">4018</td>
+<td align="left" headers="r20c1-t3 r1c2-t3">Unable to access the specified directory or device</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r21c1-t3" headers="r1c1-t3">4019</td>
+<td align="left" headers="r21c1-t3 r1c2-t3">Unable to set file pointer</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r22c1-t3" headers="r1c1-t3">4020</td>
+<td align="left" headers="r22c1-t3 r1c2-t3">Unable to set eof file marker</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r23c1-t3" headers="r1c1-t3">4021</td>
+<td align="left" headers="r23c1-t3 r1c2-t3">Unable to read file</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r24c1-t3" headers="r1c1-t3">4022</td>
+<td align="left" headers="r24c1-t3 r1c2-t3">Unable to write file</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r25c1-t3" headers="r1c1-t3">4023</td>
+<td align="left" headers="r25c1-t3 r1c2-t3">SleepEx() failure, unable to Sleep</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r26c1-t3" headers="r1c1-t3">4024</td>
+<td align="left" headers="r26c1-t3 r1c2-t3">Unable to delete file</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r27c1-t3" headers="r1c1-t3">4025</td>
+<td align="left" headers="r27c1-t3 r1c2-t3">Invalid question asked</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r28c1-t3" headers="r1c1-t3">4026</td>
+<td align="left" headers="r28c1-t3 r1c2-t3">Invalid parameter passed</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblinformalwidemax" -->
+<div class="inftblinformalwidemax">
+<table class="InformalWideMax" title="Memory Error Messages" summary="Rows are errors. For each error, the first column is the error number, and the second column is the error message." dir="ltr" border="1" width="100%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<col width="24%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t4">Memory Errors:</th>
+<th align="left" valign="bottom" id="r1c2-t4">OSD-04100 to OSD-04199</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t4" headers="r1c1-t4">4100</td>
+<td align="left" headers="r2c1-t4 r1c2-t4">malloc() failure, unable to allocate memory</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t4" headers="r1c1-t4">4101</td>
+<td align="left" headers="r3c1-t4 r1c2-t4">Invalid SGA: SGA not initialized</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t4" headers="r1c1-t4">4102</td>
+<td align="left" headers="r4c1-t4 r1c2-t4">Unable to open/create file for shared memory object</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r5c1-t4" headers="r1c1-t4">4103</td>
+<td align="left" headers="r5c1-t4 r1c2-t4">Unable to attach to SGA: SGA does not exist</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r6c1-t4" headers="r1c1-t4">4104</td>
+<td align="left" headers="r6c1-t4 r1c2-t4">Unable to map shared memory (SGA) into the address space</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r7c1-t4" headers="r1c1-t4">4105</td>
+<td align="left" headers="r7c1-t4 r1c2-t4">Shared memory (SGA) mapped to wrong address</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r8c1-t4" headers="r1c1-t4">4106</td>
+<td align="left" headers="r8c1-t4 r1c2-t4">Unable to allocate memory with VirtualAlloc</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r9c1-t4" headers="r1c1-t4">4107</td>
+<td align="left" headers="r9c1-t4 r1c2-t4">Unable to deallocate memory with VirtualFree</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r10c1-t4" headers="r1c1-t4">4108</td>
+<td align="left" headers="r10c1-t4 r1c2-t4">Unable to protect memory with VirtualProtect</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblinformalwidemax" -->
+<div class="inftblinformalwidemax">
+<table class="InformalWideMax" title="Process Error Messages" summary="Rows are errors. For each error, the first column is the error number, and the second column is the error message." dir="ltr" border="1" width="100%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<col width="24%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t5"><a id="sthref816" name="sthref816"></a>Process Errors:</th>
+<th align="left" valign="bottom" id="r1c2-t5">OSD-04200 to OSD-04299</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t5" headers="r1c1-t5">4200</td>
+<td align="left" headers="r2c1-t5 r1c2-t5">Unable to begin another thread</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t5" headers="r1c1-t5">4201</td>
+<td align="left" headers="r3c1-t5 r1c2-t5">No pid structure supplied to spdcr()</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t5" headers="r1c1-t5">4202</td>
+<td align="left" headers="r4c1-t5 r1c2-t5">DosSetPriority() failure, unable to set process priority</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r5c1-t5" headers="r1c1-t5">4203</td>
+<td align="left" headers="r5c1-t5 r1c2-t5">DosKillProcess() failure, unable to kill process</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r6c1-t5" headers="r1c1-t5">4204</td>
+<td align="left" headers="r6c1-t5 r1c2-t5">Invalid pid</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r7c1-t5" headers="r1c1-t5">4205</td>
+<td align="left" headers="r7c1-t5 r1c2-t5">CreateProcess() failure, unable to spawn process</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r8c1-t5" headers="r1c1-t5">4207</td>
+<td align="left" headers="r8c1-t5 r1c2-t5">Invalid priority specified in CONFIG parameter ORACLE_PRIORITY</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r9c1-t5" headers="r1c1-t5">4208</td>
+<td align="left" headers="r9c1-t5 r1c2-t5">OpenProcess() failure, unable to open process handle</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r10c1-t5" headers="r1c1-t5">4209</td>
+<td align="left" headers="r10c1-t5 r1c2-t5">Incorrect or unknown background image name given to spdcr()</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r11c1-t5" headers="r1c1-t5">4210</td>
+<td align="left" headers="r11c1-t5 r1c2-t5">Timeout waiting for thread semaphore</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r12c1-t5" headers="r1c1-t5">4211</td>
+<td align="left" headers="r12c1-t5 r1c2-t5">Thread information not found</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r13c1-t5" headers="r1c1-t5">4212</td>
+<td align="left" headers="r13c1-t5 r1c2-t5">Maximum number of ORACLE threads reached</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r14c1-t5" headers="r1c1-t5">4213</td>
+<td align="left" headers="r14c1-t5 r1c2-t5">ORACLE thread unable to DuplicateHandle()</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r15c1-t5" headers="r1c1-t5">4214</td>
+<td align="left" headers="r15c1-t5 r1c2-t5">ORACLE thread unable to CreateEvent()</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r16c1-t5" headers="r1c1-t5">4215</td>
+<td align="left" headers="r16c1-t5 r1c2-t5">Bad function code supplied to ssthreadop</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r17c1-t5" headers="r1c1-t5">4216</td>
+<td align="left" headers="r17c1-t5 r1c2-t5">Unable to find file handle for that thread</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r18c1-t5" headers="r1c1-t5">4217</td>
+<td align="left" headers="r18c1-t5 r1c2-t5">Unable to retrieve system username for current user</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r19c1-t5" headers="r1c1-t5">4218</td>
+<td align="left" headers="r19c1-t5 r1c2-t5">Cannot post thread</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r20c1-t5" headers="r1c1-t5">4219</td>
+<td align="left" headers="r20c1-t5 r1c2-t5">Bad thread list semaphore</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r21c1-t5" headers="r1c1-t5">4221</td>
+<td align="left" headers="r21c1-t5 r1c2-t5">Target thread is currently busy</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r22c1-t5" headers="r1c1-t5">4222</td>
+<td align="left" headers="r22c1-t5 r1c2-t5">Unable to get the threads context</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r23c1-t5" headers="r1c1-t5">4223</td>
+<td align="left" headers="r23c1-t5 r1c2-t5">Unable to set the threads context</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r24c1-t5" headers="r1c1-t5">4224</td>
+<td align="left" headers="r24c1-t5 r1c2-t5">Unable to suspend the target thread</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r25c1-t5" headers="r1c1-t5">4225</td>
+<td align="left" headers="r25c1-t5 r1c2-t5">Unable to resume the target thread</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblinformalwidemax" -->
+<div class="inftblinformalwidemax">
+<table class="InformalWideMax" title="Loader Error Messages" summary="Rows are errors. For each error, the first column is the error number, and the second column is the error message." dir="ltr" border="1" width="100%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<col width="24%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t6">Loader Errors:</th>
+<th align="left" valign="bottom" id="r1c2-t6">OSD-04300 to OSD-04399</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t6" headers="r1c1-t6">4300</td>
+<td align="left" headers="r2c1-t6 r1c2-t6">Unable to read complete record from datafile</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t6" headers="r1c1-t6">4301</td>
+<td align="left" headers="r3c1-t6 r1c2-t6">Record size too large</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t6" headers="r1c1-t6">4302</td>
+<td align="left" headers="r4c1-t6 r1c2-t6">Invalid record type, load options, or both</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblinformalwidemax" -->
+<div class="inftblinformalwidemax">
+<table class="InformalWideMax" title="Semaphore Error Messages" summary="Rows are errors. For each error, the first column is the error number, and the second column is the error message." dir="ltr" border="1" width="100%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<col width="24%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t7">Semaphore Errors:</th>
+<th align="left" valign="bottom" id="r1c2-t7">OSD-04400 to OSD-04499</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t7" headers="r1c1-t7">4400</td>
+<td align="left" headers="r2c1-t7 r1c2-t7">Unable to acquire internal semaphore for process</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t7" headers="r1c1-t7">4401</td>
+<td align="left" headers="r3c1-t7 r1c2-t7">WaitForSingleObject() failure, unable to obtain semaphore</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblinformalwidemax" -->
+<div class="inftblinformalwidemax">
+<table class="InformalWideMax" title="Miscellaneous Error Messages" summary="Rows are errors. For each error, the first column is the error number, and the second column is the error message." dir="ltr" border="1" width="100%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<col width="24%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t8">Miscellaneous Errors:</th>
+<th align="left" valign="bottom" id="r1c2-t8">OSD-04500 to OSD-04599</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t8" headers="r1c1-t8">4500</td>
+<td align="left" headers="r2c1-t8 r1c2-t8">Illegal option specified</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t8" headers="r1c1-t8">4501</td>
+<td align="left" headers="r3c1-t8 r1c2-t8">Internal buffer overflow</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t8" headers="r1c1-t8">4502</td>
+<td align="left" headers="r4c1-t8 r1c2-t8">Translations nested too deep</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r5c1-t8" headers="r1c1-t8">4503</td>
+<td align="left" headers="r5c1-t8 r1c2-t8">Text contains no translatable elements</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r6c1-t8" headers="r1c1-t8">4505</td>
+<td align="left" headers="r6c1-t8 r1c2-t8">stdin not responding</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r7c1-t8" headers="r1c1-t8">4506</td>
+<td align="left" headers="r7c1-t8 r1c2-t8">Unable to spawn process through system()</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r8c1-t8" headers="r1c1-t8">4510</td>
+<td align="left" headers="r8c1-t8 r1c2-t8">Operating system roles are not supported</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r9c1-t8" headers="r1c1-t8">4511</td>
+<td align="left" headers="r9c1-t8 r1c2-t8">Unable to get date and time from the operating system</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r10c1-t8" headers="r1c1-t8">4512</td>
+<td align="left" headers="r10c1-t8 r1c2-t8">Unable to translate the 'USERNAME' config.ora variable on server</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r11c1-t8" headers="r1c1-t8">4513</td>
+<td align="left" headers="r11c1-t8 r1c2-t8">'remote_os_authent' init.ora variable not set to true</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r12c1-t8" headers="r1c1-t8">4514</td>
+<td align="left" headers="r12c1-t8 r1c2-t8">The Windows Group name is too long for internal buffer</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r13c1-t8" headers="r1c1-t8">4515</td>
+<td align="left" headers="r13c1-t8 r1c2-t8">This command is not implemented at this time</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblinformalwidemax" --></li>
+</ul>
+<a id="i634634" name="i634634"></a><a id="NTQRF523" name="NTQRF523"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><a id="sthref817" name="sthref817"></a>File I/O Errors: OSD-04000 to OSD-04099</h3>
+<div class="msgset"><a id="tahiti642539" name="tahiti642539"></a>
+<div class="msgentry">
+<dl>
+<dt><span class="msg"><a id="sthref818" name="sthref818"></a>OSD-04000</span> <!-- class="msg" --></dt>
+<dd>
+<div class="msginfo">Logical block size mismatch</div>
+<!-- class="msginfo" --></dd>
+<dd>
+<div class="msgexplan"><span class="msgexplankw">Cause:</span> Database block size specified in <a href="glossary.htm#i432288"><span class="xrefglossterm">initialization parameter file</span></a> does not match block size of actual database files.</div>
+<!-- class="msgexplan" --></dd>
+<dd>
+<div class="msgaction"><span class="msgactionkw">Action:</span> Use matching logical block sizes.</div>
+<!-- class="msgaction" --></dd>
+</dl>
+</div>
+<!-- class="msgentry" -->
+<a id="tahiti642545" name="tahiti642545"></a>
+<div class="msgentry">
+<dl>
+<dt><span class="msg"><a id="sthref819" name="sthref819"></a>OSD-04001</span> <!-- class="msg" --></dt>
+<dd>
+<div class="msginfo">Invalid logical block size</div>
+<!-- class="msginfo" --></dd>
+<dd>
+<div class="msgexplan"><span class="msgexplankw">Cause:</span> Logical block size is not a multiple of 512 bytes, or it is too large.</div>
+<!-- class="msgexplan" --></dd>
+<dd>
+<div class="msgaction"><span class="msgactionkw">Action:</span> Change the value of <code>DB_BLOCK_SIZE</code> in the initialization parameter file.</div>
+<!-- class="msgaction" --></dd>
+</dl>
+</div>
+<!-- class="msgentry" -->
+<a id="tahiti642551" name="tahiti642551"></a>
+<div class="msgentry">
+<dl>
+<dt><span class="msg"><a id="sthref820" name="sthref820"></a>OSD-04002</span> <!-- class="msg" --></dt>
+<dd>
+<div class="msginfo">Unable to open file</div>
+<!-- class="msginfo" --></dd>
+<dd>
+<div class="msgexplan"><span class="msgexplankw">Cause:</span> Specified path or filename is invalid, or destination device is full. This error can also be caused by insufficient Windows file handles.</div>
+<!-- class="msgexplan" --></dd>
+<dd>
+<div class="msgaction"><span class="msgactionkw">Action:</span> Make sure path and file exist, and device has free space. If this fails, then increase number of Windows file handles.</div>
+<!-- class="msgaction" --></dd>
+</dl>
+</div>
+<!-- class="msgentry" -->
+<a id="tahiti642555" name="tahiti642555"></a>
+<div class="msgentry">
+<dl>
+<dt><span class="msg"><a id="sthref821" name="sthref821"></a>OSD-04003</span> <!-- class="msg" --></dt>
+<dd>
+<div class="msginfo">Unable to read file header block</div>
+<!-- class="msginfo" --></dd>
+<dd>
+<div class="msgexplan"><span class="msgexplankw">Cause:</span> Media has been damaged.</div>
+<!-- class="msgexplan" --></dd>
+<dd>
+<div class="msgaction"><span class="msgactionkw">Action:</span> Recover file, if necessary, and verify that Windows is functioning correctly.</div>
+<!-- class="msgaction" --></dd>
+</dl>
+</div>
+<!-- class="msgentry" -->
+<a id="tahiti642559" name="tahiti642559"></a>
+<div class="msgentry">
+<dl>
+<dt><span class="msg"><a id="sthref822" name="sthref822"></a>OSD-04004</span> <!-- class="msg" --></dt>
+<dd>
+<div class="msginfo">Invalid file header</div>
+<!-- class="msginfo" --></dd>
+<dd>
+<div class="msgexplan"><span class="msgexplankw">Cause:</span> File is damaged.</div>
+<!-- class="msgexplan" --></dd>
+<dd>
+<div class="msgaction"><span class="msgactionkw">Action:</span> Recover file.</div>
+<!-- class="msgaction" --></dd>
+</dl>
+</div>
+<!-- class="msgentry" -->
+<a id="tahiti642563" name="tahiti642563"></a>
+<div class="msgentry">
+<dl>
+<dt><span class="msg"><a id="sthref823" name="sthref823"></a>OSD-04005</span> <!-- class="msg" --></dt>
+<dd>
+<div class="msginfo">SetFilePointer() failure, unable to read from file</div>
+<!-- class="msginfo" --></dd>
+<dd>
+<div class="msgexplan"><span class="msgexplankw">Cause:</span> Unexpected return from Windows system service SetFilePointer().</div>
+<!-- class="msgexplan" --></dd>
+<dd>
+<div class="msgaction"><span class="msgactionkw">Action:</span> Check operating system error code and operating system documentation.</div>
+<!-- class="msgaction" --></dd>
+</dl>
+</div>
+<!-- class="msgentry" -->
+<a id="tahiti642567" name="tahiti642567"></a>
+<div class="msgentry">
+<dl>
+<dt><span class="msg"><a id="sthref824" name="sthref824"></a>OSD-04006</span> <!-- class="msg" --></dt>
+<dd>
+<div class="msginfo">ReadFile() failure, unable to read from file</div>
+<!-- class="msginfo" --></dd>
+<dd>
+<div class="msgexplan"><span class="msgexplankw">Cause:</span> Unexpected return from Windows system service ReadFile().</div>
+<!-- class="msgexplan" --></dd>
+<dd>
+<div class="msgaction"><span class="msgactionkw">Action:</span> Check operating system error code and operating system documentation.</div>
+<!-- class="msgaction" --></dd>
+</dl>
+</div>
+<!-- class="msgentry" -->
+<a id="tahiti642571" name="tahiti642571"></a>
+<div class="msgentry">
+<dl>
+<dt><span class="msg"><a id="sthref825" name="sthref825"></a>OSD-04007</span> <!-- class="msg" --></dt>
+<dd>
+<div class="msginfo">Truncated read</div>
+<!-- class="msginfo" --></dd>
+<dd>
+<div class="msgexplan"><span class="msgexplankw">Cause:</span> System encountered an unexpected end-of-file, which is due to damaged media.</div>
+<!-- class="msgexplan" --></dd>
+<dd>
+<div class="msgaction"><span class="msgactionkw">Action:</span> Verify that file is not damaged.</div>
+<!-- class="msgaction" --></dd>
+</dl>
+</div>
+<!-- class="msgentry" -->
+<a id="tahiti642575" name="tahiti642575"></a>
+<div class="msgentry">
+<dl>
+<dt><span class="msg"><a id="sthref826" name="sthref826"></a>OSD-04008</span> <!-- class="msg" --></dt>
+<dd>
+<div class="msginfo">WriteFile() failure, unable to write to file</div>
+<!-- class="msginfo" --></dd>
+<dd>
+<div class="msgexplan"><span class="msgexplankw">Cause:</span> Unexpected return from Windows system service WriteFile().</div>
+<!-- class="msgexplan" --></dd>
+<dd>
+<div class="msgaction"><span class="msgactionkw">Action:</span> Check operating system error code and operating system documentation.</div>
+<!-- class="msgaction" --></dd>
+</dl>
+</div>
+<!-- class="msgentry" -->
+<a id="tahiti642579" name="tahiti642579"></a>
+<div class="msgentry">
+<dl>
+<dt><span class="msg"><a id="sthref827" name="sthref827"></a>OSD-04009</span> <!-- class="msg" --></dt>
+<dd>
+<div class="msginfo">Truncated write</div>
+<!-- class="msginfo" --></dd>
+<dd>
+<div class="msgexplan"><span class="msgexplankw">Cause:</span> Destination device is full, or media is damaged.</div>
+<!-- class="msgexplan" --></dd>
+<dd>
+<div class="msgaction"><span class="msgactionkw">Action:</span> Verify that device has free space and that file is not damaged.</div>
+<!-- class="msgaction" --></dd>
+</dl>
+</div>
+<!-- class="msgentry" -->
+<a id="tahiti642583" name="tahiti642583"></a>
+<div class="msgentry">
+<dl>
+<dt><span class="msg"><a id="sthref828" name="sthref828"></a>OSD-04010</span> <!-- class="msg" --></dt>
+<dd>
+<div class="msginfo">&lt;create&gt; option specified, file already exists</div>
+<!-- class="msginfo" --></dd>
+<dd>
+<div class="msgexplan"><span class="msgexplankw">Cause:</span> File you attempted to create already exists.</div>
+<!-- class="msgexplan" --></dd>
+<dd>
+<div class="msgaction"><span class="msgactionkw">Action:</span> Delete existing file or use <code>REUSE</code> option in SQL statement.</div>
+<!-- class="msgaction" --></dd>
+</dl>
+</div>
+<!-- class="msgentry" -->
+<a id="tahiti642589" name="tahiti642589"></a>
+<div class="msgentry">
+<dl>
+<dt><span class="msg"><a id="sthref829" name="sthref829"></a>OSD-04011</span> <!-- class="msg" --></dt>
+<dd>
+<div class="msginfo">GetFileInformationByHandle() failure, unable to obtain file info</div>
+<!-- class="msginfo" --></dd>
+<dd>
+<div class="msgexplan"><span class="msgexplankw">Cause:</span> Unexpected return from Windows system service GetFileInformationByHandle().</div>
+<!-- class="msgexplan" --></dd>
+<dd>
+<div class="msgaction"><span class="msgactionkw">Action:</span> Check operating system error code and operating system documentation.</div>
+<!-- class="msgaction" --></dd>
+</dl>
+</div>
+<!-- class="msgentry" -->
+<a id="tahiti642593" name="tahiti642593"></a>
+<div class="msgentry">
+<dl>
+<dt><span class="msg"><a id="sthref830" name="sthref830"></a>OSD-04012</span> <!-- class="msg" --></dt>
+<dd>
+<div class="msginfo">File size mismatch</div>
+<!-- class="msginfo" --></dd>
+<dd>
+<div class="msgexplan"><span class="msgexplankw">Cause:</span> File to be re-used is either too large or too small.</div>
+<!-- class="msgexplan" --></dd>
+<dd>
+<div class="msgaction"><span class="msgactionkw">Action:</span> Specify correct file size or delete existing file.</div>
+<!-- class="msgaction" --></dd>
+</dl>
+</div>
+<!-- class="msgentry" -->
+<a id="tahiti642597" name="tahiti642597"></a>
+<div class="msgentry">
+<dl>
+<dt><span class="msg"><a id="sthref831" name="sthref831"></a>OSD-04013</span> <!-- class="msg" --></dt>
+<dd>
+<div class="msginfo">Unable to read line from file</div>
+<!-- class="msginfo" --></dd>
+<dd>
+<div class="msgexplan"><span class="msgexplankw">Cause:</span> This error is caused by an operating system error or by damaged media.</div>
+<!-- class="msgexplan" --></dd>
+<dd>
+<div class="msgaction"><span class="msgactionkw">Action:</span> Check operating system error code (if available) and operating system documentation. If no operating system error code is presented, then verify that media is not damaged.</div>
+<!-- class="msgaction" --></dd>
+</dl>
+</div>
+<!-- class="msgentry" -->
+<a id="tahiti642601" name="tahiti642601"></a>
+<div class="msgentry">
+<dl>
+<dt><span class="msg"><a id="sthref832" name="sthref832"></a>OSD-04014</span> <!-- class="msg" --></dt>
+<dd>
+<div class="msginfo">Unable to close file</div>
+<!-- class="msginfo" --></dd>
+<dd>
+<div class="msgexplan"><span class="msgexplankw">Cause:</span> Media has been damaged.</div>
+<!-- class="msgexplan" --></dd>
+<dd>
+<div class="msgaction"><span class="msgactionkw">Action:</span> Recover file, if necessary, and verify that Windows is functioning correctly.</div>
+<!-- class="msgaction" --></dd>
+</dl>
+</div>
+<!-- class="msgentry" -->
+<a id="tahiti642605" name="tahiti642605"></a>
+<div class="msgentry">
+<dl>
+<dt><span class="msg"><a id="sthref833" name="sthref833"></a>OSD-04015</span> <!-- class="msg" --></dt>
+<dd>
+<div class="msginfo">Asynchronous I/O request returned an error</div>
+<!-- class="msginfo" --></dd>
+<dd>
+<div class="msgexplan"><span class="msgexplankw">Cause:</span> Unexpected return from Windows system service.</div>
+<!-- class="msgexplan" --></dd>
+<dd>
+<div class="msgaction"><span class="msgactionkw">Action:</span> Check operating system error code and operating system documentation.</div>
+<!-- class="msgaction" --></dd>
+</dl>
+</div>
+<!-- class="msgentry" -->
+<a id="tahiti642609" name="tahiti642609"></a>
+<div class="msgentry">
+<dl>
+<dt><span class="msg"><a id="sthref834" name="sthref834"></a>OSD-04016</span> <!-- class="msg" --></dt>
+<dd>
+<div class="msginfo">Error queuing an asynchronous I/O request</div>
+<!-- class="msginfo" --></dd>
+<dd>
+<div class="msgexplan"><span class="msgexplankw">Cause:</span> Unexpected return from Windows system service.</div>
+<!-- class="msgexplan" --></dd>
+<dd>
+<div class="msgaction"><span class="msgactionkw">Action:</span> Check operating system error code and operating system documentation.</div>
+<!-- class="msgaction" --></dd>
+</dl>
+</div>
+<!-- class="msgentry" -->
+<a id="tahiti642613" name="tahiti642613"></a>
+<div class="msgentry">
+<dl>
+<dt><span class="msg"><a id="sthref835" name="sthref835"></a>OSD-04017</span> <!-- class="msg" --></dt>
+<dd>
+<div class="msginfo">Unable to open the specified RAW device</div>
+<!-- class="msginfo" --></dd>
+<dd>
+<div class="msgexplan"><span class="msgexplankw">Cause:</span> An invalid path or filename was specified, or device is full.</div>
+<!-- class="msgexplan" --></dd>
+<dd>
+<div class="msgaction"><span class="msgactionkw">Action:</span> Make sure file exists and device is not full; verify that operating system is functioning correctly.</div>
+<!-- class="msgaction" --></dd>
+</dl>
+</div>
+<!-- class="msgentry" -->
+<a id="tahiti642617" name="tahiti642617"></a>
+<div class="msgentry">
+<dl>
+<dt><span class="msg"><a id="sthref836" name="sthref836"></a>OSD-04018</span> <!-- class="msg" --></dt>
+<dd>
+<div class="msginfo">Unable to access the specified directory or device</div>
+<!-- class="msginfo" --></dd>
+<dd>
+<div class="msgexplan"><span class="msgexplankw">Cause:</span> An invalid path name was specified.</div>
+<!-- class="msgexplan" --></dd>
+<dd>
+<div class="msgaction"><span class="msgactionkw">Action:</span> Make sure directory or device exists and is accessible.</div>
+<!-- class="msgaction" --></dd>
+</dl>
+</div>
+<!-- class="msgentry" -->
+<a id="tahiti642621" name="tahiti642621"></a>
+<div class="msgentry">
+<dl>
+<dt><span class="msg"><a id="sthref837" name="sthref837"></a>OSD-04019</span> <!-- class="msg" --></dt>
+<dd>
+<div class="msginfo">Unable to set file pointer</div>
+<!-- class="msginfo" --></dd>
+<dd>
+<div class="msgexplan"><span class="msgexplankw">Cause:</span> This error is caused by an operating system error or by damaged media.</div>
+<!-- class="msgexplan" --></dd>
+<dd>
+<div class="msgaction"><span class="msgactionkw">Action:</span> Check operating system error code (if available) and operating system documentation. If no operating system error code is presented, then verify that media is not damaged.</div>
+<!-- class="msgaction" --></dd>
+</dl>
+</div>
+<!-- class="msgentry" -->
+<a id="tahiti642625" name="tahiti642625"></a>
+<div class="msgentry">
+<dl>
+<dt><span class="msg"><a id="sthref838" name="sthref838"></a>OSD-04020</span> <!-- class="msg" --></dt>
+<dd>
+<div class="msginfo">Unable to set eof file marker</div>
+<!-- class="msginfo" --></dd>
+<dd>
+<div class="msgexplan"><span class="msgexplankw">Cause:</span> This error is caused by an operating system error or by damaged media.</div>
+<!-- class="msgexplan" --></dd>
+<dd>
+<div class="msgaction"><span class="msgactionkw">Action:</span> Check operating system error code (if available) and operating system documentation. If no operating system error code is presented, then verify that media is not damaged.</div>
+<!-- class="msgaction" --></dd>
+</dl>
+</div>
+<!-- class="msgentry" -->
+<a id="tahiti642629" name="tahiti642629"></a>
+<div class="msgentry">
+<dl>
+<dt><span class="msg"><a id="sthref839" name="sthref839"></a>OSD-04021</span> <!-- class="msg" --></dt>
+<dd>
+<div class="msginfo">Unable to read file</div>
+<!-- class="msginfo" --></dd>
+<dd>
+<div class="msgexplan"><span class="msgexplankw">Cause:</span> This error is caused by an operating system error or by damaged media.</div>
+<!-- class="msgexplan" --></dd>
+<dd>
+<div class="msgaction"><span class="msgactionkw">Action:</span> Check operating system error code (if available) and operating system documentation. If no operating system error code is presented, then verify that media is not damaged.</div>
+<!-- class="msgaction" --></dd>
+</dl>
+</div>
+<!-- class="msgentry" -->
+<a id="tahiti642633" name="tahiti642633"></a>
+<div class="msgentry">
+<dl>
+<dt><span class="msg"><a id="sthref840" name="sthref840"></a>OSD-04022</span> <!-- class="msg" --></dt>
+<dd>
+<div class="msginfo">Unable to write file</div>
+<!-- class="msginfo" --></dd>
+<dd>
+<div class="msgexplan"><span class="msgexplankw">Cause:</span> This error is caused by an operating system error or by damaged media.</div>
+<!-- class="msgexplan" --></dd>
+<dd>
+<div class="msgaction"><span class="msgactionkw">Action:</span> Check operating system error code (if available) and operating system documentation. If no operating system error code is presented, then verify that media is not damaged.</div>
+<!-- class="msgaction" --></dd>
+</dl>
+</div>
+<!-- class="msgentry" -->
+<a id="tahiti642637" name="tahiti642637"></a>
+<div class="msgentry">
+<dl>
+<dt><span class="msg"><a id="sthref841" name="sthref841"></a>OSD-04023</span> <!-- class="msg" --></dt>
+<dd>
+<div class="msginfo">SleepEx() failure, unable to Sleep</div>
+<!-- class="msginfo" --></dd>
+<dd>
+<div class="msgexplan"><span class="msgexplankw">Cause:</span> Unexpected return from Windows system service.</div>
+<!-- class="msgexplan" --></dd>
+<dd>
+<div class="msgaction"><span class="msgactionkw">Action:</span> Check operating system error code and operating system documentation.</div>
+<!-- class="msgaction" --></dd>
+</dl>
+</div>
+<!-- class="msgentry" -->
+<a id="tahiti642641" name="tahiti642641"></a>
+<div class="msgentry">
+<dl>
+<dt><span class="msg"><a id="sthref842" name="sthref842"></a>OSD-04024</span> <!-- class="msg" --></dt>
+<dd>
+<div class="msginfo">Unable to delete file</div>
+<!-- class="msginfo" --></dd>
+<dd>
+<div class="msgexplan"><span class="msgexplankw">Cause:</span> This error is caused by an operating system error or by damaged media.</div>
+<!-- class="msgexplan" --></dd>
+<dd>
+<div class="msgaction"><span class="msgactionkw">Action:</span> Check operating system error code (if available) and operating system documentation. If no operating system error code is presented, then verify that media is not damaged.</div>
+<!-- class="msgaction" --></dd>
+</dl>
+</div>
+<!-- class="msgentry" -->
+<a id="tahiti642645" name="tahiti642645"></a>
+<div class="msgentry">
+<dl>
+<dt><span class="msg"><a id="sthref843" name="sthref843"></a>OSD-04025</span> <!-- class="msg" --></dt>
+<dd>
+<div class="msginfo">Invalid question asked</div>
+<!-- class="msginfo" --></dd>
+<dd>
+<div class="msgexplan"><span class="msgexplankw">Cause:</span> This is an internal error, not normally expected to occur.</div>
+<!-- class="msgexplan" --></dd>
+<dd>
+<div class="msgaction"><span class="msgactionkw">Action:</span> Contact Oracle Support Services.</div>
+<!-- class="msgaction" --></dd>
+</dl>
+</div>
+<!-- class="msgentry" -->
+<a id="tahiti642649" name="tahiti642649"></a>
+<div class="msgentry">
+<dl>
+<dt><span class="msg"><a id="sthref844" name="sthref844"></a>OSD-04026</span> <!-- class="msg" --></dt>
+<dd>
+<div class="msginfo">Invalid parameter passed</div>
+<!-- class="msginfo" --></dd>
+<dd>
+<div class="msgexplan"><span class="msgexplankw">Cause:</span> This is an internal error, not normally expected to occur.</div>
+<!-- class="msgexplan" --></dd>
+<dd>
+<div class="msgaction"><span class="msgactionkw">Action:</span> Contact Oracle Support Services.</div>
+<!-- class="msgaction" --></dd>
+</dl>
+</div>
+<!-- class="msgentry" --></div>
+<!-- class="msgset" --></div>
+<!-- class="sect2" -->
+<a id="i634748" name="i634748"></a><a id="NTQRF524" name="NTQRF524"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><a id="sthref845" name="sthref845"></a>Memory Errors: OSD-04100 to OSD-04199</h3>
+<div class="msgset"><a id="tahiti642653" name="tahiti642653"></a>
+<div class="msgentry">
+<dl>
+<dt><span class="msg"><a id="sthref846" name="sthref846"></a>OSD-04100</span> <!-- class="msg" --></dt>
+<dd>
+<div class="msginfo">Malloc() failure, unable to allocate memory</div>
+<!-- class="msginfo" --></dd>
+<dd>
+<div class="msgexplan"><span class="msgexplankw">Cause:</span> Program is out of memory.</div>
+<!-- class="msgexplan" --></dd>
+<dd>
+<div class="msgaction"><span class="msgactionkw">Action:</span> Shut down all unnecessary processes or install more memory in the computer.</div>
+<!-- class="msgaction" --></dd>
+</dl>
+</div>
+<!-- class="msgentry" -->
+<a id="tahiti642657" name="tahiti642657"></a>
+<div class="msgentry">
+<dl>
+<dt><span class="msg"><a id="sthref847" name="sthref847"></a>OSD-04101</span> <!-- class="msg" --></dt>
+<dd>
+<div class="msginfo">Invalid SGA: SGA not initialized</div>
+<!-- class="msginfo" --></dd>
+<dd>
+<div class="msgexplan"><span class="msgexplankw">Cause:</span> System Global Area (SGA) has been allocated but not initialized.</div>
+<!-- class="msgexplan" --></dd>
+<dd>
+<div class="msgaction"><span class="msgactionkw">Action:</span> Wait until STARTUP has completed before attempting to connect.</div>
+<!-- class="msgaction" --></dd>
+</dl>
+</div>
+<!-- class="msgentry" -->
+<a id="tahiti642661" name="tahiti642661"></a>
+<div class="msgentry">
+<dl>
+<dt><span class="msg"><a id="sthref848" name="sthref848"></a>OSD-04102</span> <!-- class="msg" --></dt>
+<dd>
+<div class="msginfo">Unable to open/create file for shared memory object</div>
+<!-- class="msginfo" --></dd>
+<dd>
+<div class="msgexplan"><span class="msgexplankw">Cause:</span> Unexpected return from Windows system service CreateFile().</div>
+<!-- class="msgexplan" --></dd>
+<dd>
+<div class="msgaction"><span class="msgactionkw">Action:</span> Check operating system error code and operating system documentation.</div>
+<!-- class="msgaction" --></dd>
+</dl>
+</div>
+<!-- class="msgentry" -->
+<a id="tahiti642665" name="tahiti642665"></a>
+<div class="msgentry">
+<dl>
+<dt><span class="msg"><a id="sthref849" name="sthref849"></a>OSD-04103</span> <!-- class="msg" --></dt>
+<dd>
+<div class="msginfo">Unable to attach to SGA: SGA does not exist</div>
+<!-- class="msginfo" --></dd>
+<dd>
+<div class="msgexplan"><span class="msgexplankw">Cause:</span> SGA does not exist.</div>
+<!-- class="msgexplan" --></dd>
+<dd>
+<div class="msgaction"><span class="msgactionkw">Action:</span> Start up an Oracle Database <a href="glossary.htm#CHDFBCHH"><span class="xrefglossterm">instance</span></a>.</div>
+<!-- class="msgaction" --></dd>
+</dl>
+</div>
+<!-- class="msgentry" -->
+<a id="tahiti642671" name="tahiti642671"></a>
+<div class="msgentry">
+<dl>
+<dt><span class="msg"><a id="sthref850" name="sthref850"></a>OSD-04104</span> <!-- class="msg" --></dt>
+<dd>
+<div class="msginfo">Unable to map shared memory (SGA) into the address space</div>
+<!-- class="msginfo" --></dd>
+<dd>
+<div class="msgexplan"><span class="msgexplankw">Cause:</span> Unexpected return from Windows system service MapViewOfFileEx().</div>
+<!-- class="msgexplan" --></dd>
+<dd>
+<div class="msgaction"><span class="msgactionkw">Action:</span> Check operating system error code and operating system documentation.</div>
+<!-- class="msgaction" --></dd>
+</dl>
+</div>
+<!-- class="msgentry" -->
+<a id="tahiti642675" name="tahiti642675"></a>
+<div class="msgentry">
+<dl>
+<dt><span class="msg"><a id="sthref851" name="sthref851"></a>OSD-04105</span> <!-- class="msg" --></dt>
+<dd>
+<div class="msginfo">Shared memory (SGA) mapped to wrong address</div>
+<!-- class="msginfo" --></dd>
+<dd>
+<div class="msgexplan"><span class="msgexplankw">Cause:</span> Unexpected return from Windows system service MapViewOfFileEx().</div>
+<!-- class="msgexplan" --></dd>
+<dd>
+<div class="msgaction"><span class="msgactionkw">Action:</span> Check operating system error code and operating system documentation.</div>
+<!-- class="msgaction" --></dd>
+</dl>
+</div>
+<!-- class="msgentry" -->
+<a id="tahiti642679" name="tahiti642679"></a>
+<div class="msgentry">
+<dl>
+<dt><span class="msg"><a id="sthref852" name="sthref852"></a>OSD-04106</span> <!-- class="msg" --></dt>
+<dd>
+<div class="msginfo">Unable to allocate memory with VirtualAlloc</div>
+<!-- class="msginfo" --></dd>
+<dd>
+<div class="msgexplan"><span class="msgexplankw">Cause:</span> Program is out of memory.</div>
+<!-- class="msgexplan" --></dd>
+<dd>
+<div class="msgaction"><span class="msgactionkw">Action:</span> Shut down all unnecessary processes or install more memory in the computer.</div>
+<!-- class="msgaction" --></dd>
+</dl>
+</div>
+<!-- class="msgentry" -->
+<a id="tahiti642683" name="tahiti642683"></a>
+<div class="msgentry">
+<dl>
+<dt><span class="msg"><a id="sthref853" name="sthref853"></a>OSD-04107</span> <!-- class="msg" --></dt>
+<dd>
+<div class="msginfo">Unable to deallocate memory with VirtualFree</div>
+<!-- class="msginfo" --></dd>
+<dd>
+<div class="msgexplan"><span class="msgexplankw">Cause:</span> Unexpected return from Windows system service VirtualFree().</div>
+<!-- class="msgexplan" --></dd>
+<dd>
+<div class="msgaction"><span class="msgactionkw">Action:</span> Check operating system error code and operating system documentation.</div>
+<!-- class="msgaction" --></dd>
+</dl>
+</div>
+<!-- class="msgentry" -->
+<a id="tahiti642687" name="tahiti642687"></a>
+<div class="msgentry">
+<dl>
+<dt><span class="msg"><a id="sthref854" name="sthref854"></a>OSD-04108</span> <!-- class="msg" --></dt>
+<dd>
+<div class="msginfo">Unable to protect memory with VirtualProtect</div>
+<!-- class="msginfo" --></dd>
+<dd>
+<div class="msgexplan"><span class="msgexplankw">Cause:</span> Unexpected return from Windows system service VirtualProtect().</div>
+<!-- class="msgexplan" --></dd>
+<dd>
+<div class="msgaction"><span class="msgactionkw">Action:</span> Check operating system error code and operating system documentation.</div>
+<!-- class="msgaction" --></dd>
+</dl>
+</div>
+<!-- class="msgentry" --></div>
+<!-- class="msgset" --></div>
+<!-- class="sect2" -->
+<a id="i634790" name="i634790"></a><a id="NTQRF525" name="NTQRF525"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><a id="sthref855" name="sthref855"></a>Process Errors: OSD-04200 to OSD-04299</h3>
+<div class="msgset"><a id="tahiti642691" name="tahiti642691"></a>
+<div class="msgentry">
+<dl>
+<dt><span class="msg"><a id="sthref856" name="sthref856"></a>OSD-04200</span> <!-- class="msg" --></dt>
+<dd>
+<div class="msginfo">Unable to begin another thread</div>
+<!-- class="msginfo" --></dd>
+<dd>
+<div class="msgexplan"><span class="msgexplankw">Cause:</span> Program has run out of system resources.</div>
+<!-- class="msgexplan" --></dd>
+<dd>
+<div class="msgaction"><span class="msgactionkw">Action:</span> Shut down all unnecessary processes; install more memory in the computer.</div>
+<!-- class="msgaction" --></dd>
+</dl>
+</div>
+<!-- class="msgentry" -->
+<a id="tahiti642695" name="tahiti642695"></a>
+<div class="msgentry">
+<dl>
+<dt><span class="msg"><a id="sthref857" name="sthref857"></a>OSD-04201</span> <!-- class="msg" --></dt>
+<dd>
+<div class="msginfo">No pid structure supplied to spdcr()</div>
+<!-- class="msginfo" --></dd>
+<dd>
+<div class="msgexplan"><span class="msgexplankw">Cause:</span> This is an internal error, not normally expected to occur.</div>
+<!-- class="msgexplan" --></dd>
+<dd>
+<div class="msgaction"><span class="msgactionkw">Action:</span> Contact Oracle Support Services.</div>
+<!-- class="msgaction" --></dd>
+</dl>
+</div>
+<!-- class="msgentry" -->
+<a id="tahiti642699" name="tahiti642699"></a>
+<div class="msgentry">
+<dl>
+<dt><span class="msg"><a id="sthref858" name="sthref858"></a>OSD-04202</span> <!-- class="msg" --></dt>
+<dd>
+<div class="msginfo">DosSetPriority() failure, unable to set process priority</div>
+<!-- class="msginfo" --></dd>
+<dd>
+<div class="msgexplan"><span class="msgexplankw">Cause:</span> Unexpected return from Windows system service DosSetPriority().</div>
+<!-- class="msgexplan" --></dd>
+<dd>
+<div class="msgaction"><span class="msgactionkw">Action:</span> Check operating system error code and operating system documentation.</div>
+<!-- class="msgaction" --></dd>
+</dl>
+</div>
+<!-- class="msgentry" -->
+<a id="tahiti642703" name="tahiti642703"></a>
+<div class="msgentry">
+<dl>
+<dt><span class="msg"><a id="sthref859" name="sthref859"></a>OSD-04203</span> <!-- class="msg" --></dt>
+<dd>
+<div class="msginfo">DosKillProcess() failure, unable to kill process</div>
+<!-- class="msginfo" --></dd>
+<dd>
+<div class="msgexplan"><span class="msgexplankw">Cause:</span> Unexpected return from Windows system service DosKillProcess().</div>
+<!-- class="msgexplan" --></dd>
+<dd>
+<div class="msgaction"><span class="msgactionkw">Action:</span> Check operating system error code and operating system documentation.</div>
+<!-- class="msgaction" --></dd>
+</dl>
+</div>
+<!-- class="msgentry" -->
+<a id="tahiti642707" name="tahiti642707"></a>
+<div class="msgentry">
+<dl>
+<dt><span class="msg"><a id="sthref860" name="sthref860"></a>OSD-04204</span> <!-- class="msg" --></dt>
+<dd>
+<div class="msginfo">Invalid pid</div>
+<!-- class="msginfo" --></dd>
+<dd>
+<div class="msgexplan"><span class="msgexplankw">Cause:</span> Process ID not recognized by system; process previously terminated.</div>
+<!-- class="msgexplan" --></dd>
+<dd>
+<div class="msgaction"><span class="msgactionkw">Action:</span> Verify that process ID is correct and that process is active.</div>
+<!-- class="msgaction" --></dd>
+</dl>
+</div>
+<!-- class="msgentry" -->
+<a id="tahiti642711" name="tahiti642711"></a>
+<div class="msgentry">
+<dl>
+<dt><span class="msg"><a id="sthref861" name="sthref861"></a>OSD-04205</span> <!-- class="msg" --></dt>
+<dd>
+<div class="msginfo">CreateProcess() failure, unable to spawn process</div>
+<!-- class="msginfo" --></dd>
+<dd>
+<div class="msgexplan"><span class="msgexplankw">Cause:</span> Unexpected return from Windows system service CreateProcess().</div>
+<!-- class="msgexplan" --></dd>
+<dd>
+<div class="msgaction"><span class="msgactionkw">Action:</span> Check operating system error code and operating system documentation.</div>
+<!-- class="msgaction" --></dd>
+</dl>
+</div>
+<!-- class="msgentry" -->
+<a id="tahiti642715" name="tahiti642715"></a>
+<div class="msgentry">
+<dl>
+<dt><span class="msg"><a id="sthref862" name="sthref862"></a>OSD-04207</span> <!-- class="msg" --></dt>
+<dd>
+<div class="msginfo">Invalid priority specified in CONFIG parameter <code><span class="codeinlineitalic">ORACLE_PRIORITY</span></code></div>
+<!-- class="msginfo" --></dd>
+<dd>
+<div class="msgexplan"><span class="msgexplankw">Cause:</span> Priority specified is invalid or out of range.</div>
+<!-- class="msgexplan" --></dd>
+<dd>
+<div class="msgaction"><span class="msgactionkw">Action:</span> Specify a valid setting for <code>ORACLE_PRIORITY</code>.</div>
+<!-- class="msgaction" --></dd>
+</dl>
+</div>
+<!-- class="msgentry" -->
+<a id="tahiti642722" name="tahiti642722"></a>
+<div class="msgentry">
+<dl>
+<dt><span class="msg"><a id="sthref863" name="sthref863"></a>OSD-04208</span> <!-- class="msg" --></dt>
+<dd>
+<div class="msginfo">OpenProcess() failure, unable to open process handle</div>
+<!-- class="msginfo" --></dd>
+<dd>
+<div class="msgexplan"><span class="msgexplankw">Cause:</span> Unexpected return from Windows system service OpenProcess().</div>
+<!-- class="msgexplan" --></dd>
+<dd>
+<div class="msgaction"><span class="msgactionkw">Action:</span> Check operating system error code and operating system documentation.</div>
+<!-- class="msgaction" --></dd>
+</dl>
+</div>
+<!-- class="msgentry" -->
+<a id="tahiti642726" name="tahiti642726"></a>
+<div class="msgentry">
+<dl>
+<dt><span class="msg"><a id="sthref864" name="sthref864"></a>OSD-04209</span> <!-- class="msg" --></dt>
+<dd>
+<div class="msginfo">Incorrect or unknown background image name given to spdcr()</div>
+<!-- class="msginfo" --></dd>
+<dd>
+<div class="msgexplan"><span class="msgexplankw">Cause:</span> Unexpected background name given to spdcr().</div>
+<!-- class="msgexplan" --></dd>
+<dd>
+<div class="msgaction"><span class="msgactionkw">Action:</span> Contact Oracle Support Services.</div>
+<!-- class="msgaction" --></dd>
+</dl>
+</div>
+<!-- class="msgentry" -->
+<a id="tahiti642730" name="tahiti642730"></a>
+<div class="msgentry">
+<dl>
+<dt><span class="msg"><a id="sthref865" name="sthref865"></a>OSD-04210</span> <!-- class="msg" --></dt>
+<dd>
+<div class="msginfo">Timeout waiting for thread semaphore</div>
+<!-- class="msginfo" --></dd>
+<dd>
+<div class="msgexplan"><span class="msgexplankw">Cause:</span> An Oracle Database thread died holding the semaphore.</div>
+<!-- class="msgexplan" --></dd>
+<dd>
+<div class="msgaction"><span class="msgactionkw">Action:</span> Restart Oracle Database instance.</div>
+<!-- class="msgaction" --></dd>
+</dl>
+</div>
+<!-- class="msgentry" -->
+<a id="tahiti642734" name="tahiti642734"></a>
+<div class="msgentry">
+<dl>
+<dt><span class="msg"><a id="sthref866" name="sthref866"></a>OSD-04211</span> <!-- class="msg" --></dt>
+<dd>
+<div class="msginfo">Thread information not found</div>
+<!-- class="msginfo" --></dd>
+<dd>
+<div class="msgexplan"><span class="msgexplankw">Cause:</span> An Oracle Database thread died without deleting its information.</div>
+<!-- class="msgexplan" --></dd>
+<dd>
+<div class="msgaction"><span class="msgactionkw">Action:</span> Restart Oracle Database instance.</div>
+<!-- class="msgaction" --></dd>
+</dl>
+</div>
+<!-- class="msgentry" -->
+<a id="tahiti642738" name="tahiti642738"></a>
+<div class="msgentry">
+<dl>
+<dt><span class="msg"><a id="sthref867" name="sthref867"></a>OSD-04212</span> <!-- class="msg" --></dt>
+<dd>
+<div class="msginfo">Maximum number of Oracle threads reached</div>
+<!-- class="msginfo" --></dd>
+<dd>
+<div class="msgexplan"><span class="msgexplankw">Cause:</span> Maximum number of Oracle Database threads for the instance is reached.</div>
+<!-- class="msgexplan" --></dd>
+<dd>
+<div class="msgaction"><span class="msgactionkw">Action:</span> Wait until some connections exit before trying again.</div>
+<!-- class="msgaction" --></dd>
+</dl>
+</div>
+<!-- class="msgentry" -->
+<a id="tahiti642742" name="tahiti642742"></a>
+<div class="msgentry">
+<dl>
+<dt><span class="msg"><a id="sthref868" name="sthref868"></a>OSD-04213</span> <!-- class="msg" --></dt>
+<dd>
+<div class="msginfo">Oracle thread unable to DuplicateHandle()</div>
+<!-- class="msginfo" --></dd>
+<dd>
+<div class="msgexplan"><span class="msgexplankw">Cause:</span> This is an internal error, not normally expected to occur.</div>
+<!-- class="msgexplan" --></dd>
+<dd>
+<div class="msgaction"><span class="msgactionkw">Action:</span> Contact Oracle Support Services.</div>
+<!-- class="msgaction" --></dd>
+</dl>
+</div>
+<!-- class="msgentry" -->
+<a id="tahiti642746" name="tahiti642746"></a>
+<div class="msgentry">
+<dl>
+<dt><span class="msg"><a id="sthref869" name="sthref869"></a>OSD-04214</span> <!-- class="msg" --></dt>
+<dd>
+<div class="msginfo">Oracle thread unable to CreateEvent()</div>
+<!-- class="msginfo" --></dd>
+<dd>
+<div class="msgexplan"><span class="msgexplankw">Cause:</span> This is an internal error, not normally expected to occur.</div>
+<!-- class="msgexplan" --></dd>
+<dd>
+<div class="msgaction"><span class="msgactionkw">Action:</span> Contact Oracle Support Services.</div>
+<!-- class="msgaction" --></dd>
+</dl>
+</div>
+<!-- class="msgentry" -->
+<a id="tahiti642750" name="tahiti642750"></a>
+<div class="msgentry">
+<dl>
+<dt><span class="msg"><a id="sthref870" name="sthref870"></a>OSD-04215</span> <!-- class="msg" --></dt>
+<dd>
+<div class="msginfo">Bad function code supplied to ssthreadop</div>
+<!-- class="msginfo" --></dd>
+<dd>
+<div class="msgexplan"><span class="msgexplankw">Cause:</span> This is an internal error, not normally expected to occur.</div>
+<!-- class="msgexplan" --></dd>
+<dd>
+<div class="msgaction"><span class="msgactionkw">Action:</span> Contact Oracle Support Services.</div>
+<!-- class="msgaction" --></dd>
+</dl>
+</div>
+<!-- class="msgentry" -->
+<a id="tahiti642754" name="tahiti642754"></a>
+<div class="msgentry">
+<dl>
+<dt><span class="msg"><a id="sthref871" name="sthref871"></a>OSD-04216</span> <!-- class="msg" --></dt>
+<dd>
+<div class="msginfo">Unable to find file handle for that thread</div>
+<!-- class="msginfo" --></dd>
+<dd>
+<div class="msgexplan"><span class="msgexplankw">Cause:</span> This is an internal error, not normally expected to occur.</div>
+<!-- class="msgexplan" --></dd>
+<dd>
+<div class="msgaction"><span class="msgactionkw">Action:</span> Contact Oracle Support Services.</div>
+<!-- class="msgaction" --></dd>
+</dl>
+</div>
+<!-- class="msgentry" -->
+<a id="tahiti642758" name="tahiti642758"></a>
+<div class="msgentry">
+<dl>
+<dt><span class="msg"><a id="sthref872" name="sthref872"></a>OSD-04217</span> <!-- class="msg" --></dt>
+<dd>
+<div class="msginfo">Unable to retrieve system username for current user</div>
+<!-- class="msginfo" --></dd>
+<dd>
+<div class="msgexplan"><span class="msgexplankw">Cause:</span> This is an internal error, not normally expected to occur.</div>
+<!-- class="msgexplan" --></dd>
+<dd>
+<div class="msgaction"><span class="msgactionkw">Action:</span> Contact Oracle Support Services.</div>
+<!-- class="msgaction" --></dd>
+</dl>
+</div>
+<!-- class="msgentry" -->
+<a id="tahiti642762" name="tahiti642762"></a>
+<div class="msgentry">
+<dl>
+<dt><span class="msg"><a id="sthref873" name="sthref873"></a>OSD-04218</span> <!-- class="msg" --></dt>
+<dd>
+<div class="msginfo">Cannot post thread</div>
+<!-- class="msginfo" --></dd>
+<dd>
+<div class="msgexplan"><span class="msgexplankw">Cause:</span> This is an internal error, not normally expected to occur.</div>
+<!-- class="msgexplan" --></dd>
+<dd>
+<div class="msgaction"><span class="msgactionkw">Action:</span> Contact Oracle Support Services.</div>
+<!-- class="msgaction" --></dd>
+</dl>
+</div>
+<!-- class="msgentry" -->
+<a id="tahiti642766" name="tahiti642766"></a>
+<div class="msgentry">
+<dl>
+<dt><span class="msg"><a id="sthref874" name="sthref874"></a>OSD-04219</span> <!-- class="msg" --></dt>
+<dd>
+<div class="msginfo">Bad thread list semaphore</div>
+<!-- class="msginfo" --></dd>
+<dd>
+<div class="msgexplan"><span class="msgexplankw">Cause:</span> This is an internal error, not normally expected to occur.</div>
+<!-- class="msgexplan" --></dd>
+<dd>
+<div class="msgaction"><span class="msgactionkw">Action:</span> Contact Oracle Support Services.</div>
+<!-- class="msgaction" --></dd>
+</dl>
+</div>
+<!-- class="msgentry" -->
+<a id="tahiti642770" name="tahiti642770"></a>
+<div class="msgentry">
+<dl>
+<dt><span class="msg"><a id="sthref875" name="sthref875"></a>OSD-04221</span> <!-- class="msg" --></dt>
+<dd>
+<div class="msginfo">Target thread is currently busy</div>
+<!-- class="msginfo" --></dd>
+<dd>
+<div class="msgexplan"><span class="msgexplankw">Cause:</span> Target thread is processing an Oracle Database utility command.</div>
+<!-- class="msgexplan" --></dd>
+<dd>
+<div class="msgaction"><span class="msgactionkw">Action:</span> Wait and resend command.</div>
+<!-- class="msgaction" --></dd>
+</dl>
+</div>
+<!-- class="msgentry" -->
+<a id="tahiti642774" name="tahiti642774"></a>
+<div class="msgentry">
+<dl>
+<dt><span class="msg"><a id="sthref876" name="sthref876"></a>OSD-04222</span> <!-- class="msg" --></dt>
+<dd>
+<div class="msginfo">Unable to get the threads context</div>
+<!-- class="msginfo" --></dd>
+<dd>
+<div class="msgexplan"><span class="msgexplankw">Cause:</span> Check operating system error code.</div>
+<!-- class="msgexplan" --></dd>
+<dd>
+<div class="msgaction"><span class="msgactionkw">Action:</span> Remedy operating system error.</div>
+<!-- class="msgaction" --></dd>
+</dl>
+</div>
+<!-- class="msgentry" -->
+<a id="tahiti642778" name="tahiti642778"></a>
+<div class="msgentry">
+<dl>
+<dt><span class="msg"><a id="sthref877" name="sthref877"></a>OSD-04223</span> <!-- class="msg" --></dt>
+<dd>
+<div class="msginfo">Unable to set the threads context</div>
+<!-- class="msginfo" --></dd>
+<dd>
+<div class="msgexplan"><span class="msgexplankw">Cause:</span> Check operating system error code.</div>
+<!-- class="msgexplan" --></dd>
+<dd>
+<div class="msgaction"><span class="msgactionkw">Action:</span> Remedy operating system error.</div>
+<!-- class="msgaction" --></dd>
+</dl>
+</div>
+<!-- class="msgentry" -->
+<a id="tahiti642782" name="tahiti642782"></a>
+<div class="msgentry">
+<dl>
+<dt><span class="msg"><a id="sthref878" name="sthref878"></a>OSD-04224</span> <!-- class="msg" --></dt>
+<dd>
+<div class="msginfo">Unable to suspend the target thread</div>
+<!-- class="msginfo" --></dd>
+<dd>
+<div class="msgexplan"><span class="msgexplankw">Cause:</span> Check operating system error code.</div>
+<!-- class="msgexplan" --></dd>
+<dd>
+<div class="msgaction"><span class="msgactionkw">Action:</span> Remedy operating system error.</div>
+<!-- class="msgaction" --></dd>
+</dl>
+</div>
+<!-- class="msgentry" -->
+<a id="tahiti642786" name="tahiti642786"></a>
+<div class="msgentry">
+<dl>
+<dt><span class="msg"><a id="sthref879" name="sthref879"></a>OSD-04225</span> <!-- class="msg" --></dt>
+<dd>
+<div class="msginfo">Unable to resume the target thread</div>
+<!-- class="msginfo" --></dd>
+<dd>
+<div class="msgexplan"><span class="msgexplankw">Cause:</span> Check operating system error code.</div>
+<!-- class="msgexplan" --></dd>
+<dd>
+<div class="msgaction"><span class="msgactionkw">Action:</span> Remedy operating system error.</div>
+<!-- class="msgaction" --></dd>
+</dl>
+</div>
+<!-- class="msgentry" --></div>
+<!-- class="msgset" --></div>
+<!-- class="sect2" -->
+<a id="i634889" name="i634889"></a><a id="NTQRF526" name="NTQRF526"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><a id="sthref880" name="sthref880"></a>Loader Errors: OSD-04300 to OSD-04399</h3>
+<div class="msgset"><a id="tahiti642790" name="tahiti642790"></a>
+<div class="msgentry">
+<dl>
+<dt><span class="msg"><a id="sthref881" name="sthref881"></a>OSD-04300</span> <!-- class="msg" --></dt>
+<dd>
+<div class="msginfo">Unable to read complete record from datafile</div>
+<!-- class="msginfo" --></dd>
+<dd>
+<div class="msgexplan"><span class="msgexplankw">Cause:</span> Datafile ended in the middle of a record. This error occurs when loading files with a fixed record length.</div>
+<!-- class="msgexplan" --></dd>
+<dd>
+<div class="msgaction"><span class="msgactionkw">Action:</span> Verify that datafile is of correct length and contains complete records.</div>
+<!-- class="msgaction" --></dd>
+</dl>
+</div>
+<!-- class="msgentry" -->
+<a id="tahiti642794" name="tahiti642794"></a>
+<div class="msgentry">
+<dl>
+<dt><span class="msg"><a id="sthref882" name="sthref882"></a>OSD-04301</span> <!-- class="msg" --></dt>
+<dd>
+<div class="msginfo">Record size too large</div>
+<!-- class="msginfo" --></dd>
+<dd>
+<div class="msgexplan"><span class="msgexplankw">Cause:</span> Specified record size is too large to load.</div>
+<!-- class="msgexplan" --></dd>
+<dd>
+<div class="msgaction"><span class="msgactionkw">Action:</span> Reduce record size and reload data.</div>
+<!-- class="msgaction" --></dd>
+</dl>
+</div>
+<!-- class="msgentry" -->
+<a id="tahiti642798" name="tahiti642798"></a>
+<div class="msgentry">
+<dl>
+<dt><span class="msg"><a id="sthref883" name="sthref883"></a>OSD-04302</span> <!-- class="msg" --></dt>
+<dd>
+<div class="msginfo">Invalid record type, load options, or both</div>
+<!-- class="msginfo" --></dd>
+<dd>
+<div class="msgexplan"><span class="msgexplankw">Cause:</span> Control file's Windows file processing options string contains an invalid option or keyword.</div>
+<!-- class="msgexplan" --></dd>
+<dd>
+<div class="msgaction"><span class="msgactionkw">Action:</span> Set Windows file processing options string to an acceptable value.</div>
+<!-- class="msgaction" --></dd>
+</dl>
+</div>
+<!-- class="msgentry" --></div>
+<!-- class="msgset" --></div>
+<!-- class="sect2" -->
+<a id="i634905" name="i634905"></a><a id="NTQRF527" name="NTQRF527"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><a id="sthref884" name="sthref884"></a>Semaphore Errors: OSD-04400 to OSD-04499</h3>
+<div class="msgset"><a id="tahiti642802" name="tahiti642802"></a>
+<div class="msgentry">
+<dl>
+<dt><span class="msg"><a id="sthref885" name="sthref885"></a>OSD-04400</span> <!-- class="msg" --></dt>
+<dd>
+<div class="msginfo">Unable to acquire internal semaphore for process</div>
+<!-- class="msginfo" --></dd>
+<dd>
+<div class="msgexplan"><span class="msgexplankw">Cause:</span> Oracle Database has exceeded the maximum number of connections.</div>
+<!-- class="msgexplan" --></dd>
+<dd>
+<div class="msgaction"><span class="msgactionkw">Action:</span> Delete any unused connections and try again.</div>
+<!-- class="msgaction" --></dd>
+</dl>
+</div>
+<!-- class="msgentry" -->
+<a id="tahiti642806" name="tahiti642806"></a>
+<div class="msgentry">
+<dl>
+<dt><span class="msg"><a id="sthref886" name="sthref886"></a>OSD-04401</span> <!-- class="msg" --></dt>
+<dd>
+<div class="msginfo">WaitForSingleObject() failure, unable to obtain semaphore</div>
+<!-- class="msginfo" --></dd>
+<dd>
+<div class="msgexplan"><span class="msgexplankw">Cause:</span> Unexpected return from Windows system service WaitForSingleObject().</div>
+<!-- class="msgexplan" --></dd>
+<dd>
+<div class="msgaction"><span class="msgactionkw">Action:</span> Check operating system error code and operating system documentation.</div>
+<!-- class="msgaction" --></dd>
+</dl>
+</div>
+<!-- class="msgentry" --></div>
+<!-- class="msgset" --></div>
+<!-- class="sect2" -->
+<a id="i634916" name="i634916"></a><a id="NTQRF528" name="NTQRF528"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><a id="sthref887" name="sthref887"></a>Miscellaneous Errors: OSD-04500 to OSD-04599</h3>
+<div class="msgset"><a id="tahiti642810" name="tahiti642810"></a>
+<div class="msgentry">
+<dl>
+<dt><span class="msg"><a id="sthref888" name="sthref888"></a>OSD-04500</span> <!-- class="msg" --></dt>
+<dd>
+<div class="msginfo">Illegal option specified</div>
+<!-- class="msginfo" --></dd>
+<dd>
+<div class="msgexplan"><span class="msgexplankw">Cause:</span> This is an internal error, not normally expected to occur.</div>
+<!-- class="msgexplan" --></dd>
+<dd>
+<div class="msgaction"><span class="msgactionkw">Action:</span> Contact Oracle Support Services.</div>
+<!-- class="msgaction" --></dd>
+</dl>
+</div>
+<!-- class="msgentry" -->
+<a id="tahiti642814" name="tahiti642814"></a>
+<div class="msgentry">
+<dl>
+<dt><span class="msg"><a id="sthref889" name="sthref889"></a>OSD-04501</span> <!-- class="msg" --></dt>
+<dd>
+<div class="msginfo">Internal buffer overflow</div>
+<!-- class="msginfo" --></dd>
+<dd>
+<div class="msgexplan"><span class="msgexplankw">Cause:</span> This is an internal error, not normally expected to occur.</div>
+<!-- class="msgexplan" --></dd>
+<dd>
+<div class="msgaction"><span class="msgactionkw">Action:</span> Contact Oracle Support Services.</div>
+<!-- class="msgaction" --></dd>
+</dl>
+</div>
+<!-- class="msgentry" -->
+<a id="tahiti642818" name="tahiti642818"></a>
+<div class="msgentry">
+<dl>
+<dt><span class="msg"><a id="sthref890" name="sthref890"></a>OSD-04502</span> <!-- class="msg" --></dt>
+<dd>
+<div class="msginfo">Translations nested too deep</div>
+<!-- class="msginfo" --></dd>
+<dd>
+<div class="msgexplan"><span class="msgexplankw">Cause:</span> Program encountered too many intermediate translations while attempting to translate a configuration variable.</div>
+<!-- class="msgexplan" --></dd>
+<dd>
+<div class="msgaction"><span class="msgactionkw">Action:</span> Simplify values of configuration parameters to include fewer intermediate translations.</div>
+<!-- class="msgaction" --></dd>
+</dl>
+</div>
+<!-- class="msgentry" -->
+<a id="tahiti642822" name="tahiti642822"></a>
+<div class="msgentry">
+<dl>
+<dt><span class="msg"><a id="sthref891" name="sthref891"></a>OSD-04503</span> <!-- class="msg" --></dt>
+<dd>
+<div class="msginfo">Text contains no translatable elements</div>
+<!-- class="msginfo" --></dd>
+<dd>
+<div class="msgexplan"><span class="msgexplankw">Cause:</span> Program cannot recognize variables in text to be translated.</div>
+<!-- class="msgexplan" --></dd>
+<dd>
+<div class="msgaction"><span class="msgactionkw">Action:</span> Check and, if necessary, correct text to be translated.</div>
+<!-- class="msgaction" --></dd>
+</dl>
+</div>
+<!-- class="msgentry" -->
+<a id="tahiti642826" name="tahiti642826"></a>
+<div class="msgentry">
+<dl>
+<dt><span class="msg"><a id="sthref892" name="sthref892"></a>OSD-04505</span> <!-- class="msg" --></dt>
+<dd>
+<div class="msginfo">stdin not responding</div>
+<!-- class="msginfo" --></dd>
+<dd>
+<div class="msgexplan"><span class="msgexplankw">Cause:</span> System cannot receive input from standard input stream.</div>
+<!-- class="msgexplan" --></dd>
+<dd>
+<div class="msgaction"><span class="msgactionkw">Action:</span> Verify that process has access to an input device.</div>
+<!-- class="msgaction" --></dd>
+</dl>
+</div>
+<!-- class="msgentry" -->
+<a id="tahiti642830" name="tahiti642830"></a>
+<div class="msgentry">
+<dl>
+<dt><span class="msg"><a id="sthref893" name="sthref893"></a>OSD-04506</span> <!-- class="msg" --></dt>
+<dd>
+<div class="msginfo">Unable to spawn process through system()</div>
+<!-- class="msginfo" --></dd>
+<dd>
+<div class="msgexplan"><span class="msgexplankw">Cause:</span> System is out of memory or executable is invalid.</div>
+<!-- class="msgexplan" --></dd>
+<dd>
+<div class="msgaction"><span class="msgactionkw">Action:</span> Shut down unnecessary processes; install more memory in the computer. Verify name of executable.</div>
+<!-- class="msgaction" --></dd>
+</dl>
+</div>
+<!-- class="msgentry" -->
+<a id="tahiti642834" name="tahiti642834"></a>
+<div class="msgentry">
+<dl>
+<dt><span class="msg"><a id="sthref894" name="sthref894"></a>OSD-04510</span> <!-- class="msg" --></dt>
+<dd>
+<div class="msginfo">Operating system roles are not supported</div>
+<!-- class="msginfo" --></dd>
+<dd>
+<div class="msgexplan"><span class="msgexplankw">Cause:</span> An attempt was made to use an operating system role.</div>
+<!-- class="msgexplan" --></dd>
+<dd>
+<div class="msgaction"><span class="msgactionkw">Action:</span> Only use roles that were created '<code>IDENTIFIED</code> <code>BY</code> <code><span class="codeinlineitalic">PASSWORD</span></code>' as opposed to '<code>IDENTIFIED</code> <code>EXTERNALLY</code>'.</div>
+<!-- class="msgaction" --></dd>
+</dl>
+</div>
+<!-- class="msgentry" -->
+<a id="tahiti642844" name="tahiti642844"></a>
+<div class="msgentry">
+<dl>
+<dt><span class="msg"><a id="sthref895" name="sthref895"></a>OSD-04511</span> <!-- class="msg" --></dt>
+<dd>
+<div class="msginfo">Unable to get date and time from the operating system</div>
+<!-- class="msginfo" --></dd>
+<dd>
+<div class="msgexplan"><span class="msgexplankw">Cause:</span> Unexpected return from GetLocalTime() call.</div>
+<!-- class="msgexplan" --></dd>
+<dd>
+<div class="msgaction"><span class="msgactionkw">Action:</span> Verify that system time is correct on the computer.</div>
+<!-- class="msgaction" --></dd>
+</dl>
+</div>
+<!-- class="msgentry" -->
+<a id="tahiti642848" name="tahiti642848"></a>
+<div class="msgentry">
+<dl>
+<dt><span class="msg"><a id="sthref896" name="sthref896"></a>OSD-04512</span> <!-- class="msg" --></dt>
+<dd>
+<div class="msginfo">Unable to translate the '<code><span class="codeinlineitalic">USERNAME</span></code>' config.ora variable on server</div>
+<!-- class="msginfo" --></dd>
+<dd>
+<div class="msgexplan"><span class="msgexplankw">Cause:</span> '<code>USERNAME</code>' configuration parameter variable on host is not properly set.</div>
+<!-- class="msgexplan" --></dd>
+<dd>
+<div class="msgaction"><span class="msgactionkw">Action:</span> Verify '<code>USERNAME</code>' variable is set.</div>
+<!-- class="msgaction" --></dd>
+</dl>
+</div>
+<!-- class="msgentry" -->
+<a id="tahiti642858" name="tahiti642858"></a>
+<div class="msgentry">
+<dl>
+<dt><span class="msg"><a id="sthref897" name="sthref897"></a>OSD-04513</span> <!-- class="msg" --></dt>
+<dd>
+<div class="msginfo">'remote_os_authent' init.ora variable not set to TRUE</div>
+<!-- class="msginfo" --></dd>
+<dd>
+<div class="msgexplan"><span class="msgexplankw">Cause:</span> For remote operating system logon to function, '<code>REMOTE_OS_AUTHENT</code>' parameter must be set to <code>TRUE</code>.</div>
+<!-- class="msgexplan" --></dd>
+<dd>
+<div class="msgaction"><span class="msgactionkw">Action:</span> Shut down and start up instance with '<code>REMOTE_OS_AUTHENT = TRUE</code>' in initialization parameter file.</div>
+<!-- class="msgaction" --></dd>
+</dl>
+</div>
+<!-- class="msgentry" -->
+<a id="tahiti642867" name="tahiti642867"></a>
+<div class="msgentry">
+<dl>
+<dt><span class="msg"><a id="sthref898" name="sthref898"></a>OSD-04514</span> <!-- class="msg" --></dt>
+<dd>
+<div class="msginfo">The Windows Group name is too long for internal buffer</div>
+<!-- class="msginfo" --></dd>
+<dd>
+<div class="msgexplan"><span class="msgexplankw">Cause:</span> Windows Group name is too long.</div>
+<!-- class="msgexplan" --></dd>
+<dd>
+<div class="msgaction"><span class="msgactionkw">Action:</span> Use a shorter Windows group name.</div>
+<!-- class="msgaction" --></dd>
+</dl>
+</div>
+<!-- class="msgentry" --></div>
+<!-- class="msgset" --></div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="i634964" name="i634964"></a><a id="NTQRF529" name="NTQRF529"></a>
+<div class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1"><a id="sthref899" name="sthref899"></a><a id="sthref900" name="sthref900"></a>DIM-00000 to DIM-00039: ORADIM Command Syntax Errors</h2>
+<p><code>ORADIM</code> is a command-line tool for starting and stopping database instances that is only available on Oracle Database for Windows. It is not available on any other platform.</p>
+<div class="inftblinformalwidemax">
+<table class="InformalWideMax" title="ORADIM Error Messages" summary="Rows are errors. For each error, the first column is the error number, and the second column is the error message." dir="ltr" border="1" width="100%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<col width="24%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t9">Oradim Errors</th>
+<th align="left" valign="bottom" id="r1c2-t9">DIM-0000 to DIM-0039</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t9" headers="r1c1-t9">00000</td>
+<td align="left" headers="r2c1-t9 r1c2-t9">ORADIM completed with no errors</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t9" headers="r1c1-t9">00001</td>
+<td align="left" headers="r3c1-t9 r1c2-t9">ORADIM: &lt;command&gt; [options]. Refer to manual.</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t9" headers="r1c1-t9">00002</td>
+<td align="left" headers="r4c1-t9 r1c2-t9">The specified command was invalid.</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r5c1-t9" headers="r1c1-t9">00003</td>
+<td align="left" headers="r5c1-t9 r1c2-t9">An argument is missing for the parameter</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r6c1-t9" headers="r1c1-t9">00004</td>
+<td align="left" headers="r6c1-t9 r1c2-t9">SID or service name was not specified.</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r7c1-t9" headers="r1c1-t9">00005</td>
+<td align="left" headers="r7c1-t9 r1c2-t9">SID with more than 64 characters specified.</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r8c1-t9" headers="r1c1-t9">00006</td>
+<td align="left" headers="r8c1-t9 r1c2-t9">Missing SID</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r9c1-t9" headers="r1c1-t9">00007</td>
+<td align="left" headers="r9c1-t9 r1c2-t9">Missing or invalid <code>-</code>STARTMODE parameter. Valid <code>-</code>STARTMODE parameter is AUTO or MANUAL.</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r10c1-t9" headers="r1c1-t9">00008</td>
+<td align="left" headers="r10c1-t9 r1c2-t9">A valid service name is OracleService appended with a SID</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r11c1-t9" headers="r1c1-t9">00009</td>
+<td align="left" headers="r11c1-t9 r1c2-t9">SID name is mandatory.</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r12c1-t9" headers="r1c1-t9">00010</td>
+<td align="left" headers="r12c1-t9 r1c2-t9"><code>SYSTEM\CurrentControlSet\Services\OracleService</code> key does not exist.</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r13c1-t9" headers="r1c1-t9">00011</td>
+<td align="left" headers="r13c1-t9 r1c2-t9">The specified service does not exist.</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r14c1-t9" headers="r1c1-t9">00012</td>
+<td align="left" headers="r14c1-t9 r1c2-t9">A PFILE is necessary for AUTOSTART option.</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r15c1-t9" headers="r1c1-t9">00013</td>
+<td align="left" headers="r15c1-t9 r1c2-t9">Service start mode could not be set in the registry.</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r16c1-t9" headers="r1c1-t9">00014</td>
+<td align="left" headers="r16c1-t9 r1c2-t9">Cannot open the Windows Service Control Manager.</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r17c1-t9" headers="r1c1-t9">00015</td>
+<td align="left" headers="r17c1-t9 r1c2-t9">Cannot start already-running ORACLE - shut it down first.</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r18c1-t9" headers="r1c1-t9">00016</td>
+<td align="left" headers="r18c1-t9 r1c2-t9">Missing or invalid <code>-</code>SHUTTYPE parameter. A valid <code>-</code>SHUTTYPE parameter is SRVC or INST.</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r19c1-t9" headers="r1c1-t9">00017</td>
+<td align="left" headers="r19c1-t9 r1c2-t9">Instance shutdown mode must be one of the following: a for abort, i for immediate or n for normal.</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r20c1-t9" headers="r1c1-t9">00018</td>
+<td align="left" headers="r20c1-t9 r1c2-t9">Failed to stop Oracle Service.</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r21c1-t9" headers="r1c1-t9">00019</td>
+<td align="left" headers="r21c1-t9 r1c2-t9">Create Service Error.</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r22c1-t9" headers="r1c1-t9">00020</td>
+<td align="left" headers="r22c1-t9 r1c2-t9">A service for this name exists.</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r23c1-t9" headers="r1c1-t9">00021</td>
+<td align="left" headers="r23c1-t9 r1c2-t9">Registry open failed.</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r24c1-t9" headers="r1c1-t9">00023</td>
+<td align="left" headers="r24c1-t9 r1c2-t9">Create an instance by specifying the following options:</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r25c1-t9" headers="r1c1-t9">00024</td>
+<td align="left" headers="r25c1-t9 r1c2-t9">-NEW -SID sid | -SRVC srvc | -ASMSID sid | -ASMSRVC srvc [-SYSPWD pass]</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r26c1-t9" headers="r1c1-t9">00025</td>
+<td align="left" headers="r26c1-t9 r1c2-t9">[-STARTMODE auto | manual] [-SRVCSTART system | demand] [-PFILE file | -SPFILE]</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r27c1-t9" headers="r1c1-t9">00026</td>
+<td align="left" headers="r27c1-t9 r1c2-t9">[-SHUTMODE normal | immediate | abort] [-TIMEOUT secs] [-RUNAS osusr/ospass]</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r28c1-t9" headers="r1c1-t9">00027</td>
+<td align="left" headers="r28c1-t9 r1c2-t9">Edit an instance by specifying the following options:</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r29c1-t9" headers="r1c1-t9">00028</td>
+<td align="left" headers="r29c1-t9 r1c2-t9">-EDIT -SID sid | -ASMSID sid [-SYSPWD pass]</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r30c1-t9" headers="r1c1-t9">00029</td>
+<td align="left" headers="r30c1-t9 r1c2-t9">[-STARTMODE auto | manual] [SRVCSTART system | demand] [-PFILE file | -SPFILE]</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r31c1-t9" headers="r1c1-t9">00030</td>
+<td align="left" headers="r31c1-t9 r1c2-t9">[-SHUTMODE normal | immediate | abort] [-SHUTTYPE srvc | inst] [-RUNAS osusr/ospass]</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r32c1-t9" headers="r1c1-t9">00031</td>
+<td align="left" headers="r32c1-t9 r1c2-t9">Delete instances by specifying the following options:</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r33c1-t9" headers="r1c1-t9">00032</td>
+<td align="left" headers="r33c1-t9 r1c2-t9">-DELETE -SID sid | -ASMSID sid | -SRVC srvc | -ASMSRVC srvc</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r34c1-t9" headers="r1c1-t9">00033</td>
+<td align="left" headers="r34c1-t9 r1c2-t9">Startup services and instance by specifying the following options:</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r35c1-t9" headers="r1c1-t9">00034</td>
+<td align="left" headers="r35c1-t9 r1c2-t9">-STARTUP -SID sid | -ASMSID sid [-SYSPWD pass]</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r36c1-t9" headers="r1c1-t9">00035</td>
+<td align="left" headers="r36c1-t9 r1c2-t9">[-STARTTYPE srvc | inst | srvc,inst] [-PFILE filename | -SPFILE]</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r37c1-t9" headers="r1c1-t9">00036</td>
+<td align="left" headers="r37c1-t9 r1c2-t9">Shutdown services and instance by specifying the following options:</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r38c1-t9" headers="r1c1-t9">00037</td>
+<td align="left" headers="r38c1-t9 r1c2-t9">-SHUTDOWN -SID sid | -ASMSID sid [-SYSPWD pass]</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r39c1-t9" headers="r1c1-t9">00038</td>
+<td align="left" headers="r39c1-t9 r1c2-t9">[-SHUTTYPE srvc | inst | srvc,inst] [-SHUTMODE normal | immediate | abort]</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r40c1-t9" headers="r1c1-t9">00039</td>
+<td align="left" headers="r40c1-t9 r1c2-t9">Query for help by specifying the following parameters: -? | -h | -help</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r41c1-t9" headers="r1c1-t9">00040</td>
+<td align="left" headers="r41c1-t9 r1c2-t9">Invalid option for the -NEW command.</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r42c1-t9" headers="r1c1-t9">00041</td>
+<td align="left" headers="r42c1-t9 r1c2-t9">Invalid option for the -EDIT command.</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r43c1-t9" headers="r1c1-t9">00042</td>
+<td align="left" headers="r43c1-t9 r1c2-t9">Invalid option for the -DELETE command.</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r44c1-t9" headers="r1c1-t9">00043</td>
+<td align="left" headers="r44c1-t9 r1c2-t9">Invalid option for the -STARTUP command.</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r45c1-t9" headers="r1c1-t9">00044</td>
+<td align="left" headers="r45c1-t9 r1c2-t9">Invalid option for the -SHUTDOWN command.</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r46c1-t9" headers="r1c1-t9">00045</td>
+<td align="left" headers="r46c1-t9 r1c2-t9">Internal error in ORADIM.</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r47c1-t9" headers="r1c1-t9">00046</td>
+<td align="left" headers="r47c1-t9 r1c2-t9">Invalid Pfile.</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r48c1-t9" headers="r1c1-t9">00050</td>
+<td align="left" headers="r48c1-t9 r1c2-t9">Instance deleted.</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r49c1-t9" headers="r1c1-t9">00051</td>
+<td align="left" headers="r49c1-t9 r1c2-t9">Instance created.</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r50c1-t9" headers="r1c1-t9">00075</td>
+<td align="left" headers="r50c1-t9 r1c2-t9">Failed to control service.</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r51c1-t9" headers="r1c1-t9">00076</td>
+<td align="left" headers="r51c1-t9 r1c2-t9">Failed to delete service.</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r52c1-t9" headers="r1c1-t9">00077</td>
+<td align="left" headers="r52c1-t9 r1c2-t9">Failed to change service configuration.</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r53c1-t9" headers="r1c1-t9">00078</td>
+<td align="left" headers="r53c1-t9 r1c2-t9">Failed to start service.</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblinformalwidemax" -->
+<div class="msgset"><a id="tahiti642871" name="tahiti642871"></a>
+<div class="msgentry">
+<dl>
+<dt><span class="msg"><a id="sthref901" name="sthref901"></a>DIM-00000</span> <!-- class="msg" --></dt>
+<dd>
+<div class="msginfo">ORADIM completed with no errors.</div>
+<!-- class="msginfo" --></dd>
+<dd>
+<div class="msgexplan"><span class="msgexplankw">Cause:</span> The specified operation completed successfully.</div>
+<!-- class="msgexplan" --></dd>
+<dd>
+<div class="msgaction"><span class="msgactionkw">Action:</span> None.</div>
+<!-- class="msgaction" --></dd>
+</dl>
+</div>
+<!-- class="msgentry" -->
+<a id="tahiti642875" name="tahiti642875"></a>
+<div class="msgentry">
+<dl>
+<dt><span class="msg"><a id="sthref902" name="sthref902"></a>DIM-00001</span> <!-- class="msg" --></dt>
+<dd>
+<div class="msginfo">ORADIM: &lt;command&gt; [options]. Refer to manual.</div>
+<!-- class="msginfo" --></dd>
+<dd>
+<div class="msgexplan"><span class="msgexplankw">Cause:</span> The specified options were invalid or no arguments were supplied.</div>
+<!-- class="msgexplan" --></dd>
+<dd>
+<div class="msgaction"><span class="msgactionkw">Action:</span> Usage: ORADIM &lt;command&gt; [options]</div>
+<!-- class="msgaction" --></dd>
+</dl>
+</div>
+<!-- class="msgentry" -->
+<a id="tahiti642879" name="tahiti642879"></a>
+<div class="msgentry">
+<dl>
+<dt><span class="msg"><a id="sthref903" name="sthref903"></a>DIM-00002</span> <!-- class="msg" --></dt>
+<dd>
+<div class="msginfo">The specified command was invalid.</div>
+<!-- class="msginfo" --></dd>
+<dd>
+<div class="msgexplan"><span class="msgexplankw">Cause:</span> Valid commands are: -DELETE, -EDIT, -NEW, -STARTUP, and -SHUTDOWN.</div>
+<!-- class="msgexplan" --></dd>
+<dd>
+<div class="msgaction"><span class="msgactionkw">Action:</span> Use valid command.</div>
+<!-- class="msgaction" --></dd>
+</dl>
+</div>
+<!-- class="msgentry" -->
+<a id="tahiti642883" name="tahiti642883"></a>
+<div class="msgentry">
+<dl>
+<dt><span class="msg"><a id="sthref904" name="sthref904"></a>DIM-00003</span> <!-- class="msg" --></dt>
+<dd>
+<div class="msginfo">An argument is missing for the parameter.</div>
+<!-- class="msginfo" --></dd>
+<dd>
+<div class="msgexplan"><span class="msgexplankw">Cause:</span> Missing or invalid argument.</div>
+<!-- class="msgexplan" --></dd>
+<dd>
+<div class="msgaction"><span class="msgactionkw">Action:</span> Use a valid argument and run the program again.</div>
+<!-- class="msgaction" --></dd>
+</dl>
+</div>
+<!-- class="msgentry" -->
+<a id="tahiti642887" name="tahiti642887"></a>
+<div class="msgentry">
+<dl>
+<dt><span class="msg"><a id="sthref905" name="sthref905"></a>DIM-00004</span> <!-- class="msg" --></dt>
+<dd>
+<div class="msginfo">SID or service name was not specified.</div>
+<!-- class="msginfo" --></dd>
+<dd>
+<div class="msgexplan"><span class="msgexplankw">Cause:</span> Either a SID or service name is mandatory.</div>
+<!-- class="msgexplan" --></dd>
+<dd>
+<div class="msgaction"><span class="msgactionkw">Action:</span> Enter a valid <code><span class="codeinlineitalic">SID</span></code> of 64 characters and retry.</div>
+<!-- class="msgaction" --></dd>
+</dl>
+</div>
+<!-- class="msgentry" -->
+<a id="tahiti649933" name="tahiti649933"></a>
+<div class="msgentry">
+<dl>
+<dt><span class="msg"><a id="sthref906" name="sthref906"></a>DIM-00005</span> <!-- class="msg" --></dt>
+<dd>
+<div class="msginfo">SID with more than 64 characters specified.</div>
+<!-- class="msginfo" --></dd>
+<dd>
+<div class="msgexplan"><span class="msgexplankw">Cause:</span> SID with more than 64 characters specified.</div>
+<!-- class="msgexplan" --></dd>
+<dd>
+<div class="msgaction"><span class="msgactionkw">Action:</span> Change SID to 64 unique characters and ensure that there is no other service with this name.</div>
+<!-- class="msgaction" --></dd>
+</dl>
+</div>
+<!-- class="msgentry" -->
+<a id="tahiti642902" name="tahiti642902"></a>
+<div class="msgentry">
+<dl>
+<dt><span class="msg"><a id="sthref907" name="sthref907"></a>DIM-00006</span> <!-- class="msg" --></dt>
+<dd>
+<div class="msginfo">Missing SID.</div>
+<!-- class="msginfo" --></dd>
+<dd>
+<div class="msgexplan"><span class="msgexplankw">Cause:</span> SID was not specified in the arguments.</div>
+<!-- class="msgexplan" --></dd>
+<dd>
+<div class="msgaction"><span class="msgactionkw">Action:</span> Specify a SID.</div>
+<!-- class="msgaction" --></dd>
+</dl>
+</div>
+<!-- class="msgentry" -->
+<a id="tahiti642911" name="tahiti642911"></a>
+<div class="msgentry">
+<dl>
+<dt><span class="msg"><a id="sthref908" name="sthref908"></a>DIM-00007</span> <!-- class="msg" --></dt>
+<dd>
+<div class="msginfo">Missing or invalid -STARTMODE parameter. Valid -STARTMODE parameter is AUTO or MANUAL.</div>
+<!-- class="msginfo" --></dd>
+<dd>
+<div class="msgexplan"><span class="msgexplankw">Cause:</span> An argument for STARTMODE is missing.</div>
+<!-- class="msgexplan" --></dd>
+<dd>
+<div class="msgaction"><span class="msgactionkw">Action:</span> Enter a valid start mode and retry.</div>
+<!-- class="msgaction" --></dd>
+</dl>
+</div>
+<!-- class="msgentry" -->
+<a id="tahiti642915" name="tahiti642915"></a>
+<div class="msgentry">
+<dl>
+<dt><span class="msg"><a id="sthref909" name="sthref909"></a>DIM-00008</span> <!-- class="msg" --></dt>
+<dd>
+<div class="msginfo">A valid service name is OracleService appended with a SID</div>
+<!-- class="msginfo" --></dd>
+<dd>
+<div class="msgexplan"><span class="msgexplankw">Cause:</span> The Oracle service name specified is invalid.</div>
+<!-- class="msgexplan" --></dd>
+<dd>
+<div class="msgaction"><span class="msgactionkw">Action:</span> Correct the name of service and retry.</div>
+<!-- class="msgaction" --></dd>
+</dl>
+</div>
+<!-- class="msgentry" -->
+<a id="tahiti642922" name="tahiti642922"></a>
+<div class="msgentry">
+<dl>
+<dt><span class="msg"><a id="sthref910" name="sthref910"></a>DIM-00009</span> <!-- class="msg" --></dt>
+<dd>
+<div class="msginfo">SID name is mandatory.</div>
+<!-- class="msginfo" --></dd>
+<dd>
+<div class="msgexplan"><span class="msgexplankw">Cause:</span> SID was not specified.</div>
+<!-- class="msgexplan" --></dd>
+<dd>
+<div class="msgaction"><span class="msgactionkw">Action:</span> Enter the SID and retry.</div>
+<!-- class="msgaction" --></dd>
+</dl>
+</div>
+<!-- class="msgentry" -->
+<a id="tahiti642926" name="tahiti642926"></a>
+<div class="msgentry">
+<dl>
+<dt><span class="msg"><a id="sthref911" name="sthref911"></a>DIM-00010</span> <!-- class="msg" --></dt>
+<dd>
+<div class="msginfo">SYSTEM\CurrentControlSet\Services\OracleService key does not exist.</div>
+<!-- class="msginfo" --></dd>
+<dd>
+<div class="msgexplan"><span class="msgexplankw">Cause:</span> Specified registry key was not found.</div>
+<!-- class="msgexplan" --></dd>
+<dd>
+<div class="msgaction"><span class="msgactionkw">Action:</span> Try reinstalling. If the problem persists, contact Oracle Support Services.</div>
+<!-- class="msgaction" --></dd>
+</dl>
+</div>
+<!-- class="msgentry" -->
+<a id="tahiti642930" name="tahiti642930"></a>
+<div class="msgentry">
+<dl>
+<dt><span class="msg"><a id="sthref912" name="sthref912"></a>DIM-00011</span> <!-- class="msg" --></dt>
+<dd>
+<div class="msginfo">The specified service does not exist.</div>
+<!-- class="msginfo" --></dd>
+<dd>
+<div class="msgexplan"><span class="msgexplankw">Cause:</span> An attempt to edit a service failed.</div>
+<!-- class="msgexplan" --></dd>
+<dd>
+<div class="msgaction"><span class="msgactionkw">Action:</span> Make sure the service exists or user has enough privileges.</div>
+<!-- class="msgaction" --></dd>
+</dl>
+</div>
+<!-- class="msgentry" -->
+<a id="tahiti642936" name="tahiti642936"></a>
+<div class="msgentry">
+<dl>
+<dt><span class="msg"><a id="sthref913" name="sthref913"></a>DIM-00012</span> <!-- class="msg" --></dt>
+<dd>
+<div class="msginfo">A PFILE is necessary for AUTOSTART option.</div>
+<!-- class="msginfo" --></dd>
+<dd>
+<div class="msgexplan"><span class="msgexplankw">Cause:</span> A parameter file {PFILE} was not specified.</div>
+<!-- class="msgexplan" --></dd>
+<dd>
+<div class="msgaction"><span class="msgactionkw">Action:</span> Specify a parameter file.</div>
+<!-- class="msgaction" --></dd>
+</dl>
+</div>
+<!-- class="msgentry" -->
+<a id="tahiti642940" name="tahiti642940"></a>
+<div class="msgentry">
+<dl>
+<dt><span class="msg"><a id="sthref914" name="sthref914"></a>DIM-00013</span> <!-- class="msg" --></dt>
+<dd>
+<div class="msginfo">Service start mode could not be set in the registry.</div>
+<!-- class="msginfo" --></dd>
+<dd>
+<div class="msgexplan"><span class="msgexplankw">Cause:</span> The start mode entry in the registry for the service could not be set.</div>
+<!-- class="msgexplan" --></dd>
+<dd>
+<div class="msgaction"><span class="msgactionkw">Action:</span> Check if the user has privileges to modify registry.</div>
+<!-- class="msgaction" --></dd>
+</dl>
+</div>
+<!-- class="msgentry" -->
+<a id="tahiti642944" name="tahiti642944"></a>
+<div class="msgentry">
+<dl>
+<dt><span class="msg"><a id="sthref915" name="sthref915"></a>DIM-00014</span> <!-- class="msg" --></dt>
+<dd>
+<div class="msginfo">Cannot open the Windows Service Control Manager.</div>
+<!-- class="msginfo" --></dd>
+<dd>
+<div class="msgexplan"><span class="msgexplankw">Cause:</span> The Service Control Manager could not be opened.</div>
+<!-- class="msgexplan" --></dd>
+<dd>
+<div class="msgaction"><span class="msgactionkw">Action:</span> Check for user privileges.</div>
+<!-- class="msgaction" --></dd>
+</dl>
+</div>
+<!-- class="msgentry" -->
+<a id="tahiti642948" name="tahiti642948"></a>
+<div class="msgentry">
+<dl>
+<dt><span class="msg"><a id="sthref916" name="sthref916"></a>DIM-00015</span> <!-- class="msg" --></dt>
+<dd>
+<div class="msginfo">Cannot start already-running ORACLE - shut it down first.</div>
+<!-- class="msginfo" --></dd>
+<dd>
+<div class="msgexplan"><span class="msgexplankw">Cause:</span> The instance is already started.</div>
+<!-- class="msgexplan" --></dd>
+<dd>
+<div class="msgaction"><span class="msgactionkw">Action:</span> Stop the database before restarting.</div>
+<!-- class="msgaction" --></dd>
+</dl>
+</div>
+<!-- class="msgentry" -->
+<a id="tahiti642952" name="tahiti642952"></a>
+<div class="msgentry">
+<dl>
+<dt><span class="msg"><a id="sthref917" name="sthref917"></a>DIM-00016</span> <!-- class="msg" --></dt>
+<dd>
+<div class="msginfo">Missing or invalid -SHUTTYPE parameter. A valid -SHUTTYPE parameter is SRVC or INST.</div>
+<!-- class="msginfo" --></dd>
+<dd>
+<div class="msgexplan"><span class="msgexplankw">Cause:</span> An option for SHUTTYPE was missing or invalid.</div>
+<!-- class="msgexplan" --></dd>
+<dd>
+<div class="msgaction"><span class="msgactionkw">Action:</span> Enter parameter to shut down the instance or the service and retry.</div>
+<!-- class="msgaction" --></dd>
+</dl>
+</div>
+<!-- class="msgentry" -->
+<a id="tahiti642956" name="tahiti642956"></a>
+<div class="msgentry">
+<dl>
+<dt><span class="msg"><a id="sthref918" name="sthref918"></a>DIM-00017</span> <!-- class="msg" --></dt>
+<dd>
+<div class="msginfo">Instance shutdown mode must be one of the following: a for abort, i for immediate or n for normal.</div>
+<!-- class="msginfo" --></dd>
+<dd>
+<div class="msgexplan"><span class="msgexplankw">Cause:</span> Invalid option to shut down the instance was specified.</div>
+<!-- class="msgexplan" --></dd>
+<dd>
+<div class="msgaction"><span class="msgactionkw">Action:</span> Enter the correct mode and retry.</div>
+<!-- class="msgaction" --></dd>
+</dl>
+</div>
+<!-- class="msgentry" -->
+<a id="tahiti642960" name="tahiti642960"></a>
+<div class="msgentry">
+<dl>
+<dt><span class="msg"><a id="sthref919" name="sthref919"></a>DIM-00018</span> <!-- class="msg" --></dt>
+<dd>
+<div class="msginfo">Failed to stop Oracle Service.</div>
+<!-- class="msginfo" --></dd>
+<dd>
+<div class="msgexplan"><span class="msgexplankw">Cause:</span> An attempt to stop the service failed.</div>
+<!-- class="msgexplan" --></dd>
+<dd>
+<div class="msgaction"><span class="msgactionkw">Action:</span> Retry, check for user privileges.</div>
+<!-- class="msgaction" --></dd>
+</dl>
+</div>
+<!-- class="msgentry" -->
+<a id="tahiti642964" name="tahiti642964"></a>
+<div class="msgentry">
+<dl>
+<dt><span class="msg"><a id="sthref920" name="sthref920"></a>DIM-00019</span> <!-- class="msg" --></dt>
+<dd>
+<div class="msginfo">Create service error.</div>
+<!-- class="msginfo" --></dd>
+<dd>
+<div class="msgexplan"><span class="msgexplankw">Cause:</span> Service could not be created.</div>
+<!-- class="msgexplan" --></dd>
+<dd>
+<div class="msgaction"><span class="msgactionkw">Action:</span> Check for user privileges and retry.</div>
+<!-- class="msgaction" --></dd>
+</dl>
+</div>
+<!-- class="msgentry" -->
+<a id="tahiti642968" name="tahiti642968"></a>
+<div class="msgentry">
+<dl>
+<dt><span class="msg"><a id="sthref921" name="sthref921"></a>DIM-00020</span> <!-- class="msg" --></dt>
+<dd>
+<div class="msginfo">A service for this name exists.</div>
+<!-- class="msginfo" --></dd>
+<dd>
+<div class="msgexplan"><span class="msgexplankw">Cause:</span> An attempt was made to create a service name when it already existed.</div>
+<!-- class="msgexplan" --></dd>
+<dd>
+<div class="msgaction"><span class="msgactionkw">Action:</span> Retry with a different service name or SID.</div>
+<!-- class="msgaction" --></dd>
+</dl>
+</div>
+<!-- class="msgentry" -->
+<a id="tahiti642972" name="tahiti642972"></a>
+<div class="msgentry">
+<dl>
+<dt><span class="msg"><a id="sthref922" name="sthref922"></a>DIM-00021</span> <!-- class="msg" --></dt>
+<dd>
+<div class="msginfo">Registry open failed</div>
+<!-- class="msginfo" --></dd>
+<dd>
+<div class="msgexplan"><span class="msgexplankw">Cause:</span> An attempt to open the registry failed.</div>
+<!-- class="msgexplan" --></dd>
+<dd>
+<div class="msgaction"><span class="msgactionkw">Action:</span> Check for user privileges and retry the operation.</div>
+<!-- class="msgaction" --></dd>
+</dl>
+</div>
+<!-- class="msgentry" -->
+<a id="tahiti650119" name="tahiti650119"></a>
+<div class="msgentry">
+<dl>
+<dt><span class="msg"><a id="sthref923" name="sthref923"></a>DIM-00023</span> <!-- class="msg" --></dt>
+<dd>
+<div class="msginfo">Create an instance by specifying the following options:</div>
+<!-- class="msginfo" --></dd>
+<dd>
+<div class="msgexplan"><span class="msgexplankw">Cause:</span> n/a</div>
+<!-- class="msgexplan" --></dd>
+<dd>
+<div class="msgaction"><span class="msgactionkw">Action:</span> n/a</div>
+<!-- class="msgaction" --></dd>
+</dl>
+</div>
+<!-- class="msgentry" -->
+<a id="tahiti642984" name="tahiti642984"></a>
+<div class="msgentry">
+<dl>
+<dt><span class="msg"><a id="sthref924" name="sthref924"></a>DIM-00024</span> <!-- class="msg" --></dt>
+<dd>
+<div class="msginfo">-NEW -SID sid | -SRVC srvc | -ASMSID sid | -ASMSRVC srvc [-SYSPWD pass]</div>
+<!-- class="msginfo" --></dd>
+<dd>
+<div class="msgexplan"><span class="msgexplankw">Cause:</span> n/a</div>
+<!-- class="msgexplan" --></dd>
+<dd>
+<div class="msgaction"><span class="msgactionkw">Action:</span> n/a</div>
+<!-- class="msgaction" --></dd>
+</dl>
+</div>
+<!-- class="msgentry" -->
+<a id="tahiti650302" name="tahiti650302"></a>
+<div class="msgentry">
+<dl>
+<dt><span class="msg"><a id="sthref925" name="sthref925"></a>DIM-00025</span> <!-- class="msg" --></dt>
+<dd>
+<div class="msginfo">[-STARTMODE auto | manual] [-SRVCSTART system | demand] [-PFILE file | -SPFILE]</div>
+<!-- class="msginfo" --></dd>
+<dd>
+<div class="msgexplan"><span class="msgexplankw">Cause:</span> n/a</div>
+<!-- class="msgexplan" --></dd>
+<dd>
+<div class="msgaction"><span class="msgactionkw">Action:</span> n/a</div>
+<!-- class="msgaction" --></dd>
+</dl>
+</div>
+<!-- class="msgentry" -->
+<a id="tahiti642992" name="tahiti642992"></a>
+<div class="msgentry">
+<dl>
+<dt><span class="msg"><a id="sthref926" name="sthref926"></a>DIM-00026</span> <!-- class="msg" --></dt>
+<dd>
+<div class="msginfo">[-SHUTMODE normal | immediate | abort] [-TIMEOUT secs] [-RUNAS osusr/ospass]</div>
+<!-- class="msginfo" --></dd>
+<dd>
+<div class="msgexplan"><span class="msgexplankw">Cause:</span> n/a</div>
+<!-- class="msgexplan" --></dd>
+<dd>
+<div class="msgaction"><span class="msgactionkw">Action:</span> n/a</div>
+<!-- class="msgaction" --></dd>
+</dl>
+</div>
+<!-- class="msgentry" -->
+<a id="tahiti642996" name="tahiti642996"></a>
+<div class="msgentry">
+<dl>
+<dt><span class="msg"><a id="sthref927" name="sthref927"></a>DIM00027</span> <!-- class="msg" --></dt>
+<dd>
+<div class="msginfo">Edit an instance by specifying the following options:</div>
+<!-- class="msginfo" --></dd>
+<dd>
+<div class="msgexplan"><span class="msgexplankw">Cause:</span> n/a</div>
+<!-- class="msgexplan" --></dd>
+<dd>
+<div class="msgaction"><span class="msgactionkw">Action:</span> n/a</div>
+<!-- class="msgaction" --></dd>
+</dl>
+</div>
+<!-- class="msgentry" -->
+<a id="tahiti643000" name="tahiti643000"></a>
+<div class="msgentry">
+<dl>
+<dt><span class="msg"><a id="sthref928" name="sthref928"></a>DIM-00028</span> <!-- class="msg" --></dt>
+<dd>
+<div class="msginfo">-EDIT -SID sid | -ASMSID sid [-SYSPWD pass]</div>
+<!-- class="msginfo" --></dd>
+<dd>
+<div class="msgexplan"><span class="msgexplankw">Cause:</span> n/a</div>
+<!-- class="msgexplan" --></dd>
+<dd>
+<div class="msgaction"><span class="msgactionkw">Action:</span> n/a</div>
+<!-- class="msgaction" --></dd>
+</dl>
+</div>
+<!-- class="msgentry" -->
+<a id="tahiti643004" name="tahiti643004"></a>
+<div class="msgentry">
+<dl>
+<dt><span class="msg"><a id="sthref929" name="sthref929"></a>DIM-00029</span> <!-- class="msg" --></dt>
+<dd>
+<div class="msginfo">[-STARTMODE auto | manual] [-SRVCSTART system | demand] [-PFILE file | -SPFILE]</div>
+<!-- class="msginfo" --></dd>
+<dd>
+<div class="msgexplan"><span class="msgexplankw">Cause:</span> n/a</div>
+<!-- class="msgexplan" --></dd>
+<dd>
+<div class="msgaction"><span class="msgactionkw">Action:</span> n/a</div>
+<!-- class="msgaction" --></dd>
+</dl>
+</div>
+<!-- class="msgentry" -->
+<a id="tahiti643008" name="tahiti643008"></a>
+<div class="msgentry">
+<dl>
+<dt><span class="msg"><a id="sthref930" name="sthref930"></a>DIM-00030</span> <!-- class="msg" --></dt>
+<dd>
+<div class="msginfo">[-SHUTMODE normal | immediate | abort] [-SHUTTYPE srvc | inst] [-RUNAS osusr/ospass]</div>
+<!-- class="msginfo" --></dd>
+<dd>
+<div class="msgexplan"><span class="msgexplankw">Cause:</span> n/a</div>
+<!-- class="msgexplan" --></dd>
+<dd>
+<div class="msgaction"><span class="msgactionkw">Action:</span> n/a</div>
+<!-- class="msgaction" --></dd>
+</dl>
+</div>
+<!-- class="msgentry" -->
+<a id="tahiti643012" name="tahiti643012"></a>
+<div class="msgentry">
+<dl>
+<dt><span class="msg"><a id="sthref931" name="sthref931"></a>DIM-00031</span> <!-- class="msg" --></dt>
+<dd>
+<div class="msginfo">Delete instances by specifying the following options:</div>
+<!-- class="msginfo" --></dd>
+<dd>
+<div class="msgexplan"><span class="msgexplankw">Cause:</span> n/a</div>
+<!-- class="msgexplan" --></dd>
+<dd>
+<div class="msgaction"><span class="msgactionkw">Action:</span> n/a</div>
+<!-- class="msgaction" --></dd>
+</dl>
+</div>
+<!-- class="msgentry" -->
+<a id="tahiti643016" name="tahiti643016"></a>
+<div class="msgentry">
+<dl>
+<dt><span class="msg"><a id="sthref932" name="sthref932"></a>DIM-00032</span> <!-- class="msg" --></dt>
+<dd>
+<div class="msginfo">-DELETE -SID sid | -ASMSID sid | -SRVC srvc | -ASMSRVC srvc</div>
+<!-- class="msginfo" --></dd>
+<dd>
+<div class="msgexplan"><span class="msgexplankw">Cause:</span> n/a</div>
+<!-- class="msgexplan" --></dd>
+<dd>
+<div class="msgaction"><span class="msgactionkw">Action:</span> n/a</div>
+<!-- class="msgaction" --></dd>
+</dl>
+</div>
+<!-- class="msgentry" -->
+<a id="tahiti643020" name="tahiti643020"></a>
+<div class="msgentry">
+<dl>
+<dt><span class="msg"><a id="sthref933" name="sthref933"></a>DIM-00033</span> <!-- class="msg" --></dt>
+<dd>
+<div class="msginfo">Start up services and instance by specifying the following options:</div>
+<!-- class="msginfo" --></dd>
+<dd>
+<div class="msgexplan"><span class="msgexplankw">Cause:</span> n/a</div>
+<!-- class="msgexplan" --></dd>
+<dd>
+<div class="msgaction"><span class="msgactionkw">Action:</span> n/a</div>
+<!-- class="msgaction" --></dd>
+</dl>
+</div>
+<!-- class="msgentry" -->
+<a id="tahiti643024" name="tahiti643024"></a>
+<div class="msgentry">
+<dl>
+<dt><span class="msg"><a id="sthref934" name="sthref934"></a>DIM-00034</span> <!-- class="msg" --></dt>
+<dd>
+<div class="msginfo">-STARTUP -SID sid | -ASMSID sid [-SYSPWD pass]</div>
+<!-- class="msginfo" --></dd>
+<dd>
+<div class="msgexplan"><span class="msgexplankw">Cause:</span> n/a</div>
+<!-- class="msgexplan" --></dd>
+<dd>
+<div class="msgaction"><span class="msgactionkw">Action:</span> n/a</div>
+<!-- class="msgaction" --></dd>
+</dl>
+</div>
+<!-- class="msgentry" -->
+<a id="tahiti643028" name="tahiti643028"></a>
+<div class="msgentry">
+<dl>
+<dt><span class="msg"><a id="sthref935" name="sthref935"></a>DIM-00035</span> <!-- class="msg" --></dt>
+<dd>
+<div class="msginfo">[-STARTTYPE srvc | inst | srvc,inst] [-PFILE filename | -SPFILE]</div>
+<!-- class="msginfo" --></dd>
+<dd>
+<div class="msgexplan"><span class="msgexplankw">Cause:</span> n/a</div>
+<!-- class="msgexplan" --></dd>
+<dd>
+<div class="msgaction"><span class="msgactionkw">Action:</span> n/a</div>
+<!-- class="msgaction" --></dd>
+</dl>
+</div>
+<!-- class="msgentry" -->
+<a id="tahiti643032" name="tahiti643032"></a>
+<div class="msgentry">
+<dl>
+<dt><span class="msg"><a id="sthref936" name="sthref936"></a>DIM-00036</span> <!-- class="msg" --></dt>
+<dd>
+<div class="msginfo">Shut down services and instance by specifying the following options:</div>
+<!-- class="msginfo" --></dd>
+<dd>
+<div class="msgexplan"><span class="msgexplankw">Cause:</span> n/a</div>
+<!-- class="msgexplan" --></dd>
+<dd>
+<div class="msgaction"><span class="msgactionkw">Action:</span> n/a</div>
+<!-- class="msgaction" --></dd>
+</dl>
+</div>
+<!-- class="msgentry" -->
+<a id="tahiti643036" name="tahiti643036"></a>
+<div class="msgentry">
+<dl>
+<dt><span class="msg"><a id="sthref937" name="sthref937"></a>DIM-00037</span> <!-- class="msg" --></dt>
+<dd>
+<div class="msginfo">-SHUTDOWN -SID sid | -ASMSID sid [-SYSPWD pass]</div>
+<!-- class="msginfo" --></dd>
+<dd>
+<div class="msgexplan"><span class="msgexplankw">Cause:</span> n/a</div>
+<!-- class="msgexplan" --></dd>
+<dd>
+<div class="msgaction"><span class="msgactionkw">Action:</span> n/a</div>
+<!-- class="msgaction" --></dd>
+</dl>
+</div>
+<!-- class="msgentry" -->
+<a id="tahiti643040" name="tahiti643040"></a>
+<div class="msgentry">
+<dl>
+<dt><span class="msg"><a id="sthref938" name="sthref938"></a>DIM-00038</span> <!-- class="msg" --></dt>
+<dd>
+<div class="msginfo">[-SHUTTYPE srvc | inst | srvc,inst] [-SHUTMODE normal | immediate | abort]</div>
+<!-- class="msginfo" --></dd>
+<dd>
+<div class="msgexplan"><span class="msgexplankw">Cause:</span> n/a</div>
+<!-- class="msgexplan" --></dd>
+<dd>
+<div class="msgaction"><span class="msgactionkw">Action:</span> n/a</div>
+<!-- class="msgaction" --></dd>
+</dl>
+</div>
+<!-- class="msgentry" -->
+<a id="tahiti643044" name="tahiti643044"></a>
+<div class="msgentry">
+<dl>
+<dt><span class="msg"><a id="sthref939" name="sthref939"></a>DIM-00039</span> <!-- class="msg" --></dt>
+<dd>
+<div class="msginfo">Query for help by specifying the following parameters: -? | -h | -help</div>
+<!-- class="msginfo" --></dd>
+<dd>
+<div class="msgexplan"><span class="msgexplankw">Cause:</span> n/a</div>
+<!-- class="msgexplan" --></dd>
+<dd>
+<div class="msgaction"><span class="msgactionkw">Action:</span> n/a</div>
+<!-- class="msgaction" --></dd>
+</dl>
+</div>
+<!-- class="msgentry" -->
+<a id="tahiti650371" name="tahiti650371"></a>
+<div class="msgentry">
+<dl>
+<dt><span class="msg"><a id="sthref940" name="sthref940"></a>DIM-00040</span> <!-- class="msg" --></dt>
+<dd>
+<div class="msginfo">Invalid option for the -NEW command.</div>
+<!-- class="msginfo" --></dd>
+<dd>
+<div class="msgexplan"><span class="msgexplankw">Cause:</span> One or more arguments for creating new service is invalid.</div>
+<!-- class="msgexplan" --></dd>
+<dd>
+<div class="msgaction"><span class="msgactionkw">Action:</span> Specify required option and retry.</div>
+<!-- class="msgaction" --></dd>
+</dl>
+</div>
+<!-- class="msgentry" -->
+<a id="tahiti650407" name="tahiti650407"></a>
+<div class="msgentry">
+<dl>
+<dt><span class="msg"><a id="sthref941" name="sthref941"></a>DIM-00041</span> <!-- class="msg" --></dt>
+<dd>
+<div class="msginfo">Invalid option for the -EDIT command.</div>
+<!-- class="msginfo" --></dd>
+<dd>
+<div class="msgexplan"><span class="msgexplankw">Cause:</span> One or more arguments for editing existing service is invalid.</div>
+<!-- class="msgexplan" --></dd>
+<dd>
+<div class="msgaction"><span class="msgactionkw">Action:</span> Specify required option and retry.</div>
+<!-- class="msgaction" --></dd>
+</dl>
+</div>
+<!-- class="msgentry" -->
+<a id="tahiti650443" name="tahiti650443"></a>
+<div class="msgentry">
+<dl>
+<dt><span class="msg"><a id="sthref942" name="sthref942"></a>DIM-00042</span> <!-- class="msg" --></dt>
+<dd>
+<div class="msginfo">Invalid option for the -DELETE command.</div>
+<!-- class="msginfo" --></dd>
+<dd>
+<div class="msgexplan"><span class="msgexplankw">Cause:</span> One or more arguments for deleting service is invalid.</div>
+<!-- class="msgexplan" --></dd>
+<dd>
+<div class="msgaction"><span class="msgactionkw">Action:</span> Specify required option and retry.</div>
+<!-- class="msgaction" --></dd>
+</dl>
+</div>
+<!-- class="msgentry" -->
+<a id="tahiti650479" name="tahiti650479"></a>
+<div class="msgentry">
+<dl>
+<dt><span class="msg"><a id="sthref943" name="sthref943"></a>DIM-00043</span> <!-- class="msg" --></dt>
+<dd>
+<div class="msginfo">Invalid option for the -STARTUP command.</div>
+<!-- class="msginfo" --></dd>
+<dd>
+<div class="msgexplan"><span class="msgexplankw">Cause:</span> One or more arguments for starting the instance is invalid.</div>
+<!-- class="msgexplan" --></dd>
+<dd>
+<div class="msgaction"><span class="msgactionkw">Action:</span> Specify required option and retry.</div>
+<!-- class="msgaction" --></dd>
+</dl>
+</div>
+<!-- class="msgentry" -->
+<a id="tahiti650515" name="tahiti650515"></a>
+<div class="msgentry">
+<dl>
+<dt><span class="msg"><a id="sthref944" name="sthref944"></a>DIM-00044</span> <!-- class="msg" --></dt>
+<dd>
+<div class="msginfo">Invalid option for the -SHUTDOWN command.</div>
+<!-- class="msginfo" --></dd>
+<dd>
+<div class="msgexplan"><span class="msgexplankw">Cause:</span> One or more arguments for shutting down the instance is invalid.</div>
+<!-- class="msgexplan" --></dd>
+<dd>
+<div class="msgaction"><span class="msgactionkw">Action:</span> Specify required option and retry.</div>
+<!-- class="msgaction" --></dd>
+</dl>
+</div>
+<!-- class="msgentry" -->
+<a id="tahiti650551" name="tahiti650551"></a>
+<div class="msgentry">
+<dl>
+<dt><span class="msg"><a id="sthref945" name="sthref945"></a>DIM-00045</span> <!-- class="msg" --></dt>
+<dd>
+<div class="msginfo">Internal error in ORADIM</div>
+<!-- class="msginfo" --></dd>
+<dd>
+<div class="msgexplan"><span class="msgexplankw">Cause:</span> Unknown.</div>
+<!-- class="msgexplan" --></dd>
+<dd>
+<div class="msgaction"><span class="msgactionkw">Action:</span> Contact Oracle Support Services.</div>
+<!-- class="msgaction" --></dd>
+</dl>
+</div>
+<!-- class="msgentry" -->
+<a id="tahiti650587" name="tahiti650587"></a>
+<div class="msgentry">
+<dl>
+<dt><span class="msg"><a id="sthref946" name="sthref946"></a>DIM-00046</span> <!-- class="msg" --></dt>
+<dd>
+<div class="msginfo">Invalid Pfile.</div>
+<!-- class="msginfo" --></dd>
+<dd>
+<div class="msgexplan"><span class="msgexplankw">Cause:</span> The parameter filename is invalid.</div>
+<!-- class="msgexplan" --></dd>
+<dd>
+<div class="msgaction"><span class="msgactionkw">Action:</span> Check that the path name is correct.</div>
+<!-- class="msgaction" --></dd>
+</dl>
+</div>
+<!-- class="msgentry" -->
+<a id="tahiti650623" name="tahiti650623"></a>
+<div class="msgentry">
+<dl>
+<dt><span class="msg"><a id="sthref947" name="sthref947"></a>DIM-00050</span> <!-- class="msg" --></dt>
+<dd>
+<div class="msginfo">Instance deleted</div>
+<!-- class="msginfo" --></dd>
+<dd>
+<div class="msgexplan"><span class="msgexplankw">Cause:</span> The request for deleting instance was successful.</div>
+<!-- class="msgexplan" --></dd>
+<dd>
+<div class="msgaction"><span class="msgactionkw">Action:</span> None.</div>
+<!-- class="msgaction" --></dd>
+</dl>
+</div>
+<!-- class="msgentry" -->
+<a id="tahiti650659" name="tahiti650659"></a>
+<div class="msgentry">
+<dl>
+<dt><span class="msg"><a id="sthref948" name="sthref948"></a>DIM-00051</span> <!-- class="msg" --></dt>
+<dd>
+<div class="msginfo">Instance created.</div>
+<!-- class="msginfo" --></dd>
+<dd>
+<div class="msgexplan"><span class="msgexplankw">Cause:</span> The request for creating new instance was successful.</div>
+<!-- class="msgexplan" --></dd>
+<dd>
+<div class="msgaction"><span class="msgactionkw">Action:</span> None.</div>
+<!-- class="msgaction" --></dd>
+</dl>
+</div>
+<!-- class="msgentry" -->
+<a id="tahiti650695" name="tahiti650695"></a>
+<div class="msgentry">
+<dl>
+<dt><span class="msg"><a id="sthref949" name="sthref949"></a>DIM-00075</span> <!-- class="msg" --></dt>
+<dd>
+<div class="msginfo">Failed to control service.</div>
+<!-- class="msginfo" --></dd>
+<dd>
+<div class="msgexplan"><span class="msgexplankw">Cause:</span> An attempt to control the service failed.</div>
+<!-- class="msgexplan" --></dd>
+<dd>
+<div class="msgaction"><span class="msgactionkw">Action:</span> Check additional error, ensure that user has enough privileges.</div>
+<!-- class="msgaction" --></dd>
+</dl>
+</div>
+<!-- class="msgentry" -->
+<a id="tahiti650738" name="tahiti650738"></a>
+<div class="msgentry">
+<dl>
+<dt><span class="msg"><a id="sthref950" name="sthref950"></a>DIM-00076</span> <!-- class="msg" --></dt>
+<dd>
+<div class="msginfo">Failed to delete service.</div>
+<!-- class="msginfo" --></dd>
+<dd>
+<div class="msgexplan"><span class="msgexplankw">Cause:</span> The request for service deletion failed.</div>
+<!-- class="msgexplan" --></dd>
+<dd>
+<div class="msgaction"><span class="msgactionkw">Action:</span> Check additional error, ensure that user has enough privileges.</div>
+<!-- class="msgaction" --></dd>
+</dl>
+</div>
+<!-- class="msgentry" -->
+<a id="tahiti650774" name="tahiti650774"></a>
+<div class="msgentry">
+<dl>
+<dt><span class="msg"><a id="sthref951" name="sthref951"></a>DIM-00077</span> <!-- class="msg" --></dt>
+<dd>
+<div class="msginfo">Failed to change service configuration.</div>
+<!-- class="msginfo" --></dd>
+<dd>
+<div class="msgexplan"><span class="msgexplankw">Cause:</span> An attempt to change configuration failed.</div>
+<!-- class="msgexplan" --></dd>
+<dd>
+<div class="msgaction"><span class="msgactionkw">Action:</span> Check additional error, ensure that user has enough privileges.</div>
+<!-- class="msgaction" --></dd>
+</dl>
+</div>
+<!-- class="msgentry" -->
+<a id="tahiti650810" name="tahiti650810"></a>
+<div class="msgentry">
+<dl>
+<dt><span class="msg"><a id="sthref952" name="sthref952"></a>DIM-00078</span> <!-- class="msg" --></dt>
+<dd>
+<div class="msginfo">Failed to start service.</div>
+<!-- class="msginfo" --></dd>
+<dd>
+<div class="msgexplan"><span class="msgexplankw">Cause:</span> The request to start service failed.</div>
+<!-- class="msgexplan" --></dd>
+<dd>
+<div class="msgaction"><span class="msgactionkw">Action:</span> Check additional error, ensure that user has enough privileges.</div>
+<!-- class="msgaction" --></dd>
+</dl>
+</div>
+<!-- class="msgentry" --></div>
+<!-- class="msgset" --></div>
+<!-- class="sect1" -->
+<a id="i635282" name="i635282"></a><a id="NTQRF530" name="NTQRF530"></a>
+<div class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1"><a id="sthref953" name="sthref953"></a>Database Connection Issues</h2>
+<p>The following are common Oracle Database connection error codes, their causes, and suggested remedies.</p>
+<div class="msgset"><a id="tahiti643048" name="tahiti643048"></a>
+<div class="msgentry">
+<dl>
+<dt><span class="msg"><a id="sthref954" name="sthref954"></a>TNS-12203</span> <!-- class="msg" --></dt>
+<dd>
+<div class="msginfo">TNS: unable to connect to destination</div>
+<!-- class="msginfo" --></dd>
+<dd>
+<div class="msgexplan"><span class="msgexplankw">Cause:</span> OracleService<span class="italic">SID</span> service, Oracle<span class="italic">HOME_NAME</span>TNSListener service, or both are not running.</div>
+<!-- class="msgexplan" --></dd>
+<dd>
+<div class="msgaction"><span class="msgactionkw">Action:</span> Ensure that both services are started.</div>
+<!-- class="msgaction" --></dd>
+</dl>
+</div>
+<!-- class="msgentry" -->
+<a id="tahiti643054" name="tahiti643054"></a>
+<div class="msgentry">
+<dl>
+<dt><span class="msg"><a id="sthref955" name="sthref955"></a><a id="sthref956" name="sthref956"></a><a id="sthref957" name="sthref957"></a><a id="sthref958" name="sthref958"></a><a id="sthref959" name="sthref959"></a>ORA-12560</span> <!-- class="msg" --></dt>
+<dd>
+<div class="msginfo">TNS: lost contact</div>
+<!-- class="msginfo" --></dd>
+<dd>
+<div class="msgexplan"><span class="msgexplankw">Cause:</span> OracleService<span class="italic">SID</span> service, Oracle<span class="italic">HOME_NAME</span>TNSListener service, or both are not running. You receive this error if you attempt to use any Oracle Database utilities, such as SQL*Plus. This error is analogous to the following Oracle7 error: <code>ORA-09352:</code> <code>Windows</code> <code>32-bit</code> <code>Two-Task</code> <code>driver</code> <code>unable</code> <code>to spawn</code> <code>new</code> <code>ORACLE</code> <code>task</code>.</div>
+<!-- class="msgexplan" --></dd>
+<dd>
+<div class="msgaction"><span class="msgactionkw">Action:</span> Ensure that both services are started.</div>
+<!-- class="msgaction" --></dd>
+</dl>
+</div>
+<!-- class="msgentry" -->
+<a id="tahiti643071" name="tahiti643071"></a>
+<div class="msgentry">
+<dl>
+<dt><span class="msg"><a id="sthref960" name="sthref960"></a>ORA-28575</span> <!-- class="msg" --></dt>
+<dd>
+<div class="msginfo">unable to open RPC connection to external procedure agent</div>
+<!-- class="msginfo" --></dd>
+<dd>
+<div class="msgexplan"><span class="msgexplankw">Cause:</span> <code>tnsnames.ora</code> and <a href="glossary.htm#i432306"><span class="xrefglossterm">listener.ora</span></a> files have not been correctly configured to use <a href="glossary.htm#i432249"><span class="xrefglossterm">external procedures</span></a>.</div>
+<!-- class="msgexplan" --></dd>
+<dd>
+<div class="msgaction"><span class="msgactionkw">Action:</span> Reconfigure services.</div>
+<!-- class="msgaction" --></dd>
+</dl>
+</div>
+<!-- class="msgentry" -->
+<a id="tahiti643079" name="tahiti643079"></a>
+<div class="msgentry">
+<dl>
+<dt><span class="msg"><a id="sthref961" name="sthref961"></a>ORA-06512</span> <!-- class="msg" --></dt>
+<dd>
+<div class="msginfo">at "APPLICATIONS.OSEXEC", line 0</div>
+<!-- class="msginfo" --></dd>
+<dd>
+<div class="msgexplan"><span class="msgexplankw">Cause:</span> <code>tnsnames.ora</code> and listener.ora files have not been correctly configured to use external procedures.</div>
+<!-- class="msgexplan" --></dd>
+<dd>
+<div class="msgaction"><span class="msgactionkw">Action:</span> Reconfigure services.</div>
+<!-- class="msgaction" --></dd>
+</dl>
+</div>
+<!-- class="msgentry" -->
+<a id="tahiti643085" name="tahiti643085"></a>
+<div class="msgentry">
+<dl>
+<dt><span class="msg"><a id="sthref962" name="sthref962"></a>ORA-06512</span> <!-- class="msg" --></dt>
+<dd>
+<div class="msginfo">at "APPLICATIONS.TEST", line 4</div>
+<!-- class="msginfo" --></dd>
+<dd>
+<div class="msgexplan"><span class="msgexplankw">Cause:</span> <code>tnsnames.ora</code> and <code>listener.ora</code> files have not been correctly configured to use external procedures.</div>
+<!-- class="msgexplan" --></dd>
+<dd>
+<div class="msgaction"><span class="msgactionkw">Action:</span> Reconfigure services.</div>
+<!-- class="msgaction" --></dd>
+</dl>
+</div>
+<!-- class="msgentry" -->
+<a id="tahiti643091" name="tahiti643091"></a>
+<div class="msgentry">
+<dl>
+<dt><span class="msg"><a id="sthref963" name="sthref963"></a>ORA-06512</span> <!-- class="msg" --></dt>
+<dd>
+<div class="msginfo">at line 2</div>
+<!-- class="msginfo" --></dd>
+<dd>
+<div class="msgexplan"><span class="msgexplankw">Cause:</span> <code>tnsnames.ora</code> and <code>listener.ora</code> files have not been correctly configured to use external procedures.</div>
+<!-- class="msgexplan" --></dd>
+<dd>
+<div class="msgaction"><span class="msgactionkw">Action:</span> Reconfigure services.</div>
+<!-- class="msgaction" --></dd>
+</dl>
+</div>
+<!-- class="msgentry" -->
+<a id="tahiti643097" name="tahiti643097"></a>
+<div class="msgentry">
+<dl>
+<dt><span class="msg"><a id="sthref964" name="sthref964"></a>ORA-01031 and LCC-00161</span> <!-- class="msg" --></dt>
+<dd>
+<div class="msginfo">Both codes appear at startup</div>
+<!-- class="msginfo" --></dd>
+<dd>
+<div class="msgexplan"><span class="msgexplankw">Cause:</span> Parameter file (init.ora) or Windows services are damaged. These errors usually appear when the parameter file cannot be read by Oracle Database at database startup.</div>
+<!-- class="msgexplan" --></dd>
+<dd>
+<div class="msgaction"><span class="msgactionkw">Action:</span> Delete and re-create the SID and services. Make sure you are logged on as the user Administrator, or a user within the Windows Administrator's Group with full administrative rights. At the command prompt, enter: <code>oradim -delete -sid</code> <code><span class="codeinlineitalic">sid</span></code> where <code><span class="codeinlineitalic">sid</span></code> is the name of your database (for example, <code>orcl</code>). Re-create the SID and services by entering: <code>oradim -new -sid</code> <code><span class="codeinlineitalic">sid</span></code> <code>-startmode auto -pfile</code> <code><span class="codeinlineitalic">full_path_to_init.ora</span></code></div>
+<!-- class="msgaction" --></dd>
+</dl>
+</div>
+<!-- class="msgentry" --></div>
+<!-- class="msgset" --></div>
+<!-- class="sect1" --></div>
+<!-- class="ind" -->
+<div class="footer">
+<hr />
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<col width="33%" />
+<col width="*" />
+<col width="33%" />
+<tr>
+<td align="left">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="98">
+<tr>
+<td align="center" valign="top"><a href="ap_net.htm"><img width="24" height="24" src="../../dcommon/gifs/leftnav.gif" alt="Go to previous page" /><br />
+<span class="icon">Previous</span></a></td>
+<td align="center" valign="top"><a href="ap_unix.htm"><img width="24" height="24" src="../../dcommon/gifs/rightnav.gif" alt="Go to next page" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+</td>
+<td style="font-size: 90%" align="center" class="copyrightlogo"><img width="144" height="18" src="../../dcommon/gifs/oracle.gif" alt="Oracle" /><br />
+Copyright&nbsp;&copy;&nbsp;1996, 2010,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.<br />
+<a href="../../dcommon/html/cpyr.htm">Legal Notices</a></td>
+<td align="right">
+<table class="icons oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="245">
+<tr>
+<td align="center" valign="top"><a href="../../index.htm"><img width="24" height="24" src="../../dcommon/gifs/doclib.gif" alt="Go to Documentation Home" /><br />
+<span class="icon">Home</span></a></td>
+<td align="center" valign="top"><a href="../../nav/portal_booklist.htm"><img width="24" height="24" src="../../dcommon/gifs/booklist.gif" alt="Go to Book List" /><br />
+<span class="icon">Book List</span></a></td>
+<td align="center" valign="top"><a href="toc.htm"><img width="24" height="24" src="../../dcommon/gifs/toc.gif" alt="Go to Table of Contents" /><br />
+<span class="icon">Contents</span></a></td>
+<td align="center" valign="top"><a href="index.htm"><img width="24" height="24" src="../../dcommon/gifs/index.gif" alt="Go to Index" /><br />
+<span class="icon">Index</span></a></td>
+<td align="center" valign="top"><a href="../../dcommon/html/feedback.htm"><img width="24" height="24" src="../../dcommon/gifs/feedbck2.gif" alt="Go to Feedback page" /><br />
+<span class="icon">Contact Us</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+</body>
+</html>

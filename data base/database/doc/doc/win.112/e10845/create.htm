@@ -1,0 +1,1246 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii" />
+<meta http-equiv="Content-Language" content="en" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta name="robots" content="all" scheme="http://www.robotstxt.org/" />
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 5.1" />
+<meta name="Date" content="2010-03-05T15:45:35Z" />
+<meta name="doctitle" content="Oracle&reg; Database Platform Guide 11g Release 2 (11.2) for Microsoft Windows" />
+<meta name="partno" content="E10845-01" />
+<meta name="docid" content="NTQRF" />
+<link rel="Start" href="../../index.htm" title="Home" type="text/html" />
+<link rel="Copyright" href="../../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+<link rel="Stylesheet" href="../../dcommon/css/blafdoc.css" title="Default" type="text/css" />
+<script type="text/javascript" src="../../dcommon/js/doccd.js">
+</script>
+<link rel="Contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="Index" href="index.htm" title="Index" type="text/html" />
+<link rel="Glossary" href="glossary.htm" title="Glossary" type="text/html" />
+<link rel="Prev" href="tools.htm" title="Previous" type="text/html" />
+<link rel="Next" href="config.htm" title="Next" type="text/html" />
+<link rel="alternate" href="../e10845.pdf" title="PDF version" type="application/pdf" />
+<title>Postinstallation Database Creation on Windows</title>
+</head>
+<body>
+<div class="header">
+<div class="zz-skip-header"><a name="top" id="top" href="#BEGIN">Skip Headers</a></div>
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td align="left" valign="top"><b>Oracle&reg; Database Platform Guide<br />
+11<i>g</i> Release 2 (11.2) for Microsoft Windows</b><br />
+Part Number E10845-01</td>
+<td valign="bottom" align="right">
+<table class="icons oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="245">
+<tr>
+<td align="center" valign="top"><a href="../../index.htm"><img width="24" height="24" src="../../dcommon/gifs/doclib.gif" alt="Go to Documentation Home" /><br />
+<span class="icon">Home</span></a></td>
+<td align="center" valign="top"><a href="../../nav/portal_booklist.htm"><img width="24" height="24" src="../../dcommon/gifs/booklist.gif" alt="Go to Book List" /><br />
+<span class="icon">Book List</span></a></td>
+<td align="center" valign="top"><a href="toc.htm"><img width="24" height="24" src="../../dcommon/gifs/toc.gif" alt="Go to Table of Contents" /><br />
+<span class="icon">Contents</span></a></td>
+<td align="center" valign="top"><a href="index.htm"><img width="24" height="24" src="../../dcommon/gifs/index.gif" alt="Go to Index" /><br />
+<span class="icon">Index</span></a></td>
+<td align="center" valign="top"><a href="../../dcommon/html/feedback.htm"><img width="24" height="24" src="../../dcommon/gifs/feedbck2.gif" alt="Go to Feedback page" /><br />
+<span class="icon">Contact Us</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<hr />
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td align="left" valign="top">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="98">
+<tr>
+<td align="center" valign="top"><a href="tools.htm"><img width="24" height="24" src="../../dcommon/gifs/leftnav.gif" alt="Go to previous page" /><br />
+<span class="icon">Previous</span></a></td>
+<td align="center" valign="top"><a href="config.htm"><img width="24" height="24" src="../../dcommon/gifs/rightnav.gif" alt="Go to next page" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+</td>
+<td align="right" valign="top" style="font-size: 90%"><a href="../e10845.pdf">View PDF</a></td>
+</tr>
+</table>
+<a name="BEGIN" id="BEGIN"></a></div>
+<div class="IND"><!-- End Header --><a id="g1023843" name="g1023843"></a><a id="NTQRF050" name="NTQRF050"></a><a id="i1011374" name="i1011374"></a>
+<h1 class="chapter"><span class="secnum">3</span> Postinstallation Database Creation on Windows</h1>
+<p>This chapter describes how to create a database after installing Oracle Database, using either Database Configuration Assistant or command-line tools.</p>
+<p>This chapter contains these topics:</p>
+<ul>
+<li>
+<p><a href="#i1015001">Naming Conventions for Oracle Database</a></p>
+</li>
+<li>
+<p><a href="#i1005759">Creating a Database on Windows Using Database Configuration Assistant</a></p>
+</li>
+<li>
+<p><a href="#i1005959">Creating a Database on Windows Using Command-Line Tools</a></p>
+</li>
+<li>
+<p><a href="#i1006533">Using ORADIM to Administer an Oracle Database Instance</a></p>
+</li>
+<li>
+<p><a href="#CHDCDAGE">Database Migration from a 32-bit Windows Computer</a></p>
+</li>
+</ul>
+<a id="i1015001" name="i1015001"></a><a id="NTQRF129" name="NTQRF129"></a>
+<div class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1"><a id="sthref133" name="sthref133"></a>Naming Conventions for Oracle Database</h2>
+<p>All mounted Oracle Database servers in a network must have unique database names. When a database is created, a name is associated with it and stored in its <a href="glossary.htm#i432217"><span class="xrefglossterm">control files</span></a>. If you provide the database keyword, either in the <code>CREATE DATABASE</code> statement or when prompted by Database Configuration Assistant, then that value becomes the name for that database.</p>
+<p>If you attempt to <a href="glossary.htm#i432330"><span class="xrefglossterm">mount</span></a> two Oracle Database servers with the same database name, then you receive the following error during mounting of the second server:</p>
+<pre xml:space="preserve" class="oac_no_warn"><a id="sthref134" name="sthref134"></a>ORA-01102: cannot mount database in EXCLUSIVE mode
+</pre>
+<p>If there are two or more Oracle Database servers on the same computer, but located in different Oracle homes, then the following rules apply:</p>
+<ul>
+<li>
+<p>Each database name must be unique</p>
+</li>
+<li>
+<p>Each <a href="glossary.htm#i432506"><span class="xrefglossterm">SID</span></a> must be unique</p>
+</li>
+</ul>
+<p>To change the name of an existing database, you must use the <code>CREATE CONTROLFILE</code> statement to re-create your control files and specify a new database name.</p>
+</div>
+<!-- class="sect1" -->
+<a id="i1005759" name="i1005759"></a><a id="NTQRF132" name="NTQRF132"></a>
+<div class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Creating a Database on Windows Using Database Configuration Assistant</h2>
+<p>Oracle recommends you use Database Configuration Assistant to create a database, because it is easier. It offers the same interface and operates the same way on all supported platforms, so no step-by-step procedures or screen shots are included here.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<a class="olink ADMQS002" href="../../server.112/e10897/install.htm#ADMQS002"><span class="italic">Oracle Database 2 Day DBA</span></a> for instructions on using Database Configuration Assistant</div>
+<p>Database Configuration Assistant enables you to:</p>
+<ul>
+<li>
+<p>Create a Database</p>
+</li>
+<li>
+<p>Configure Database Options in a database</p>
+</li>
+<li>
+<p>Delete a Database</p>
+</li>
+<li>
+<p>Manage Templates</p>
+</li>
+</ul>
+<p>An <a href="glossary.htm#i432288"><span class="xrefglossterm">initialization parameter file</span></a> is an ASCII text file containing parameters. Use this file to create and modify a database using command-line tools. When you create a database using Database Configuration Assistant, a server parameter file (SPFILE) is created from the initialization parameter file, and the initialization parameter file is renamed. Oracle does not recognize the renamed file as an initialization parameter file, and it is not used after the instance is started.</p>
+<p>If you want to modify an instance created with Database Configuration Assistant after it starts, you must use <code>ALTER SYSTEM</code> statements. You cannot change the Server Parameter File itself, because it is a binary file that cannot be browsed or edited using a text editor. The location of the newly-created Server Parameter File is <code><span class="codeinlineitalic">ORACLE_HOME</span></code><code>\database</code>. The Server Parameter File filename is <code>spfile</code><code><span class="codeinlineitalic">SID</span></code><code>.ora</code>.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+"Managing Initialization Parameters Using a Server Parameter File" in <a class="olink ADMIN00202" href="http://www.oracle.com/pls/db112/lookup?id=ADMIN00202"><span class="italic">Oracle Database Administrator's Guide</span></a></div>
+</div>
+<!-- class="sect1" -->
+<a id="i1005959" name="i1005959"></a><a id="NTQRF133" name="NTQRF133"></a>
+<div class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1"><a id="sthref135" name="sthref135"></a>Creating a Database on Windows Using Command-Line Tools</h2>
+<p>This section describes how to create a new database manually. As part of its database software files, Oracle Database provides a sample initialization parameter file, which can be edited to suit your needs. You can choose to create database creation scripts using DBCA.</p>
+<p>Database creations are of three types:</p>
+<ul>
+<li>
+<p>Copy an existing database and delete the old database.</p>
+</li>
+<li>
+<p>Copy an existing database and keep the old database.</p>
+</li>
+<li>
+<p>Create a new database when no database exists on your system.</p>
+</li>
+</ul>
+<p><a href="#g1015865">Table 3-1</a> summarizes tasks involved in creating a new database for each of these database creation categories. Each step is explained in detail in the following subsections.</p>
+<div class="tblhruleformalwide"><a id="NTQRF134" name="NTQRF134"></a><a id="sthref136" name="sthref136"></a><a id="g1015865" name="g1015865"></a>
+<p class="titleintable">Table 3-1 Manual Database Creation Tasks</p>
+<table class="HRuleFormalWide" title="Manual Database Creation Tasks" summary="Rows are tasks. For each task, the first column describes the task, and the other three columns indicate whether the task is necessary or not for different database creation situations." dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
+<col width="*" />
+<col width="23%" />
+<col width="21%" />
+<col width="28%" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t4">Task</th>
+<th align="left" valign="bottom" id="r1c2-t4">Copy existing database and delete old database</th>
+<th align="left" valign="bottom" id="r1c3-t4">Copy existing database and keep old database</th>
+<th align="left" valign="bottom" id="r1c4-t4">Create new database when no database exists on system</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t4" headers="r1c1-t4">
+<p><a href="#i1006121">Exporting an Existing Database</a></p>
+</td>
+<td align="left" headers="r2c1-t4 r1c2-t4">
+<p>Yes</p>
+</td>
+<td align="left" headers="r2c1-t4 r1c3-t4">
+<p><a href="#BABIEJEG">Note 1</a></p>
+</td>
+<td align="left" headers="r2c1-t4 r1c4-t4">
+<p>Not applicable</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t4" headers="r1c1-t4">
+<p><a href="#i1006157">Deleting Database Files</a></p>
+</td>
+<td align="left" headers="r3c1-t4 r1c2-t4">
+<p>Yes</p>
+</td>
+<td align="left" headers="r3c1-t4 r1c3-t4">
+<p>No</p>
+</td>
+<td align="left" headers="r3c1-t4 r1c4-t4">
+<p>Not applicable</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t4" headers="r1c1-t4">
+<p><a href="#i1015399">Modifying the Initialization Parameter File</a></p>
+</td>
+<td align="left" headers="r4c1-t4 r1c2-t4">
+<p>Yes</p>
+</td>
+<td align="left" headers="r4c1-t4 r1c3-t4">
+<p>Yes</p>
+</td>
+<td align="left" headers="r4c1-t4 r1c4-t4">
+<p>Yes</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r5c1-t4" headers="r1c1-t4">
+<p><a href="#BABDIJIC">Starting an Oracle Database Instance</a></p>
+</td>
+<td align="left" headers="r5c1-t4 r1c2-t4">
+<p>Yes</p>
+</td>
+<td align="left" headers="r5c1-t4 r1c3-t4">
+<p>Yes</p>
+</td>
+<td align="left" headers="r5c1-t4 r1c4-t4">
+<p>Yes</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r6c1-t4" headers="r1c1-t4">
+<p><a href="#i1006274">Creating and Starting an Oracle Database Service</a></p>
+</td>
+<td align="left" headers="r6c1-t4 r1c2-t4">
+<p>No</p>
+</td>
+<td align="left" headers="r6c1-t4 r1c3-t4">
+<p>Yes</p>
+</td>
+<td align="left" headers="r6c1-t4 r1c4-t4">
+<p>Yes</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r7c1-t4" headers="r1c1-t4">
+<p><a href="#i1006304">Putting the CREATE DATABASE Statement in a Script</a></p>
+</td>
+<td align="left" headers="r7c1-t4 r1c2-t4">
+<p>Yes</p>
+</td>
+<td align="left" headers="r7c1-t4 r1c3-t4">
+<p>Yes</p>
+</td>
+<td align="left" headers="r7c1-t4 r1c4-t4">
+<p>Yes</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r8c1-t4" headers="r1c1-t4">
+<p><a href="#i1006335">Running the CREATE DATABASE Script</a></p>
+</td>
+<td align="left" headers="r8c1-t4 r1c2-t4">
+<p>Yes</p>
+</td>
+<td align="left" headers="r8c1-t4 r1c3-t4">
+<p>Yes</p>
+</td>
+<td align="left" headers="r8c1-t4 r1c4-t4">
+<p>Yes</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r9c1-t4" headers="r1c1-t4">
+<p><a href="#i1006378">Importing a Database</a></p>
+</td>
+<td align="left" headers="r9c1-t4 r1c2-t4">
+<p>Yes</p>
+</td>
+<td align="left" headers="r9c1-t4 r1c3-t4">
+<p><a href="#BABGGFDG">Note 2</a></p>
+</td>
+<td align="left" headers="r9c1-t4 r1c4-t4">
+<p>Not applicable</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r10c1-t4" headers="r1c1-t4">
+<p><a href="#i1014850">Updating ORACLE_SID in the Registry</a></p>
+</td>
+<td align="left" headers="r10c1-t4 r1c2-t4">
+<p>No</p>
+</td>
+<td align="left" headers="r10c1-t4 r1c3-t4">
+<p>Only if you change the default <code><span class="codeinlineitalic">SID</span></code></p>
+</td>
+<td align="left" headers="r10c1-t4 r1c4-t4">
+<p>Yes</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r11c1-t4" headers="r1c1-t4">
+<p><a href="#i1006473">Backing Up the New Database</a></p>
+</td>
+<td align="left" headers="r11c1-t4 r1c2-t4">
+<p>Yes</p>
+</td>
+<td align="left" headers="r11c1-t4 r1c3-t4">
+<p>Yes</p>
+</td>
+<td align="left" headers="r11c1-t4 r1c4-t4">
+<p>Yes</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblhruleformalwide" -->
+<a id="BABIEJEG" name="BABIEJEG"></a><a id="NTQRF135" name="NTQRF135"></a>
+<p class="subhead2">Note 1</p>
+<p>Yes if you copy data from the existing database to the new database; no otherwise.</p>
+<a id="BABGGFDG" name="BABGGFDG"></a><a id="NTQRF136" name="NTQRF136"></a>
+<p class="subhead2">Note 2</p>
+<p>Yes if you import tables and other objects exported from the existing database; no otherwise.</p>
+<p>We use an example in the following sections to demonstrate how to create a database. In this example, the existing database is the <a href="glossary.htm#i432525"><span class="xrefglossterm">starter database</span></a> with a <code><span class="codeinlineitalic">SID</span></code> of <code>orcl</code> located in directory <code>C:\app\</code><code><span class="codeinlineitalic">username</span></code><code>\product\11.2.0\oradata\orcl.</code> You will copy <code>orcl</code> to a new database with a database name and <code>SID</code> of <code>prod</code> located in directory <code>C:\app\</code><code><span class="codeinlineitalic">username</span></code><code>\product\11.2.0\oradata\prod.</code> You will then delete starter database <code>orcl</code>.</p>
+<a id="i1006121" name="i1006121"></a><a id="NTQRF138" name="NTQRF138"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><a id="sthref137" name="sthref137"></a><a id="sthref138" name="sthref138"></a>Exporting an Existing Database</h3>
+<p>You are required to export an existing database only if you intend to copy its contents to a new database. If you are working with data from an earlier Oracle release, then you can use Export for this task. If you are using Oracle Database 10<span class="italic">g</span> Release 1 (10.1) or later data, then Oracle recommends that you use Data Pump Export because it supports new Oracle Database 10<span class="italic">g</span> Release 1 (10.1) or later features, such as floating points.</p>
+<p>Although you can start Data Pump Export or Export in either parameter mode or interactive mode, Oracle recommends parameter mode. Interactive mode provides less functionality than parameter mode and exists for backward compatibility only.</p>
+<p>The syntax for Data Pump Export parameter mode is:</p>
+<pre xml:space="preserve" class="oac_no_warn"><a id="sthref139" name="sthref139"></a><a id="sthref140" name="sthref140"></a>C:\&gt; expdp SYSTEM DUMPFILE=myexp.dmp FULL=y LOGFILE=myexp.log
+Password: <span class="italic">password</span>
+</pre>
+<p>The syntax for Data Pump Export interactive mode is:</p>
+<pre xml:space="preserve" class="oac_no_warn"><a id="sthref141" name="sthref141"></a>C:\&gt; expdp SYSTEM<span class="italic"> </span>
+Password: <span class="italic">password</span>
+</pre>
+<p>Enter only the command <code>expdp</code> <code>SYSTEM</code> to begin an interactive session and let Data Pump Export prompt you for information it needs.</p>
+<div class="infoboxnote">
+<p class="notep1">Note:</p>
+If you use parameter mode, then Data Pump Export considers filenames and directory names to be invalid if they contain one or more blank spaces. The workaround is to enclose the full path in the <code>DUMPFILE=</code> parameter in triple quotation marks. For example:
+<p><code>DUMPFILE="""C:\program files\export.dmp"""</code></p>
+<p>If Data Pump Export is used in interactive mode, then the filename or directory name can contain a space without quotation marks.</p>
+</div>
+<p>The syntax for Export parameter mode is:</p>
+<pre xml:space="preserve" class="oac_no_warn"><a id="sthref142" name="sthref142"></a><a id="sthref143" name="sthref143"></a>C:\&gt; exp SYSTEM FILE=myexp.dmp FULL=y LOG=myexp.log
+Password: <span class="italic">password</span>
+</pre>
+<p>The syntax for Export interactive mode is:</p>
+<pre xml:space="preserve" class="oac_no_warn">C:\&gt; exp SYSTEM
+Password: <span class="italic">password</span>
+</pre>
+<p>Enter only the command <code>exp</code> <code>SYSTEM</code> to begin an interactive session and let Export prompt you for information it needs.</p>
+<div class="infoboxnote">
+<p class="notep1">Note:</p>
+If you use parameter mode, then Export considers filenames and directory names to be invalid if they contain one or more blank spaces. The workaround is to enclose the full path in the <code>FILE=</code> parameter in triple quotation marks. For example:
+<p><code>FILE="""C:\program files\export.dmp"""</code></p>
+<p>If Export is used in interactive mode, then the filename or directory name can contain a space without quotation marks.</p>
+</div>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<a class="olink SUTIL200" href="http://www.oracle.com/pls/db112/lookup?id=SUTIL200"><span class="italic">Oracle Database Utilities</span></a> for more information on using Data Pump Export or Export</div>
+<p>To export all data from an existing database to a new database:</p>
+<ol>
+<li>
+<p>Set <code>ORACLE_SID</code> to the database service of the database whose contents you intend to export. For example, if the database you intend to export is starter database <code>orcl</code>, then enter the following at the command prompt. Note that there are no spaces around the equal sign (<code>=</code>) character.</p>
+<pre xml:space="preserve" class="oac_no_warn">C:\&gt; set ORACLE_SID=orcl
+</pre></li>
+<li>
+<p>If the existing database is Oracle Database 10<span class="italic">g</span> Release 1 (10.1) or later, then start Data Pump Export from the command prompt:</p>
+<pre xml:space="preserve" class="oac_no_warn">C:\&gt; expdp SYSTEM DUMPFILE=myexp.dmp FULL=y LOG=myexp.log
+Password: <span class="italic">password</span>
+</pre>
+<p>You now have a full database export of starter database <code>orcl</code> in file <code>myexp.dmp</code>. All messages from Data Pump Export are logged in file <code>myexp.log</code>.</p>
+</li>
+<li>
+<p>If the existing database is before Oracle Database 10<span class="italic">g</span> Release 1 (10.1), then start Export from the command prompt:</p>
+<pre xml:space="preserve" class="oac_no_warn">C:\&gt; exp SYSTEM FILE=myexp.dmp FULL=y LOG=myexp.log
+Password: <span class="italic">password</span>
+</pre>
+<p>You now have a full database export of starter database <code>orcl</code> in file <code>myexp.dmp</code>. All messages from Export are logged in file <code>myexp.log</code>.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<a id="i1006157" name="i1006157"></a><a id="NTQRF139" name="NTQRF139"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><a id="sthref144" name="sthref144"></a>Deleting<a id="sthref145" name="sthref145"></a> Database Files</h3>
+<p>Deleting database files is required only when you copy an existing database to a new database to replace the old database. In the following example, you delete the database files of starter database <code>orcl</code>.</p>
+<p>To delete database files:</p>
+<ol>
+<li>
+<p>Shut down starter database <code>orcl</code> at the command prompt:</p>
+<pre xml:space="preserve" class="oac_no_warn">C:\&gt; oradim -SHUTDOWN -SID orcl -SHUTTYPE inst -SHUTMODE immediate
+</pre></li>
+<li>
+<p>Delete the following files from directory <code>C:\app\</code><code><span class="codeinlineitalic">username</span></code><code>\product\11.2.0\oradata\orcl:</code></p>
+<div class="inftblinformal">
+<table class="Informal" title="Database Files To Be Deleted" summary="List of sixteen database files to be deleted." dir="ltr" border="1" width="100%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<col width="*" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t8">File Name</th>
+<th align="left" valign="bottom" id="r1c2-t8">File Name</th>
+<th align="left" valign="bottom" id="r1c3-t8">File Name</th>
+<th align="left" valign="bottom" id="r1c4-t8">File Name</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t8" headers="r1c1-t8"><code>control01.ctl</code></td>
+<td align="left" headers="r2c1-t8 r1c2-t8"><code>drsys01.dbf</code></td>
+<td align="left" headers="r2c1-t8 r1c3-t8"><code>temp01.dbf</code></td>
+<td align="left" headers="r2c1-t8 r1c4-t8"><code>xdb01.dbf</code></td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t8" headers="r1c1-t8"><code>control02.ctl</code></td>
+<td align="left" headers="r3c1-t8 r1c2-t8"><code>cwmlite01.dbf</code></td>
+<td align="left" headers="r3c1-t8 r1c3-t8"><code>tools01.dbf</code></td>
+<td align="left" headers="r3c1-t8 r1c4-t8"><code>redo01.log</code></td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t8" headers="r1c1-t8"><code>control03.ctl</code></td>
+<td align="left" headers="r4c1-t8 r1c2-t8"><code>example01.dbf</code></td>
+<td align="left" headers="r4c1-t8 r1c3-t8"><code>undotbs01.dbf</code></td>
+<td align="left" headers="r4c1-t8 r1c4-t8"><code>redo02.log</code></td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r5c1-t8" headers="r1c1-t8"><code>index01.dbf</code></td>
+<td align="left" headers="r5c1-t8 r1c2-t8"><code>system01.dbf</code></td>
+<td align="left" headers="r5c1-t8 r1c3-t8"><code>user01.dbf</code></td>
+<td align="left" headers="r5c1-t8 r1c4-t8"><code>redo03.log</code></td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblinformal" --></li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<a id="i1015399" name="i1015399"></a><a id="NTQRF140" name="NTQRF140"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Modifying the Initialization Parameter File</h3>
+<p>To use starter database <code>orcl</code> as the basis for your new database, first copy <code><span class="codeinlineitalic">ORACLE_BASE</span></code><code>\admin\orcl\pfile\init.ora</code>. Second, put the copy in <code><span class="codeinlineitalic">ORACLE_BASE</span></code><code>\admin\prod\pfile\init.ora</code>. Third, modify the file as described in this section.</p>
+<div class="infoboxnote">
+<p class="notep1">Note:</p>
+Beginning with Oracle9<span class="italic">i</span> Release 2 (9.2), nesting of quotation marks using the backslash (\) escape character is no longer supported. This may affect how Oracle Database interprets parameter values in your initialization parameter file. For example, if you specified <code>CONTROL_FILES = "ctlfile\'1.ora"</code> in releases before release 9.2, the filename would be interpreted as <code>ctlfile'1.ora</code>. Starting with release 9.2, the filename would be interpreted as <code>ctlfile\'1.ora</code>.
+<p>Oracle highly recommends modifying your parameter files to remove such references. See <a class="olink REFRN001" href="http://www.oracle.com/pls/db112/lookup?id=REFRN001"><span class="italic">Oracle Database Reference</span></a> for other methods of nesting quotation marks in initialization parameter values.</p>
+</div>
+<p>If you do not have an existing database on your system, then you cannot copy an existing initialization parameter file to use as the basis for your new initialization parameter file. However, you can use the sample initialization parameter file <code>initsmpl.ora</code> provided in</p>
+<pre xml:space="preserve" class="oac_no_warn"><span class="italic">ORACLE_HOME</span>\admin\sample\pfile
+</pre>
+<p>as the basis for the initialization parameter file for database <code>prod</code>.</p>
+<p>If you use <code>initsmpl.ora</code> as the basis for the initialization parameter file, then you must set the following parameters to the indicated values, or you will not be able to start database <code>prod</code>:</p>
+<ul>
+<li>
+<p><code>DB_NAME=prod.domain</code></p>
+<p>Parameter <code>DB_NAME</code> indicates the database name and must match the name used in the <code>CREATE DATABASE</code> statement in <a href="#i1006304">"Putting the CREATE DATABASE Statement in a Script"</a>. You give a unique database name to each database. You can use up to eight characters for a database name. The name is not required to match the <code><span class="codeinlineitalic">SID</span></code> of the database service.</p>
+</li>
+<li>
+<p><code>INSTANCE_NAME=prod.domain</code></p>
+</li>
+<li>
+<p><code>SERVICE_NAMES=prod.domain</code></p>
+</li>
+<li>
+<p><code>CONTROL_FILES = (</code> <code>"C:\app\</code><code><span class="codeinlineitalic">username</span></code><code>\product\11.2.0\oradata\prod\control01.ctl",</code> <code>"C:\app\</code><code><span class="codeinlineitalic">username</span></code><code>\product\11.2.0\oradata\prod\control02.ctl",</code> <code>"C:\app\</code><code><span class="codeinlineitalic">username</span></code><code>\product\11.2.0\oradata\prod\control03.ctl")</code></p>
+<p>Parameter <code>CONTROL_FILES</code> lists database control files. You do not have control files on your file system at this point, because control files are created when you run the <code>CREATE DATABASE</code> statement. Ensure that you specify the complete path and filename, including drive letter.</p>
+</li>
+<li>
+<p><code>DB_FILES=100</code></p>
+<p>Modifying initialization parameter <code>DB_FILES</code> is not required, but it is recommended to optimize performance. Set this parameter to the same number as the value of the <code><a id="sthref146" name="sthref146"></a>MAXDATAFILES</code> option of the <code>CREATE DATABASE</code> statement. The value of <code>100</code> is used for this example.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<a class="olink REFRN001" href="http://www.oracle.com/pls/db112/lookup?id=REFRN001"><span class="italic">Oracle Database Reference</span></a> for information on other initialization parameters that you can add or modify</div>
+</li>
+</ul>
+<p>The <code>DIAGNOSTIC_DEST</code> initialization parameter sets the location of the Automatic Diagnostic Repository (ADR), which is a directory structure stored outside of the database. The ADR is used in problem diagnostics.</p>
+<p><code>DIAGNOSTIC_DEST =</code> <code><span class="codeinlineitalic">ORACLE_HOME\log</span></code> if the environment variable <code>ORACLE_BASE</code> is not set.</p>
+<p><code>DIAGNOSTIC_DEST =</code> <code><span class="codeinlineitalic">ORACLE_BASE</span></code> variable if the environment variable <code>ORACLE_BASE</code> is set.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<a class="olink NTDBI" href="../../install.112/e10843/toc.htm"><span class="italic">Oracle Database Installation Guide for Microsoft Windows</span></a> for information on ADR</div>
+</div>
+<!-- class="sect2" -->
+<a id="i1006274" name="i1006274"></a><a id="NTQRF141" name="NTQRF141"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><a id="sthref147" name="sthref147"></a>Creating and Starting an Oracle Database Service</h3>
+<p>You are required to create and start an Oracle Database service only if you do one of the following:</p>
+<ul>
+<li>
+<p>Copy an existing database to a new database and keep the old database</p>
+</li>
+<li>
+<p>Create a new database when you have no other database to copy</p>
+</li>
+</ul>
+<p>Before you create the database, first create a Windows service to run the database. This service is the Oracle Database <a href="glossary.htm#i432454"><span class="xrefglossterm">process</span></a>, <code>oracle.exe</code>, installed in the form of a Windows service.</p>
+<p>Use ORADIM to create the service. After it has been created, the service starts automatically. See <a href="#i1006533">"Using ORADIM to Administer an Oracle Database Instance"</a> for information on how to use ORADIM.</p>
+<p>To create and start an Oracle Database service:</p>
+<ol>
+<li>
+<p>Run ORADIM from the command prompt:</p>
+<pre xml:space="preserve" class="oac_no_warn">C:\&gt; oradim -NEW -SID prod -STARTMODE manual
+-PFILE "C:\app\oracle\product\11.2.0\admin\prod\pfile\init.ora"
+</pre>
+<p>Note that the previously created initialization parameter file is specified, with complete path, including drive name. You can check if the service is started in the Services window of the Control Panel.</p>
+</li>
+<li>
+<p>Set <code>ORACLE_SID</code> to equal <code>prod</code>. Note that there are no spaces around the equal sign (=) character:</p>
+<pre xml:space="preserve" class="oac_no_warn">C:\&gt; set ORACLE_SID=prod
+</pre></li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<a id="BABDIJIC" name="BABDIJIC"></a><a id="NTQRF142" name="NTQRF142"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Starting an Oracle Database Instance</h3>
+<p>Start an instance without mounting a database.</p>
+<pre xml:space="preserve" class="oac_no_warn">SQL&gt; STARTUP NOMOUNT
+</pre>
+<p>You are not required to specify the <code>PFILE</code> clause in this example, because the initialization parameter file is stored in the default location. At this point, there is no database. Only the SGA is created and background processes are started in preparation for the creation of a new database.</p>
+</div>
+<!-- class="sect2" -->
+<a id="i1006304" name="i1006304"></a><a id="NTQRF143" name="NTQRF143"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><a id="sthref148" name="sthref148"></a><a id="sthref149" name="sthref149"></a>Putting the CREATE DATABASE Statement in a Script</h3>
+<p>The <code>CREATE DATABASE</code> statement is a SQL statement that creates the database. A script containing this statement can be used anytime you create a database.</p>
+<p>The <code>CREATE DATABASE</code> statement may have the following parameters:</p>
+<ul>
+<li>
+<p><code>MAXDATAFILES</code> - default value: 32, maximum value: 65534</p>
+</li>
+<li>
+<p><code>MAXLOGFILES</code> - default value: 32, maximum value: 255</p>
+</li>
+</ul>
+<p>When you run a <code>CREATE DATABASE</code> statement, Oracle Database performs several operations depending upon clauses that you specified in the <code>CREATE DATABASE</code> statement or initialization parameters that you have set.</p>
+<div class="infoboxnote">
+<p class="notep1">Note:</p>
+<a id="sthref150" name="sthref150"></a>Oracle-managed files is a feature that works with the <code>CREATE DATABASE</code> statement to simplify administration of Oracle Database. Oracle-managed files eliminates the requirement to directly manage operating system files comprising an Oracle Database server, because you specify operations in terms of database objects rather than filenames. For more information on using Oracle-managed files see <a class="olink ADMIN003" href="http://www.oracle.com/pls/db112/lookup?id=ADMIN003"><span class="italic">Oracle Database Administrator's Guide</span></a>.</div>
+<p>To create database <code>prod</code>, copy and save the following statement in a file named <code><span class="codeinlineitalic">script_name</span></code><code>.sql</code>:</p>
+<pre xml:space="preserve" class="oac_no_warn">CREATE DATABASE prod
+USER SYS IDENTIFIED BY <span class="italic">sys_password</span>
+USER SYSTEM IDENTIFIED BY <span class="italic">system_password</span>
+MAXLOGFILES 5
+MAXDATAFILES 100
+DATAFILE 'C:\app\oracle\product\11.2.0\oradata\prod\system01.dbf' SIZE 325M REUSE
+AUTOEXTEND ON NEXT 10240K MAXSIZE UNLIMITED
+UNDO TABLESPACE "UNDOTBS" DATAFILE 'app\oracle\product\11.2.0\oradata\prod\undotbs01.dbf'
+SIZE 200M REUSE AUTOEXTEND ON NEXT 5120K MAXSIZE UNLIMITED
+CHARACTER SET WE8MSWIN1252
+logfile 'C:\app\<span class="italic">username</span>\product\11.2.0\oradata\prod\redo01.log' size 100M reuse,
+        'C:\app\<span class="italic">username</span>\product\11.2.0\oradata\prod\redo02.log' size 100M reuse,
+        'C:\app\<span class="italic">username</span>\product\11.2.0\oradata\prod\redo03.log' size 100M reuse
+EXTENT MANAGEMENT LOCAL;
+</pre></div>
+<!-- class="sect2" -->
+<a id="i1006335" name="i1006335"></a><a id="NTQRF144" name="NTQRF144"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Running the CREATE DATABASE Script</h3>
+<p>To use the SQL script to create a database:</p>
+<ol>
+<li>
+<p>Verify that the service is started in the Control Panel. In this example, the service name is <code>OracleServicePROD</code>, and its status column must display Started. If not, then select the service name and choose Start.</p>
+<p>You can also check the status of the service by entering the following at the command prompt:</p>
+<pre xml:space="preserve" class="oac_no_warn">C:\&gt; <a id="sthref151" name="sthref151"></a><a id="sthref152" name="sthref152"></a>net START
+</pre>
+<p>A list of all Windows services currently running on the system appears. If <code>OracleServicePROD</code> is missing from the list, then enter:</p>
+<pre xml:space="preserve" class="oac_no_warn">C:\&gt; net START OracleServicePROD
+</pre></li>
+<li>
+<p>Make <code>PROD</code> the current <code><span class="codeinlineitalic">SID</span></code>:</p>
+<pre xml:space="preserve" class="oac_no_warn">C:\&gt; set ORACLE_SID=PROD
+</pre></li>
+<li>
+<p>Add <code><span class="codeinlineitalic">ORACLE_HOME</span></code><code>\bin</code> to your <code>PATH</code> environment variable:</p>
+<pre xml:space="preserve" class="oac_no_warn">set PATH=<span class="italic">ORACLE_BASE</span>\<span class="italic">ORACLE_HOME</span>\bin;%PATH%
+</pre></li>
+<li><a id="i1006349" name="i1006349"></a>
+<p>Start SQL*Plus from the command prompt, and connect to the database as <a href="glossary.htm#i432528"><span class="xrefglossterm">SYSDBA</span></a>:</p>
+<pre xml:space="preserve" class="oac_no_warn">C:\&gt; sqlplus /NOLOG
+SQL&gt; CONNECT / AS SYSDBA 
+</pre>
+<p>The message <code>connected</code> appears.</p>
+</li>
+<li>
+<p>Turn on spooling to save messages:</p>
+<pre xml:space="preserve" class="oac_no_warn">SQL&gt; SPOOL <span class="italic">script_name</span>.log
+</pre></li>
+<li>
+<p>Run script <code><span class="codeinlineitalic">script_name</span></code><code>.sql</code> that you created in <a href="#i1006304">"Putting the CREATE DATABASE Statement in a Script"</a>:</p>
+<pre xml:space="preserve" class="oac_no_warn">SQL&gt; C:\app\oracle\product\11.2.0\dbhome_1\rdbms\admin\<span class="italic">script_name</span>.sql;
+</pre>
+<p>If the database is successfully created, then the instance is started and the following message appears numerous times: <code>Statement</code> <code>processed</code></p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<a id="i1006378" name="i1006378"></a><a id="NTQRF145" name="NTQRF145"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><a id="sthref153" name="sthref153"></a>Importing<a id="sthref154" name="sthref154"></a> a Database</h3>
+<p>You can use Data Pump Import (for Oracle Database 10<span class="italic">g</span> Release 1 (10.1) or later data) or Import (for earlier data) to import the full export created in <a href="#i1006121">"Exporting an Existing Database"</a> into the new database. Although you can start Data Pump Import or Import using either parameter mode or interactive mode, Oracle recommends parameter mode because it provides more functionality. Interactive mode exists solely for backward compatibility.</p>
+<p>The syntax for Data Pump Import parameter mode is:</p>
+<pre xml:space="preserve" class="oac_no_warn"><a id="sthref155" name="sthref155"></a><a id="sthref156" name="sthref156"></a>C:\&gt; impdp SYSTEM DUMPFILE=myexp.dmp FULL=y LOG=myexp.log
+Password: <span class="italic">password</span>
+</pre>
+<p>The syntax for Data Pump Import interactive mode is:</p>
+<pre xml:space="preserve" class="oac_no_warn">C:\&gt; impdp SYSTEM 
+Password: <span class="italic">password</span>
+</pre>
+<p>Enter only <code>impdp</code> <code>SYSTEM</code> to begin an interactive session and let Data Pump Import prompt you for information it needs.</p>
+<div class="infoboxnote">
+<p class="notep1">Note:</p>
+<ul>
+<li>
+<p>If you use parameter mode, then Data Pump Import considers filenames and directory names to be invalid if they contain one or more blank spaces. The workaround is to enclose the full path in the <code>DUMPFILE=</code> parameter in triple quotation marks. For example:</p>
+<p><code>DUMPFILE="""C:\program files\export.dmp"""</code></p>
+<p>If you use Data Pump Import in interactive mode, then the filename or directory name can contain a space without quotation marks.</p>
+</li>
+<li>
+<p>If the original database from which the export file was generated contains a <a href="glossary.htm#i432555"><span class="xrefglossterm">tablespace</span></a> that is not in the new database, then Import tries to create that tablespace with associated datafiles.</p>
+<p>The easy solution is to ensure that both databases contain the same tablespaces. Datafiles are not required to be identical. Only tablespace names are important.</p>
+</li>
+</ul>
+</div>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<a class="olink SUTIL300" href="http://www.oracle.com/pls/db112/lookup?id=SUTIL300"><span class="italic">Oracle Database Utilities</span></a> for more information on using Data Pump Import or Import</div>
+</div>
+<!-- class="sect2" -->
+<a id="i1014850" name="i1014850"></a><a id="NTQRF146" name="NTQRF146"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><a id="sthref157" name="sthref157"></a>Updating<a id="sthref158" name="sthref158"></a><a id="sthref159" name="sthref159"></a> ORACLE_SID in<a id="sthref160" name="sthref160"></a><a id="sthref161" name="sthref161"></a> the Registry</h3>
+<p>If this is the first database on the system or if you intend to make the new database the default database, then you must make a change in the <a href="glossary.htm#i432474"><span class="xrefglossterm">registry</span></a>.</p>
+<ol>
+<li>
+<p>Start Registry Editor at the command prompt:</p>
+<pre xml:space="preserve" class="oac_no_warn">C:\&gt; regedit
+</pre>
+<p>The Registry Editor window appears.</p>
+</li>
+<li>
+<p>Choose subkey <code>\HKEY_LOCAL_MACHINE\SOFTWARE\ORACLE\HOME0</code> for the first Oracle home on your computer. For subsequent installations to different Oracle homes on the same computer, the path is <code>\HKEY_LOCAL_MACHINE\SOFTWARE\ORACLE\HOME</code><code><span class="codeinlineitalic">ID</span></code> where ID is the unique number identifying the Oracle home.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<a href="registry.htm#g1015622">Chapter 15, "Configuration Parameters and the Registry"</a> for more information on subkey locations for <a href="glossary.htm#i432341"><span class="xrefglossterm">multiple Oracle homes</span></a></div>
+</li>
+<li>
+<p>Locate parameter <code>ORACLE_SID</code> on the right side of the Registry Editor window.</p>
+</li>
+<li>
+<p>Double-click the parameter name and change the data to the new <code><span class="codeinlineitalic">SID</span></code>, which is <code>prod</code> in this example.</p>
+</li>
+</ol>
+<p>If you do not yet have parameter <code>ORACLE_SID</code>, because this is the first database on your system, then you must create it.</p>
+<p>To create parameter <code>ORACLE_SID</code>:</p>
+<ol>
+<li>
+<p>Choose <span class="bold">Add Value</span> from the <span class="bold">Edit</span> menu.</p>
+<p>The Add Value dialog appears:</p>
+<img width="353" height="160" src="img/addvalue.gif" alt="Description of addvalue.gif follows" title="Description of addvalue.gif follows" longdesc="img_text/addvalue.htm" /><br />
+<a id="sthref162" name="sthref162" href="img_text/addvalue.htm">Description of the illustration addvalue.gif</a><br />
+<br /></li>
+<li>
+<p>Enter <code>ORACLE_SID</code> in the <span class="bold">Value Name</span> field.</p>
+</li>
+<li>
+<p>Select <span class="bold">REG_EXPAND_SZ</span> (for an expandable string) in the <span class="bold">Data Type</span> list.</p>
+</li>
+<li>
+<p>Click <span class="bold">OK</span>.</p>
+<p>A string editor dialog appropriate for the data type appears:</p>
+<img width="378" height="116" src="img/stringre.gif" alt="Description of stringre.gif follows" title="Description of stringre.gif follows" longdesc="img_text/stringre.htm" /><br />
+<a id="sthref163" name="sthref163" href="img_text/stringre.htm">Description of the illustration stringre.gif</a><br />
+<br /></li>
+<li>
+<p>Enter <span class="bold">prod</span> in the <span class="bold">String</span> field.</p>
+</li>
+<li>
+<p>Click <span class="bold">OK</span>.</p>
+<p>Registry Editor adds parameter <code>ORACLE_SID</code>.</p>
+</li>
+<li>
+<p>Choose <span class="bold">Exit</span> from the <span class="bold">Registry</span> menu.</p>
+<p>Registry Editor exits.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<a id="i1006473" name="i1006473"></a><a id="NTQRF147" name="NTQRF147"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><a id="sthref164" name="sthref164"></a>Backing <a id="sthref165" name="sthref165"></a>Up the New Database</h3>
+<div class="infoboxnote">
+<p class="notep1">Caution:</p>
+If anything goes wrong while operating the new database without a <a href="glossary.htm#i432192"><span class="xrefglossterm">backup</span></a>, then you must repeat the database creation procedure. Back up your database now to prevent loss of data.</div>
+<p>To back up the new database:</p>
+<ol>
+<li>
+<p>Shut down the database instance and stop the service:</p>
+<pre xml:space="preserve" class="oac_no_warn">C:\&gt; oradim -SHUTDOWN -SID prod -SHUTTYPE srvc,inst -SHUTMODE immediate
+</pre>
+<div class="infoboxnote">
+<p class="notep1">Caution:</p>
+Although <code>ORADIM</code> returns the prompt immediately, you must wait for the database and the service to stop completely before continuing to Step 2. Wait until the Control Panel indicates service <code>OracleServicePROD</code> has stopped. If you do not do this, then the backup may be useless because it was taken while data was being written to datafiles.</div>
+</li>
+<li>
+<p>Using the tool of your choice, back up database files.</p>
+<p>Database files consist of the initialization parameter file, control files, online redo log files, and datafiles.</p>
+<p>When the backup is complete, you can start the database again, create users and objects, if necessary, make any other changes, and use the database.</p>
+<p>Be sure to back up the database after making any significant changes, such as switching archiving mode or adding a tablespace or datafile.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+For more information on archiving, backup, and <a href="glossary.htm#i432925"><span class="xrefglossterm">recovery</span></a>
+<ul>
+<li>
+<p><a class="olink CNCPT031" href="http://www.oracle.com/pls/db112/lookup?id=CNCPT031"><span class="italic">Oracle Database Concepts</span></a></p>
+</li>
+<li>
+<p><a class="olink BRBSC001" href="http://www.oracle.com/pls/db112/lookup?id=BRBSC001"><span class="italic">Oracle Database Backup and Recovery Basics</span></a></p>
+</li>
+<li>
+<p><a class="olink ADMQS009" href="../../server.112/e10897/backrest.htm#ADMQS009"><span class="italic">Oracle Database 2 Day DBA</span></a></p>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+<div class="infoboxnote">
+<p class="notep1">Caution:</p>
+Do not store database files on a compressed drive. This can result in write errors and decreased performance.</div>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="i1006533" name="i1006533"></a><a id="NTQRF05011" name="NTQRF05011"></a>
+<div class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Using ORADIM to Administer an Oracle Database Instance</h2>
+<p>ORADIM is a command-line tool that is available with Oracle Database. You are required to use ORADIM only if you are manually creating, deleting, or modifying databases. Database Configuration Assistant is an easier tool to use for this purpose.</p>
+<p>The following sections describe ORADIM commands and parameters. Note that each command is preceded by a dash (<code>-</code>). To get a list of ORADIM parameters, enter:</p>
+<pre xml:space="preserve" class="oac_no_warn">oradim -? | -h | -help
+</pre>
+<div class="infoboxnote">
+<p class="notep1">Note:</p>
+Specifying <code>oradim</code> without any options also returns a list of ORADIM parameters and descriptions.</div>
+<p>When you use ORADIM, a log file called <code>oradim.log</code> opens in <code><span class="codeinlineitalic">ORACLE_HOME</span></code><code>\database</code>, or in the directory specified by registry parameter <code>ORA_CWD</code>. All operations, whether successful or failed, are logged in this file. You must check this file to verify success of an operation.</p>
+<p>If you have installed an Oracle Database service on Windows, then when logging in as SYSTEM user (LocalSystem), with startup mode set to Automatic, it is possible that the Oracle Database service starts but the database does not start automatically. The following error message is written to file <code>ORADIM.LOG</code> in directory <code><span class="codeinlineitalic">ORACLE_HOME</span></code><code>\database</code>:</p>
+<pre xml:space="preserve" class="oac_no_warn">ORA-12640: Authentication adapter initialization failed 
+</pre>
+<p>Oracle Enterprise Management Agent, Oracle Enterprise Manager Management Server and Oracle Internet Directory may also fail, because they cannot connect to the database for the same reason. The workarounds are:</p>
+<ul>
+<li>
+<p>Modify <code>SQLNET.ORA</code></p>
+<p>You can modify <code>SQLNET.ORA</code>, either by removing the line</p>
+<pre xml:space="preserve" class="oac_no_warn">sqlnet.authentication_services=(NTS) 
+</pre>
+<p>or by changing it to</p>
+<pre xml:space="preserve" class="oac_no_warn">sqlnet.authentication_services=(NONE)
+</pre></li>
+<li>
+<p>Start the database after the service starts</p>
+<p>You can start the database manually after the Oracle Database service has started, using SQL*Plus and connecting as <code>SYSDBA</code>.</p>
+</li>
+<li>
+<p>Start the service as a specific user</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+Your operating system documentation for instructions on starting services</div>
+</li>
+</ul>
+<a id="NTQRF148" name="NTQRF148"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref166" name="sthref166"></a>
+<h3 class="sect2">Creating an Instance</h3>
+<p>To use ORADIM to create an instance, enter:</p>
+<pre xml:space="preserve" class="oac_no_warn">oradim [-NEW -SID <span class="italic">SID</span>] | -SRVC <span class="italic">service_name</span> | -ASMSID <span class="italic">SID</span> | -ASMSRVC <span class="italic">service_name</span> 
+[-SYSPWD <span class="italic">password</span>] [-STARTMODE auto | manual] [-SRVCSTART system | demand] 
+[-PFILE <span class="italic">filename</span> | -SPFILE] [-SHUTMODE normal | immediate | abort] [-TIMEOUT 
+<span class="italic">secs</span>] [-RUNAS <span class="italic">osusr</span>/<span class="italic">ospass</span>]
+</pre>
+<p>where</p>
+<ul>
+<li>
+<p><code>-NEW</code> indicates that you are creating a new instance. This is a mandatory parameter.</p>
+</li>
+<li>
+<p><code>-SID</code> <code><span class="codeinlineitalic">SID</span></code> is the name of the instance to create.</p>
+</li>
+<li>
+<p><code>-SRVC</code> <code><span class="codeinlineitalic">service_name</span></code> is the name of the service to create (<code>OracleService</code><code><span class="codeinlineitalic">SID</span></code>).</p>
+</li>
+<li>
+<p><code>-ASMSID</code> <code><span class="codeinlineitalic">SID</span></code> is the name of the Automatic Storage Management instance to create.</p>
+</li>
+<li>
+<p><code>-ASMSRVC</code> <code><span class="codeinlineitalic">service_name</span></code> is the name of the Automatic Storage Management service to create.</p>
+</li>
+<li>
+<p><code>-SYSPWD</code> <code><span class="codeinlineitalic">password</span></code> is the system password.</p>
+</li>
+<li>
+<p><code>-STARTMODE</code> <code>auto</code> | <code>manual</code> indicates whether to start the instance when the Oracle Database service is started. Default is <code>manual</code>.</p>
+</li>
+<li>
+<p><code>-SRVCSTART system | demand</code> indicates whether to start the Oracle Database service on computer restart. Default is <code>demand.</code> Here, <code>system</code> specifies that the service be configured to automatically start when the system boots or reboots. <code>Demand</code> specifies that the user has to explicitly start the service.</p>
+</li>
+<li>
+<p><code>-PFILE</code> <code><span class="codeinlineitalic">filename</span></code> is the initialization parameter file to be used with this instance. Ensure that you specify the complete path name of this file, including drive letter.</p>
+</li>
+<li>
+<p><code>-SPFILE</code> indicates that a server parameter file (SPFILE) be used during startup instead of a PFILE.</p>
+</li>
+<li>
+<p><code>-SHUTMODE normal|immediate|abort</code> specifies how to stop an instance. This is an optional parameter. If you do not specify how to stop an instance, then <code>normal</code> is the default mode.</p>
+<p><code>-SHUTMODE</code> requires an argument and the default is <code>immediate.</code> If <code>SHUTMODE</code> is omitted, then there is no attempt made to shutdown the instance when the service is shutdown.</p>
+</li>
+<li>
+<p><code>-TIMEOUT</code> <code><span class="codeinlineitalic">secs</span></code> sets the maximum time to wait (in seconds) before the service for a particular <code><span class="codeinlineitalic">SID</span></code> stops. The default is 90 seconds. It cannot be used without the <code>SHUTDOWN</code> argument.</p>
+</li>
+<li>
+<p><code>-RUNAS osusr/ospass</code> ("run as") sets the operating system user with which the Oracle service logs on to the system. You supply an operating system user name and password, and the service logs on and runs with the privileges of that user. If omitted, the service logs on to the system using the Local system account, which is a privileged user.</p>
+</li>
+</ul>
+<div class="infoboxnote">
+<p class="notep1">Note:</p>
+For simplicity in demonstrating this feature, this example does not perform the password management techniques that a deployed system normally uses. In a production environment, follow the Oracle Database password management guidelines, and disable any sample accounts. See <a class="olink DBSEG50053" href="http://www.oracle.com/pls/db112/lookup?id=DBSEG50053"><span class="italic">Oracle Database Security Guide</span></a> for password management guidelines and other security recommendations.</div>
+<p>To create an instance called <code>PROD</code>, for example, you can enter:</p>
+<pre xml:space="preserve" class="oac_no_warn">C:\&gt; oradim -NEW -SID prod -STARTMODE auto -PFILE C:\app\oracle\product\11.2.0\admin\prod\pfile\init.ora
+</pre></div>
+<!-- class="sect2" -->
+<a id="NTQRF149" name="NTQRF149"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref167" name="sthref167"></a>
+<h3 class="sect2">Starting an Instance and Services</h3>
+<p>To use ORADIM to start an instance and services, enter:</p>
+<pre xml:space="preserve" class="oac_no_warn">oradim -STARTUP -SID <span class="italic">SID</span> | -ASMSID <span class="italic">SID</span> [-SYSPWD <span class="italic">password</span>] [-STARTTYPE srvc | 
+inst | srvc,inst] [-PFILE filename | -SPFILE]
+</pre>
+<p>where</p>
+<ul>
+<li>
+<p><code>-STARTUP</code> indicates that you are starting an instance that already exists. This is a mandatory parameter.</p>
+</li>
+<li>
+<p><code>-SID</code> <code><span class="codeinlineitalic">SID</span></code> is the name of the instance to start.</p>
+</li>
+<li>
+<p><code>-ASMSID</code> <code><span class="codeinlineitalic">SID</span></code> is the name of the Automatic Storage Management instance to start.</p>
+</li>
+<li>
+<p><code>-STARTTYPE</code> <code>srvc</code>, <code>inst</code> indicates whether to start the service or the instance. One or both values can be specified. If it is not specified, then the registry is checked for the current setting.</p>
+<p><code>-STARTTYPE srvc</code> is equivalent to running <code>net start oracleservice&lt;sid&gt;</code> from the command line.</p>
+<p><code>-STARTTYPE inst</code> is equivalent of running <code>startup</code> within SQL*Plus.</p>
+</li>
+<li>
+<p><code>-PFILE</code> <code><span class="codeinlineitalic">filename</span></code> is the initialization parameter file to be used with this instance. Ensure that you specify the complete path name of this file, including drive letter.</p>
+</li>
+<li>
+<p><code>-SPFILE</code> indicates that a server parameter file (SPFILE) be used during startup instead of a PFILE.</p>
+</li>
+</ul>
+<p>To start an instance called <code>puma</code>, for example, you can enter:</p>
+<pre xml:space="preserve" class="oac_no_warn">C:\&gt; oradim -STARTUP -SID puma -STARTTYPE inst -PFILE C:\app\oracle\product\11.2.0\admin\prod\pfile\init.ora
+</pre></div>
+<!-- class="sect2" -->
+<a id="NTQRF151" name="NTQRF151"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref168" name="sthref168"></a>
+<h3 class="sect2">Stopping an Instance and Services</h3>
+<p>The Enterprise Database Control service (<code>OracleDBConsole</code><code><span class="codeinlineitalic">SID</span></code>) is dependent on the Oracle Database service (<code>OracleService</code><code><span class="codeinlineitalic">SID</span></code>). You must stop the dependent Enterprise Database Control service (if installed) before running <code>ORADIM</code> to stop the database instance service.</p>
+<p>To use ORADIM to stop an instance, enter:</p>
+<pre xml:space="preserve" class="oac_no_warn">oradim -SHUTDOWN -SID <span class="italic">SID</span> | -ASMSID <span class="italic">SID</span> [-SYSPWD password] 
+[-SHUTTYPE srvc | inst | srvc,inst] [-SHUTMODE normal | immediate | abort]
+</pre>
+<p>where</p>
+<ul>
+<li>
+<p><code>-SHUTDOWN</code> indicates that you are stopping an instance. This is a mandatory parameter.</p>
+</li>
+<li>
+<p><code>-SID</code> <code><span class="codeinlineitalic">SID</span></code> specifies the name of the instance to stop.</p>
+</li>
+<li>
+<p><code>-ASMSID</code> <code><span class="codeinlineitalic">SID</span></code> is the name of the Automatic Storage Management instance to stop.</p>
+</li>
+<li>
+<p><code>-SHUTTYPE</code> <code>srvc</code>, <code>inst</code> indicates whether to stop the service or the instance. One or both values can be specified. If it is not specified, then the registry is checked for the current setting.</p>
+</li>
+<li>
+<p><code>-SHUTMODE</code> specifies how to stop an instance. This is an optional parameter. If you do not specify how to stop an instance, then <code>normal</code> is the default mode.</p>
+</li>
+</ul>
+<p>To stop an instance called <code>puma</code>, for example, you can enter:</p>
+<pre xml:space="preserve" class="oac_no_warn">C:\&gt; oradim -SHUTDOWN -SID puma -SHUTTYPE srvc,inst
+</pre></div>
+<!-- class="sect2" -->
+<a id="NTQRF152" name="NTQRF152"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref169" name="sthref169"></a>
+<h3 class="sect2"><a id="sthref170" name="sthref170"></a><a id="sthref171" name="sthref171"></a>Editing an Instance</h3>
+<p>You can edit an existing instance to change such values as instance name, startup mode, shutdown mode, and shutdown type. To use ORADIM to modify an instance, enter:</p>
+<pre xml:space="preserve" class="oac_no_warn">oradim -EDIT -SID <span class="italic">SID</span> | -ASMSID <span class="italic">SID</span> [-SYSPWD <span class="italic">password</span>] [-STARTMODE auto | 
+manual] [-SRVCSTART system | demand] [-PFILE <span class="italic">filename</span> | -SPFILE][SHUTMODE normal 
+| immediate | abort] [SHUTTYPE srvc | inst | srvc,inst]
+</pre>
+<p>where</p>
+<ul>
+<li>
+<p><code>-EDIT</code> indicates that you are modifying an instance. This is a mandatory parameter.</p>
+</li>
+<li>
+<p><code>-SID</code> <code><span class="codeinlineitalic">SID</span></code> specifies the name of the instance to modify. This is a mandatory parameter.</p>
+</li>
+<li>
+<p><code>-ASMSID</code> <code><span class="codeinlineitalic">SID</span></code> is the name of the Automatic Storage Management instance to modify.</p>
+</li>
+<li>
+<p><code>-STARTMODE</code> indicates whether to start the instance when the Oracle Database service is started. Default is <code>manual</code>.</p>
+</li>
+<li>
+<p><code>-SRVCSTART system | demand</code> indicates whether to start the Oracle Database service on computer restart. Default is <code>demand.</code></p>
+</li>
+<li>
+<p><code>-PFILE</code> <code><span class="codeinlineitalic">filename</span></code> specifies the initialization parameter file to be used with this instance. Ensure that you specify the complete path name of this file, including drive letter.</p>
+</li>
+<li>
+<p><code>-SPFILE</code> indicates that a server parameter file (SPFILE) be used during startup instead of a PFILE.</p>
+</li>
+<li>
+<p><code>-SHUTMODE</code> specifies how to stop an instance. This is an optional parameter. If you do not specify how to stop an instance, then <code>normal</code> is the default mode.</p>
+</li>
+<li>
+<p><code>-SHUTTYPE</code> indicates whether to stop the service or the instance. One or both values can be specified. If it is not specified, then the registry is checked for the current setting.</p>
+</li>
+</ul>
+<p>To specify a new initialization parameter file for the instance <code>prod</code>, for example, you can enter:</p>
+<pre xml:space="preserve" class="oac_no_warn">C:\&gt; oradim -EDIT -SID prod -PFILE C:\app\oracle\product\11.2.0\admin\lynx\pfile\init.ora
+</pre></div>
+<!-- class="sect2" -->
+<a id="NTQRF153" name="NTQRF153"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref172" name="sthref172"></a>
+<h3 class="sect2">Deleting an Instance</h3>
+<p>The Enterprise Database Control service (<code>OracleDBConsole</code><code><span class="codeinlineitalic">SID</span></code>) is dependent on the Oracle Database service (<code>OracleService</code><code><span class="codeinlineitalic">SID</span></code>). You must stop the dependent Enterprise Database Control service (if installed) before running <code>ORADIM</code> to delete the database instance.</p>
+<p>To use ORADIM to delete an instance, enter:</p>
+<pre xml:space="preserve" class="oac_no_warn">oradim -DELETE -SID <span class="italic">SID </span>| -ASMSID <span class="italic">SID</span> | -SRVC <span class="italic">service_name</span> | -ASMSRVC <span class="italic">service_name</span>
+</pre>
+<p>where</p>
+<ul>
+<li>
+<p><code>-DELETE</code> indicates that you are deleting an instance or service. This is a mandatory parameter.</p>
+</li>
+<li>
+<p><code>-SID</code> <code><span class="codeinlineitalic">SID</span></code> specifies the name of the <code><span class="codeinlineitalic">SID</span></code> to delete.</p>
+</li>
+<li>
+<p><code>-SRVC</code> <code><span class="codeinlineitalic">service_name</span></code> specifies the name of the service to delete (OracleServiceSID). User should specify either <code><span class="codeinlineitalic">SID</span></code> or SRVC.</p>
+</li>
+<li>
+<p><code>-ASMSID</code> <code><span class="codeinlineitalic">SID</span></code> is the name of the Automatic Storage Management instance to delete.</p>
+</li>
+<li>
+<p><code>-ASMSRVC</code> <code><span class="codeinlineitalic">service_name</span></code> is the name of the Automatic Storage Management service to delete.</p>
+</li>
+</ul>
+<p>To delete an instance called <code>prod</code>, for example, you can enter:</p>
+<pre xml:space="preserve" class="oac_no_warn">C:\&gt; oradim -DELETE -SID prod
+</pre></div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="CHDCDAGE" name="CHDCDAGE"></a><a id="NTQRF154" name="NTQRF154"></a>
+<div class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Database Migration from a 32-bit Windows Computer</h2>
+<p>This section contains these topics:</p>
+<ul>
+<li>
+<p><a href="#CHDDBAEE">Backing Up a 32-Bit Oracle Database</a></p>
+</li>
+<li>
+<p><a href="#CHDGCBFJ">Migrating an Oracle Database 11<span class="italic">g</span> Release 2 (11.2)</a></p>
+</li>
+<li>
+<p><a href="#CHDDCDEI">Migrating an Oracle Database 10<span class="italic">g</span> Release 2 (10.2) or Earlier Database</a></p>
+</li>
+</ul>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<a class="olink UPGRD" href="http://www.oracle.com/pls/db112/lookup?id=UPGRD"><span class="italic">Oracle Database Upgrade Guide</span></a> for information about upgrading an earlier release of Oracle Database to Oracle Database 11<span class="italic">g</span> Release 2 (11.2)</div>
+<a id="CHDDBAEE" name="CHDDBAEE"></a><a id="NTQRF155" name="NTQRF155"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Backing Up a 32-Bit Oracle Database</h3>
+<p>To back up a 32-bit Oracle home database:</p>
+<ol>
+<li>
+<p>Start SQL*Plus:</p>
+<pre xml:space="preserve" class="oac_no_warn">C:\&gt; sqlplus /NOLOG
+</pre></li>
+<li>
+<p>Connect to the database instance as <code>SYSDBA</code>:</p>
+<pre xml:space="preserve" class="oac_no_warn">SQL&gt; CONNECT / AS SYSDBA;
+</pre></li>
+<li>
+<p>Create a <code>.trc</code> file to use as a template to re-create the control files on the 64-bit computer:</p>
+<pre xml:space="preserve" class="oac_no_warn">SQL&gt; ALTER DATABASE BACKUP CONTROLFILE TO TRACE;
+</pre></li>
+<li>
+<p>Shut down the database:</p>
+<pre xml:space="preserve" class="oac_no_warn">SQL&gt; SHUTDOWN IMMEDIATE;
+</pre></li>
+<li>
+<p>Perform a full offline backup of the database.</p>
+</li>
+</ol>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<a class="olink RCMQK" href="http://www.oracle.com/pls/db112/lookup?id=RCMQK"><span class="italic">Oracle Database Backup and Recovery Quick Start Guide</span></a></div>
+</div>
+<!-- class="sect2" -->
+<a id="CHDGCBFJ" name="CHDGCBFJ"></a><a id="NTQRF001" name="NTQRF001"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Migrating an Oracle Database 11<span class="italic">g</span> Release 2 (11.2)</h3>
+<p>To migrate an Oracle Database 11<span class="italic">g</span> Release 2 (11.2) for 32-bit Windows to an Oracle Database 11<span class="italic">g</span> Release 2 (11.2) for 64-bit Windows:</p>
+<ol>
+<li>
+<p>Install Oracle Database 11<span class="italic">g</span> Release 2 (11.2) for 64-bit Windows.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<a class="olink NTDBI" href="../../install.112/e10843/toc.htm"><span class="italic">Oracle Database Installation Guide for Microsoft Windows</span></a></div>
+</li>
+<li>
+<p>Create the new Oracle Database 11<span class="italic">g</span> Release 2 (11.2) service at the command prompt:</p>
+<pre xml:space="preserve" class="oac_no_warn">C:\&gt; ORADIM -NEW -SID <span class="italic">SID</span> [-INTPWD <span class="italic">PASSWORD</span> ]-MAXUSERS <span class="italic">USERS</span> 
+-STARTMODE AUTO -PFILE <span class="italic">ORACLE_HOME</span>\DATABASE\INIT<span class="italic">SID</span>.ORA
+</pre>
+<p>The following table provides more information on the values you must supply.</p>
+<div class="inftblinformal">
+<table class="Informal" title="CREATE DATABASE Parameters" summary="Rows are parameters. The first column is the parameter name, and the second column is its description." dir="ltr" border="1" width="100%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<col width="24%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t26">Parameter</th>
+<th align="left" valign="bottom" id="r1c2-t26">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t26" headers="r1c1-t26"><code><span class="codeinlineitalic">SID</span></code></td>
+<td align="left" headers="r2c1-t26 r1c2-t26"><code><span class="codeinlineitalic">SID</span></code> of the database you are migrating</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t26" headers="r1c1-t26"><code><span class="codeinlineitalic">PASSWORD</span></code></td>
+<td align="left" headers="r3c1-t26 r1c2-t26">Password for the new Oracle Database 11<span class="italic">g</span> Release 2 (11.2) for 64-bit Windows database. This is the password for the user connected with <code>SYSDBA</code> privileges. The <code>-INTPWD</code> option is not required. If you do not specify it, then operating system authentication is used, and no password is required.</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t26" headers="r1c1-t26"><code><span class="codeinlineitalic">USERS</span></code></td>
+<td align="left" headers="r4c1-t26 r1c2-t26">Maximum number of users who can be granted <code>SYSDBA</code> and <code>SYSOPER</code> privileges</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r5c1-t26" headers="r1c1-t26"><code><span class="codeinlineitalic">ORACLE_HOME</span></code></td>
+<td align="left" headers="r5c1-t26 r1c2-t26">Oracle home directory. Ensure that you specify the full path name with the <code>-PFILE</code> option, including drive letter of the Oracle home directory.</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblinformal" --></li>
+<li>
+<p>Copy the 32-bit datafiles to the new 64-bit Oracle home.</p>
+</li>
+<li>
+<p>Copy the 32-bit configuration files to the 64-bit Oracle home.</p>
+<ol>
+<li>
+<p>If your 32-bit initialization parameter file has an <code>IFILE</code> (include file) entry, then copy the file specified by the <code>IFILE</code> entry to the 64-bit Oracle home and edit the <code>IFILE</code> entry in the initialization parameter file to point to its new location.</p>
+</li>
+<li>
+<p>If you have a password file that resides in the 32-bit Oracle home, then copy the password file to the 64-bit Oracle home. The default 32-bit password file is located in <code><span class="codeinlineitalic">ORACLE_HOME</span></code><code>\database\pwd</code><code><span class="codeinlineitalic">SID</span></code><code>.ora</code>., where <code><span class="codeinlineitalic">SID</span></code> is your Oracle instance ID.</p>
+</li>
+</ol>
+</li>
+<li>
+<p>In the 64-bit Oracle home, add the <code>_SYSTEM_TRIG_ENABLED = false</code> parameter to the <code><span class="codeinlineitalic">ORACLE_HOME</span></code><code>\database\ORACLE_</code><code><span class="codeinlineitalic">SID</span></code> <code>\init.ora</code> file before changing the word size.</p>
+</li>
+<li>
+<p>Remove this parameter from the initialization file after the word size change is complete.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<a class="olink UPGRD" href="http://www.oracle.com/pls/db112/lookup?id=UPGRD"><span class="italic">Oracle Database Upgrade Guide</span></a> for more information on changing word size</div>
+</li>
+<li>
+<p>Go to the 64-bit <code><span class="codeinlineitalic">ORACLE_HOME</span></code><code>\rdbms\admin</code> directory from the command prompt.</p>
+</li>
+<li>
+<p>Start SQL*Plus:</p>
+<pre xml:space="preserve" class="oac_no_warn">C:\&gt; sqlplus /NOLOG 
+</pre></li>
+<li>
+<p>Connect to the database instance as <code>SYSDBA</code>:</p>
+<pre xml:space="preserve" class="oac_no_warn">SQL&gt; CONNECT / AS SYSDBA;
+</pre></li>
+<li>
+<p>Re-create the 64-bit control files using the <code>CREATE CONTROLFILE</code> command. Edit the trace file created in <a href="#CHDDBAEE">"Backing Up a 32-Bit Oracle Database"</a> to change the paths to the datafiles, log files and control files to point to the Oracle home on the 64-bit computer. This creates the new control file in <code><span class="codeinlineitalic">ORACLE_HOME</span></code><code>\database</code>.</p>
+<p>Here is an example of a database named <code>orcl32</code> on a 32-bit computer migrating to <code>orcl64</code> on a 64-bit computer:</p>
+<pre xml:space="preserve" class="oac_no_warn">CREATE CONTROLFILE REUSE DATABASE "T1" NORESETLOGS NOARCHIVELOG
+    MAXLOGFILES 32
+    MAXLOGMEMBERS 2
+    MAXDATAFILES 32
+    MAXINSTANCES 16
+    MAXLOGHISTORY 1815
+LOGFILE
+    GROUP 1 'C:\app\oracle\product\11.2.0\oradata\orcl64\REDO03.LOG'  SIZE 1M, 
+    # was   'C:\app\oracle\product\11.2.0\oradata\orcl32\...LOG' 
+    # on the 32-bit computer
+    GROUP 2 'C:\app\oracle\product\11.2.0\oradata\orcl64\REDO02.LOG'  SIZE 1M,
+    GROUP 3 'C:\app\oracle\product\11.2.0\oradata\orcl64\REDO01.LOG'  SIZE 1M
+DATAFILE
+   'C:\app\oracle\product\11.2.0\oradata\orcl64\SYSTEM01.DBF',
+    # was 'C:\app\oracle\product\11.2.0\oradata\orcl32\...DBF' 
+    # on the 32-bit computer
+   'C:\app\oracle\product\11.2.0\oradata\orcl64\RBS01.DBF',
+   'C:\app\oracle\product\11.2.0\oradata\orcl64\USERS01.DBF',
+   'C:\app\oracle\product\11.2.0\oradata\orcl64\TEMP01.DBF',
+   'C:\app\oracle\product\11.2.0\oradata\orcl64\TOOLS01.DBF',
+   'C:\app\oracle\product\11.2.0\oradata\orcl64\INDX01.DBF',
+   'C:\app\oracle\product\11.2.0\oradata\orcl64\DR01.DBF'
+CHARACTER SET WE8ISO8859P1;
+</pre></li>
+<li>
+<p>Alter the <code>init</code> file from the 32-bit computer to include the new control file generated in the preceding step.</p>
+</li>
+<li>
+<p>Shut down the database:</p>
+<pre xml:space="preserve" class="oac_no_warn">SQL&gt; SHUTDOWN IMMEDIATE;
+</pre></li>
+<li>
+<p>Start the database in <code>UPGRADE</code> mode to run <code>utlirp.sql</code>:</p>
+<pre xml:space="preserve" class="oac_no_warn">SQL&gt; STARTUP UPGRADE;
+</pre>
+<p>You must use the <code>PFILE</code> option to specify the location of your initialization parameter file.</p>
+</li>
+<li>
+<p>Set the system to spool results to a log file for later verification of success. For example:</p>
+<pre xml:space="preserve" class="oac_no_warn">SQL&gt; SPOOL mig32-64.log;
+</pre></li>
+<li>
+<p>Enter the following command to view the output of the script on-screen:</p>
+<pre xml:space="preserve" class="oac_no_warn">SQL&gt; SET ECHO ON;
+</pre></li>
+<li>
+<p>Recompile existing PL/SQL modules in the format required by the 64-bit Oracle Database:</p>
+<pre xml:space="preserve" class="oac_no_warn">SQL&gt; @utlirp.sql;
+</pre></li>
+<li>
+<p>Turn off the spooling of script results to the log file:</p>
+<pre xml:space="preserve" class="oac_no_warn">SQL&gt; SPOOL OFF;
+</pre></li>
+<li>
+<p>Check the spool file and verify that the packages and procedures compiled successfully. Correct any problems you find in this file.</p>
+</li>
+<li>
+<p>Shut down the database:</p>
+<pre xml:space="preserve" class="oac_no_warn">SQL&gt; SHUTDOWN IMMEDIATE;
+</pre></li>
+<li>
+<p>Start the database:</p>
+<pre xml:space="preserve" class="oac_no_warn">SQL&gt; STARTUP;
+</pre></li>
+<li>
+<p>Recompile existing PL/SQL modules in the format required by the 64-bit Oracle Database:</p>
+<pre xml:space="preserve" class="oac_no_warn">SQL&gt; @utlrp.sql;
+</pre></li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<a id="CHDDCDEI" name="CHDDCDEI"></a><a id="NTQRF156" name="NTQRF156"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2">Migrating an Oracle Database 10<span class="italic">g</span> Release 2 (10.2) or Earlier Database</h3>
+<p>To migrate an Oracle Database 10<span class="italic">g</span> Release 2 (10.2) to an Oracle Database 11<span class="italic">g</span> Release 2 (11.2) for 64-bit Windows:</p>
+<ol>
+<li>
+<p>Perform steps 1 - 11 in <a href="#CHDGCBFJ">"Migrating an Oracle Database 11<span class="italic">g</span> Release 2 (11.2)"</a>.</p>
+</li>
+<li>
+<p>Shut down the database on the 64-bit computer:</p>
+<pre xml:space="preserve" class="oac_no_warn">SQL&gt; SHUTDOWN IMMEDIATE;
+</pre></li>
+<li>
+<p>Start the database migration:</p>
+<pre xml:space="preserve" class="oac_no_warn">SQL&gt; STARTUP MIGRATE;
+</pre></li>
+<li>
+<p>Migrate the database as described in Chapter 3, "Upgrading to the New Release" in <a class="olink UPGRD003" href="http://www.oracle.com/pls/db112/lookup?id=UPGRD003"><span class="italic">Oracle Database Upgrade Guide</span>.</a></p>
+</li>
+<li>
+<p>Shut down the database:</p>
+<pre xml:space="preserve" class="oac_no_warn">SQL&gt; SHUTDOWN IMMEDIATE;
+</pre></li>
+<li>
+<p>Restart the database:</p>
+<pre xml:space="preserve" class="oac_no_warn">SQL&gt; STARTUP OPEN;
+</pre></li>
+</ol>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" --></div>
+<!-- class="ind" -->
+<div class="footer">
+<hr />
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<col width="33%" />
+<col width="*" />
+<col width="33%" />
+<tr>
+<td align="left">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="98">
+<tr>
+<td align="center" valign="top"><a href="tools.htm"><img width="24" height="24" src="../../dcommon/gifs/leftnav.gif" alt="Go to previous page" /><br />
+<span class="icon">Previous</span></a></td>
+<td align="center" valign="top"><a href="config.htm"><img width="24" height="24" src="../../dcommon/gifs/rightnav.gif" alt="Go to next page" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+</td>
+<td style="font-size: 90%" align="center" class="copyrightlogo"><img width="144" height="18" src="../../dcommon/gifs/oracle.gif" alt="Oracle" /><br />
+Copyright&nbsp;&copy;&nbsp;1996, 2010,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.<br />
+<a href="../../dcommon/html/cpyr.htm">Legal Notices</a></td>
+<td align="right">
+<table class="icons oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="245">
+<tr>
+<td align="center" valign="top"><a href="../../index.htm"><img width="24" height="24" src="../../dcommon/gifs/doclib.gif" alt="Go to Documentation Home" /><br />
+<span class="icon">Home</span></a></td>
+<td align="center" valign="top"><a href="../../nav/portal_booklist.htm"><img width="24" height="24" src="../../dcommon/gifs/booklist.gif" alt="Go to Book List" /><br />
+<span class="icon">Book List</span></a></td>
+<td align="center" valign="top"><a href="toc.htm"><img width="24" height="24" src="../../dcommon/gifs/toc.gif" alt="Go to Table of Contents" /><br />
+<span class="icon">Contents</span></a></td>
+<td align="center" valign="top"><a href="index.htm"><img width="24" height="24" src="../../dcommon/gifs/index.gif" alt="Go to Index" /><br />
+<span class="icon">Index</span></a></td>
+<td align="center" valign="top"><a href="../../dcommon/html/feedback.htm"><img width="24" height="24" src="../../dcommon/gifs/feedbck2.gif" alt="Go to Feedback page" /><br />
+<span class="icon">Contact Us</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+</body>
+</html>

@@ -1,0 +1,591 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii" />
+<meta http-equiv="Content-Language" content="en" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta name="robots" content="all" scheme="http://www.robotstxt.org/" />
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Version 5.1" />
+<meta name="Date" content="2010-03-05T15:45:36Z" />
+<meta name="doctitle" content="Oracle&reg; Database Platform Guide 11g Release 2 (11.2) for Microsoft Windows" />
+<meta name="partno" content="E10845-01" />
+<meta name="docid" content="NTQRF" />
+<link rel="Start" href="../../index.htm" title="Home" type="text/html" />
+<link rel="Copyright" href="../../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+<link rel="Stylesheet" href="../../dcommon/css/blafdoc.css" title="Default" type="text/css" />
+<script type="text/javascript" src="../../dcommon/js/doccd.js">
+</script>
+<link rel="Contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="Index" href="index.htm" title="Index" type="text/html" />
+<link rel="Glossary" href="glossary.htm" title="Glossary" type="text/html" />
+<link rel="Prev" href="monitor.htm" title="Previous" type="text/html" />
+<link rel="Next" href="vss.htm" title="Next" type="text/html" />
+<link rel="alternate" href="../e10845.pdf" title="PDF version" type="application/pdf" />
+<title>Tuning Windows to Optimize Oracle Database</title>
+</head>
+<body>
+<div class="header">
+<div class="zz-skip-header"><a name="top" id="top" href="#BEGIN">Skip Headers</a></div>
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td align="left" valign="top"><b>Oracle&reg; Database Platform Guide<br />
+11<i>g</i> Release 2 (11.2) for Microsoft Windows</b><br />
+Part Number E10845-01</td>
+<td valign="bottom" align="right">
+<table class="icons oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="245">
+<tr>
+<td align="center" valign="top"><a href="../../index.htm"><img width="24" height="24" src="../../dcommon/gifs/doclib.gif" alt="Go to Documentation Home" /><br />
+<span class="icon">Home</span></a></td>
+<td align="center" valign="top"><a href="../../nav/portal_booklist.htm"><img width="24" height="24" src="../../dcommon/gifs/booklist.gif" alt="Go to Book List" /><br />
+<span class="icon">Book List</span></a></td>
+<td align="center" valign="top"><a href="toc.htm"><img width="24" height="24" src="../../dcommon/gifs/toc.gif" alt="Go to Table of Contents" /><br />
+<span class="icon">Contents</span></a></td>
+<td align="center" valign="top"><a href="index.htm"><img width="24" height="24" src="../../dcommon/gifs/index.gif" alt="Go to Index" /><br />
+<span class="icon">Index</span></a></td>
+<td align="center" valign="top"><a href="../../dcommon/html/feedback.htm"><img width="24" height="24" src="../../dcommon/gifs/feedbck2.gif" alt="Go to Feedback page" /><br />
+<span class="icon">Contact Us</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<hr />
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td align="left" valign="top">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="98">
+<tr>
+<td align="center" valign="top"><a href="monitor.htm"><img width="24" height="24" src="../../dcommon/gifs/leftnav.gif" alt="Go to previous page" /><br />
+<span class="icon">Previous</span></a></td>
+<td align="center" valign="top"><a href="vss.htm"><img width="24" height="24" src="../../dcommon/gifs/rightnav.gif" alt="Go to next page" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+</td>
+<td align="right" valign="top" style="font-size: 90%"><a href="../e10845.pdf">View PDF</a></td>
+</tr>
+</table>
+<a name="BEGIN" id="BEGIN"></a></div>
+<div class="IND"><!-- End Header --><a id="g1012542" name="g1012542"></a><a id="NTQRF090" name="NTQRF090"></a><a id="i1007483" name="i1007483"></a>
+<h1 class="chapter"><span class="secnum">7</span> Tuning Windows to Optimize Oracle Database</h1>
+<p>This chapter describes how to tune the Windows Server operating system to ensure that Oracle Database is running in the best possible environment.</p>
+<p>This chapter contains these topics:</p>
+<ul>
+<li>
+<p><a href="#i1006396">Windows Tuning Overview</a></p>
+</li>
+<li>
+<p><a href="#BCGDHBBD">Large Page Support</a></p>
+</li>
+<li>
+<p><a href="#i1005703">Reduce Priority of Foreground Applications on Server Console</a></p>
+</li>
+<li>
+<p><a href="#i1005721">Configure Windows Server to Be an Application Server</a></p>
+</li>
+<li>
+<p><a href="#i1005786">Disable Unnecessary Services</a></p>
+</li>
+<li>
+<p><a href="#BABEEDAH">Remove Unused Network Protocols</a></p>
+</li>
+<li>
+<p><a href="#i1005883">Reset Network Protocol Bind Order</a></p>
+</li>
+<li>
+<p><a href="#BCGDDADD">Setting the Order of Multiple Network Interface Cards</a></p>
+</li>
+<li>
+<p><a href="#i1005918">Apply Latest Reliable Windows Server Service Pack</a></p>
+</li>
+<li>
+<p><a href="#i1005936">Use Hardware or Operating System Striping</a></p>
+</li>
+<li>
+<p><a href="#i1007342">Multiplex Windows Server Virtual Memory Paging File</a></p>
+</li>
+<li>
+<p><a href="#i1006067">Close All Unnecessary Foreground Applications</a></p>
+<div class="infoboxnote">
+<p class="notep1">Note:</p>
+For the sake of brevity, this discussion uses the collective term <span class="italic">Windows Server</span> when a statement applies to all supported Windows operating systems.</div>
+</li>
+</ul>
+<a id="i1006396" name="i1006396"></a><a id="NTQRF261" name="NTQRF261"></a>
+<div class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1"><a id="sthref330" name="sthref330"></a><a id="sthref331" name="sthref331"></a>Windows Tuning Overview</h2>
+<p>Windows Server operating systems offer considerably fewer tuning adjustments than UNIX. This difference constrains systems administrators when they try to optimize Windows Server performance, but it also makes Windows Server easier to use.</p>
+<p>There are still ways, however, to make Windows Server a better application server environment for Oracle Database. Most of the operating system specific procedures described in this chapter enable Oracle Database to reserve more system resources, such as CPU, memory, and disk I/O.</p>
+<p>In addition, because Oracle Database is a high-performance database management system that effectively uses resources of your Windows computer, it should not also serve as any of the following:</p>
+<ul>
+<li>
+<p>Primary or backup domain controller</p>
+</li>
+<li>
+<p>File or print server</p>
+</li>
+<li>
+<p>Remote access server</p>
+</li>
+<li>
+<p>Router</p>
+</li>
+</ul>
+<p>These configurations consume network, memory, and CPU resources. In addition, the Windows computer that is running Oracle Database should not be locally accessed with a high frequency or intensively used for local user processing, unless it has enough resources to accommodate all this activity.</p>
+</div>
+<!-- class="sect1" -->
+<a id="BCGDHBBD" name="BCGDHBBD"></a><a id="NTQRF262" name="NTQRF262"></a>
+<div class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Large Page Support</h2>
+<p>Large page support is a feature of Oracle Database 10<span class="italic">g</span> Release 1 (10.1) or later. It provides a performance boost for memory-intensive database instances running on Windows Server 2003. By taking advantage of newly introduced operating system support, Oracle Database 10<span class="italic">g</span> Release 1 (10.1) or later can now make more efficient use of processor memory addressing resources. Specifically, when large page support is enabled, the CPUs in the system will be able to access the Oracle Database buffers in RAM more quickly. Instead of addressing the buffers in 4KB increments, the CPUs are told to use 2 MB page sizes in Physical Address Extension (PAE) mode and 4MB page sizes in non-PAE mode when addressing the database buffers.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+<a href="architec.htm#i1005826">"Support for Very Large Memory (VLM) Configurations"</a> for instructions on setting Physical Address Extension mode</div>
+<p>This feature is particularly useful when the Oracle buffer cache is several gigabytes. Smaller-sized configurations will still see a gain when using large pages, but the gain will not be as great as when the database is accessing large amounts of memory.</p>
+<p>To enable large page support, set <code>ORA_LPENABLE</code> to <code>1</code> in the Oracle key of the Windows Server 2003 registry.</p>
+<p>If the service is running as a user instead of the default <code>SYSTEM</code> user, then the administrator must grant the "Lock pages in memory" privilege to the user. This privilege is not enabled by default when Windows is installed. To grant this privilege:</p>
+<ol>
+<li>
+<p>From the <span class="bold">Start</span> menu, select <span class="bold">Settings</span> and then select <span class="bold">Control Panel</span>.</p>
+<p>The Control Panel window opens.</p>
+</li>
+<li>
+<p>Double-click <span class="bold">Administrative Tools</span>.</p>
+<p>The Administrative Tools window opens.</p>
+</li>
+<li>
+<p>Double-click <span class="bold">Local Security Policy</span>.</p>
+<p>The Local Security Settings window opens.</p>
+</li>
+<li>
+<p>In the left pane of the Local Security Settings window, expand Local Policies and select <span class="bold">User Rights Assignment</span>.</p>
+</li>
+<li>
+<p>In the right pane of the Local Security Settings window, select <span class="bold">Lock pages in memory</span> and select <span class="bold">Action</span> and then <span class="bold">Security..</span>.</p>
+<p>The Local Security Policy Setting dialog opens.</p>
+</li>
+<li>
+<p>Click <span class="bold">Add...</span></p>
+<p>The Select Users or Groups dialog opens.</p>
+</li>
+<li>
+<p>Select the <code>oracle</code> user from the <span class="bold">Name</span> list.</p>
+</li>
+<li>
+<p>Click <span class="bold">Add</span>.</p>
+</li>
+<li>
+<p>Click <span class="bold">OK</span> to close the Select Users or Groups dialog.</p>
+</li>
+<li>
+<p>Click <span class="bold">OK</span> to close the Local Security Policy Setting dialog.</p>
+</li>
+</ol>
+<p>To take advantage of large pages on Windows Server 2003, the amount of physical memory must be greater than the amount of System Global Area (SGA) specified in the parameter file.</p>
+<p>Large pages may not be allocated always during instance startup; either all of the SGA is allocated using large pages or all of SGA is allocated using regular pages.</p>
+<div class="infoboxnote">
+<p class="notep1">Note:</p>
+Large page usage locks the entire SGA into physical memory. Physical memory is not released during a shrink operation.</div>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+Your operating system documentation for restrictions on allocating large pages.</div>
+<p>To enable large page support:</p>
+<ol>
+<li>
+<p>Go to <code><span class="codeinlineitalic">ORACLE_HOME</span></code><code>\bin\oracle.key</code>.</p>
+</li>
+<li>
+<p>Open <code>oracle.key</code> in a text editor and record the value found. It is set by Oracle Universal Installer. The default is:</p>
+<pre xml:space="preserve" class="oac_no_warn">SOFTWARE\ORACLE\KEY_<span class="italic">HOME_NAME</span>
+</pre></li>
+<li>
+<p>Start Registry Editor at the command prompt:</p>
+<pre xml:space="preserve" class="oac_no_warn">C:\&gt; regedit
+</pre>
+<div class="infoboxnote">
+<p class="notep1">Note:</p>
+Although Registry Editor lets you view and modify registry keys and parameter values, you normally are not required to do so. In fact, you can render your system useless if you make incorrect changes. Therefore, only advanced users should edit the registry! Back up your system before making any changes in the registry.</div>
+</li>
+<li>
+<p>Go to <code>HKEY_LOCAL_MACHINE</code>.</p>
+<p>Find the key corresponding to the value found in <code>oracle.key</code>. In the default case, for example, you would look for:</p>
+<pre xml:space="preserve" class="oac_no_warn">HKEY_LOCAL_MACHINE\SOFTWARE\ORACLE\KEY_<span class="italic">HOME_NAME</span>
+</pre></li>
+<li>
+<p>Create <span class="italic">one</span> of the following, depending on where you want to enable large page support:</p>
+<ul>
+<li>
+<p><code>ORA_LPENABLE=1</code> to enable large page support on all instances</p>
+</li>
+<li>
+<p><code>ORA_</code><code><span class="codeinlineitalic">SID</span></code><code>_LPENABLE=1</code> to enable large page support on a specific instance</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Exit Registry Editor.</p>
+</li>
+</ol>
+<p>By default, Oracle allocates the minimum available large page size when using large pages. The minimum available large page size, 16 MB, is obtained by using the <code>GetLargePageMinumum</code> function.</p>
+<div class="infoboxnote">
+<p class="notep1">Caution:</p>
+Do not set initialization parameter <code>lock_sga</code> when large pages are enabled. Large page usage locks the entire SGA into physical memory. When used with parameter <code>lock_sga</code>, database startup fails with an error because the operating system automatically locks. That is, it prevents memory from being paged to disk when large pages are requested. Physical memory is not released during a shrink operation.</div>
+</div>
+<!-- class="sect1" -->
+<a id="i1005703" name="i1005703"></a><a id="NTQRF263" name="NTQRF263"></a>
+<div class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1"><a id="sthref332" name="sthref332"></a>Reduce Priority of Foreground Applications on Server Console</h2>
+<p>One of the settings provided by default during installation of Windows Server gives interactive foreground applications priority over every background <a href="glossary.htm#i432454"><span class="xrefglossterm">process</span></a>. To prevent foreground applications on the server console from taking excessive processor time away from Oracle Database, you can reduce priority for foreground applications.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+Your operating system documentation for instructions on reducing priority of foreground applications</div>
+</div>
+<!-- class="sect1" -->
+<a id="i1005721" name="i1005721"></a><a id="NTQRF264" name="NTQRF264"></a>
+<div class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1"><a id="sthref333" name="sthref333"></a><a id="sthref334" name="sthref334"></a>Configure Windows Server to Be an Application Server</h2>
+<p>Windows memory manager divides up system memory into three different pools described in <a href="#g1009268">Table 7-1</a>.</p>
+<div class="tblhruleformal"><a id="NTQRF265" name="NTQRF265"></a><a id="sthref335" name="sthref335"></a><a id="g1009268" name="g1009268"></a>
+<p class="titleintable">Table 7-1 Windows Server Memory Shares</p>
+<table class="HRuleFormal" title="Windows Server Memory Shares" summary="Rows are memory pools. For each pool, the first column is its name, and the second column is its percent of total memory." dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
+<col width="*" />
+<col width="44%" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t9">Pool</th>
+<th align="left" valign="bottom" id="r1c2-t9">Percent of Total Memory</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t9" headers="r1c1-t9">
+<p>Kernel and other system services</p>
+</td>
+<td align="left" headers="r2c1-t9 r1c2-t9">
+<p>9%</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t9" headers="r1c1-t9">
+<p>File Cache</p>
+</td>
+<td align="left" headers="r3c1-t9 r1c2-t9">
+<p>41%</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t9" headers="r1c1-t9">
+<p>Paged Memory</p>
+</td>
+<td align="left" headers="r4c1-t9 r1c2-t9">
+<p>50%</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblhruleformal" -->
+<p>Windows Server memory manager tries to balance each application's usage of memory by dynamically paging memory between physical RAM and a virtual memory paging file. If an application is particularly memory-intensive (like Oracle Database) or if a large number of applications run concurrently, then combined memory requirements of the applications may exceed physical memory capacity.</p>
+<p>The large proportion of memory reserved for file caching (41%) can be quite beneficial to file and print servers. But it may not be advantageous to application servers that often run memory-intensive network applications. A Windows Server file cache is particularly unnecessary for Oracle Database, which performs its own caching through <a href="glossary.htm#i432537"><span class="xrefglossterm">System Global Area</span></a>.</p>
+<p>You can reset the Windows Server memory model from the default file and print server, with its large file cache, to a network applications model, with a reduced file cache and more physical memory available for Oracle Database.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+Your operating system documentation for instructions</div>
+</div>
+<!-- class="sect1" -->
+<a id="i1005786" name="i1005786"></a><a id="NTQRF266" name="NTQRF266"></a>
+<div class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1"><a id="sthref336" name="sthref336"></a>Disable Unnecessary Services</h2>
+<p>After you have significantly reduced the file cache as described in <a href="#i1005721">"Configure Windows Server to Be an Application Server"</a>, you can retrieve additional physical memory for Oracle Database by disabling services not needed for core operating system functionality. Unnecessary services include:</p>
+<ul>
+<li>
+<p>License Logging Service</p>
+</li>
+<li>
+<p>Plug and Play</p>
+</li>
+<li>
+<p>Remote Access Autodial Manager</p>
+</li>
+<li>
+<p>Remote Access Connection Manager</p>
+</li>
+<li>
+<p>Remote Access Server</p>
+</li>
+<li>
+<p>Telephony Service</p>
+</li>
+</ul>
+<p>Consult with your systems administrator to identify other unnecessary services.</p>
+<p>Do <span class="italic">not</span> disable any of the following services:</p>
+<ul>
+<li>
+<p>Alerter</p>
+</li>
+<li>
+<p>Computer Browser</p>
+</li>
+<li>
+<p>EventLog</p>
+</li>
+<li>
+<p>Messenger</p>
+</li>
+<li>
+<p>OracleService<code><span class="codeinlineitalic">SID</span></code></p>
+</li>
+<li>
+<p>Oracle<span class="italic">HOME_NAME</span>TNSListener</p>
+</li>
+<li>
+<p>OracleStart<code><span class="codeinlineitalic">SID</span></code> (Oracle8 release 8.0.6 and earlier)</p>
+</li>
+<li>
+<p>Remote Procedure Call (RPC) Service</p>
+</li>
+<li>
+<p>Server</p>
+</li>
+<li>
+<p>Spooler</p>
+</li>
+<li>
+<p>TCP/IP NetBIOS Helper</p>
+</li>
+<li>
+<p>Workstation</p>
+</li>
+</ul>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+Your operating system documentation for instructions on disabling unnecessary services</div>
+</div>
+<!-- class="sect1" -->
+<a id="BABEEDAH" name="BABEEDAH"></a><a id="NTQRF267" name="NTQRF267"></a>
+<div class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1"><a id="sthref337" name="sthref337"></a>Remove Unused Network Protocols</h2>
+<p>Remove all unnecessary network protocols on Windows so that processing time can be concentrated on servicing only critical protocols.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+Your operating system documentation for instructions on removing unnecessary network protocols</div>
+</div>
+<!-- class="sect1" -->
+<a id="i1005883" name="i1005883"></a><a id="NTQRF268" name="NTQRF268"></a>
+<div class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1"><a id="sthref338" name="sthref338"></a>Reset Network Protocol Bind Order</h2>
+<p>If multiple protocols must be installed on the server, you can give the protocol most frequently used by Oracle Database highest priority by resetting the network protocol bind order.</p>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+Your operating system documentation for instructions on resetting network protocol bind order</div>
+</div>
+<!-- class="sect1" -->
+<a id="BCGDDADD" name="BCGDDADD"></a><a id="NTQRF269" name="NTQRF269"></a>
+<div class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Setting the Order of Multiple Network Interface Cards</h2>
+<p>If you have public and private network interface cards (NICs) on a single Windows computer and they are not in the correct order, then you might experience problems with any configuration (Oracle Enterprise Manager, for example) that uses <code>gethostname</code>.</p>
+<p>If the private NIC is seen first by Windows, then a <code>gethostname</code> call will return the host name of the private interconnect. Whichever tool is calling <code>gethostname</code> will have configuration or connectivity problems stemming from this non-public network information.</p>
+<p>You can determine the current order of your NICs, and change it if necessary, as follows:</p>
+<ol>
+<li>
+<p>From the <span class="bold">Start</span> menu, select <span class="bold">Settings</span> and then select <span class="bold">Network and Dial-up Connections</span>.</p>
+</li>
+<li>
+<p>Select <span class="bold">Advanced</span> and then select <span class="bold">Advanced Settings</span>.</p>
+</li>
+<li>
+<p>The <span class="bold">Connections:</span> field lists your public and private Local Area Connections. To change the order in which Windows accesses them, select one of them and click the <span class="bold">Arrow</span> buttons to move it up or down.</p>
+</li>
+<li>
+<p>When the public and private NICs are in the order you want, click <span class="bold">OK</span>.</p>
+</li>
+<li>
+<p>The change in priority takes effect immediately. Restarting your computer is not necessary.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect1" -->
+<a id="i1005918" name="i1005918"></a><a id="NTQRF271" name="NTQRF271"></a>
+<div class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1"><a id="sthref339" name="sthref339"></a>Apply Latest Reliable Windows Server Service Pack</h2>
+<p>Microsoft releases operating system patches, called Service Packs, on a quarterly basis. Service Packs are collections of bug fixes and product enhancements to the basic Windows Server release. In general, apply Service Packs as soon as it is safe to do so, since they fix bugs and can improve Windows Server performance or functionality.</p>
+<p>While Service Packs are supposed to fix bugs, they sometimes introduce new problems as well. In general, it is safest to wait a few weeks after a Service Pack is released before implementing it. This allows time for other field sites to report any problems with the SP release.</p>
+<p>The latest Windows Server Service Packs may be downloaded as self-extracting archives from <code><a href="http://support.microsoft.com">http://support.microsoft.com</a></code></p>
+<p>Unless there are assurances that the Service Pack works without flaws on Windows Server, choose to create an <code>Uninstall</code> directory. This enables the Service Pack to be removed and the original configuration to be restored.</p>
+<p>Service Pack files overwrite similarly-named files in the previous Windows Server configuration. However, Service Pack files can be overwritten in turn by setup programs that copy files from the original installation media.</p>
+<p>For example, installing a new network protocol or printer driver usually requires copying files from original Windows Server installation media. When Service Pack files are comprehensively or selectively overwritten, the Service Pack must be re-applied.</p>
+</div>
+<!-- class="sect1" -->
+<a id="i1005936" name="i1005936"></a><a id="NTQRF272" name="NTQRF272"></a>
+<div class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1"><a id="sthref340" name="sthref340"></a>Use Hardware or Operating System Striping</h2>
+<p>Compared to CPU and memory speeds, hard disk drives are extremely slow. Now that hard disk drives are relatively inexpensive, Oracle recommends that Windows Server use logical volumes comprised of striped physical disks. Data striping is an effective means of reducing the impact of relatively slow hard drives by distributing file I/O across a number of hard drives simultaneously.</p>
+<div class="infoboxnote">
+<p class="notep1">Note:</p>
+Data striping through the operating system is not permitted with Automatic Storage Management (ASM), which does its own striping. Hardware striping is allowed with ASM, but it is not necessary.</div>
+<div class="infoboxnotealso">
+<p class="notep1">See Also:</p>
+"Using Automatic Storage Management" in <a class="olink ADMIN11011" href="http://www.oracle.com/pls/db112/lookup?id=ADMIN11011"><span class="italic">Oracle Database Administrator's Guide</span></a></div>
+<p>Striping data across a number of disks is one example of a redundant array of inexpensive disks (RAID). There are several different types of RAID, also referred to as RAID levels, ranging from high performance to high reliability. The three most common RAID levels in Oracle Database installations are RAID-0, RAID-1, and RAID-5. Descriptions of each RAID level follow <a href="#g1009232">Table 7-2</a>, which shows each level's read and write penalties.</p>
+<div class="tblhruleformal"><a id="NTQRF273" name="NTQRF273"></a><a id="sthref341" name="sthref341"></a><a id="g1009232" name="g1009232"></a>
+<p class="titleintable">Table 7-2 RAID Levels in Oracle Database Installations</p>
+<table class="HRuleFormal" title="RAID Levels in Oracle Database Installations" summary="Rows are RAID levels. For each RAID level, the first column is its number (with its name in parentheses), the second column is its read penalty, and the third column is its write penalty." dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
+<col width="*" />
+<col width="27%" />
+<col width="29%" />
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t16">RAID Level</th>
+<th align="left" valign="bottom" id="r1c2-t16">Read Penalty<a href="#BABIEADE"><span class="xrefglossterm">Note</span></a></th>
+<th align="left" valign="bottom" id="r1c3-t16">Write Penalty<a href="#BABFDEDE"><span class="xrefglossterm">Note</span></a></th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t16" headers="r1c1-t16">
+<p>0 (Disk Striping)</p>
+</td>
+<td align="left" headers="r2c1-t16 r1c2-t16">
+<p>1:1</p>
+</td>
+<td align="left" headers="r2c1-t16 r1c3-t16">
+<p>1:1</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t16" headers="r1c1-t16">
+<p>1 (Disk Mirroring)</p>
+</td>
+<td align="left" headers="r3c1-t16 r1c2-t16">
+<p>1:1</p>
+</td>
+<td align="left" headers="r3c1-t16 r1c3-t16">
+<p>2:1</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t16" headers="r1c1-t16">
+<p>0 + 1</p>
+</td>
+<td align="left" headers="r4c1-t16 r1c2-t16">
+<p>1:1</p>
+</td>
+<td align="left" headers="r4c1-t16 r1c3-t16">
+<p>2:1</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r5c1-t16" headers="r1c1-t16">
+<p>5 (Distributed Data Gathering)</p>
+</td>
+<td align="left" headers="r5c1-t16 r1c2-t16">
+<p>1:1</p>
+</td>
+<td align="left" headers="r5c1-t16 r1c3-t16">
+<p>4:1</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblhruleformal" -->
+<a id="BABIEADE" name="BABIEADE"></a><a id="NTQRF274" name="NTQRF274"></a>
+<p class="subhead2">Note</p>
+<p>Read penalty is ratio of I/O operations to read requests.</p>
+<a id="BABFDEDE" name="BABFDEDE"></a><a id="NTQRF275" name="NTQRF275"></a>
+<p class="subhead2">Note</p>
+<p>Write penalty is ratio of I/O operations to write requests.</p>
+<a id="NTQRF276" name="NTQRF276"></a>
+<p class="subhead1">Disk Striping</p>
+<p>RAID level 0 enables high-performance, fault-intolerant disk striping. Multiple physical hard disks are aggregated into a logical whole, either by a disk controller or through the operating system. Data operations against the logical volume are broken down into as many chunks as there are physical drives in the array, making simultaneous use of all disks. Given identical hard disks, if one hard disk has a throughput rate of <code>DISKRATE</code> operations/second, then a RAID 0 logical volume has a rate of:</p>
+<pre xml:space="preserve" class="oac_no_warn">(DISKRATE * [number of physical  drives in array]) operations/second
+</pre>
+<p>The downside of RAID 0 is its lack of fault tolerance. If one disk in the logical volume fails, the whole volume fails and must be restored from a <a href="glossary.htm#i432192"><span class="xrefglossterm">backup</span></a>.</p>
+<a id="NTQRF277" name="NTQRF277"></a>
+<p class="subhead1">Disk Mirroring</p>
+<p>RAID level 1 enables fault tolerant disk mirroring with some chance of a performance penalty. Essentially, every write to a mirrored disk is duplicated on another drive dedicated to this purpose (the mirror drive). If the mirrored disk fails, the mirror drive is brought online in real time. After the faulted drive is replaced, the mirror configuration can be reestablished.</p>
+<p>The read penalty for RAID level 1 is nominally 1:1, but it may benefit from split reads on some controllers. When the controller knows which mirror can be accessed fastest, for example, it can lower seek times by directing I/O operations to that disk.</p>
+<a id="NTQRF278" name="NTQRF278"></a>
+<p class="subhead1">Disk Striping + Mirroring</p>
+<p>RAID level 0+1 enables mirroring of an array of striped hard disks. This is a blend of RAID 0 and RAID 1, offering high-performing fault tolerance.</p>
+<a id="NTQRF279" name="NTQRF279"></a>
+<p class="subhead1">Distributed Data Guarding</p>
+<p>RAID level 5, also known as disk striping with parity, eliminates the costly requirement to mirror. In RAID 5, multiple hard disks are aggregated into a striped logical volume, similar to RAID 0, but each drive contains parity information such that any single drive failure is tolerated. With one failed drive, a RAID-5 system can allow continued access to data, although access times are greatly reduced due to on-the-fly rebuilding of bytes from parity information. RAID-5 solutions usually allow hot-swapping of faulty drives with replacements, triggering a rebuild of the failed drive's data onto the replacement from parity information.</p>
+<p>The write penalty of 4:1 results from 2 reads and 2 writes during parity calculation.</p>
+<a id="NTQRF281" name="NTQRF281"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref342" name="sthref342"></a>
+<h3 class="sect2"><a id="sthref343" name="sthref343"></a>Multiple Striped Volumes for Sequential and Random Access</h3>
+<p>If there are enough physical disks in Windows Server, create at least two striped volumes (in addition to a standalone hard disk or striped volume for the operating system). One striped volume can be used for sequential data access, and the other can be used for random data access.</p>
+<p>Oracle Database redo logs and archived redo logs, for example, are written in sequential order. Because of reduced head movement, hard disks perform best when reading or writing sequential data.</p>
+<p>Oracle Database datafiles, however, are usually accessed in random order. Random access in a hard disk results in significant head movement, translating to slower data access.</p>
+<p>Unless redo logs are separated from datafiles (at physical device level), undo file I/O contention may result, increasing access times for both types of files.</p>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="i1007342" name="i1007342"></a><a id="NTQRF282" name="NTQRF282"></a>
+<div class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1">Multiplex Windows Server Virtual Memory Paging File</h2>
+<p>Some virtual memory paging is likely even if Oracle Database is the only network application running on Windows Server, because Windows Server memory manager will attempt to move seldom-used pages to disk to free up more physical memory for hot pages.</p>
+<p>Multiplexing the Windows Server virtual memory paging file is a good strategy to boost overall system performance. Splitting the paging file onto at least two different physical volumes (or logical volumes as long as underlying physical volumes do not overlap) provides a significant performance boost to virtual memory swapping operations.</p>
+<p>Even though this is a good technique to increase speed of virtual memory paging, too much paging activity is still a performance hit and should be corrected by adding more RAM to the server.</p>
+<a id="NTQRF283" name="NTQRF283"></a>
+<p class="subhead1">General Page File Sizing Tip</p>
+<p>Oracle recommends that total combined size of your page files be at least equal to physical RAM on your computer. Configurations where combined size is two to four times the size of physical RAM are not uncommon. Minimize paging as much as possible. But situations in which the operating system runs out of or low on paging space are to be avoided at all costs. Adequately-sized paging files spaced across physical disks spread out I/O most efficiently, because the operating system spreads paging evenly across page files.</p>
+<div class="infoboxnote">
+<p class="notep1">Note:</p>
+Internal read/write batch size for Windows is 4K.</div>
+</div>
+<!-- class="sect1" -->
+<a id="i1006067" name="i1006067"></a><a id="NTQRF284" name="NTQRF284"></a>
+<div class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1"><a id="sthref344" name="sthref344"></a>Close All Unnecessary Foreground Applications</h2>
+<p>Once procedures in previous sections have been applied, remember to close any unnecessary foreground applications. First, remove all applications from Startup folders of Windows Server console operators. Second, minimize the window when executing long-running scripts from a command prompt, so that Windows Server can focus on the operation and not on a flood of window repaint messages. Third, disable screen savers, which can quickly saturate the CPU. If a screen saver must be run, choose Blank Screen, which uses the least amount of processing time.</p>
+</div>
+<!-- class="sect1" --></div>
+<!-- class="ind" -->
+<div class="footer">
+<hr />
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<col width="33%" />
+<col width="*" />
+<col width="33%" />
+<tr>
+<td align="left">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="98">
+<tr>
+<td align="center" valign="top"><a href="monitor.htm"><img width="24" height="24" src="../../dcommon/gifs/leftnav.gif" alt="Go to previous page" /><br />
+<span class="icon">Previous</span></a></td>
+<td align="center" valign="top"><a href="vss.htm"><img width="24" height="24" src="../../dcommon/gifs/rightnav.gif" alt="Go to next page" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+</td>
+<td style="font-size: 90%" align="center" class="copyrightlogo"><img width="144" height="18" src="../../dcommon/gifs/oracle.gif" alt="Oracle" /><br />
+Copyright&nbsp;&copy;&nbsp;1996, 2010,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.<br />
+<a href="../../dcommon/html/cpyr.htm">Legal Notices</a></td>
+<td align="right">
+<table class="icons oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="245">
+<tr>
+<td align="center" valign="top"><a href="../../index.htm"><img width="24" height="24" src="../../dcommon/gifs/doclib.gif" alt="Go to Documentation Home" /><br />
+<span class="icon">Home</span></a></td>
+<td align="center" valign="top"><a href="../../nav/portal_booklist.htm"><img width="24" height="24" src="../../dcommon/gifs/booklist.gif" alt="Go to Book List" /><br />
+<span class="icon">Book List</span></a></td>
+<td align="center" valign="top"><a href="toc.htm"><img width="24" height="24" src="../../dcommon/gifs/toc.gif" alt="Go to Table of Contents" /><br />
+<span class="icon">Contents</span></a></td>
+<td align="center" valign="top"><a href="index.htm"><img width="24" height="24" src="../../dcommon/gifs/index.gif" alt="Go to Index" /><br />
+<span class="icon">Index</span></a></td>
+<td align="center" valign="top"><a href="../../dcommon/html/feedback.htm"><img width="24" height="24" src="../../dcommon/gifs/feedbck2.gif" alt="Go to Feedback page" /><br />
+<span class="icon">Contact Us</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<noscript>
+<p>Scripting on this page enhances content navigation, but does not change the content in any way.</p>
+</noscript>
+</body>
+</html>
